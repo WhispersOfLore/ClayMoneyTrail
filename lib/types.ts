@@ -39,10 +39,12 @@ export interface SourceItem {
 
 export type EvidenceStatus =
   | 'verified_fact'
+  | 'partially_verified'
   | 'unverified_lead'
   | 'allegation'
   | 'possible_connection'
   | 'documented_connection'
+  | 'conflicting_evidence'
   | 'disproven_claim'
   | 'records_required';
 

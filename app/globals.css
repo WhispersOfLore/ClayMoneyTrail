@@ -578,6 +578,14 @@ td small {
   background: #2a2f33;
   color: #d8dde0;
 }
+.inv-status-partially_verified {
+  background: #dff0e6;
+  color: #3c7a5a;
+}
+.inv-status-conflicting_evidence {
+  background: #fdeccb;
+  color: #93591a;
+}
 .priority {
   text-transform: capitalize;
   font-weight: 650;

@@ -3,19 +3,25 @@
     "id": "TL-2025-06-24-gustafson",
     "investigationId": "burke-d5",
     "date": "2025-06-24",
-    "title": "BCC denies Gustafson land-use change, 13.86 acres off CR 16A, Green Cove Springs (District 5)",
-    "agendaItem": "Land-use/zoning change: Agriculture (AG) to Rural Residential designation / AG to AR zoning",
-    "motion": "Reported motion to deny (moving commissioner's identity NOT reliably established — see status note)",
-    "parcel": "13.86 acres, County Road 16A, Green Cove Springs",
-    "location": "Green Cove Springs, District 5",
-    "applicant": "Cheryl Gustafson (represented by agent Danielle Kitchens, per secondary source)",
-    "staffRecommendation": "Approval — cited location within the urban service area and proximity to schools/emergency services",
-    "publicComment": "Not detailed in the source found; applicant's agent reportedly stated the property had been unsuccessfully marketed for single-home sale and that potential buyers wanted higher density than the owner sought.",
-    "votes": [],
-    "result": "Denied, reported 4-1 (individual commissioner vote breakdown UNVERIFIED — see status note)",
+    "title": "BCC denies Gustafson comprehensive-plan amendment, 13.86 acres at 2005 S CR 16-A, Green Cove Springs (District 5) — Vice-Chairman Burke's motion",
+    "agendaItem": "Item 20: Final Public Hearing on COMP 25-0010 (FLUM Agriculture→Rural Residential) and ZON 25-0007 (Rezoning Agriculture→Agricultural Residential)",
+    "motion": "Vice-Chairman Kristen Burke moved to deny COMP 25-0010; seconded by Commissioner John Sgromolo",
+    "parcel": "16-06-26-015574-001-02 — 13.86+/- acres, 2005 S County Road 16 (CR 16-A), Green Cove Springs",
+    "location": "The Springs planning district, District 5 (Commissioner Burke)",
+    "applicant": "Sheryl Edlyn Gustafson (owner/homesteaded resident since 2013), represented at the hearing by Danielle Kitchens, real estate agent",
+    "staffRecommendation": "Approval of both COMP 25-0010 and ZON 25-0007 — staff found the request consistent with the 2045 Comprehensive Plan, within the Urban Service Boundary, and consistent with surrounding land use",
+    "publicComment": "Public hearing opened 5:54pm, closed 5:58pm by Chairman Betsy Condon; no speakers other than Ms. Kitchens are recorded. Extended Board discussion followed with staff and Ms. Kitchens covering development options under current AG zoning, surrounding properties, lot sizes, selling price, minimum-lot-size options, code requirements, water/sewer, density, and the applicant's residence, intent to sell, and future plans.",
+    "votes": [
+      { "commissioner": "Kristen Burke", "district": "District 5 (Vice-Chairman)", "vote": "yes" },
+      { "commissioner": "John Sgromolo", "district": "District 1", "vote": "yes" },
+      { "commissioner": "Alexandra Compere", "district": "District 2", "vote": "yes" },
+      { "commissioner": "Betsy Condon", "district": "District 4 (Chairman)", "vote": "yes" },
+      { "commissioner": "Jim Renninger", "district": "District 3", "vote": "no" }
+    ],
+    "result": "Motion to DENY carried 4-1 (Renninger dissenting, i.e. Renninger would have approved). Because the comprehensive-plan amendment was denied, the companion rezoning (ZON 25-0007) was not considered. Chairman Condon recommended the applicant reapply with a minimum lot size or as a PUD.",
     "amount": null,
-    "status": "unverified_lead",
-    "evidenceIds": ["EV-004"],
-    "sourceNote": "Built entirely from a single AI-aggregated secondary source (CitizenPortal.ai) whose commissioner-name attribution does not match the real BCC roster (it names a nonexistent 'Commissioner John Burke' and 'Commissioner Magdalen'). This timeline entry preserves the source's claims but the `votes` array is intentionally left empty rather than guessing which real commissioners cast which vote. RECORDS REQUIRED: the official June 24, 2025 BCC agenda packet, staff report, and minutes/video (NovusAgenda or PrimeGov) to confirm or correct every field above, including whether Kristen Burke participated in this vote at all."
+    "status": "verified_fact",
+    "evidenceIds": ["EV-010", "EV-011", "EV-012"],
+    "sourceNote": "Confirmed against the official, e-signed BCC minutes (PrimeGov meetingTemplateId 8164, meeting id 1833) — see EV-010. Video available at www.claycountygov.com/government/clay-county-tv-and-video-archive, BCC Agenda, June 24, 2025, timestamp 1:56:56-2:20:20. This entry originally relied on a secondary AI-aggregated source (CitizenPortal.ai) whose commissioner-attribution was wrong (see EV-011 for the specific correction: no 'Commissioner John Burke' or 'Commissioner Magdalen' exists — the real mover was Kristen Burke herself). Recorded neutrally: a commissioner moving to deny an application against staff/CAC/Planning-Commission recommendations is a normal, lawful exercise of discretion and is not, by itself, evidence of any impropriety. The 'yes' votes for Compere and Sgromolo/Condon reflect the vote FOR denial (the motion on the floor); Renninger's 'no' reflects his vote against denial (i.e., for approval)."
   }
 ]

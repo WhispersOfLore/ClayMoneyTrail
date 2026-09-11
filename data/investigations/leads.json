@@ -16,26 +16,26 @@
       "Sunbiz records for any LLC that acquired land in this corridor during the widening project"
     ],
     "priority": "high",
-    "status": "unverified_lead"
+    "status": "unverified_lead",
+    "cthrewEntityIds": ["doc_sandridge_road_project"]
   },
   {
     "id": "LEAD-gustafson",
     "investigationId": "burke-d5",
     "title": "Gustafson family / company connections to Clay County land and development matters",
-    "description": "A June 24, 2025 BCC land-use decision denied applicant Cheryl Gustafson's request to rezone 13.86 acres off CR 16A in Green Cove Springs (AG to Rural Residential) 4-1, despite staff, the Planning Commission, and the Springs Citizens Advisory Committee all recommending approval. This is currently the only confirmed Gustafson-related BCC matter found. Whether there is a broader Gustafson family/company footprint in Clay County land or development records, and whether it connects to Burke or District 5 beyond this one case, is unresolved.",
-    "origin": "User-provided investigative lead (mission brief). One matching case found via initial search 2026-09-11.",
-    "entitiesInvolved": ["Cheryl Gustafson", "Clay County BCC", "Clay County Planning Commission", "Springs Citizens Advisory Committee"],
-    "whyItMatters": "Establishes whether \"Gustafson\" is a real, recurring name in Clay County land/development records or a one-off case with no broader pattern.",
-    "evidenceAvailable": "A secondary, AI-aggregated news summary (CitizenPortal.ai) of the June 24, 2025 decision, including applicant name, parcel size/location, requested change, staff recommendation, and a reported 4-1 denial vote.",
-    "evidenceMissing": "The vote-attribution detail in the only source found does not match the verified BCC roster (it names a 'Commissioner John Burke' and a 'Commissioner Magdalen', neither of whom exist on the real board — Sgromolo/D1, Compere/D2, Renninger/D3, Condon/D4, Kristen Burke/D5). This means the specific vote breakdown is UNVERIFIED and should not be relied on until checked against the official meeting record. No confirmation of any other Gustafson-connected parcel, business, or BCC matter exists yet. No confirmation of a personal/business relationship between any Gustafson and Burke.",
+    "description": "RESOLVED (core facts) 2026-09-11 via primary source: on June 24, 2025 the BCC denied (4-1) Sheryl Edlyn Gustafson's request (COMP 25-0010 / ZON 25-0007) to change 13.86 acres at 2005 S CR 16-A, Green Cove Springs (The Springs planning district, District 5) from Agriculture to Rural Residential/AR, despite staff, the Planning Commission (6-0), and the Springs Citizens Advisory Committee (6-0) all recommending approval. Vice-Chairman Kristen Burke personally made the motion to deny; Commissioner John Sgromolo seconded; Commissioner Jim Renninger was the lone dissenting vote (opposed to the denial). The property is Gustafson's own homesteaded residence since 2013, acquired via nominal-consideration family/trust transfers in 2012, not a recent outside-developer acquisition. NOTE: this parcel (CR 16-A / The Springs) is geographically distinct from the Sandridge Road / Lake Asbury corridor in LEAD-sandridge — do not conflate the two areas. Whether there is any broader Gustafson family/company footprint in Clay County beyond this one case remains open.",
+    "origin": "User-provided investigative lead (mission brief). Core facts verified against official BCC minutes and Property Appraiser records 2026-09-11.",
+    "entitiesInvolved": ["Sheryl Edlyn Gustafson", "Kristen Burke", "John Sgromolo", "Jim Renninger", "Betsy Condon", "Danielle Kitchens", "Clay County BCC", "Clay County Planning Commission", "Springs Citizens Advisory Committee"],
+    "whyItMatters": "This is now the investigation's best-documented single BCC action involving Burke: a motion she personally made, against staff/CAC/Planning-Commission recommendations, in her own district. Recorded neutrally — voting/moving against a staff recommendation is a normal, lawful exercise of a commissioner's discretion, not evidence of impropriety by itself. Whether there is a broader Gustafson pattern (beyond this one homesteaded family parcel) remains the open question.",
+    "evidenceAvailable": "Official, e-signed BCC minutes (PrimeGov meetingTemplateId 8164) with full case detail, motion/second/vote, and a video timestamp (1:56:56-2:20:20). Official Property Appraiser parcel record (16-06-26-015574-001-02) with ownership and sale history back to 2012. The original CitizenPortal.ai lead is now confirmed partially accurate (topline facts) and partially wrong (commissioner names) — see EV-004/EV-010/EV-011/EV-012.",
+    "evidenceMissing": "No confirmation of any OTHER Gustafson-connected parcel, business, or BCC matter beyond this one case. G Bar Ranch LLC / G Bar Ranch South LLC (the 2012 grantor, likely a Gustafson-family ranching entity) has not been independently confirmed via Sunbiz. No re-application (PUD or reduced-density) has been filed or found yet, per Chairman Condon's suggestion at the hearing.",
     "recordsNeeded": [
-      "Official June 24, 2025 BCC agenda item, staff report, and minutes/video for the Gustafson land-use case (NovusAgenda/PrimeGov)",
-      "Clay County Property Appraiser records for the CR 16A parcel and any other Gustafson-held parcels",
-      "Sunbiz search for any Gustafson-affiliated business entities",
-      "A general Clay County land-record and BCC-agenda name search for 'Gustafson' beyond this one case"
+      "Sunbiz detail for G Bar Ranch LLC / G Bar Ranch South LLC to confirm the Gustafson-family ranching-entity connection",
+      "A general Clay County land-record and BCC-agenda name search for 'Gustafson' beyond this one case, to establish or rule out a broader footprint",
+      "Any follow-up PUD or reduced-density re-application for this parcel"
     ],
     "priority": "medium",
-    "status": "unverified_lead",
+    "status": "documented_connection",
     "cthrewEntityIds": ["person_gustafson", "doc_gustafson_denial_20250624"]
   },
   {
@@ -46,13 +46,13 @@
     "origin": "User-provided investigative lead (mission brief). Existing practice confirmed 2026-09-11; the 'newer clinic / brother' claim not yet substantiated.",
     "entitiesInvolved": ["Kristen Burke", "Harold Burke", "Fleming Island Family Chiropractic"],
     "whyItMatters": "If a Burke-family-connected business later sought or received a county permit, zoning approval, or other BCC action, that would be a Voting-Conflict/Ethics lead. Nothing found so far establishes that any such action has occurred.",
-    "evidenceAvailable": "Self-published bio on Fleming Island Family Chiropractic's own website confirming Kristen + Harold Burke opened that practice in 2000.",
-    "evidenceMissing": "No name, address, incorporation record, or ownership documentation exists yet for a separate 'newer clinic' involving a brother or other family member. No permit, zoning, or BCC-action record tied to either business has been checked. No Sunbiz filing has been pulled for either entity.",
+    "evidenceAvailable": "Self-published bio on Fleming Island Family Chiropractic's own website confirming Kristen + Harold Burke opened that practice in 2000. Fleming Island Family Chiropractic, Inc. confirmed active in Sunbiz (P00000100632) 2026-09-11, though officer detail wasn't pulled (automation friction). The practice donated $1,000 + $364.31 in-kind to Burke's own 2020 campaign (EV-014). Two campaign donors share the Burke surname — Kenneth Burke ($100) and Laurie Burke ($200) — unverified as relatives (EV-017). A same-named 'Burke Chiropractic LLC' was found and DISPROVEN as connected (St. Petersburg, FL, owners James L. and Sarah E. Burke — EV-016).",
+    "evidenceMissing": "No name, address, incorporation record, or ownership documentation exists yet for a separate 'newer clinic' involving a brother or other family member — this remains completely unidentified. Fleming Island Family Chiropractic, Inc.'s Sunbiz officer/registered-agent detail has not been pulled. No confirmation of whether Kenneth Burke or Laurie Burke (2020 campaign donors) are related to Kristen Burke.",
     "recordsNeeded": [
-      "Sunbiz (Florida Division of Corporations) records for Fleming Island Family Chiropractic and any other Burke-family-connected chiropractic business",
+      "Sunbiz officer/registered-agent detail for Fleming Island Family Chiropractic, Inc. (P00000100632)",
       "Clay County / municipal business tax receipt and building-permit records for any newly opened chiropractic clinic in the area",
-      "Property Appraiser records for the business address(es)",
-      "Confirmation of the brother's identity and any documented business role, from a primary source — not assumed from a shared surname"
+      "A primary-source list of Kristen Burke's immediate family members (to check Kenneth Burke / Laurie Burke against, without assuming from surname)",
+      "Confirmation of the brother's identity and any documented business role, from a primary source"
     ],
     "priority": "high",
     "status": "unverified_lead",
@@ -62,19 +62,19 @@
     "id": "LEAD-campaign-contributors",
     "investigationId": "burke-d5",
     "title": "Burke campaign contributors cross-referenced against developers, vendors, and BCC applicants",
-    "description": "Clay County Supervisor of Elections hosts Burke's official campaign-finance filings (via a VoterFocus-hosted system). Her 2020 District 5 race shows 14 filed reports with period-level contribution/in-kind/expenditure totals; itemized contributor names, addresses, amounts, dates, and employer/occupation have not yet been pulled from the individual report pages. A 2024 re-election cycle filing (if one exists) has not yet been located.",
-    "origin": "User-provided investigative lead (mission brief). Filing system located and 2020-cycle summary confirmed 2026-09-11.",
+    "description": "Itemized contributor-level data for Burke's 2020 District 5 race (9 of 14 filed reports, all reports with nonzero contributions) has now been pulled directly from the Clay County Supervisor of Elections' VoterFocus system — see CAMPAIGN_CROSSREF.md for the full table. Total: $35,834.04 monetary + $844.31 in-kind contributions, $27,706.79 in itemized expenditures. A 2024 re-election cycle filing has not yet been located.",
+    "origin": "User-provided investigative lead (mission brief). Itemized data obtained 2026-09-11.",
     "entitiesInvolved": ["Kristen Burke campaign committee"],
-    "whyItMatters": "This is the foundational dataset for the entire Voting-Conflict/Ethics layer: it can't be determined whether a developer, vendor, or applicant before the BCC also donated to Burke's campaign without this itemized data.",
-    "evidenceAvailable": "Confirmed the official filing system and the 2020-cycle report list/totals (contributions ranged from $0 to $19,575 per reporting period, Feb-Nov 2020).",
-    "evidenceMissing": "No itemized individual contributions have been extracted yet. No 2024 cycle has been located. No cross-reference against the vendor/contract or land-development datasets has been attempted.",
+    "whyItMatters": "This is the foundational dataset for the entire Voting-Conflict/Ethics layer. With ClayMoneyTrail's vendor/contract dataset still unpopulated, most donor↔county-contract cross-references can't be completed yet, but donor↔BCC-applicant and donor↔self-interest cross-references were possible this pass (see CAMPAIGN_CROSSREF.md).",
+    "evidenceAvailable": "Full itemized 2020-cycle contribution and expenditure detail (CAMPAIGN_CROSSREF.md). Confirmed matches: Burke's own business (Fleming Island Chiropractic, $1,364.31), a fellow chiropractic business/professional (Oakleaf Family Chiropractic, Beth Starkey), the campaign's own treasurer family (Kronmiller), a real active political-consulting LLC (Reliant Florida Consulting), and one donor (Sue Campbell) whose address sits directly on Sandridge Road — a geographic coincidence, not a demonstrated relationship, flagged for LEAD-sandridge follow-up.",
+    "evidenceMissing": "No 2024 cycle located. No cross-reference against ClayMoneyTrail's vendor/contract dataset yet exists (that dataset itself is still empty). Employer/occupation-only entries (e.g. 'Business Owner') have not been traced to specific companies for most donors.",
     "recordsNeeded": [
-      "Itemized contribution detail for every filed report in Burke's 2020 cycle (and any later cycle) from clayelections.gov / VoterFocus",
-      "Confirmation of whether Burke has filed for a 2024 re-election cycle",
-      "Cross-reference of resulting contributor list against ClayMoneyTrail's vendor/contract data (once populated) and against LEAD-sandridge / LEAD-gustafson applicants"
+      "Confirmation of whether Burke has filed for a 2024 re-election cycle, and its itemized detail if so",
+      "The remaining 4 small 2020 reports (M4 Amended, P4, P5, P6) — each shows $0 contributions on the summary but was not individually opened",
+      "ClayMoneyTrail vendor/contract data, once populated, to complete the donor↔county-contract cross-reference"
     ],
     "priority": "high",
-    "status": "records_required"
+    "status": "partially_verified"
   },
   {
     "id": "LEAD-stormwater",

@@ -5,13 +5,13 @@
     "agency": "Clay County Board of County Commissioners / Clerk of Court",
     "request": "Official agenda packet, staff report, and minutes/video (with timestamp) for the June 24, 2025 BCC meeting item concerning the Gustafson land-use change request, 13.86 acres off CR 16A, Green Cove Springs.",
     "subject": "Confirm or correct the individual commissioner vote breakdown misreported by a secondary source.",
-    "status": "suggested_not_sent",
+    "status": "fulfilled",
     "responseDeadline": null,
     "fees": null,
-    "filesReceived": [],
+    "filesReceived": ["Board of County Commissioners Meeting Minutes and Attachments, June 24, 2025 (PrimeGov meetingTemplateId 8164)"],
     "relatedInvestigation": "burke-d5",
-    "relatedEntities": ["Cheryl Gustafson", "Clay County BCC"],
-    "followUpRequired": "Review and approve before sending; this is a suggestion only per project instructions not to auto-submit requests."
+    "relatedEntities": ["Sheryl Edlyn Gustafson", "Kristen Burke", "Clay County BCC"],
+    "followUpRequired": "No formal request needed — the record was already public on Clay County's PrimeGov portal and was obtained directly 2026-09-11. See EV-010/EV-011 in the evidence ledger."
   },
   {
     "id": "PRR-SUGGESTED-002",
@@ -19,13 +19,13 @@
     "agency": "Clay County Supervisor of Elections",
     "request": "Itemized contribution detail (contributor name, address, amount, date, employer/occupation) for all 14 campaign-finance reports filed by Kristen Burke's 2020 District 5 campaign, plus confirmation of and detail for any 2024 re-election cycle filing.",
     "subject": "Build the itemized campaign-contribution dataset needed for cross-referencing against developers, vendors, and BCC applicants.",
-    "status": "suggested_not_sent",
+    "status": "partially_fulfilled",
     "responseDeadline": null,
     "fees": null,
-    "filesReceived": [],
+    "filesReceived": ["9 of 14 filed 2020-cycle VoterFocus reports (all nonzero-contribution reports) — see CAMPAIGN_CROSSREF.md"],
     "relatedInvestigation": "burke-d5",
     "relatedEntities": ["Kristen Burke campaign committee"],
-    "followUpRequired": "May be obtainable directly from the public VoterFocus report pages without a formal request — check that first before requesting from the Supervisor of Elections."
+    "followUpRequired": "Obtained directly from the public VoterFocus report pages 2026-09-11, no formal request needed. Still open: any 2024 re-election cycle filing, and the 4 remaining zero-contribution 2020 reports."
   },
   {
     "id": "PRR-SUGGESTED-003",

@@ -55,8 +55,8 @@ const timeline = JSON.parse(await readFile(new URL('../data/investigations/timel
 const recordsRequests = JSON.parse(await readFile(new URL('../data/investigations/records-requests.json', import.meta.url), 'utf8'));
 
 const VALID_EVIDENCE_STATUSES = new Set([
-  'verified_fact', 'unverified_lead', 'allegation', 'possible_connection',
-  'documented_connection', 'disproven_claim', 'records_required',
+  'verified_fact', 'partially_verified', 'unverified_lead', 'allegation', 'possible_connection',
+  'documented_connection', 'conflicting_evidence', 'disproven_claim', 'records_required',
 ]);
 const investigationIds = new Set(investigationMeta.map((i) => i.id));
 const leadIds = new Set();
