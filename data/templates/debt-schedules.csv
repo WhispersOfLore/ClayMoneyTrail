@@ -1,0 +1,2 @@
+record_id,fiscal_year,department,category,name,maturity_date,interest_rate,amount,measure,source_status,source_url,source_title,notes,last_verified,example_only
+debt-example-series-2026-bond,FY2025-26,Debt & Reserves,Bond Schedule,Fictional Series 2026 Revenue Bond (FICTIONAL),2041-10-01,0.0385,610000,budgeted,verified_official,https://example.gov/debt-schedule,Example Official Statement,Fictional row for schema demonstration only; replace with a real bond-level debt schedule entry before import.,2026-01-20,true

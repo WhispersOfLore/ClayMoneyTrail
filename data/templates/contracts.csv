@@ -1,0 +1,2 @@
+record_id,fiscal_year,department,category,vendor_name,contract_number,name,amount,measure,source_status,source_url,source_title,notes,last_verified,example_only
+contract-example-drainage-2026,FY2025-26,Stormwater,Vendors & Contracts,Fictional Drainage Co. (FICTIONAL),CC-2026-0001,Countywide culvert replacement contract,1250000,budgeted,verified_official,https://example.gov/contracts,Example Contract Award Log,Fictional row for schema demonstration only; replace with a real contract-award record before import.,2026-01-20,true

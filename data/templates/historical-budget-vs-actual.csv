@@ -1,0 +1,2 @@
+record_id,fiscal_year,department,category,name,adopted_budget,amended_budget,actual_amount,source_status,source_url,source_title,notes,last_verified,example_only
+histbudget-example-public-works-fy2223,FY2022-23,Public Works,Transportation,Public Works cost center (FICTIONAL EXAMPLE),10500000,10750000,10611340,verified_official,https://example.gov/car-fy2223,Example Annual Comprehensive Financial Report,Fictional row for schema demonstration only; replace with a real budget-vs-actual comparison before import.,2026-01-20,true

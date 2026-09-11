@@ -1,0 +1,2 @@
+record_id,fiscal_year,department,category,name,project_status,amount,measure,source_status,source_url,source_title,notes,last_verified,example_only
+capital-example-fleming-island-park,FY2025-26,Capital Projects,Parks & Recreation,Fictional Fleming Island Park expansion (FICTIONAL),in_progress,3200000,amended,verified_official,https://example.gov/cip,Example Capital Improvement Plan,Fictional row for schema demonstration only; replace with a real project-level appropriation before import.,2026-01-20,true

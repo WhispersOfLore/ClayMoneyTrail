@@ -2,11 +2,25 @@ import { readFile, writeFile } from 'node:fs/promises';
 
 const records = JSON.parse(await readFile(new URL('../data/records.json', import.meta.url), 'utf8'));
 const sources = JSON.parse(await readFile(new URL('../data/sources.json', import.meta.url), 'utf8'));
+
+const populated = records.filter((r) => r.amount !== null).length;
+const byStatus = ['verified_official', 'official_estimate', 'derived_estimate', 'rough_estimate', 'pending'].map((status) => ({
+  status,
+  count: records.filter((r) => r.sourceStatus === status).length,
+}));
+
 const bundle = {
   dataset: 'Clay County Money Trail',
-  version: '0.2.0',
+  version: '0.3.0',
   asOf: new Date().toISOString().slice(0, 10),
-  disclaimer: 'Budgeted does not equal actual spent. Derived calculations and rough estimates are labeled separately. Null means not yet populated.',
+  disclaimer:
+    'Budgeted does not equal actual spent. Derived calculations and rough/approximate estimates are labeled separately. Null means not yet populated. Record coverage below describes this dataset only, not the county\'s full budget.',
+  coverage: {
+    totalRecords: records.length,
+    populatedRecords: populated,
+    pendingRecords: records.length - populated,
+    byStatus,
+  },
   records,
   sources,
 };

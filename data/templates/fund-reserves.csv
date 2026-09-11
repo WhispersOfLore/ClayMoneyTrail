@@ -1,0 +1,2 @@
+record_id,fiscal_year,department,category,fund_name,name,amount,measure,source_status,source_url,source_title,notes,last_verified,example_only
+reserve-example-general-fund-cash,FY2025-26,Debt & Reserves,Fund Reserves,General Fund (FICTIONAL EXAMPLE),General Fund actual unrestricted cash balance,9100000,actual,verified_official,https://example.gov/fund-balance-report,Example Fund Balance Report,Fictional row for schema demonstration only; replace with a real actual (not budgeted) reserve balance before import.,2026-01-20,true

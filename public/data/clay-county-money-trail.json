@@ -1,8 +1,35 @@
 {
   "dataset": "Clay County Money Trail",
-  "version": "0.2.0",
-  "asOf": "2026-09-09",
-  "disclaimer": "Budgeted does not equal actual spent. Derived calculations and rough estimates are labeled separately. Null means not yet populated.",
+  "version": "0.3.0",
+  "asOf": "2026-09-11",
+  "disclaimer": "Budgeted does not equal actual spent. Derived calculations and rough/approximate estimates are labeled separately. Null means not yet populated. Record coverage below describes this dataset only, not the county's full budget.",
+  "coverage": {
+    "totalRecords": 106,
+    "populatedRecords": 105,
+    "pendingRecords": 1,
+    "byStatus": [
+      {
+        "status": "verified_official",
+        "count": 93
+      },
+      {
+        "status": "official_estimate",
+        "count": 2
+      },
+      {
+        "status": "derived_estimate",
+        "count": 10
+      },
+      {
+        "status": "rough_estimate",
+        "count": 0
+      },
+      {
+        "status": "pending",
+        "count": 1
+      }
+    ]
+  },
   "records": [
     {
       "id": "sheriff-cost-center",
@@ -1496,7 +1523,8 @@
       "publisher": "Clay County Office of Budget Management",
       "url": "https://www.claycountygov.com/home/showdocument?id=9168&t=638949119516239477",
       "status": "verified_official",
-      "notes": "Official adopted-budget document; General Fund detail and expenditure-by-fund summaries are now partially imported."
+      "notes": "Official adopted-budget document; General Fund detail and expenditure-by-fund summaries are now partially imported.",
+      "lastVerified": null
     },
     {
       "id": "county-charter",
@@ -1504,7 +1532,8 @@
       "publisher": "Clay County",
       "url": "https://claycounty.novusagenda.com/agendapublic/DisplayAgendaPDF.ashx?MeetingID=2166",
       "status": "verified_official",
-      "notes": "Official county agenda attachment reproducing the current $37,000 charter provision; a 2026 ballot proposal may seek to change it."
+      "notes": "Official county agenda attachment reproducing the current $37,000 charter provision; a 2026 ballot proposal may seek to change it.",
+      "lastVerified": null
     },
     {
       "id": "stormwater-impact",
@@ -1512,7 +1541,8 @@
       "publisher": "Clay County",
       "url": "https://www.claycountygov.com/Home/Components/News/News/4117/1512",
       "status": "official_estimate",
-      "notes": "Official estimates: $8,218,308 expected collections and $624,371 first-year regulatory/collection costs."
+      "notes": "Official estimates: $8,218,308 expected collections and $624,371 first-year regulatory/collection costs.",
+      "lastVerified": null
     },
     {
       "id": "budget-office",
@@ -1520,7 +1550,8 @@
       "publisher": "Clay County",
       "url": "https://www.claycountygov.com/government/office-of-budget-management",
       "status": "verified_official",
-      "notes": "Official landing page for current and historical county budget materials."
+      "notes": "Official landing page for current and historical county budget materials.",
+      "lastVerified": null
     },
     {
       "id": "public-records",
@@ -1528,7 +1559,8 @@
       "publisher": "Clay County",
       "url": "https://www.claycountygov.com/government/public-records-search",
       "status": "verified_official",
-      "notes": "Starting point for future payroll, contracts, payments, and supporting records."
+      "notes": "Starting point for future payroll, contracts, payments, and supporting records.",
+      "lastVerified": null
     },
     {
       "id": "ccso-approved-budget",
@@ -1536,7 +1568,8 @@
       "publisher": "Clay County Sheriff’s Office",
       "url": "https://www.claysheriff.com/wp-content/uploads/2025/09/CCSO-Approved-FY-25-26-Budget.pdf",
       "status": "verified_official",
-      "notes": "Official CCSO presentation with division-level personnel, operating, capital, and comparison tables."
+      "notes": "Official CCSO presentation with division-level personnel, operating, capital, and comparison tables.",
+      "lastVerified": null
     },
     {
       "id": "county-doge",
@@ -1544,7 +1577,8 @@
       "publisher": "Clay County",
       "url": "https://www.claycountygov.com/government/doge",
       "status": "verified_official",
-      "notes": "County confirms employee positions and salaries were supplied to the state; the employee-level file is not linked on this page."
+      "notes": "County confirms employee positions and salaries were supplied to the state; the employee-level file is not linked on this page.",
+      "lastVerified": null
     }
   ]
 }

@@ -1,0 +1,2 @@
+record_id,fiscal_year,department,category,employee_title,name,amount,measure,source_status,source_url,source_title,notes,last_verified,example_only
+payroll-example-equipment-operator-i,FY2025-26,Public Works,Individual Payroll,Equipment Operator I,Equipment Operator I - base salary,42500,actual,verified_official,https://example.gov/payroll-file,Example Countywide Payroll File,Fictional row for schema demonstration only. Do not add named-employee rows; identify positions by title/classification only, never by name.,2026-01-20,true
