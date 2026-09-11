@@ -7,7 +7,7 @@
     "origin": "User-provided investigative lead (mission brief), refined against initial search research 2026-09-11.",
     "entitiesInvolved": ["Kristen Burke", "Clay County BCC", "Clay County Public Works / Bonded Transportation Program"],
     "whyItMatters": "Road-widening and rezoning decisions directly affect adjacent land values; if any BCC vote or land-use approval in this corridor coincided with a documented financial or personal relationship, that intersection would be a Voting-Conflict/Ethics lead, not by itself an allegation.",
-    "evidenceAvailable": "Official county project page for the Sandridge Road widening (source: county Bonded Transportation Program). News coverage of the 2025 connectivity-plan withdrawal and general Lake Asbury growth pressure (secondary).",
+    "evidenceAvailable": "Official county project page for the Sandridge Road widening (source: county Bonded Transportation Program). News coverage of the 2025 connectivity-plan withdrawal and general Lake Asbury growth pressure (secondary). Burke's own residence (Russell Landing, near Lake Asbury) is in this general area per her campaign bio (EV-024) — a mundane explanation for a small cluster of Sandridge-Road-area campaign donors (Sue Campbell 2020, Stu Opferman and Mike Elliott 2023) that does not require a developer-benefit theory. See COUNTER_EVIDENCE.md.",
     "evidenceMissing": "No parcel-level ownership chain (property appraiser → seller → buyer → LLC) has been built. No specific rezoning/comprehensive-plan-amendment case tied to this corridor has been pulled from BCC agendas/minutes. No confirmation of Burke's specific votes on any Lake Asbury/Sandridge-corridor item.",
     "recordsNeeded": [
       "Clay County Property Appraiser parcel records for land adjacent to the Sandridge Road corridor",
@@ -42,36 +42,35 @@
     "id": "LEAD-burke-chiropractic",
     "investigationId": "burke-d5",
     "title": "Burke chiropractic/business interests — including a reported newer clinic possibly involving a family member",
-    "description": "Kristen Burke is a chiropractor and, per her practice's own site, has co-owned Fleming Island Family Chiropractic with her husband Harold Burke since 2000 — that fact is well-established and not itself in question. Separately, there is an UNVERIFIED lead that a different, more recently opened chiropractic clinic may involve Burke's brother and/or other family members. No such clinic has been identified by name yet, and no ownership/management link to Burke has been found.",
-    "origin": "User-provided investigative lead (mission brief). Existing practice confirmed 2026-09-11; the 'newer clinic / brother' claim not yet substantiated.",
-    "entitiesInvolved": ["Kristen Burke", "Harold Burke", "Fleming Island Family Chiropractic"],
-    "whyItMatters": "If a Burke-family-connected business later sought or received a county permit, zoning approval, or other BCC action, that would be a Voting-Conflict/Ethics lead. Nothing found so far establishes that any such action has occurred.",
-    "evidenceAvailable": "Self-published bio on Fleming Island Family Chiropractic's own website confirming Kristen + Harold Burke opened that practice in 2000. Fleming Island Family Chiropractic, Inc. confirmed active in Sunbiz (P00000100632) 2026-09-11, though officer detail wasn't pulled (automation friction). The practice donated $1,000 + $364.31 in-kind to Burke's own 2020 campaign (EV-014). Two campaign donors share the Burke surname — Kenneth Burke ($100) and Laurie Burke ($200) — unverified as relatives (EV-017). A same-named 'Burke Chiropractic LLC' was found and DISPROVEN as connected (St. Petersburg, FL, owners James L. and Sarah E. Burke — EV-016).",
-    "evidenceMissing": "No name, address, incorporation record, or ownership documentation exists yet for a separate 'newer clinic' involving a brother or other family member — this remains completely unidentified. Fleming Island Family Chiropractic, Inc.'s Sunbiz officer/registered-agent detail has not been pulled. No confirmation of whether Kenneth Burke or Laurie Burke (2020 campaign donors) are related to Kristen Burke.",
+    "description": "Kristen Burke is a chiropractor and, per her practice's own site, has co-owned Fleming Island Family Chiropractic with her husband Harold Burke since 2000 — well-established, not in question. UPDATE 2026-09-11: Burke's own bio now confirms she has a brother and states the family \"opened Oakleaf Family Chiropractic in 2009 for her brother and his family\" — this is the first primary-source (self-published) confirmation of both the brother's existence and a specific named business. However, the Sunbiz corporate record for the matching entity name lists officers surnamed Thompson (Jeremy E. and Natalie), not Burke, and the practice's current public website shows unrelated doctors. This is now CONFLICTING EVIDENCE, not a blank slate — see PATTERN_MATRIX.md and COUNTER_EVIDENCE.md.",
+    "origin": "User-provided investigative lead (mission brief). Major update 2026-09-11 via Burke's own bio + Sunbiz.",
+    "entitiesInvolved": ["Kristen Burke", "Harold Burke", "Fleming Island Family Chiropractic", "Oakleaf Family Chiropractic", "Jeremy E. Thompson", "Natalie Thompson"],
+    "whyItMatters": "If a Burke-family-connected business later sought or received a county permit, zoning approval, or other BCC action, that would be a Voting-Conflict/Ethics lead. Nothing found so far establishes that any such county action has occurred, even taking the family connection at face value.",
+    "evidenceAvailable": "Self-published bio on Fleming Island Family Chiropractic's own website confirming Kristen + Harold Burke opened that practice in 2000, AND stating they opened Oakleaf Family Chiropractic in 2009 for her brother (EV-022). Oakleaf Family Chiropractic contributed $1,000 to Burke's campaign in BOTH the 2020 and 2023-2024 cycles (CAMPAIGN_REPEAT_DONORS.md). Fleming Island Family Chiropractic, Inc. confirmed active in Sunbiz (P00000100632). The Fleming Island practice donated $1,000 + $364.31 in-kind to Burke's own 2020 campaign and $500 in 2023 (EV-014). Campaign donor 'Kenneth Burke' ($100, 2020) is very likely Burke's own son (matches her stated child's name — EV-023), not an unknown relative. 'Laurie Burke' ($200, 2020) remains unmatched. A same-named 'Burke Chiropractic LLC' was found and DISPROVEN as connected (St. Petersburg, FL, owners James L. and Sarah E. Burke — EV-016).",
+    "evidenceMissing": "Whether 'Jeremy Thompson' (the officer of record for the matching-named 2010 Oakleaf entity) is Burke's brother is NOT confirmed — her maiden name has not been established from a primary source. The second, currently-active 'Oakleaf Family Chiropractic, Inc.' entity (filed 2012) has not had its officers pulled. No permit, zoning, or BCC-action record tied to any of these businesses has been found.",
     "recordsNeeded": [
+      "Confirmation of Kristen Burke's maiden name from a primary source (marriage record, voter registration, or an interview/bio that states it directly) to test the Thompson hypothesis",
+      "Sunbiz officer detail for the second, active Oakleaf Family Chiropractic, Inc. entity (P12000019233)",
       "Sunbiz officer/registered-agent detail for Fleming Island Family Chiropractic, Inc. (P00000100632)",
-      "Clay County / municipal business tax receipt and building-permit records for any newly opened chiropractic clinic in the area",
-      "A primary-source list of Kristen Burke's immediate family members (to check Kenneth Burke / Laurie Burke against, without assuming from surname)",
-      "Confirmation of the brother's identity and any documented business role, from a primary source"
+      "Clay County / municipal business tax receipt and building-permit records for either chiropractic business"
     ],
     "priority": "high",
-    "status": "unverified_lead",
+    "status": "conflicting_evidence",
     "cthrewEntityIds": ["biz_flemingislandchiro"]
   },
   {
     "id": "LEAD-campaign-contributors",
     "investigationId": "burke-d5",
     "title": "Burke campaign contributors cross-referenced against developers, vendors, and BCC applicants",
-    "description": "Itemized contributor-level data for Burke's 2020 District 5 race (9 of 14 filed reports, all reports with nonzero contributions) has now been pulled directly from the Clay County Supervisor of Elections' VoterFocus system — see CAMPAIGN_CROSSREF.md for the full table. Total: $35,834.04 monetary + $844.31 in-kind contributions, $27,706.79 in itemized expenditures. A 2024 re-election cycle filing has not yet been located.",
-    "origin": "User-provided investigative lead (mission brief). Itemized data obtained 2026-09-11.",
+    "description": "Itemized contributor-level data for BOTH of Burke's campaign cycles is now loaded: the 2020 District 5 race (9 of 14 filed reports — CAMPAIGN_CROSSREF.md, $35,834.04 monetary + $844.31 in-kind) and the 2023-2024 re-election cycle (7 of 8 filed reports — BURKE_CAMPAIGN_2024.md, $24,610.72 net contributions + $950 in-kind). A repeat-donor comparison across both cycles is in CAMPAIGN_REPEAT_DONORS.md.",
+    "origin": "User-provided investigative lead (mission brief). 2020 cycle obtained in the prior pass; 2024 cycle obtained 2026-09-11.",
     "entitiesInvolved": ["Kristen Burke campaign committee"],
-    "whyItMatters": "This is the foundational dataset for the entire Voting-Conflict/Ethics layer. With ClayMoneyTrail's vendor/contract dataset still unpopulated, most donor↔county-contract cross-references can't be completed yet, but donor↔BCC-applicant and donor↔self-interest cross-references were possible this pass (see CAMPAIGN_CROSSREF.md).",
-    "evidenceAvailable": "Full itemized 2020-cycle contribution and expenditure detail (CAMPAIGN_CROSSREF.md). Confirmed matches: Burke's own business (Fleming Island Chiropractic, $1,364.31), a fellow chiropractic business/professional (Oakleaf Family Chiropractic, Beth Starkey), the campaign's own treasurer family (Kronmiller), a real active political-consulting LLC (Reliant Florida Consulting), and one donor (Sue Campbell) whose address sits directly on Sandridge Road — a geographic coincidence, not a demonstrated relationship, flagged for LEAD-sandridge follow-up.",
-    "evidenceMissing": "No 2024 cycle located. No cross-reference against ClayMoneyTrail's vendor/contract dataset yet exists (that dataset itself is still empty). Employer/occupation-only entries (e.g. 'Business Owner') have not been traced to specific companies for most donors.",
+    "whyItMatters": "This is the foundational dataset for the entire Voting-Conflict/Ethics layer. With ClayMoneyTrail's vendor/contract dataset still unpopulated, most donor↔county-contract cross-references can't be completed yet, but donor↔BCC-applicant, donor↔self-interest, and cross-cycle repeat-donor analysis were possible this pass.",
+    "evidenceAvailable": "Full itemized contribution/expenditure detail for both cycles. Confirmed repeat donors across cycles: Fleming Island Chiropractic (Burke's own practice), Oakleaf Family Chiropractic ($1,000 both cycles — now tied to LEAD-burke-chiropractic), Kronmiller (donor + paid treasurer both cycles), and several individual neighbors. New in 2024: four $1,000 PAC contributions, one development-adjacent donor (The Vector Companies Inc, 'Affordable housing'). No contributor in either cycle has been matched to the Gustafson case's applicant or agent, or to any confirmed county contractor.",
+    "evidenceMissing": "4 small 2020 reports and 1 small 2024 report (each ~$0-4 on the summary) not individually opened. No cross-reference against ClayMoneyTrail's vendor/contract dataset yet exists (that dataset itself is still empty).",
     "recordsNeeded": [
-      "Confirmation of whether Burke has filed for a 2024 re-election cycle, and its itemized detail if so",
-      "The remaining 4 small 2020 reports (M4 Amended, P4, P5, P6) — each shows $0 contributions on the summary but was not individually opened",
-      "ClayMoneyTrail vendor/contract data, once populated, to complete the donor↔county-contract cross-reference"
+      "ClayMoneyTrail vendor/contract data, once populated, to complete the donor↔county-contract cross-reference",
+      "Sunbiz officer detail for the remaining unresolved business donors (Lin-Mor-5 LLC, RIG Holdings, The Vector Companies Inc, and others)"
     ],
     "priority": "high",
     "status": "partially_verified"
@@ -80,36 +79,36 @@
     "id": "LEAD-stormwater",
     "investigationId": "burke-d5",
     "title": "Stormwater assessment decision-making and Burke's role as Board Chair",
-    "description": "Clay County adopted a new stormwater assessment fee (based on impervious surface area, roughly $51-$161/year for a single-family home) alongside hardship and disabled-veteran exemptions. News coverage describes Board Chair Kristen Burke chairing a contentious public hearing, described as frustrated with attendees and threatening to eject people for clapping or speaking out of turn. ClayMoneyTrail's existing money-trail dataset already carries the official stormwater revenue/cost estimates (sourceId: stormwater-impact) — this lead is about the decision-making process and Burke's specific role, not the dollar figures, which are handled in the main money-trail dataset.",
-    "origin": "User-provided investigative lead (mission brief). Confirmed as a real, documented controversy 2026-09-11.",
-    "entitiesInvolved": ["Kristen Burke", "Clay County BCC"],
-    "whyItMatters": "Establishes the factual public record of how the assessment was adopted and how the Board Chair conducted the process, distinct from any claim about the fee's legality or fairness.",
-    "evidenceAvailable": "Multiple secondary news accounts (Action News Jax, WOKV) of hearings, exemption votes, and Burke's conduct as chair. Official county business-impact estimate already in ClayMoneyTrail's money dataset.",
-    "evidenceMissing": "No official meeting minutes/video timestamp has been pulled to independently confirm the specific conduct described by news outlets. No full vote history (who voted for/against the assessment and each exemption) has been compiled. No confirmation of where stormwater revenue is actually being spent (vs. budgeted) yet exists.",
+    "description": "RESOLVED (adoption vote) 2026-09-11 via primary source. The final Stormwater Utility and Assessment Ordinance was adopted July 28, 2026 by a unanimous 5-0 vote; Vice-Chairman John Sgromolo made both motions (ordinance and resolution), seconded by Jim Renninger. Chairman Kristen Burke chaired a calm hearing with a single speaker asking a cost question ($85/year confirmed). This is a materially different picture from the contentious hearings described in 2025 secondary news coverage, which appear to be earlier, separate meetings — see STORMWATER_MASTER_TIMELINE.md.",
+    "origin": "User-provided investigative lead (mission brief). Adoption vote confirmed via primary source 2026-09-11.",
+    "entitiesInvolved": ["Kristen Burke", "John Sgromolo", "Jim Renninger", "Clay County BCC"],
+    "whyItMatters": "Establishes the factual public record of how the assessment was adopted and how the Board Chair conducted the process. The primary record of the actual enacting vote does not support a narrative of Burke personally pushing through an unpopular measure over strong opposition at that meeting — see COUNTER_EVIDENCE.md.",
+    "evidenceAvailable": "Official BCC minutes for the July 28, 2026 adoption vote (EV-020), with video timestamp. Multiple secondary news accounts (Action News Jax, WOKV) of earlier, separate hearings and Burke's reported conduct as chair at those. Official county business-impact estimate already in ClayMoneyTrail's money dataset.",
+    "evidenceMissing": "The specific date(s) and primary-source minutes for the earlier, contentious hearing(s) described in secondary coverage have not been identified. The hardship/veteran exemption vote specifically was not found in the July 28, 2026 minutes — it likely happened at an earlier meeting not yet pulled. No confirmation of where stormwater revenue is actually being spent (vs. budgeted) — the fee only took effect October 1, 2026.",
     "recordsNeeded": [
-      "Official BCC meeting video/minutes for the stormwater assessment adoption vote and the hardship/veteran exemption vote, with timestamps",
-      "Full commissioner-by-commissioner vote record for each stormwater-related agenda item",
-      "Actual (not budgeted) stormwater collections and expenditures once available"
+      "Primary-source minutes for the earlier stormwater hearing(s) described by Action News Jax/WOKV, including the hardship/veteran exemption vote",
+      "Initial consultant contracts and staff studies preceding the ordinance",
+      "Actual (not budgeted) stormwater collections and expenditures once available (not yet possible — fee effective 2026-10-01)"
     ],
     "priority": "medium",
-    "status": "documented_connection"
+    "status": "partially_verified"
   },
   {
     "id": "LEAD-compensation",
     "investigationId": "burke-d5",
     "title": "Commissioner compensation increase proposal",
-    "description": "Clay County commissioner salary has been fixed at $37,000/year since 2008 per the Home Rule Charter (already documented in ClayMoneyTrail's main dataset, sourceId: county-charter). The Charter Review Commission — a separate advisory body from the BCC itself — has reportedly discussed raising it, with different secondary sources citing figures from roughly $60,000 up to 'triple' the current salary, and reporting Charter Review Chair Courtney Connor opposed. Whether Burke has personally advocated for or against any specific figure has not been established.",
-    "origin": "User-provided investigative lead (mission brief). Proposal's existence confirmed 2026-09-11; Burke's position not yet established.",
+    "description": "Clay County commissioner salary has been fixed at $37,000/year since 2008 per the Home Rule Charter (already documented in ClayMoneyTrail's main dataset, sourceId: county-charter). UPDATE 2026-09-11: the Charter Review Commission approved final ballot language on 2026-03-16 to tie commissioner pay to Florida Statute 145.031 (raising it to over $100,000, described as tripling current pay — reconciling the earlier conflicting $60,000-vs-triple figures; $60,000 was an earlier/superseded draft). Public hearings followed April-May 2026. Measure pending for the November 2026 ballot. Whether Burke has personally advocated for or against it remains unestablished.",
+    "origin": "User-provided investigative lead (mission brief). Ballot language and timeline confirmed 2026-09-11 (secondary source); Burke's position still not established.",
     "entitiesInvolved": ["Clay County Charter Review Commission", "Kristen Burke", "Courtney Connor"],
-    "whyItMatters": "The mission brief explicitly warns not to attribute this proposal to Burke unless records establish that — this lead exists specifically to check that attribution, not assume it.",
-    "evidenceAvailable": "Secondary news coverage (Clay Views, Action News Jax) describing the Charter Review Commission's discussion and a range of proposed figures.",
-    "evidenceMissing": "No primary Charter Review Commission agenda/minutes has been pulled. No statement or vote by Burke specifically on this proposal has been found. The exact proposed figure is inconsistent across secondary sources and needs reconciling against the primary record.",
+    "whyItMatters": "The mission brief explicitly warns not to attribute this proposal to Burke unless records establish that. No source found in either pass connects her to it in any way — see COUNTER_EVIDENCE.md.",
+    "evidenceAvailable": "Secondary news coverage (Clay Views) with a specific date (2026-03-16), specific ballot language (tying pay to FS 145.031), and a public-hearing schedule. NovusAgenda agenda URLs located for two of the three hearings (MeetingID 2161, 2166) but not opened.",
+    "evidenceMissing": "Primary Charter Review Commission minutes for the March 16 vote and three hearings not directly opened. No statement or vote by Burke found. Whether the BCC's forwarding role involves any actual vote (vs. a ministerial pass-through) is unconfirmed.",
     "recordsNeeded": [
-      "Official Charter Review Commission agenda/minutes for the compensation discussion, with the exact proposed figure and calculation method",
-      "Confirmation of whether this requires a ballot measure and its current status",
-      "Any recorded statement or vote by Burke specifically on this proposal"
+      "Primary Charter Review Commission minutes/video for the 2026-03-16 vote and the three public hearings",
+      "Confirmation of whether the BCC took any recorded vote to forward the ballot language",
+      "Any recorded statement by Burke specifically on this proposal, if one exists"
     ],
     "priority": "medium",
-    "status": "unverified_lead"
+    "status": "partially_verified"
   }
 ]

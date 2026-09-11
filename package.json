@@ -13,7 +13,8 @@
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt",
-    "investigations:crossref": "node scripts/cross-reference-check.mjs"
+    "investigations:crossref": "node scripts/cross-reference-check.mjs",
+    "investigations:repeat-entities": "node scripts/repeat-entity-detection.mjs"
   },
   "dependencies": {
     "react": "19.2.6",

@@ -9,11 +9,12 @@ import { LeadsTable } from './leads-table';
 import { EvidenceLedger } from './evidence-ledger';
 import { InvestigationTimeline } from './investigation-timeline';
 import { RecordsRequestsTable } from './records-requests-table';
+import { PatternExplorer } from './pattern-explorer';
 
-type InvTab = 'Overview' | 'Timeline' | 'Land & Development' | 'Businesses' | 'Campaign Money' | 'Stormwater' | 'Compensation' | 'Leads' | 'Evidence Ledger' | 'Records Needed';
+type InvTab = 'Overview' | 'Pattern Explorer' | 'Timeline' | 'Land & Development' | 'Businesses' | 'Campaign Money' | 'Stormwater' | 'Compensation' | 'Leads' | 'Evidence Ledger' | 'Records Needed';
 
 const TABS: InvTab[] = [
-  'Overview', 'Timeline', 'Land & Development', 'Businesses', 'Campaign Money',
+  'Overview', 'Pattern Explorer', 'Timeline', 'Land & Development', 'Businesses', 'Campaign Money',
   'Stormwater', 'Compensation', 'Leads', 'Evidence Ledger', 'Records Needed',
 ];
 
@@ -92,6 +93,8 @@ export function InvestigationsPanel({
           </div>
         </div>
       )}
+
+      {tab === 'Pattern Explorer' && <PatternExplorer leads={leads} evidence={evidence} timeline={timeline} />}
 
       {tab === 'Timeline' && <InvestigationTimeline events={timeline} />}
 

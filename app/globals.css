@@ -718,6 +718,43 @@ td small {
 .inv-timeline-item h4 {
   margin: 0 0 10px;
 }
+.pattern-explorer-intro {
+  color: #526169;
+  font-size: 13px;
+  max-width: 70ch;
+  margin: 0 0 14px;
+}
+.pattern-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.pattern-filter-bar label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #526169;
+  font-weight: 650;
+}
+.pattern-filter-bar select,
+.pattern-filter-bar input {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 13px;
+  min-width: 180px;
+}
+.pattern-filter-search {
+  flex: 1;
+  min-width: 220px;
+}
+.pattern-explorer-footnote {
+  color: #929ca1;
+  font-size: 12px;
+  margin-top: 14px;
+}
 .measure {
   text-transform: capitalize;
   color: #526169;

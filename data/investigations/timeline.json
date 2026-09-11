@@ -23,5 +23,30 @@
     "status": "verified_fact",
     "evidenceIds": ["EV-010", "EV-011", "EV-012"],
     "sourceNote": "Confirmed against the official, e-signed BCC minutes (PrimeGov meetingTemplateId 8164, meeting id 1833) — see EV-010. Video available at www.claycountygov.com/government/clay-county-tv-and-video-archive, BCC Agenda, June 24, 2025, timestamp 1:56:56-2:20:20. This entry originally relied on a secondary AI-aggregated source (CitizenPortal.ai) whose commissioner-attribution was wrong (see EV-011 for the specific correction: no 'Commissioner John Burke' or 'Commissioner Magdalen' exists — the real mover was Kristen Burke herself). Recorded neutrally: a commissioner moving to deny an application against staff/CAC/Planning-Commission recommendations is a normal, lawful exercise of discretion and is not, by itself, evidence of any impropriety. The 'yes' votes for Compere and Sgromolo/Condon reflect the vote FOR denial (the motion on the floor); Renninger's 'no' reflects his vote against denial (i.e., for approval)."
+  },
+  {
+    "id": "TL-2024-10-22-industrial-rezonings",
+    "investigationId": "burke-d5",
+    "date": "2024-10-22",
+    "title": "Three linked District 5 industrial-rezoning applications (~76 acres) continued to Jan 28, 2025",
+    "agendaItem": "Items 27-29: COMP 24-0016/ZON 24-0019 (1.72 ac), COMP 24-0017/ZON 24-0023 (41.75 ac), COMP 24-0018/ZON 24-0024 (32.79 ac) — all Agricultural/Agricultural Residential to Industrial/Heavy Industrial, all \"(District 5, Comm. Burke)\"",
+    "motion": "Commissioner Alexandra Compere moved approval of a continuance (all three items), seconded by Commissioner Betsy Condon",
+    "parcel": "Not stated in minutes text; not yet identified",
+    "location": "District 5 (Commissioner Burke) — specific location not stated in minutes text",
+    "applicant": "Not named in minutes text; agent Kelly Hartwig, 3420 Wall Road, Green Cove Springs, addressed the Board",
+    "staffRecommendation": "Not reached — no merits hearing occurred",
+    "publicComment": "Public hearing opened 6:05pm by Chairman James Renninger; two speakers — Patricia Ross (thanked the applicant for addressing neighbor concerns) and Van Royal (reserved comment for the later merits hearing); closed 6:07pm.",
+    "votes": [
+      { "commissioner": "Alexandra Compere", "district": "District 2", "vote": "yes" },
+      { "commissioner": "Betsy Condon", "district": "District 4", "vote": "yes" },
+      { "commissioner": "Kristen Burke", "district": "District 5", "vote": "yes" },
+      { "commissioner": "John Sgromolo", "district": "District 1", "vote": "yes" },
+      { "commissioner": "Jim Renninger", "district": "District 3 (Chairman)", "vote": "yes" }
+    ],
+    "result": "Continuance to January 28, 2025 carried 5-0 (individual vote breakdown not itemized in minutes — recorded here as unanimous per the '5-0' result; per-commissioner rows are an inference from the unanimous count, not individually confirmed). No decision on the merits was made at this meeting.",
+    "amount": null,
+    "status": "verified_fact",
+    "evidenceIds": ["EV-025"],
+    "sourceNote": "Confirmed against official BCC minutes (PrimeGov meetingTemplateId 392, meeting id 81), video 2:01:58-2:07:46. Discovered while spot-checking a PrimeGov text-search hit for 'Recuse' (no recusal language was actually found at this meeting — see CONFLICT_DISCLOSURES.md). The January 28, 2025 follow-up meeting, where these ~76 acres of District 5 industrial rezoning were presumably actually decided, has NOT been pulled — this is the top-priority follow-up for BURKE_DECISION_TIMELINE_2020_2026.md and DISTRICT5_DEVELOPMENT_2020_2026.md."
   }
 ]

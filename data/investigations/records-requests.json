@@ -33,13 +33,13 @@
     "agency": "Clay County Charter Review Commission",
     "request": "Official agenda/minutes for all meetings discussing commissioner compensation, including the exact proposed figure, calculation method, and any recorded statement or vote by Commissioner Burke.",
     "subject": "Reconcile conflicting secondary-source figures ($60,000 vs. 'triple' current pay) and establish whether Burke has taken a public position.",
-    "status": "suggested_not_sent",
+    "status": "partially_fulfilled",
     "responseDeadline": null,
     "fees": null,
-    "filesReceived": [],
+    "filesReceived": ["Secondary-source confirmation of 2026-03-16 CRC vote and final ballot language (Clay Views) — see COMMISSIONER_COMPENSATION_TIMELINE.md"],
     "relatedInvestigation": "burke-d5",
-    "relatedEntities": ["Clay County Charter Review Commission", "Kristen Burke"],
-    "followUpRequired": "Check claycounty.novusagenda.com / PrimeGov archive first — this is likely public without a formal request."
+    "relatedEntities": ["Clay County Charter Review Commission", "Kristen Burke", "Courtney Connor"],
+    "followUpRequired": "Primary CRC minutes/video for the 2026-03-16 vote and three public hearings still need to be pulled from claycounty.novusagenda.com (MeetingID 2161, 2166 located) or PrimeGov — likely public without a formal request."
   },
   {
     "id": "PRR-SUGGESTED-004",
@@ -68,5 +68,33 @@
     "relatedInvestigation": "burke-d5",
     "relatedEntities": ["Clay County BCC", "Lake Asbury"],
     "followUpRequired": "Much of this may be available via the county's public ArcGIS/Property Appraiser tools without a formal request; a formal request is more likely needed for older/paper case files."
+  },
+  {
+    "id": "PRR-SUGGESTED-006",
+    "dateSent": null,
+    "agency": "Clay County Clerk of Court",
+    "request": "All Form 8B Memoranda of Voting Conflict filed by Commissioner Kristen Burke from commencement of service (November 2020) through present.",
+    "subject": "Directly resolve the voting-conflict/ethics workstream after a PrimeGov full-text search produced ~48 unresolved hits for '8B'/'Recuse' that a spot-check suggests are mostly false positives (boilerplate/attachment text, not real disclosure events).",
+    "status": "suggested_not_sent",
+    "responseDeadline": null,
+    "fees": null,
+    "filesReceived": [],
+    "relatedInvestigation": "burke-d5",
+    "relatedEntities": ["Kristen Burke"],
+    "followUpRequired": "Review and approve before sending. Narrow and specific by design to minimize cost/delay, per this pass's instructions."
+  },
+  {
+    "id": "PRR-SUGGESTED-007",
+    "dateSent": null,
+    "agency": "Clay County Board of County Commissioners / Clerk of Court",
+    "request": "Official agenda packet, staff report, and minutes/video for the January 28, 2025 BCC meeting item(s) concerning COMP 24-0016/ZON 24-0019, COMP 24-0017/ZON 24-0023, and COMP 24-0018/ZON 24-0024 (three linked District 5 industrial-rezoning applications, ~76 acres combined, continued from October 22, 2024).",
+    "subject": "Identify the applicant/owner, parcel numbers, and final disposition of the highest-priority open item in DISTRICT5_DEVELOPMENT_2020_2026.md.",
+    "status": "suggested_not_sent",
+    "responseDeadline": null,
+    "fees": null,
+    "filesReceived": [],
+    "relatedInvestigation": "burke-d5",
+    "relatedEntities": ["Clay County BCC", "Kelly Hartwig"],
+    "followUpRequired": "Likely obtainable directly from PrimeGov (as the Oct 22, 2024 and other meetings were) without a formal request — try that first."
   }
 ]

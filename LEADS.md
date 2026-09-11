@@ -14,8 +14,13 @@ This file is the plain-text mirror of `data/investigations/leads.json`
 both together. See also `RECORDS_NEEDED.md`,
 `data/investigations/evidence.json` (the Evidence Ledger),
 `CAMPAIGN_CROSSREF.md`, `CONFLICT_DISCLOSURES.md`, and
-`SANDRIDGE_PROPERTY_CHAIN.md` — new deep-dive reports added in the second
-investigation pass (2026-09-11).
+`SANDRIDGE_PROPERTY_CHAIN.md` from the second pass, plus the third pass's
+(2026-09-11) **2020–2026 pattern-building** reports:
+`BURKE_DECISION_TIMELINE_2020_2026.md`, `PATTERN_MATRIX.md`,
+`BURKE_CAMPAIGN_2024.md`, `CAMPAIGN_REPEAT_DONORS.md`,
+`STORMWATER_MASTER_TIMELINE.md`, `COMMISSIONER_COMPENSATION_TIMELINE.md`,
+`DISTRICT5_DEVELOPMENT_2020_2026.md`, `PUBLIC_SENTIMENT_VOTES.md`,
+`COUNTER_EVIDENCE.md`, and `REPEAT_ENTITIES.md`.
 
 ---
 
@@ -81,35 +86,44 @@ LEAD-sandridge — do not conflate the two.
 
 ## LEAD-burke-chiropractic — Burke business/chiropractic interests
 
-**Status:** unverified_lead · **Priority:** high
+**Status:** conflicting_evidence (major update 2026-09-11) · **Priority:** high
 
 Kristen Burke is a chiropractor and co-owns Fleming Island Family
 Chiropractic with her husband Harold Burke, per the practice's own site
-(opened 2000) — that part is well-established. Separately, there is an
-**unverified** lead that a different, more recently opened clinic may
-involve Burke's brother and/or other family members. No such clinic has
-been identified by name, and no ownership/management link to Burke has been
-found.
+(opened 2000) — well-established. **UPDATE 2026-09-11:** that same
+self-published bio now states the family "opened Oakleaf Family
+Chiropractic in 2009 for her brother and his family" — the first
+primary-source confirmation that Burke has a brother and that a specific
+named business was opened for him. But the Sunbiz corporate record for the
+matching entity name lists officers surnamed **Thompson** (Jeremy E. and
+Natalie), not Burke, and the practice's current public website shows
+unrelated doctors. This is now **conflicting evidence**, not a blank
+slate — see `PATTERN_MATRIX.md` and `COUNTER_EVIDENCE.md`.
 
-- **Evidence available:** Self-published practice bio confirming the 2000
-  Fleming Island Family Chiropractic ownership. Fleming Island Family
-  Chiropractic, Inc. confirmed active in Sunbiz (P00000100632). The practice
-  donated $1,000 + $364.31 in-kind to Burke's own 2020 campaign. Two 2020
-  campaign donors share the Burke surname (Kenneth Burke $100, Laurie Burke
-  $200) — unverified as relatives. A same-named "Burke Chiropractic LLC" was
-  found and **disproven** as connected (registered to James L. and Sarah E.
-  Burke of St. Petersburg, FL — different family, different city, inactive
-  since 2022).
-- **Evidence missing:** No name, address, incorporation record, or ownership
-  documentation for the newer clinic exists — it remains completely
-  unidentified. Fleming Island Family Chiropractic, Inc.'s Sunbiz
-  officer/registered-agent detail not yet pulled (automation friction).
-- **Records needed:** Sunbiz officer detail for Fleming Island Family
-  Chiropractic, Inc.; county/municipal business tax receipt and
-  building-permit records for any newly opened chiropractic clinic; a
-  primary-source list of Burke's immediate family to check Kenneth/Laurie
-  Burke against; confirmation of the brother's identity from a primary
-  source (never assume from a shared surname alone).
+- **Evidence available:** Self-published bio confirming both practices and
+  the brother claim. Oakleaf Family Chiropractic donated $1,000 to Burke's
+  campaign in **both** the 2020 and 2023-2024 cycles (see
+  `CAMPAIGN_REPEAT_DONORS.md`). Fleming Island Family Chiropractic, Inc.
+  confirmed active in Sunbiz (P00000100632); donated $1,000+$364.31 in-kind
+  (2020) and $500 (2023) to Burke's campaigns. Donor "Kenneth Burke" ($100,
+  2020) is very likely Burke's own son (matches her stated child's name),
+  not an unknown relative — narrows, doesn't resolve, the family-name
+  question. "Laurie Burke" ($200, 2020) remains unmatched. A same-named
+  "Burke Chiropractic LLC" was found and **disproven** as connected
+  (registered to James L. and Sarah E. Burke of St. Petersburg, FL —
+  different family, different city, inactive since 2022).
+- **Evidence missing:** Whether "Jeremy Thompson" (officer of the 2010
+  Oakleaf entity) is Burke's brother is **not confirmed** — her maiden name
+  has not been established from a primary source. The second, currently
+  active Oakleaf entity (filed 2012) hasn't had its officers pulled. No
+  permit, zoning, or BCC-action record tied to either business has been
+  found — even taking the family connection at face value, there is
+  currently no county decision for it to conflict with.
+- **Records needed:** Confirmation of Kristen Burke's maiden name from a
+  primary source; Sunbiz officer detail for the active Oakleaf entity
+  (P12000019233) and for Fleming Island Family Chiropractic, Inc.
+  (P00000100632); county/municipal business-tax and permit records for
+  either practice.
 
 ## LEAD-campaign-contributors — Burke campaign contributors
 
@@ -142,7 +156,14 @@ re-election cycle filing has not yet been located.
 
 ## LEAD-stormwater — Stormwater decision-making and Burke's role as Chair
 
-**Status:** documented_connection · **Priority:** medium
+**Status:** partially_verified (adoption vote RESOLVED 2026-09-11) · **Priority:** medium
+
+**Update:** the final ordinance adoption vote (July 28, 2026) is now
+primary-sourced — unanimous 5-0, Sgromolo made both motions, Burke chaired
+a calm single-speaker hearing. This is a materially different picture than
+the contentious 2025 hearings described in secondary press. Full
+chronology in `STORMWATER_MASTER_TIMELINE.md`; counter-evidence discussion
+in `COUNTER_EVIDENCE.md`.
 
 Clay County adopted a stormwater assessment fee (impervious-surface based,
 ~$51-$161/yr for a single-family home) alongside hardship/veteran
@@ -164,7 +185,15 @@ this lead is about the decision-making process and Burke's role.
 
 ## LEAD-compensation — Commissioner compensation increase proposal
 
-**Status:** unverified_lead · **Priority:** medium
+**Status:** partially_verified (ballot language RESOLVED 2026-09-11) · **Priority:** medium
+
+**Update:** the Charter Review Commission approved final ballot language on
+2026-03-16 tying commissioner pay to Florida Statute 145.031 (raising
+$37,000 to over $100,000 — "tripling" it; reconciles the earlier
+conflicting $60,000 figure as a superseded draft). Measure pending for the
+November 2026 ballot. **Burke's involvement remains unestablished** — see
+`COMMISSIONER_COMPENSATION_TIMELINE.md` for the full record and
+`COUNTER_EVIDENCE.md` for why this lead should not be attributed to her.
 
 Commissioner salary has been fixed at $37,000/year since 2008 per the
 charter (already in the main dataset, sourceId `county-charter`). The
