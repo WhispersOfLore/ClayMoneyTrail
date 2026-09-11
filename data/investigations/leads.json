@@ -1,0 +1,115 @@
+[
+  {
+    "id": "LEAD-sandridge",
+    "investigationId": "burke-d5",
+    "title": "Sandridge Road / Lake Asbury / First Coast Expressway land & development activity",
+    "description": "District 5's Lake Asbury area is undergoing rapid change: the county-funded Sandridge Road (CR 739B) widening ($31.6M, per the county's own project page), a 2005 Lake Asbury Master Plan, a 2021 moratorium on new rezoning within the master-plan area, growth pressure tied to the First Coast Expressway, and a 2025 inter-neighborhood \"connectivity\" rezoning-adjacent plan that was withdrawn after public opposition. The lead is whether specific land sales, rezonings, or comprehensive-plan amendments in this corridor show a pattern connecting county infrastructure spending, private landowners/developers, and BCC/District 5 decisions.",
+    "origin": "User-provided investigative lead (mission brief), refined against initial search research 2026-09-11.",
+    "entitiesInvolved": ["Kristen Burke", "Clay County BCC", "Clay County Public Works / Bonded Transportation Program"],
+    "whyItMatters": "Road-widening and rezoning decisions directly affect adjacent land values; if any BCC vote or land-use approval in this corridor coincided with a documented financial or personal relationship, that intersection would be a Voting-Conflict/Ethics lead, not by itself an allegation.",
+    "evidenceAvailable": "Official county project page for the Sandridge Road widening (source: county Bonded Transportation Program). News coverage of the 2025 connectivity-plan withdrawal and general Lake Asbury growth pressure (secondary).",
+    "evidenceMissing": "No parcel-level ownership chain (property appraiser → seller → buyer → LLC) has been built. No specific rezoning/comprehensive-plan-amendment case tied to this corridor has been pulled from BCC agendas/minutes. No confirmation of Burke's specific votes on any Lake Asbury/Sandridge-corridor item.",
+    "recordsNeeded": [
+      "Clay County Property Appraiser parcel records for land adjacent to the Sandridge Road corridor",
+      "BCC agenda/minutes for all Lake Asbury Master Plan amendments and rezonings, 2019-present",
+      "The withdrawn 2025 \"connectivity\" plan application and who submitted it",
+      "Sunbiz records for any LLC that acquired land in this corridor during the widening project"
+    ],
+    "priority": "high",
+    "status": "unverified_lead"
+  },
+  {
+    "id": "LEAD-gustafson",
+    "investigationId": "burke-d5",
+    "title": "Gustafson family / company connections to Clay County land and development matters",
+    "description": "A June 24, 2025 BCC land-use decision denied applicant Cheryl Gustafson's request to rezone 13.86 acres off CR 16A in Green Cove Springs (AG to Rural Residential) 4-1, despite staff, the Planning Commission, and the Springs Citizens Advisory Committee all recommending approval. This is currently the only confirmed Gustafson-related BCC matter found. Whether there is a broader Gustafson family/company footprint in Clay County land or development records, and whether it connects to Burke or District 5 beyond this one case, is unresolved.",
+    "origin": "User-provided investigative lead (mission brief). One matching case found via initial search 2026-09-11.",
+    "entitiesInvolved": ["Cheryl Gustafson", "Clay County BCC", "Clay County Planning Commission", "Springs Citizens Advisory Committee"],
+    "whyItMatters": "Establishes whether \"Gustafson\" is a real, recurring name in Clay County land/development records or a one-off case with no broader pattern.",
+    "evidenceAvailable": "A secondary, AI-aggregated news summary (CitizenPortal.ai) of the June 24, 2025 decision, including applicant name, parcel size/location, requested change, staff recommendation, and a reported 4-1 denial vote.",
+    "evidenceMissing": "The vote-attribution detail in the only source found does not match the verified BCC roster (it names a 'Commissioner John Burke' and a 'Commissioner Magdalen', neither of whom exist on the real board — Sgromolo/D1, Compere/D2, Renninger/D3, Condon/D4, Kristen Burke/D5). This means the specific vote breakdown is UNVERIFIED and should not be relied on until checked against the official meeting record. No confirmation of any other Gustafson-connected parcel, business, or BCC matter exists yet. No confirmation of a personal/business relationship between any Gustafson and Burke.",
+    "recordsNeeded": [
+      "Official June 24, 2025 BCC agenda item, staff report, and minutes/video for the Gustafson land-use case (NovusAgenda/PrimeGov)",
+      "Clay County Property Appraiser records for the CR 16A parcel and any other Gustafson-held parcels",
+      "Sunbiz search for any Gustafson-affiliated business entities",
+      "A general Clay County land-record and BCC-agenda name search for 'Gustafson' beyond this one case"
+    ],
+    "priority": "medium",
+    "status": "unverified_lead",
+    "cthrewEntityIds": ["person_gustafson", "doc_gustafson_denial_20250624"]
+  },
+  {
+    "id": "LEAD-burke-chiropractic",
+    "investigationId": "burke-d5",
+    "title": "Burke chiropractic/business interests — including a reported newer clinic possibly involving a family member",
+    "description": "Kristen Burke is a chiropractor and, per her practice's own site, has co-owned Fleming Island Family Chiropractic with her husband Harold Burke since 2000 — that fact is well-established and not itself in question. Separately, there is an UNVERIFIED lead that a different, more recently opened chiropractic clinic may involve Burke's brother and/or other family members. No such clinic has been identified by name yet, and no ownership/management link to Burke has been found.",
+    "origin": "User-provided investigative lead (mission brief). Existing practice confirmed 2026-09-11; the 'newer clinic / brother' claim not yet substantiated.",
+    "entitiesInvolved": ["Kristen Burke", "Harold Burke", "Fleming Island Family Chiropractic"],
+    "whyItMatters": "If a Burke-family-connected business later sought or received a county permit, zoning approval, or other BCC action, that would be a Voting-Conflict/Ethics lead. Nothing found so far establishes that any such action has occurred.",
+    "evidenceAvailable": "Self-published bio on Fleming Island Family Chiropractic's own website confirming Kristen + Harold Burke opened that practice in 2000.",
+    "evidenceMissing": "No name, address, incorporation record, or ownership documentation exists yet for a separate 'newer clinic' involving a brother or other family member. No permit, zoning, or BCC-action record tied to either business has been checked. No Sunbiz filing has been pulled for either entity.",
+    "recordsNeeded": [
+      "Sunbiz (Florida Division of Corporations) records for Fleming Island Family Chiropractic and any other Burke-family-connected chiropractic business",
+      "Clay County / municipal business tax receipt and building-permit records for any newly opened chiropractic clinic in the area",
+      "Property Appraiser records for the business address(es)",
+      "Confirmation of the brother's identity and any documented business role, from a primary source — not assumed from a shared surname"
+    ],
+    "priority": "high",
+    "status": "unverified_lead",
+    "cthrewEntityIds": ["biz_flemingislandchiro"]
+  },
+  {
+    "id": "LEAD-campaign-contributors",
+    "investigationId": "burke-d5",
+    "title": "Burke campaign contributors cross-referenced against developers, vendors, and BCC applicants",
+    "description": "Clay County Supervisor of Elections hosts Burke's official campaign-finance filings (via a VoterFocus-hosted system). Her 2020 District 5 race shows 14 filed reports with period-level contribution/in-kind/expenditure totals; itemized contributor names, addresses, amounts, dates, and employer/occupation have not yet been pulled from the individual report pages. A 2024 re-election cycle filing (if one exists) has not yet been located.",
+    "origin": "User-provided investigative lead (mission brief). Filing system located and 2020-cycle summary confirmed 2026-09-11.",
+    "entitiesInvolved": ["Kristen Burke campaign committee"],
+    "whyItMatters": "This is the foundational dataset for the entire Voting-Conflict/Ethics layer: it can't be determined whether a developer, vendor, or applicant before the BCC also donated to Burke's campaign without this itemized data.",
+    "evidenceAvailable": "Confirmed the official filing system and the 2020-cycle report list/totals (contributions ranged from $0 to $19,575 per reporting period, Feb-Nov 2020).",
+    "evidenceMissing": "No itemized individual contributions have been extracted yet. No 2024 cycle has been located. No cross-reference against the vendor/contract or land-development datasets has been attempted.",
+    "recordsNeeded": [
+      "Itemized contribution detail for every filed report in Burke's 2020 cycle (and any later cycle) from clayelections.gov / VoterFocus",
+      "Confirmation of whether Burke has filed for a 2024 re-election cycle",
+      "Cross-reference of resulting contributor list against ClayMoneyTrail's vendor/contract data (once populated) and against LEAD-sandridge / LEAD-gustafson applicants"
+    ],
+    "priority": "high",
+    "status": "records_required"
+  },
+  {
+    "id": "LEAD-stormwater",
+    "investigationId": "burke-d5",
+    "title": "Stormwater assessment decision-making and Burke's role as Board Chair",
+    "description": "Clay County adopted a new stormwater assessment fee (based on impervious surface area, roughly $51-$161/year for a single-family home) alongside hardship and disabled-veteran exemptions. News coverage describes Board Chair Kristen Burke chairing a contentious public hearing, described as frustrated with attendees and threatening to eject people for clapping or speaking out of turn. ClayMoneyTrail's existing money-trail dataset already carries the official stormwater revenue/cost estimates (sourceId: stormwater-impact) — this lead is about the decision-making process and Burke's specific role, not the dollar figures, which are handled in the main money-trail dataset.",
+    "origin": "User-provided investigative lead (mission brief). Confirmed as a real, documented controversy 2026-09-11.",
+    "entitiesInvolved": ["Kristen Burke", "Clay County BCC"],
+    "whyItMatters": "Establishes the factual public record of how the assessment was adopted and how the Board Chair conducted the process, distinct from any claim about the fee's legality or fairness.",
+    "evidenceAvailable": "Multiple secondary news accounts (Action News Jax, WOKV) of hearings, exemption votes, and Burke's conduct as chair. Official county business-impact estimate already in ClayMoneyTrail's money dataset.",
+    "evidenceMissing": "No official meeting minutes/video timestamp has been pulled to independently confirm the specific conduct described by news outlets. No full vote history (who voted for/against the assessment and each exemption) has been compiled. No confirmation of where stormwater revenue is actually being spent (vs. budgeted) yet exists.",
+    "recordsNeeded": [
+      "Official BCC meeting video/minutes for the stormwater assessment adoption vote and the hardship/veteran exemption vote, with timestamps",
+      "Full commissioner-by-commissioner vote record for each stormwater-related agenda item",
+      "Actual (not budgeted) stormwater collections and expenditures once available"
+    ],
+    "priority": "medium",
+    "status": "documented_connection"
+  },
+  {
+    "id": "LEAD-compensation",
+    "investigationId": "burke-d5",
+    "title": "Commissioner compensation increase proposal",
+    "description": "Clay County commissioner salary has been fixed at $37,000/year since 2008 per the Home Rule Charter (already documented in ClayMoneyTrail's main dataset, sourceId: county-charter). The Charter Review Commission — a separate advisory body from the BCC itself — has reportedly discussed raising it, with different secondary sources citing figures from roughly $60,000 up to 'triple' the current salary, and reporting Charter Review Chair Courtney Connor opposed. Whether Burke has personally advocated for or against any specific figure has not been established.",
+    "origin": "User-provided investigative lead (mission brief). Proposal's existence confirmed 2026-09-11; Burke's position not yet established.",
+    "entitiesInvolved": ["Clay County Charter Review Commission", "Kristen Burke", "Courtney Connor"],
+    "whyItMatters": "The mission brief explicitly warns not to attribute this proposal to Burke unless records establish that — this lead exists specifically to check that attribution, not assume it.",
+    "evidenceAvailable": "Secondary news coverage (Clay Views, Action News Jax) describing the Charter Review Commission's discussion and a range of proposed figures.",
+    "evidenceMissing": "No primary Charter Review Commission agenda/minutes has been pulled. No statement or vote by Burke specifically on this proposal has been found. The exact proposed figure is inconsistent across secondary sources and needs reconciling against the primary record.",
+    "recordsNeeded": [
+      "Official Charter Review Commission agenda/minutes for the compensation discussion, with the exact proposed figure and calculation method",
+      "Confirmation of whether this requires a ballot measure and its current status",
+      "Any recorded statement or vote by Burke specifically on this proposal"
+    ],
+    "priority": "medium",
+    "status": "unverified_lead"
+  }
+]

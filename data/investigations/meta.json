@@ -1,0 +1,11 @@
+[
+  {
+    "id": "burke-d5",
+    "subject": "Commissioner Kristen Burke — District 5",
+    "scope": "Historical review of BCC actions, land/development decisions, business interests, campaign finance, contracts, and voting-conflict disclosures involving Burke and/or District 5 (Green Cove Springs, Lake Asbury, Penney Farms, Virginia Village). Not limited to any single topic; expands as records are confirmed.",
+    "startDate": "2026-09-11",
+    "status": "Active — evidence gathering. No conclusions reached. See LEADS.md and data/investigations/evidence.json.",
+    "disclaimer": "This is an evidence-gathering investigation, not an accusation. It does not begin from the assumption that Commissioner Burke committed any violation. Every claim below carries an explicit status (verified fact, unverified lead, allegation, possible connection, documented connection, disproven claim, or records required) and a source. A documented connection or contribution is not evidence of wrongdoing by itself.",
+    "cthrewRootEntityId": "person_burke"
+  }
+]

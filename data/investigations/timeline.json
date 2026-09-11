@@ -1,0 +1,21 @@
+[
+  {
+    "id": "TL-2025-06-24-gustafson",
+    "investigationId": "burke-d5",
+    "date": "2025-06-24",
+    "title": "BCC denies Gustafson land-use change, 13.86 acres off CR 16A, Green Cove Springs (District 5)",
+    "agendaItem": "Land-use/zoning change: Agriculture (AG) to Rural Residential designation / AG to AR zoning",
+    "motion": "Reported motion to deny (moving commissioner's identity NOT reliably established — see status note)",
+    "parcel": "13.86 acres, County Road 16A, Green Cove Springs",
+    "location": "Green Cove Springs, District 5",
+    "applicant": "Cheryl Gustafson (represented by agent Danielle Kitchens, per secondary source)",
+    "staffRecommendation": "Approval — cited location within the urban service area and proximity to schools/emergency services",
+    "publicComment": "Not detailed in the source found; applicant's agent reportedly stated the property had been unsuccessfully marketed for single-home sale and that potential buyers wanted higher density than the owner sought.",
+    "votes": [],
+    "result": "Denied, reported 4-1 (individual commissioner vote breakdown UNVERIFIED — see status note)",
+    "amount": null,
+    "status": "unverified_lead",
+    "evidenceIds": ["EV-004"],
+    "sourceNote": "Built entirely from a single AI-aggregated secondary source (CitizenPortal.ai) whose commissioner-name attribution does not match the real BCC roster (it names a nonexistent 'Commissioner John Burke' and 'Commissioner Magdalen'). This timeline entry preserves the source's claims but the `votes` array is intentionally left empty rather than guessing which real commissioners cast which vote. RECORDS REQUIRED: the official June 24, 2025 BCC agenda packet, staff report, and minutes/video (NovusAgenda or PrimeGov) to confirm or correct every field above, including whether Kristen Burke participated in this vote at all."
+  }
+]
