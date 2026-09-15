@@ -496,18 +496,18 @@ export default function Home() {
             </StandardPage>
           )}
 
-          {section === 'Investigations' && investigations[0] && (
+          {section === 'Investigations' && investigations.length > 0 && (
             <StandardPage
-              kicker="INVESTIGATION 001"
-              title={investigations[0].subject}
-              description="Evidence-gathering only. Every claim below carries an explicit status — verified fact, documented connection, possible connection, unverified lead, records required, allegation, or disproven claim — and links to its source. See LEADS.md and RECORDS_NEEDED.md in the project root for the plain-text version of this work."
+              kicker="COMMISSIONER INVESTIGATIONS"
+              title="Clay County Board of County Commissioners, District 1–5"
+              description="Evidence-gathering only. Every claim below carries an explicit status — verified fact, documented connection, possible connection, unverified lead, records required, allegation, or disproven claim — and links to its source. Select a district below to see that commissioner's own profile; each district is researched and evidenced independently of the others."
             >
               <InvestigationsPanel
-                meta={investigations[0]}
-                leads={leads.filter((l) => l.investigationId === investigations[0].id)}
-                evidence={evidenceLedger.filter((e) => e.investigationId === investigations[0].id)}
-                timeline={timeline.filter((t) => t.investigationId === investigations[0].id)}
-                requests={recordsRequests.filter((r) => r.relatedInvestigation === investigations[0].id)}
+                investigations={investigations}
+                leads={leads}
+                evidence={evidenceLedger}
+                timeline={timeline}
+                requests={recordsRequests}
               />
             </StandardPage>
           )}

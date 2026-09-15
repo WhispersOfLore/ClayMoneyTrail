@@ -2,10 +2,52 @@
   {
     "id": "burke-d5",
     "subject": "Commissioner Kristen Burke — District 5",
+    "district": "5",
+    "commissioner": "Kristen Burke",
     "scope": "Historical review of BCC actions, land/development decisions, business interests, campaign finance, contracts, and voting-conflict disclosures involving Burke and/or District 5 (Green Cove Springs, Lake Asbury, Penney Farms, Virginia Village). Not limited to any single topic; expands as records are confirmed.",
     "startDate": "2026-09-11",
     "status": "Active — evidence gathering. No conclusions reached. See LEADS.md and data/investigations/evidence.json.",
     "disclaimer": "This is an evidence-gathering investigation, not an accusation. It does not begin from the assumption that Commissioner Burke committed any violation. Every claim below carries an explicit status (verified fact, unverified lead, allegation, possible connection, documented connection, disproven claim, or records required) and a source. A documented connection or contribution is not evidence of wrongdoing by itself.",
     "cthrewRootEntityId": "person_burke"
+  },
+  {
+    "id": "sgromolo-d1",
+    "subject": "Commissioner John Sgromolo — District 1",
+    "district": "1",
+    "commissioner": "John Sgromolo",
+    "scope": "Independent evidence-gathering review of BCC actions, campaign finance, employment/business background, and voting record involving Sgromolo and/or District 1 (Oakleaf/Branan Field area), covering his tenure since he was sworn in November 2024. Built from scratch — no facts, relationships, or conclusions carried over from any other commissioner's investigation. Expands as records are confirmed.",
+    "startDate": "2026-09-15",
+    "status": "Active — evidence gathering. No conclusions reached.",
+    "disclaimer": "This is an evidence-gathering profile, not an accusation. It does not begin from the assumption that Commissioner Sgromolo committed any violation. Every claim below carries an explicit status (verified fact, partially verified, unverified lead, allegation, possible connection, documented connection, conflicting evidence, disproven claim, or records required) and a source. A documented connection or contribution is not evidence of wrongdoing by itself."
+  },
+  {
+    "id": "compere-d2",
+    "subject": "Commissioner Alexandra Compere — District 2",
+    "district": "2",
+    "commissioner": "Alexandra Compere",
+    "scope": "Independent evidence-gathering review of BCC actions, campaign finance, employment/business background, and voting record involving Compere and/or District 2 (Oakleaf-area, northern Clay County), covering her full term since November 2022. Built from scratch — no facts, relationships, or conclusions carried over from any other commissioner's investigation. Expands as records are confirmed.",
+    "startDate": "2026-09-15",
+    "status": "Active — evidence gathering. No conclusions reached. Compere is reported by local news (unconfirmed by any statement from her) as not seeking re-election in 2026, which would make District 2 an open seat.",
+    "disclaimer": "This is an evidence-gathering profile, not an accusation. It does not begin from the assumption that Commissioner Compere committed any violation. Every claim below carries an explicit status (verified fact, partially verified, unverified lead, allegation, possible connection, documented connection, conflicting evidence, disproven claim, or records required) and a source. A documented connection or contribution is not evidence of wrongdoing by itself."
+  },
+  {
+    "id": "renninger-d3",
+    "subject": "Commissioner Jim Renninger — District 3",
+    "district": "3",
+    "commissioner": "Jim Renninger",
+    "scope": "Independent evidence-gathering review of BCC actions, campaign finance, employment/business background, and voting record involving Renninger and/or District 3 (Orange Park/Fleming Island area), covering his tenure since November 2020. Built from scratch — no facts, relationships, or conclusions carried over from any other commissioner's investigation. Expands as records are confirmed.",
+    "startDate": "2026-09-15",
+    "status": "Active — evidence gathering. No conclusions reached.",
+    "disclaimer": "This is an evidence-gathering profile, not an accusation. It does not begin from the assumption that Commissioner Renninger committed any violation. Every claim below carries an explicit status (verified fact, partially verified, unverified lead, allegation, possible connection, documented connection, conflicting evidence, disproven claim, or records required) and a source. A documented connection or contribution is not evidence of wrongdoing by itself."
+  },
+  {
+    "id": "condon-d4",
+    "subject": "Commissioner Betsy Condon — District 4",
+    "district": "4",
+    "commissioner": "Betsy Condon",
+    "scope": "Independent evidence-gathering review of BCC actions, campaign finance, employment/business background, and voting record involving Condon and/or District 4 (Keystone Heights area), covering her service since November 2020 (first elected to fill a vacancy; reelected 2022; unopposed for 2026). Built from scratch — no facts, relationships, or conclusions carried over from any other commissioner's investigation. Expands as records are confirmed.",
+    "startDate": "2026-09-15",
+    "status": "Active — evidence gathering. No conclusions reached.",
+    "disclaimer": "This is an evidence-gathering profile, not an accusation. It does not begin from the assumption that Commissioner Condon committed any violation. Every claim below carries an explicit status (verified fact, partially verified, unverified lead, allegation, possible connection, documented connection, conflicting evidence, disproven claim, or records required) and a source. A documented connection or contribution is not evidence of wrongdoing by itself."
   }
 ]

@@ -63,6 +63,11 @@ export interface LeadItem {
   recordsNeeded: string[];
   priority: LeadPriority;
   status: EvidenceStatus;
+  // Groups leads into topic tabs in the Investigations UI (e.g. "Land &
+  // Development", "Campaign Finance"). Optional and free-form so each
+  // investigation can use topic names that fit its own subject matter;
+  // leads without a topic only show up in the general "Leads" tab.
+  topic?: string;
   cthrewEntityIds?: string[];
 }
 
@@ -130,6 +135,11 @@ export interface RecordsRequestItem {
 export interface InvestigationMeta {
   id: string;
   subject: string;
+  // District number as a plain string (e.g. "1") and the commissioner's
+  // plain name, used only for the district-selector UI label — the
+  // narrative subject/scope/disclaimer fields remain the source of truth.
+  district?: string;
+  commissioner?: string;
   scope: string;
   startDate: string;
   status: string;

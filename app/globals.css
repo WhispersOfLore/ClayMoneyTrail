@@ -639,6 +639,46 @@ td small {
   flex-direction: column;
   gap: 18px;
 }
+.inv-district-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.inv-district-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  min-width: 130px;
+}
+.inv-district-tab-district {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7c8a91;
+  font-weight: 650;
+}
+.inv-district-tab-name {
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 600;
+}
+.inv-district-tab-active {
+  background: var(--nav);
+  border-color: var(--nav);
+}
+.inv-district-tab-active .inv-district-tab-district,
+.inv-district-tab-active .inv-district-tab-name {
+  color: #fff;
+}
+.inv-subject-heading {
+  margin: 0;
+}
 .inv-tabs {
   display: flex;
   flex-wrap: wrap;

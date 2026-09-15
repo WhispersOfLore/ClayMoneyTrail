@@ -17,6 +17,7 @@
     ],
     "priority": "high",
     "status": "unverified_lead",
+    "topic": "Land & Development",
     "cthrewEntityIds": ["doc_sandridge_road_project"]
   },
   {
@@ -36,6 +37,7 @@
     ],
     "priority": "medium",
     "status": "documented_connection",
+    "topic": "Land & Development",
     "cthrewEntityIds": ["person_gustafson", "doc_gustafson_denial_20250624"]
   },
   {
@@ -56,6 +58,7 @@
     ],
     "priority": "high",
     "status": "conflicting_evidence",
+    "topic": "Businesses",
     "cthrewEntityIds": ["biz_flemingislandchiro"]
   },
   {
@@ -73,7 +76,8 @@
       "Sunbiz officer detail for the remaining unresolved business donors (Lin-Mor-5 LLC, RIG Holdings, The Vector Companies Inc, and others)"
     ],
     "priority": "high",
-    "status": "partially_verified"
+    "status": "partially_verified",
+    "topic": "Campaign Money"
   },
   {
     "id": "LEAD-stormwater",
@@ -91,7 +95,8 @@
       "Actual (not budgeted) stormwater collections and expenditures once available (not yet possible — fee effective 2026-10-01)"
     ],
     "priority": "medium",
-    "status": "partially_verified"
+    "status": "partially_verified",
+    "topic": "Stormwater"
   },
   {
     "id": "LEAD-compensation",
@@ -109,6 +114,304 @@
       "Any recorded statement by Burke specifically on this proposal, if one exists"
     ],
     "priority": "medium",
-    "status": "partially_verified"
+    "status": "partially_verified",
+    "topic": "Compensation"
+  },
+  {
+    "id": "LEAD-D1-rezonings",
+    "investigationId": "sgromolo-d1",
+    "title": "District 1 rezoning approvals — Winter Investments LLC and Rogers Towers/Gaver applications",
+    "description": "On June 23, 2026, Vice-Chairman John Sgromolo personally moved approval of two separate District 1 land-use items along College Drive (OakLeaf/Branan-Ridge area): a 0.50-acre FLUM/PUD/rezoning change for applicant David Winter (Winter Investments, LLC), and a 2.19-acre FLUM/rezoning change represented by agent Courtney Gaver of Rogers Towers, P.A. Both carried 5-0 with no recorded public opposition and staff recommending approval.",
+    "origin": "Independent District 1 research pass, 2026-09-15, using directly-downloaded primary BCC minutes (PDF text extraction) from clay.primegov.com.",
+    "entitiesInvolved": ["John Sgromolo", "David Winter", "Winter Investments, LLC", "Courtney Gaver", "Rogers Towers, P.A.", "Jim Renninger", "Clay County BCC"],
+    "whyItMatters": "Establishes Sgromolo's own baseline land-use voting record in his district — both items were staff-recommended, unopposed, and unanimous. Recorded neutrally as his normal exercise of a commissioner's role in approving development in his own district, not as anything irregular.",
+    "evidenceAvailable": "Full primary-source minutes text for both items (motion, second, vote, applicant/agent name, staff recommendation) obtained via direct PDF download and extraction from clay.primegov.com.",
+    "evidenceMissing": "Whether David Winter, Winter Investments LLC, or Rogers Towers/Courtney Gaver (or any client they represent) has ever contributed to Sgromolo's campaign — his itemized 2024 contributor list was only partially pulled (see LEAD-D1-campaign-finance), so this cross-reference is incomplete, not negative.",
+    "recordsNeeded": [
+      "Full itemized 2024 campaign-finance reports for Sgromolo (Jan-Sept 2024 portion not yet pulled)",
+      "Sunbiz officer/registered-agent detail for Winter Investments, LLC"
+    ],
+    "priority": "low",
+    "status": "verified_fact",
+    "topic": "Land & Development"
+  },
+  {
+    "id": "LEAD-D1-stormwater-datacenter",
+    "investigationId": "sgromolo-d1",
+    "title": "Stormwater ordinance and data-center moratorium — Sgromolo's role as Vice-Chairman and motion-maker",
+    "description": "As Vice-Chairman, Sgromolo made both motions (ordinance and resolution) to adopt the countywide Stormwater Utility and Assessment Ordinance on July 28, 2026 (unanimous 5-0, no opposition speakers), and seconded Commissioner Betsy Condon's motion to adopt a one-year data-center development moratorium on June 23, 2026 (carried 4-1, Compere dissenting). Secondary-source reporting also describes a later, more contested stormwater/veteran-exemption vote around August 25-26, 2026 (reported 3-2, Sgromolo among the majority) which could not yet be confirmed against primary minutes because that meeting's minutes are not yet published on the county's PrimeGov portal.",
+    "origin": "Independent District 1 research pass, 2026-09-15.",
+    "entitiesInvolved": ["John Sgromolo", "Betsy Condon", "Jim Renninger", "Alexandra Compere", "Kristen Burke", "Clay County BCC"],
+    "whyItMatters": "These are among the most consequential, highest-public-attention votes of the current Board's term (a new recurring county-wide fee, and a moratorium on a fast-growing industry). Sgromolo's motion-making role on both, and his reported vote on the later contested stormwater/veteran vote, are directly relevant to the project's voting-history goals.",
+    "evidenceAvailable": "Primary-source minutes (directly downloaded and read) for the July 28 and June 23, 2026 votes. Secondary-source reporting (Action News Jax, Clay Views, WOKV, Florida Politics) for the later, still-unconfirmed August 2026 vote.",
+    "evidenceMissing": "Primary BCC minutes for the reported August 25-26, 2026 stormwater/veteran-exemption vote — not yet published by the county as of this research date. Full primary text of the June 9, 2026 first data-center hearing (the PDF's font could not be machine-extracted).",
+    "recordsNeeded": [
+      "August 25-26, 2026 BCC meeting minutes once published on clay.primegov.com",
+      "September 8-9, 2026 BCC meeting minutes (hardship/veteran exemption follow-up)",
+      "OCR of the June 9, 2026 first data-center-hearing minutes PDF"
+    ],
+    "priority": "high",
+    "status": "partially_verified",
+    "topic": "Stormwater"
+  },
+  {
+    "id": "LEAD-D1-campaign-finance",
+    "investigationId": "sgromolo-d1",
+    "title": "Sgromolo 2023-24 campaign contributors — PACs, businesses, and a lobbying-firm partner",
+    "description": "Sgromolo ran unopposed in 2024 and raised $18,434.95 plus $41.20 in-kind. Only the 2023 portion (~$11,049 of the total) has been itemized so far, including three $1,000 PAC contributions, four business contributions of $500+ (including a railroad company and a government-consulting firm), and a $500 contribution from a partner at The Fiorentino Group, a Tallahassee government-relations/lobbying firm.",
+    "origin": "Independent District 1 research pass, 2026-09-15, via the Clay County Supervisor of Elections' VoterFocus campaign-finance system.",
+    "entitiesInvolved": ["John Sgromolo campaign committee", "Joe Mobley", "The Fiorentino Group", "WJ Sapp & Son, Inc.", "Cruz & Company"],
+    "whyItMatters": "Foundational dataset for any future donor-to-vote cross-reference. No donor identified so far matches any applicant/agent in the District 1 rezoning votes reviewed (LEAD-D1-rezonings), but the 2024 portion of his itemized contributions has not yet been pulled, so this is an incomplete check, not a clean result.",
+    "evidenceAvailable": "Full itemized detail for the 2023 reporting periods (2023-08 through 2023-11), pulled directly from the county campaign-finance portal.",
+    "evidenceMissing": "Itemized donor detail for the January-September 2024 reporting periods (roughly $7,385 of the $18,435 total raised).",
+    "recordsNeeded": [
+      "Itemized 2024 campaign-finance reports (Q1/Q2/P1/TR) via the Clay County Supervisor of Elections VoterFocus portal"
+    ],
+    "priority": "medium",
+    "status": "partially_verified",
+    "topic": "Campaign Money"
+  },
+  {
+    "id": "LEAD-D1-recall-effort",
+    "investigationId": "sgromolo-d1",
+    "title": "September 2026 citizen recall effort targeting the full Board of County Commissioners",
+    "description": "Following the stormwater-fee votes, a citizen group held a September 5, 2026 meeting in Middleburg and formed a committee to pursue Florida-law recall petitions against all five sitting commissioners, citing the stormwater assessment, road-construction delays, and the disabled-veteran exemption reduction. No recall petition had been confirmed as formally filed with the Supervisor of Elections as of this research date, and no allegation specific to Sgromolo individually (as distinct from the Board as a whole) was found.",
+    "origin": "Independent District 1 research pass, 2026-09-15, via secondary local news coverage.",
+    "entitiesInvolved": ["John Sgromolo", "Kristen Burke", "Jim Renninger", "Betsy Condon", "Alexandra Compere", "Clay County BCC"],
+    "whyItMatters": "A real, organized public accountability effort naming the sitting Board is directly relevant to a civic-transparency project, but it is a general Board-wide grievance, not (so far) an individual allegation against Sgromolo — reported neutrally as such.",
+    "evidenceAvailable": "One local-news (Clay Views/Substack) account of the organizing meeting and its stated grievances.",
+    "evidenceMissing": "Confirmation of whether any recall petition has actually been filed with the Clay County Supervisor of Elections, its specific legal grounds, and signature-count status.",
+    "recordsNeeded": [
+      "Direct confirmation from the Clay County Supervisor of Elections on recall-petition filing status"
+    ],
+    "priority": "low",
+    "status": "unverified_lead",
+    "topic": "Elections"
+  },
+  {
+    "id": "LEAD-D2-fcc-waste-contract",
+    "investigationId": "compere-d2",
+    "title": "FCC Environmental Services solid-waste contract — Compere's initial dissent, then final approval",
+    "description": "In an initial January 2024 vote on which of six solid-waste-service scopes to pursue, Compere was reportedly in the minority (3-2) opposing a scope that dropped curbside recycling. At the February 13, 2024 final contract-award vote, she voted with the 4-1 majority to finalize a multi-year contract with FCC Environmental Services (Commissioner Condon dissenting), a contract separately reported by the vendor's own press materials as worth up to $420 million over its full term.",
+    "origin": "Independent District 2 research pass, 2026-09-15, via secondary news coverage (Clay Today title/snippet, News4Jax) and confirmation of meeting dates via clay.primegov.com's meeting-list API.",
+    "entitiesInvolved": ["Alexandra Compere", "Betsy Condon", "FCC Environmental Services", "Clay County BCC"],
+    "whyItMatters": "A major, multi-year county vendor contract is exactly the kind of consequential vote the project prioritizes. Compere's position shifted between the scope-selection vote and the final award vote, which is worth understanding on its own terms rather than assuming inconsistency.",
+    "evidenceAvailable": "Consistent secondary-source reporting on both vote dates and tallies; meeting dates independently confirmed to exist via the county's own PrimeGov meeting-list API.",
+    "evidenceMissing": "The primary BCC minutes PDFs for both meetings exceeded the size limit for automated retrieval this pass, so the vote tallies rest on secondary reporting, not a directly-read primary transcript. The $420 million figure comes from the vendor's own press release, a self-interested source.",
+    "recordsNeeded": [
+      "Primary BCC minutes for the January 9 or 23, 2024 and February 13, 2024 meetings (manual download, given automated size limits)",
+      "The actual contract value from the county's own procurement records, independent of the vendor's press release"
+    ],
+    "priority": "medium",
+    "status": "partially_verified",
+    "topic": "Contracts & Vendors"
+  },
+  {
+    "id": "LEAD-D2-datacenter-moratorium",
+    "investigationId": "compere-d2",
+    "title": "Data-center moratorium — Compere as the lone dissenting vote",
+    "description": "Compere was the sole 'no' vote (4-1) on both the first public hearing (June 9, 2026) and final adoption (June 23, 2026) of a one-year moratorium on new data-center land-use applications, citing the county's reported budget deficit and potential tax revenue from data centers, and stating the county 'already has a data center' without naming it.",
+    "origin": "Independent District 2 research pass, 2026-09-15, via directly-read secondary reporting (Clay News & Views, Action News Jax).",
+    "entitiesInvolved": ["Alexandra Compere", "Betsy Condon", "John Sgromolo", "Jim Renninger", "Kristen Burke", "Clay County BCC"],
+    "whyItMatters": "A clearly documented, on-the-record policy disagreement between one commissioner and the rest of the Board on a high-public-attention issue. Recorded neutrally as a real, sourced difference of position — not as wrongdoing.",
+    "evidenceAvailable": "Direct reporting from Clay News & Views (fetched in full) describing her stated rationale and the public reaction.",
+    "evidenceMissing": "Primary BCC minutes for the June 23, 2026 final vote were not retrievable at full size this pass. The specific existing 'data center' she referenced was not identified.",
+    "recordsNeeded": [
+      "Primary minutes for the June 9 and June 23, 2026 hearings",
+      "Identification of the existing Clay County data center Compere referenced"
+    ],
+    "priority": "medium",
+    "status": "partially_verified",
+    "topic": "Land & Development"
+  },
+  {
+    "id": "LEAD-D2-business-interests",
+    "investigationId": "compere-d2",
+    "title": "Compere Law Offices LLC and a related transportation/interpretation entity",
+    "description": "Compere is a practicing attorney and sole-practitioner principal of Compere Law Offices, LLC, whose Sunbiz principal address (2307 Club Lake Drive, Orange Park) matches her own campaign-finance filing address. A separately-named entity, Compere Interpretation and Transportation Services Inc., also surfaced at the same address in a search snippet, but her specific role there (officer vs. unrelated) was not confirmed.",
+    "origin": "Independent District 2 research pass, 2026-09-15, via Sunbiz search-engine snippets (direct fetch to search.sunbiz.org was blocked).",
+    "entitiesInvolved": ["Alexandra Compere", "Compere Law Offices, LLC", "Compere Interpretation and Transportation Services Inc."],
+    "whyItMatters": "A commissioner's law practice is unremarkable on its own; recorded here only to establish the address/entity overlap plainly and to flag the unconfirmed second entity for direct follow-up rather than assuming a role.",
+    "evidenceAvailable": "Search-engine-indexed Sunbiz snippet showing the law-practice LLC's address matching her campaign filing address.",
+    "evidenceMissing": "A directly-loaded Sunbiz detail page (not just a snippet) for both entities, to confirm exact officer roles, filing dates, and status.",
+    "recordsNeeded": [
+      "Sunbiz detail pages for Compere Law Offices, LLC and Compere Interpretation and Transportation Services Inc."
+    ],
+    "priority": "low",
+    "status": "unverified_lead",
+    "topic": "Businesses"
+  },
+  {
+    "id": "LEAD-D2-campaign-finance",
+    "investigationId": "compere-d2",
+    "title": "Compere 2022 campaign contributors — PACs and business donors",
+    "description": "Compere's 2022 campaign raised approximately $51,942 across the full cycle. Only the May 2022 (M5) report has been fully itemized so far, showing two $1,000 PAC contributions and a $500 contribution from a donor described as a 'businessman' in one search-indexed source as possibly connected to the Clay County Economic Development Corporation (unconfirmed as the same individual).",
+    "origin": "Independent District 2 research pass, 2026-09-15, via the Clay County Supervisor of Elections' VoterFocus campaign-finance system.",
+    "entitiesInvolved": ["Alexandra Compere campaign committee"],
+    "whyItMatters": "Foundational dataset for any donor-to-vote cross-reference. No donor identified so far matches any applicant/agent in the votes reviewed in LEAD-D2-fcc-waste-contract or LEAD-D2-datacenter-moratorium, but only one of roughly 25 filed reports has been itemized, so this is a partial check, not a clean result.",
+    "evidenceAvailable": "Full itemized detail for the May 2022 (M5) report.",
+    "evidenceMissing": "Itemized donor detail for the remaining ~24 filed 2022 reports (P1-P7, G1-G6, TR, and other monthly reports).",
+    "recordsNeeded": [
+      "Full itemized 2022 campaign-finance reports via the Clay County Supervisor of Elections VoterFocus portal"
+    ],
+    "priority": "medium",
+    "status": "partially_verified",
+    "topic": "Campaign Money"
+  },
+  {
+    "id": "LEAD-D2-reelection-status",
+    "investigationId": "compere-d2",
+    "title": "Compere's reported non-candidacy for re-election in 2026",
+    "description": "Multiple local news outlets report Compere has not filed for re-election in 2026, making District 2 an open seat (candidates Leroy Edwards and Lolita Smoak have filed). One outlet frames the reasons as unconfirmed rumor involving her law practice and unspecified 'internal political dynamics.' No public statement from Compere herself confirming or explaining a decision not to run was found.",
+    "origin": "Independent District 2 research pass, 2026-09-15, via secondary news coverage.",
+    "entitiesInvolved": ["Alexandra Compere", "Leroy Edwards", "Lolita Smoak"],
+    "whyItMatters": "Directly relevant to the project's goal of tracking who currently holds and is seeking each seat; the reasons behind any non-candidacy are explicitly unconfirmed and should not be treated as established.",
+    "evidenceAvailable": "Consistent reporting across two local outlets that she has not filed for re-election.",
+    "evidenceMissing": "Any direct statement from Compere confirming or explaining her decision.",
+    "recordsNeeded": [
+      "A direct statement from Compere or confirmation from the Clay County Supervisor of Elections' candidate-qualifying records"
+    ],
+    "priority": "low",
+    "status": "unverified_lead",
+    "topic": "Elections"
+  },
+  {
+    "id": "LEAD-D3-shedd-road",
+    "investigationId": "renninger-d3",
+    "title": "Shedd Road (Middleburg) rezoning continuance denial — Renninger's dissent",
+    "description": "The BCC voted 3-2 to deny a developer's (reported as St. Augustine-based Matthews DCCM) request for a continuance on a proposed 62-home Shedd Road subdivision rezoning, with Renninger and Compere dissenting (i.e. wanting to grant the continuance). The applicant then withdrew the rezoning application rather than proceed. The parcel does not appear to sit within Renninger's own District 3.",
+    "origin": "Independent District 3 research pass, 2026-09-15, via secondary news coverage (Clay Today title/snippet; direct fetch blocked).",
+    "entitiesInvolved": ["Jim Renninger", "Alexandra Compere", "Matthews DCCM", "Clay County BCC"],
+    "whyItMatters": "A denied continuance leading to a withdrawn application is a consequential, board-wide land-use outcome Renninger took a position on, even though the parcel is outside his own district.",
+    "evidenceAvailable": "A secondary-source (Clay Today) paraphrase of the vote and outcome, via search snippet only — the article itself returned HTTP 403 to direct fetch.",
+    "evidenceMissing": "Primary BCC minutes for this vote (date, exact motion language, and full vote breakdown) have not been directly read.",
+    "recordsNeeded": [
+      "Primary BCC minutes for the Shedd Road rezoning continuance vote (approx. January 2024)"
+    ],
+    "priority": "low",
+    "status": "partially_verified",
+    "topic": "Land & Development"
+  },
+  {
+    "id": "LEAD-D3-stormwater-veteran-remarks",
+    "investigationId": "renninger-d3",
+    "title": "Stormwater/veteran-exemption vote and Renninger's disputed remarks on VA disability",
+    "description": "Renninger voted with the reported 3-2 majority (with Burke and Sgromolo) to adopt a stormwater assessment fee and reduce the disabled-veteran solid-waste exemption from 100% to 50% around August 26, 2026. He reportedly defended the exemption cut with an anecdote about a veteran with a 100% VA disability rating who he said also earned roughly $400,000/year as a FedEx pilot, implying possible system abuse. The reporting outlet noted that a 'permanent and total' VA disability rating carries no income restriction and that VA disability-fraud convictions are rare, and stated Renninger did not respond to a request for comment.",
+    "origin": "Independent District 3 research pass, 2026-09-15, via secondary news coverage (Clay News & Views).",
+    "entitiesInvolved": ["Jim Renninger", "Kristen Burke", "John Sgromolo", "Betsy Condon", "Alexandra Compere", "Clay County BCC"],
+    "whyItMatters": "A specific, quoted public statement by a commissioner defending a consequential vote, with a news outlet directly disputing its factual premise, is exactly the kind of documented public matter the project should track — labeled carefully as a disputed characterization, not an adjudicated finding.",
+    "evidenceAvailable": "Direct reporting from Clay News & Views describing the vote, the quote, and the outlet's factual rebuttal.",
+    "evidenceMissing": "Primary BCC minutes/video for this meeting are not yet published by the county, so the exact quote and vote tally rest on one secondary source.",
+    "recordsNeeded": [
+      "Primary BCC minutes/video for the August 25-26, 2026 meeting once published"
+    ],
+    "priority": "high",
+    "status": "partially_verified",
+    "topic": "Stormwater"
+  },
+  {
+    "id": "LEAD-D3-family-business",
+    "investigationId": "renninger-d3",
+    "title": "Grant Development & Management LLC/Inc. — Renninger family business entities",
+    "description": "Renninger and his spouse, Phyllis Renninger, are co-officers of two Sunbiz-registered entities at their Orange Park home address: Grant Development & Management, LLC (active) and an earlier, now-dissolved Grant Development & Management, Inc. No evidence was found connecting either entity to any Clay County contract, rezoning application, or vendor relationship.",
+    "origin": "Independent District 3 research pass, 2026-09-15, via Sunbiz-data mirror sites (direct sunbiz.org fetch was blocked).",
+    "entitiesInvolved": ["Jim Renninger", "Phyllis Renninger", "Grant Development & Management, LLC", "Grant Development & Management, Inc."],
+    "whyItMatters": "A commissioner and spouse jointly owning a business is unremarkable on its own; recorded here only to establish the entities exist and to flag the open question of whether either has ever done business with or appeared before the county.",
+    "evidenceAvailable": "Direct fetch of Sunbiz-data mirror sites confirming both entities, their officers, and filing history.",
+    "evidenceMissing": "Whether either entity has ever contracted with, or an officer has ever appeared before, Clay County government.",
+    "recordsNeeded": [
+      "Clay County procurement/contract records search for 'Grant Development & Management'",
+      "BCC agenda-item search for either entity name or Phyllis Renninger"
+    ],
+    "priority": "low",
+    "status": "documented_connection",
+    "topic": "Businesses"
+  },
+  {
+    "id": "LEAD-D3-campaign-finance",
+    "investigationId": "renninger-d3",
+    "title": "Renninger campaign finance — totals confirmed, itemized donors not yet obtained",
+    "description": "Renninger raised $76,794.39 in his 2020 first election and $7,650.00 in his unopposed 2024 re-election, per the county's own campaign-finance summary totals. Itemized contributor-level detail (individual names, amounts, employers) could not be retrieved from the portal's automated interface in this pass for either cycle.",
+    "origin": "Independent District 3 research pass, 2026-09-15, via the Clay County Supervisor of Elections' VoterFocus campaign-finance system.",
+    "entitiesInvolved": ["Jim Renninger campaign committee"],
+    "whyItMatters": "Without itemized donor data, no donor-to-vote cross-reference is possible for Renninger yet — this is an explicit, acknowledged gap rather than a finding of 'nothing to see.'",
+    "evidenceAvailable": "Confirmed period-level and cycle totals for both 2020 and 2024 from the official candidate summary page.",
+    "evidenceMissing": "All itemized individual contribution records for both cycles.",
+    "recordsNeeded": [
+      "Itemized 2020 and 2024 campaign-finance reports via the Clay County Supervisor of Elections' full report-detail views or a direct records request"
+    ],
+    "priority": "medium",
+    "status": "records_required",
+    "topic": "Campaign Money"
+  },
+  {
+    "id": "LEAD-D4-stormwater-dissent",
+    "investigationId": "condon-d4",
+    "title": "Stormwater assessment — Condon's dissent after earlier supportive votes",
+    "description": "Condon voted against final adoption of the stormwater assessment fee and veteran-exemption reduction around August 25-26, 2026 (reported 3-2, with Compere), after reportedly voting in favor of the fee at an earlier November 2025 meeting and again in July 2026. She is quoted responding to online criticism of commissioners, saying she 'could not support the fee as it was currently constituted.' Two weeks later, the Board reportedly restored the disabled-veteran exemption to 100%, though Condon's specific vote on that later item was not confirmed.",
+    "origin": "Independent District 4 research pass, 2026-09-15, via secondary news coverage (Clay News & Views, Action News Jax, Bradford County Telegraph).",
+    "entitiesInvolved": ["Betsy Condon", "Alexandra Compere", "Kristen Burke", "John Sgromolo", "Jim Renninger", "Clay County BCC"],
+    "whyItMatters": "A commissioner's vote shifting from earlier support to final-adoption opposition on a major recurring fee is a notable, on-the-record position worth tracking precisely rather than summarizing loosely.",
+    "evidenceAvailable": "Two independent secondary-source accounts of the August vote and Condon's stated reasoning.",
+    "evidenceMissing": "Primary BCC minutes for the November 2025, July 2026, and August 2026 votes (to confirm each precise tally) and for the September 2026 veteran-exemption restoration vote, none of which have been directly read.",
+    "recordsNeeded": [
+      "Primary BCC minutes for the November 2025, July 2026, August 25-26 2026, and September 9 2026 meetings"
+    ],
+    "priority": "high",
+    "status": "partially_verified",
+    "topic": "Stormwater"
+  },
+  {
+    "id": "LEAD-D4-developer-allegation",
+    "investigationId": "condon-d4",
+    "title": "Green Cove Springs 160-home PUD denial and the 'developers in my pocket' social-media allegation",
+    "description": "After the BCC denied a developer's rezoning request for a 160-home PUD near Green Cove Springs on December 9, 2025 (following sustained resident opposition), social-media commentary alleged commissioners were influenced by developers. Condon responded on the record: 'There are always people on Facebook saying the developers are in the commissioner's pockets... Tell me which developers are in my pocket and tell me which projects I've voted for... And I've voted for some that make sense.' No specific donor-to-vote link was found to substantiate the allegation in this pass.",
+    "origin": "Independent District 4 research pass, 2026-09-15, via secondary news coverage (News4Jax).",
+    "entitiesInvolved": ["Betsy Condon", "Kristen Burke", "Clay County BCC"],
+    "whyItMatters": "This is exactly the kind of general, unattributed social-media allegation the project's methodology exists to test rather than repeat as fact — recorded here with Condon's own on-the-record denial, and explicitly labeled as an unsubstantiated allegation pending any specific donor-to-vote match.",
+    "evidenceAvailable": "Direct quotes from Condon and Burke in News4Jax coverage of the December 2025 vote.",
+    "evidenceMissing": "The specific developer/applicant name for this rezoning, the parcel's district assignment, and a systematic cross-check of Condon's donor list against every rezoning applicant she has voted on (only her 2022 itemized donors have been checked so far, against a limited set of votes).",
+    "recordsNeeded": [
+      "The applicant/developer name and staff report for the December 9, 2025 Green Cove Springs PUD denial",
+      "A systematic donor-to-applicant cross-check across Condon's full voting record"
+    ],
+    "priority": "medium",
+    "status": "allegation",
+    "topic": "Land & Development"
+  },
+  {
+    "id": "LEAD-D4-business-interests",
+    "investigationId": "condon-d4",
+    "title": "Condon's disclosed business interests — Auxadyne LLC, JBC Holdings LLC, Condon & Assoc.",
+    "description": "Condon's 2022 Florida CE Form 6 financial disclosure lists her as majority owner/CEO of Auxadyne LLC (manufacturing), owner of JBC Holdings LLC (real estate), and owner of a manufacturing-consulting business, Condon & Assoc. — all based at or near her Keystone Heights home address. Sunbiz shows Auxadyne LLC was dissolved in July 2024, after her 2022 disclosure; her more recent Form 6 filings (2022-2025) have not yet been located to confirm her current business interests.",
+    "origin": "Independent District 4 research pass, 2026-09-15, via her own 2022 Form 6 filing (Clay County Supervisor of Elections portal) and Sunbiz search snippets.",
+    "entitiesInvolved": ["Betsy Condon", "Auxadyne LLC", "JBC Holdings LLC", "Condon & Assoc."],
+    "whyItMatters": "This is the most detailed, self-disclosed financial picture obtained for any District 1-4 commissioner so far (net worth, specific assets/liabilities, and named business interests) — directly useful for the project's financial-disclosure goals, and notable that the disclosure on file is now several years stale relative to at least one business's dissolution.",
+    "evidenceAvailable": "Full read of her 2022 Form 6 filing (net worth, assets, liabilities, income, and business interests) plus independent Sunbiz corroboration of JBC Holdings LLC as active and Auxadyne LLC as dissolved.",
+    "evidenceMissing": "Form 6 filings for reporting years 2022-2025, which would show her current net worth and whether Auxadyne's dissolution changed her disclosed business interests.",
+    "recordsNeeded": [
+      "Condon's Form 6 filings for 2022-2025 via disclosure.floridaethics.gov",
+      "Sunbiz detail pages for all three entities (officer history, exact filing/dissolution dates)"
+    ],
+    "priority": "medium",
+    "status": "verified_fact",
+    "topic": "Businesses"
+  },
+  {
+    "id": "LEAD-D4-campaign-finance",
+    "investigationId": "condon-d4",
+    "title": "Condon 2022 campaign finance — a self-funded loan and a WastePro contribution",
+    "description": "Condon's 2022 campaign raised roughly $31,400, of which $20,000 was her own personal loan to her campaign (partially repaid, $11,155.97, before her termination report). Outside contributions totaled roughly $11,400, including a $1,000 contribution from WastePro, a company independently confirmed as a currently-listed Clay County franchise solid-waste hauler. No specific BCC vote by Condon on a WastePro franchise agreement was identified.",
+    "origin": "Independent District 4 research pass, 2026-09-15, via the Clay County Supervisor of Elections' VoterFocus campaign-finance system, with every itemized report for the cycle individually pulled.",
+    "entitiesInvolved": ["Betsy Condon campaign committee", "WastePro", "Maloy Grading Corp", "C Spencer Farms", "Driver, McAfee, et al."],
+    "whyItMatters": "WastePro is a real, checkable overlap between a 2022 donor and a company doing business with the county under a franchise-hauler structure — reported neutrally, since no specific vote-to-donation link was found, and the county's primary curbside contract went to a different company (FCC Environmental Services) in 2024.",
+    "evidenceAvailable": "Full itemized 2022 contribution data (every report for the cycle was individually pulled), plus independent confirmation of WastePro's current county franchise-hauler status.",
+    "evidenceMissing": "Whether Condon has ever voted on any WastePro-specific franchise agreement or contract renewal.",
+    "recordsNeeded": [
+      "Clay County procurement/contract history for WastePro franchise agreements and any related BCC votes"
+    ],
+    "priority": "medium",
+    "status": "documented_connection",
+    "topic": "Campaign Money"
   }
 ]
