@@ -38,3 +38,8 @@ next-env.d.ts
 /outputs/
 /work/
 tsconfig.tsbuildinfo
+
+# Obsidian local workspace/session state (machine-specific, not shared)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
