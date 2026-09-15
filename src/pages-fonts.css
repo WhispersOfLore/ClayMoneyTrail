@@ -1,0 +1,6 @@
+/* Static GitHub Pages build has no Next.js layout to inject next/font
+   variables, so provide the same variable names via Google Fonts instead. */
+:root {
+  --font-geist-sans: 'Geist', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --font-geist-mono: 'Geist Mono', 'SFMono-Regular', Menlo, monospace;
+}
