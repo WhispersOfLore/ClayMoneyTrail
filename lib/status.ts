@@ -6,6 +6,7 @@ export const STATUS_ORDER: SourceStatus[] = [
   'derived_estimate',
   'rough_estimate',
   'pending',
+  'news_report',
 ];
 
 // Labels match the badge vocabulary requested for the dashboard: Official,
@@ -18,6 +19,7 @@ export const STATUS_LABELS: Record<SourceStatus, string> = {
   derived_estimate: 'Derived',
   rough_estimate: 'Approximate',
   pending: 'Pending',
+  news_report: 'News report',
 };
 
 export const STATUS_DESCRIPTIONS: Record<SourceStatus, string> = {
@@ -26,6 +28,7 @@ export const STATUS_DESCRIPTIONS: Record<SourceStatus, string> = {
   derived_estimate: 'Calculated from verified figures using a formula shown in the notes.',
   rough_estimate: 'An approximate figure that required an assumption or a range. Treat as directional, not exact.',
   pending: 'No verified amount is available yet.',
+  news_report: 'Reported by a news outlet, not a primary government record. Treat as a lead unless traced to an underlying document.',
 };
 
 export function statusLabel(status: string): string {

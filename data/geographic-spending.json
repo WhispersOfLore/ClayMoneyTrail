@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "title": "Where does Clay County spending go geographically?",
+    "asOf": "2026-09-16",
+    "originQuestion": "A Clay County resident asked: \"Is there a way to pinpoint what part of the county certain percentages of the budget are spent on? This storm water tax targets rural unincorporated area which seem to get the least services from clay county.\"",
+    "methodologyNote": "Every category below is classified by whether it CAN be geographically allocated from public records found so far, or CANNOT — this page does not assume the resident's premise is true or false, and does not fabricate a geographic allocation where the county's own records don't provide one."
+  },
+  "methodologyBanner": {
+    "cannotCalculate": "We CANNOT currently calculate \"X% of the entire Clay County budget is spent in District 1/2/3/4/5\" (or any other single-district share of the whole budget). No published record ties the full budget to individual commission districts.",
+    "canIdentify": "We CAN identify specific geographically-attributable spending where records exist — capital projects, roads, facilities, MSTU/MSBU-funded spending, and stormwater projects — each shown below with its own status and source.",
+    "doNotImply": "The geographically-identified projects on this page are a small, specific subset of county spending. They do not represent, and should never be read as representing, the entire county budget or a complete picture of any district's share of it."
+  },
+  "coreQuestion": {
+    "question": "Can we determine what parts of Clay County receive what percentages or amounts of county spending?",
+    "answer": "Partially, and only at the incorporated/unincorporated (MSTU) level — not at the individual commission-district level.",
+    "reasoning": [
+      "The large majority of the county budget (Sheriff operations, general government, courts, most General Fund departments) is COUNTYWIDE/UNALLOCATED by the county's own accounting structure — it is not broken out by area in any published record found, and presenting a district-level percentage for it would require fabricating an allocation the county itself does not make.",
+      "A genuinely defensible incorporated/unincorporated split exists at the MSTU layer: the Unincorporated Services MSTU, Law Enforcement MSTU, and Fire Control MSTU are taxing authorities levied only on unincorporated property, separate from what municipality residents pay their own city for equivalent services. This is a real, source-backed geographic division of WHO PAYS. Whether it also cleanly maps to WHO RECEIVES SERVICE (i.e. whether MSTU revenue is spent proportionally within its own boundary) was not verified this pass.",
+      "The new stormwater assessment is the cleanest live example of geographically-targeted revenue AND (per a referenced 2025 Stormwater Master Plan) geographically-targeted spending — but the project list itself, which would let a resident check their own neighborhood, was not obtained as a primary document this pass.",
+      "Commission-district-level ('District 1 gets X%') allocation is NOT currently calculable from anything found in this research pass. No budget, CIP, or GIS record was found tying dollars to a specific district. This does not mean it's impossible — CIP PDFs exist and were partially opened (see data below) but not fully mined due to the county site's bot-blocking — but as of now this specific claim cannot be made responsibly."
+    ]
+  },
+  "classification": [
+    {
+      "id": "countywide-unallocated",
+      "category": "COUNTYWIDE / NOT GEOGRAPHICALLY ALLOCATABLE",
+      "canAllocate": false,
+      "reason": "Sheriff's Office operations, general government, courts, and most General Fund departments serve the entire county under one operating budget with no geographic breakdown published.",
+      "evidenceStatus": "verified_fact",
+      "sourceUrl": null
+    },
+    {
+      "id": "incorporated-unincorporated-mstu",
+      "category": "INCORPORATED vs UNINCORPORATED — ad valorem MSTUs",
+      "canAllocate": true,
+      "reason": "Unincorporated Services MSTU ($2,684,976 @ 0.1477 mill), Law Enforcement MSTU ($43,975,092 @ 2.4014 mill), and Fire Control MSTU ($9,654,156 @ 0.5048 mill) are distinct taxing authorities levied only on unincorporated property (FY2025-26, already in data/records.json). This is the clearest source-backed incorporated/unincorporated split in the whole budget on the revenue side. NOT yet verified on the spending side.",
+      "evidenceStatus": "verified_fact",
+      "sourceUrl": "https://www.claycountygov.com/home/showdocument?id=9168&t=638949119516239477",
+      "followUp": "Find whether the county publishes MSTU-fund expenditure detail (not just revenue) to see if spending is also tracked separately from the general countywide budget."
+    },
+    {
+      "id": "unincorporated-stormwater-assessment",
+      "category": "UNINCORPORATED — Stormwater assessment (new, FY2026-27)",
+      "canAllocate": true,
+      "reason": "A new stormwater utility/assessment (Ordinance 2026-33, final hearing/adoption Aug 25-26 2026) applies only to developed property in unincorporated Clay County. Orange Park, Green Cove Springs, Keystone Heights, and Penney Farms are excluded because they already run and fund their own municipal stormwater programs — a jurisdictional split (who is the operating government), not a service-level judgment on its own.",
+      "evidenceStatus": "documented_connection",
+      "sourceUrl": "https://www.clayviews.com/p/new-stormwater-tax-for-unincorporated",
+      "conflictFlag": "Two different rate structures appear in secondary reporting and are not resolved: an early draft described three tiers ($51/$85/$161.50 by impervious-area band); later reporting on the actual adoption describes a flat $85/ERU rate with a Board-authorized $120/ERU ceiling. The primary ordinance text is needed to state the final rate with confidence — do not publish either number as final without it.",
+      "voteNote": "Per secondary reporting, final adoption passed with Commissioners Condon and Compere voting against — not yet cross-checked against official minutes."
+    },
+    {
+      "id": "unincorporated-stormwater-projects",
+      "category": "UNINCORPORATED — Stormwater capital project list",
+      "canAllocate": true,
+      "reason": "A 2025 Stormwater Master Plan (Jones Edmunds & Associates with Raftelis) reportedly prices 12 specific projects ($450,000-$6,350,000) plus 5 more marked TBD, each tied to a named location (e.g. a cited $6.35M Gano Avenue project and a $450,000 Shannon Lake neighborhood drainage fix). This is exactly the class of geographically-tagged capital spending that would let a resident check their own area — but the Master Plan PDF itself was not located as a primary document this pass.",
+      "evidenceStatus": "unverified_lead",
+      "sourceUrl": "https://www.clayviews.com/p/new-stormwater-tax-for-unincorporated",
+      "followUp": "HIGH PRIORITY: locate the actual 2025 Stormwater Master Plan PDF (likely a BCC agenda attachment around the June-July 2026 stormwater-ordinance items, or published by County Engineering/Public Works) to capture the full project list with locations, costs, and priority ranking."
+    },
+    {
+      "id": "lake-asbury-msbd",
+      "category": "LAKE ASBURY — independent special district (not Clay County BCC government)",
+      "canAllocate": true,
+      "reason": "The Lake Asbury Municipal Service Benefit District (LAMSBD) is a legally separate special district (own elected Board of Trustees) created by Clay County Ordinance 85-33 (1985) and Florida Statute Ch. 86-392/HB 696, charter amended by Ch. 2010-268/HB 1547. It levies its own annual assessment (up to $2,400/lake lot, approved by an October 2021 referendum) confined to lake-lot properties around Lake Asbury/South Lake Asbury/Lake Ryan, funding only lake and dam maintenance. 100% geographically confined by design — but must not be folded into Clay County BCC spending totals since it is a separate government entity.",
+      "evidenceStatus": "verified_fact",
+      "sourceUrl": "https://lamsbd.com/lamsbd-special-district-information/"
+    },
+    {
+      "id": "challenger-center-mstu",
+      "category": "CHALLENGER CENTER MSTU",
+      "canAllocate": true,
+      "reason": "A distinct BCC-governed ad valorem taxing authority ($538,980 @ 3.0000 mill, FY2025-26, already in data/records.json) — the smallest MSTU in the budget, implying a narrow, development-specific boundary. Boundary ordinance and expenditure detail not yet located.",
+      "evidenceStatus": "records_required",
+      "sourceUrl": "https://www.claycountygov.com/home/showdocument?id=9168&t=638949119516239477"
+    },
+    {
+      "id": "commission-districts",
+      "category": "COMMISSION DISTRICTS 1-5",
+      "canAllocate": false,
+      "reason": "No budget document, CIP entry, or GIS layer was found this pass that ties any dollar figure to a specific commission district. An official district-boundary map/lookup page exists but its content wasn't extracted; even once read, a boundary map alone doesn't establish district-level spending unless CIP/road-project records themselves carry a district tag, which is unconfirmed.",
+      "evidenceStatus": "records_required",
+      "sourceUrl": "https://www.claycountygov.com/government/board-of-county-commissioners/district-voting-maps",
+      "followUp": "Read the CIP PDF Exhibits B-F (Public Safety, Parks & Recreation, General Government/Facilities, Utilities/Stormwater) specifically checking whether individual line items carry a commission-district or location field. This is the single biggest open question for a future district-level spending feature."
+    },
+    {
+      "id": "roads-corridors",
+      "category": "ROADS / CORRIDORS",
+      "canAllocate": "unknown",
+      "reason": "The county publishes a dedicated Road Projects page and CIP Exhibit A (Transportation) does show individual named road projects with dollar figures — 9 line items were captured (CR218 Extension, CR220 segments, CR209 segments, CR739B, etc., $17.56M five-year / $24.23M total-project subtotal for Section I alone). These are real, geocodable, named-corridor capital projects. Road projects are the single most promising category for future geographic mapping.",
+      "evidenceStatus": "partially_verified",
+      "sourceUrl": "https://www.claycountygov.com/home/showpublisheddocument/9424/639238672846830000"
+    },
+    {
+      "id": "parcel-level",
+      "category": "PARCEL-LEVEL",
+      "canAllocate": false,
+      "reason": "No parcel-level spending data found or expected to exist in a form usable at this scale; parcel-level analysis would require joining GIS parcel layers against project locations manually.",
+      "evidenceStatus": "records_required",
+      "sourceUrl": null
+    }
+  ],
+  "cipTransportationProjects": {
+    "note": "Extracted directly from the current Approved CIP (Ordinance 2026-36, Aug 25 2026), Exhibit A / Transportation, Section I. Geographically identifiable road-widening/drainage projects with named corridors — exactly the kind of spending Part C looks for.",
+    "sourceUrl": "https://www.claycountygov.com/home/showpublisheddocument/9424/639238672846830000",
+    "sourceStatus": "verified_official",
+    "projects": [
+      { "name": "CR218 Extension", "fiveYearTotal": 2000000, "totalProject": 2000000, "status": "Project completed" },
+      { "name": "CR220 (Henley Rd to Knight Boxx)", "fiveYearTotal": 166058, "totalProject": 14657097, "status": "Final completion no later than Aug 13, 2026" },
+      { "name": "CR220 - Quadrant Intersection (East)", "fiveYearTotal": 7576418, "totalProject": null, "status": "Final completion no later than March 8, 2026 (approximate reading)" },
+      { "name": "CR218 - Pinetree Ln to Cosmos Ave (4 lanes)", "fiveYearTotal": 2546463, "totalProject": null, "status": "Under construction" },
+      { "name": "CR209 - Peters Creek south to US17 (4 lanes)", "fiveYearTotal": 3053586, "totalProject": null, "status": "In grant closeout (approximate reading)" },
+      { "name": "CR209 - Peters Creek to Sandridge", "fiveYearTotal": 65000, "totalProject": null, "status": "Phases 3A/3B complete" },
+      { "name": "CR739B - Henley to west of CR209", "fiveYearTotal": 117881, "totalProject": null, "status": "Scheduled completion, spring 2025 (approximate reading)" },
+      { "name": "CR220 - SR21 (Blanding Blvd) to Henley", "fiveYearTotal": 2037062, "totalProject": null, "status": "Final completion no later than March 8, 2026 (approximate reading)" },
+      { "name": "SUBTOTAL, Section I Comprehensive Plan CIE (Capital Improvement Fund)", "fiveYearTotal": 17562468, "totalProject": 24233515, "status": "Subtotal — do not add to component rows" }
+    ],
+    "section2ProjectNamesSeen": [
+      "Ridaught Landing Drainage Improvements (Match)", "Knight Boxx & CR220 Drainage Improvements (Match)",
+      "Tumbleweed Dr / Tanglewood Village Drainage (Match)", "Homestead Rd Drainage / Tanglewood (Match)",
+      "Greenwood Drainage Improvements (Match)", "Bridge Improvements", "Aquarius Concourse",
+      "CR224 (College Dr) Component 1-Drainage Rehabilitation", "CR220 Component 1, 5, 6-Access Rd EW Pkwy Improvement",
+      "Oakleaf Plantation / Eagle Landing Signal"
+    ],
+    "section2Note": "Project names captured from the CIP document; dollar figures for these Section II (non-Comprehensive-Plan) items were not transcribed this pass."
+  },
+  "systemsFound": [
+    { "system": "Clay County GIS Data Downloads", "url": "https://www.claycountygov.com/community/maps-and-map-data/data-downloads", "status": "confirmed_exists_not_extracted", "notes": "Shapefile downloads for 'most requested data layers'; layer list not yet enumerated." },
+    { "system": "Clay County Map Viewer (ClayView)", "url": "https://maps.claycountygov.com/clayview/", "status": "confirmed_exists_not_extracted", "notes": "General-purpose interactive GIS viewer." },
+    { "system": "Clay County ArcGIS-hosted map app", "url": "https://www.arcgis.com/apps/View/index.html?appid=8fe4cc7fc296423ba7dcfd2bd2911712", "status": "confirmed_exists_not_extracted", "notes": "'Clay County Government GIS Maps'." },
+    { "system": "Clay County Utility Authority (CCUA) GIS REST services", "url": "https://maps.clayutility.org/server/rest/services/", "status": "confirmed_exists_not_extracted", "notes": "CCUA is a legally separate water/wastewater utility authority, NOT the county stormwater program and not the BCC — do not conflate." },
+    { "system": "Clay County Approved CIP archive", "url": "https://www.claycountygov.com/government/office-of-budget-management/approved-cip", "status": "index_confirmed_pdf_partially_extracted", "notes": "~60 ordinances/resolutions from April 2020 to August 2026, fully indexed. Only the current ordinance's Exhibit A (Transportation) was opened." },
+    { "system": "Clay County Road Projects page", "url": "https://www.claycountygov.com/?navid=1233", "status": "confirmed_exists_not_extracted" },
+    { "system": "Clay County BCC District Voting Maps / 'Find My Commissioner'", "url": "https://www.claycountygov.com/government/board-of-county-commissioners/district-voting-maps", "status": "confirmed_exists_not_extracted" },
+    { "system": "Lake Asbury Municipal Service Benefit District (LAMSBD)", "url": "https://lamsbd.com/maps-and-boundaries/", "status": "verified_official" },
+    { "system": "Clay County Ordinance Code (Municode)", "url": "https://library.municode.com/fl/clay_county/codes/code_of_ordinances", "status": "index_confirmed" },
+    { "system": "Clay County NovusAgenda (BCC agenda/minutes system)", "url": "https://claycounty.novusagenda.com/agendapublic/", "status": "verified_official", "notes": "Not Akamai-blocked; best route to primary ordinance/resolution PDFs going forward." }
+  ]
+}

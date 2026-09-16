@@ -11,7 +11,9 @@ import {
   ExternalLink,
   FileQuestion,
   Landmark,
+  MapPin,
   Menu,
+  Percent,
   Search,
   Shield,
   Users,
@@ -24,6 +26,11 @@ import rawLeads from '@/data/investigations/leads.json';
 import rawEvidence from '@/data/investigations/evidence.json';
 import rawTimeline from '@/data/investigations/timeline.json';
 import rawRecordsRequests from '@/data/investigations/records-requests.json';
+import stateFundingData from '@/data/state-funding.json';
+import publicSafetyComplexData from '@/data/public-safety-complex.json';
+import geographicSpendingData from '@/data/geographic-spending.json';
+import taxesAssessmentsData from '@/data/taxes-assessments.json';
+import blackCreekData from '@/data/black-creek.json';
 import { money, formatDate } from '@/lib/format';
 import { computeCoverage } from '@/lib/coverage';
 import { computeFlags } from '@/lib/gaps';
@@ -37,9 +44,17 @@ import { Disclaimer, FilterBar, Kpi, StandardPage, type FilterProps } from '@/co
 import { RecordsTable } from '@/components/dashboard/records-table';
 import { StatusBadge } from '@/components/dashboard/status-badge';
 import { InvestigationsPanel } from '@/components/dashboard/investigations-panel';
+import { StateFundingPanel, type StateFundingDataset } from '@/components/dashboard/state-funding-panel';
+import { PublicSafetyComplexPanel, type PublicSafetyComplexData } from '@/components/dashboard/public-safety-complex-panel';
+import { GeographicSpendingPanel, type GeographicSpendingData } from '@/components/dashboard/geographic-spending-panel';
+import { TaxesAssessmentsPanel, type TaxesAssessmentsData } from '@/components/dashboard/taxes-assessments-panel';
 
 const records = rawRecords as RecordItem[];
 const sources = rawSources as SourceItem[];
+const stateFunding = stateFundingData as unknown as StateFundingDataset;
+const publicSafetyComplex = publicSafetyComplexData as unknown as PublicSafetyComplexData;
+const geographicSpending = geographicSpendingData as unknown as GeographicSpendingData;
+const taxesAssessments = taxesAssessmentsData as unknown as TaxesAssessmentsData;
 const investigations = rawInvestigationMeta as InvestigationMeta[];
 const leads = rawLeads as LeadItem[];
 const evidenceLedger = rawEvidence as EvidenceItem[];
@@ -55,6 +70,10 @@ type Section =
   | 'Stormwater'
   | 'Vendors & Contracts'
   | 'Capital Projects'
+  | 'Public Safety Complex'
+  | 'State Funding'
+  | 'Geographic Spending'
+  | 'Taxes & Assessments'
   | 'Debt & Reserves'
   | 'Year-over-Year'
   | 'Investigations'
@@ -70,6 +89,10 @@ const navSections: { label: Section; icon: typeof CircleDollarSign }[] = [
   { label: 'Stormwater', icon: CircleDollarSign },
   { label: 'Vendors & Contracts', icon: Building2 },
   { label: 'Capital Projects', icon: Landmark },
+  { label: 'Public Safety Complex', icon: Shield },
+  { label: 'State Funding', icon: Landmark },
+  { label: 'Geographic Spending', icon: MapPin },
+  { label: 'Taxes & Assessments', icon: Percent },
   { label: 'Debt & Reserves', icon: Landmark },
   { label: 'Year-over-Year', icon: BookOpen },
   { label: 'Investigations', icon: Search },
@@ -441,6 +464,73 @@ export default function Home() {
               <section className="panel">
                 <RecordsTable records={records.filter((r) => r.domain === 'capital' && r.fiscalYear === fiscalYear)} sources={sources} />
               </section>
+              <div className="panel-head">
+                <div>
+                  <span className="section-kicker">FEATURED PROJECTS</span>
+                  <h3>Two large projects with their own dedicated trails</h3>
+                </div>
+              </div>
+              <div className="overview-grid">
+                <button className="tile-card" onClick={() => setActive('Public Safety Complex')}>
+                  <span className="section-kicker">P3 · RFP {publicSafetyComplex.rfp.number}</span>
+                  <h3>Public Safety Complex</h3>
+                  <p>{publicSafetyComplex.meta.summary}</p>
+                  <span className="source-link">
+                    Open full trail <ChevronRight size={14} />
+                  </span>
+                </button>
+                <button className="tile-card" onClick={() => setActive('Geographic Spending')}>
+                  <span className="section-kicker">SJRWMD · {money(blackCreekData.costEstimates[1].amount, true)}</span>
+                  <h3>{blackCreekData.meta.title}</h3>
+                  <p>
+                    {blackCreekData.statedPrimaryPurpose.value.split('.')[0]}. Original estimate {money(blackCreekData.costEstimates[0].amount, true)}{' '}
+                    (2017) grew to {money(blackCreekData.costEstimates[1].amount, true)} today.
+                  </p>
+                  <a className="source-link" href={blackCreekData.statedPrimaryPurpose.sourceUrl} target="_blank" rel="noreferrer">
+                    SJRWMD project page <ExternalLink size={12} />
+                  </a>
+                </button>
+              </div>
+            </StandardPage>
+          )}
+
+          {section === 'Public Safety Complex' && (
+            <StandardPage
+              kicker="P3 · RFP 25/26-085"
+              title="Public Safety Complex money trail"
+              description={publicSafetyComplex.meta.disclaimer}
+            >
+              <PublicSafetyComplexPanel data={publicSafetyComplex} />
+            </StandardPage>
+          )}
+
+          {section === 'State Funding' && (
+            <StandardPage
+              kicker="STATE APPROPRIATIONS"
+              title="Florida Senate Local Funding Initiative Requests"
+              description="Clay County's FY2026-27 state funding asks, tracked from request through the Governor's signature — requested, appropriated, vetoed, and received are modeled as distinct stages, never collapsed into one number."
+            >
+              <StateFundingPanel dataset={stateFunding} />
+            </StandardPage>
+          )}
+
+          {section === 'Geographic Spending' && (
+            <StandardPage
+              kicker="WHERE DOES THE MONEY GO"
+              title="Geographic spending"
+              description={geographicSpending.meta.originQuestion}
+            >
+              <GeographicSpendingPanel data={geographicSpending} />
+            </StandardPage>
+          )}
+
+          {section === 'Taxes & Assessments' && (
+            <StandardPage
+              kicker="TAXES & ASSESSMENTS"
+              title="Clay County property taxes, 2019-2025"
+              description="Millage history, the seven-year ad valorem series, and an independent check of statewide numbers a community post claimed — verified against Florida DOR, Census, and FRED where possible."
+            >
+              <TaxesAssessmentsPanel data={taxesAssessments} />
             </StandardPage>
           )}
 

@@ -343,6 +343,107 @@ main {
   border-radius: var(--radius);
   overflow: hidden;
 }
+.panel-footnote {
+  padding: 0 20px 18px;
+  margin: -6px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.panel > .panel-footnote:first-child {
+  padding-top: 18px;
+}
+.feature-answer {
+  margin: 0 20px 10px;
+  font:
+    500 16px Georgia,
+    serif;
+  color: var(--ink);
+}
+.geo-row td {
+  vertical-align: top;
+}
+.allocate-yes {
+  color: #2f7166;
+}
+.allocate-no {
+  color: #a3392c;
+}
+.allocate-unknown {
+  color: #8a6422;
+}
+.geo-conflict {
+  color: #93591a;
+}
+.record-subtotal {
+  font-weight: 700;
+  background: #f7f8f9;
+}
+.geo-cip-link {
+  margin: 0 20px 18px;
+  display: inline-flex;
+}
+.verdict-text {
+  font-size: 11px;
+  font-weight: 650;
+  margin-top: 4px;
+}
+.anomaly-kicker {
+  color: #93591a !important;
+}
+.anomaly-text {
+  font-weight: 600;
+  color: #93591a;
+}
+.methodology-banner {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.methodology-banner-row {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.methodology-banner-row strong {
+  margin-right: 4px;
+}
+.methodology-cannot strong {
+  color: #a3392c;
+}
+.methodology-can strong {
+  color: #2f7166;
+}
+.tile-card {
+  text-align: left;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.tile-card:hover {
+  border-color: var(--blue);
+}
+.tile-card h3 {
+  font:
+    500 17px Georgia,
+    serif;
+  margin: 0;
+}
+.tile-card p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
 .panel-head {
   display: flex;
   justify-content: space-between;
@@ -550,6 +651,10 @@ td small {
   background: #edf0f1;
   color: #68767d;
 }
+.status-news_report {
+  background: #fdeccb;
+  color: #93591a;
+}
 .inv-status-verified_fact {
   background: #e5f1ed;
   color: #2f7166;
@@ -678,6 +783,30 @@ td small {
 }
 .inv-subject-heading {
   margin: 0;
+}
+.inv-subject-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+.inv-subject-photo {
+  width: 72px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+.inv-subject-subhead {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+.inv-subject-photo-credit {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 10px;
 }
 .inv-tabs {
   display: flex;

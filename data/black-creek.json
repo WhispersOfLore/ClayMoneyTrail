@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Black Creek Water Resource Development Project",
+    "leadAgency": "St. Johns River Water Management District (SJRWMD)",
+    "location": "Southwest Clay County, between Penney Farms and Camp Blanding",
+    "asOf": "2026-09-16"
+  },
+  "statedPrimaryPurpose": {
+    "value": "Increase recharge to the Upper Floridan aquifer in northeast Florida using excess flow from Black Creek. Lake restoration (Lake Brooklyn, Lake Geneva) is stated by SJRWMD as a SECONDARY benefit, not the primary purpose — do not characterize this as a \"save the lakes\" project.",
+    "sourceStatus": "verified_official",
+    "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/",
+    "dateAccessed": "2026-09-16"
+  },
+  "scope": {
+    "value": "Diverts up to 10 million gallons/day from the South Fork of Black Creek during wet-weather high-flow periods, treats for color/nutrients, and discharges into Alligator Creek, which flows into Lake Brooklyn, enhancing aquifer recharge. Components: a pump station, a ~17-mile 30-inch pipeline, and a color-removal treatment system.",
+    "sourceStatus": "verified_official",
+    "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/",
+    "dateAccessed": "2026-09-16"
+  },
+  "costEstimates": [
+    { "label": "Original estimated project cost", "amount": 41000000, "asOfDate": "2017-12", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/2017/12/easement-approval-keeps-black-creek-water-resource-development-project-track-allows-future-recreational-access/", "notes": "SJRWMD quote: \"The estimated $41 million project.\"" },
+    { "label": "Current/revised construction cost estimate (pump station + pipeline + treatment system)", "amount": 118700000, "asOfDate": "2026 (current project page)", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/", "notes": "The records reviewed establish the change in project cost (approximately $41M in 2017 to approximately $118.7M today, both figures from SJRWMD's own materials), but the specific causes of the increase (inflation, scope changes, land/easement costs, treatment-system addition, or something else) have not yet been established in this dataset. A records request to SJRWMD would be needed to confirm the breakdown." }
+  ],
+  "funding": [
+    { "source": "Land Acquisition Trust Fund (Amendment One / Florida Land and Conservation Initiative)", "amount": 5000000, "measure": "per year, as originally structured (2017)", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/2017/12/easement-approval-keeps-black-creek-water-resource-development-project-track-allows-future-recreational-access/" },
+    { "source": "Florida Legislature — St. Johns River and Keystone Heights Lake Region Projects appropriations, 2017-2019 (3 years)", "amount": 48000000, "measure": "total appropriated across both named legislative line items", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/" },
+    { "source": "Of the above, portion specifically allocated to Black Creek", "amount": 43400000, "measure": "appropriated, 2017-2019", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/", "notes": "Matches the user-supplied lead figure of $43.4M; confirmed against SJRWMD's own project page, not just secondary reporting." },
+    { "source": "North Florida utility partners: Clay County Utility Authority (CCUA), Gainesville Regional Utilities, St. Johns County Utilities, JEA", "amount": 19200000, "measure": "committed contribution", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/", "notes": "CCUA is the Clay County-specific funding partner — worth cross-referencing against CCUA's own budget/board minutes if pursued further." },
+    { "source": "SJRWMD (District) funds", "amount": null, "measure": "remaining balance to reach the ~$118.7M total", "sourceStatus": "official_estimate", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/", "notes": "Page says District funds cover the remainder; exact dollar figure not stated." }
+  ],
+  "legislativeSponsors2017": {
+    "value": "Sen. Rob Bradley (R-Fleming Island), Rep. Bobby Payne (R-Palatka), Rep. Travis Cummings (R-Orange Park)",
+    "sourceStatus": "verified_official",
+    "sourceUrl": "https://www.sjrwmd.com/2017/12/easement-approval-keeps-black-creek-water-resource-development-project-track-allows-future-recreational-access/",
+    "notes": "Rob Bradley — NOT Jennifer Bradley, the later Senate sponsor of the FY2026-27 Clay County LFIR requests (see data/state-funding.json). Do not conflate the two Bradleys; any relationship between them was not independently confirmed and is not stated here."
+  },
+  "clayCountyGovernmentConnection": {
+    "value": "Clay County Board of County Commissioners unanimously approved a perpetual easement on ~3 acres of county-owned property near SR 16 and SR 21 on December 1, 2017, allowing SJRWMD to implement the project and construct related recreational facilities.",
+    "sourceStatus": "verified_official",
+    "sourceUrl": "https://www.sjrwmd.com/2017/12/easement-approval-keeps-black-creek-water-resource-development-project-track-allows-future-recreational-access/",
+    "recordsNeeded": "The actual BCC agenda item / minutes / recorded easement instrument for the December 1, 2017 vote (claycounty.novusagenda.com) was not pulled this pass."
+  },
+  "timeline": [
+    { "date": "2017-07", "event": "Design contractor approved", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/" },
+    { "date": "2017-12-01", "event": "Clay County BCC approves easement on county property for the project plus recreational access", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/2017/12/easement-approval-keeps-black-creek-water-resource-development-project-track-allows-future-recreational-access/" },
+    { "date": "FY2018-FY2021", "event": "Design, permitting, land acquisition", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/" },
+    { "date": "2022-07", "event": "Pump station construction contract approved", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/" },
+    { "date": "2022-09", "event": "Pipeline construction contract approved", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/" },
+    { "date": "2023-08", "event": "Treatment system construction contract approved", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/" },
+    { "date": "2025-09", "event": "Initial discharge to Alligator Creek", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/" },
+    { "date": "FY2026", "event": "Anticipated full system operation; as of this research pass, intermittent test pumping has occurred using completed treatment cells", "sourceStatus": "verified_official", "sourceUrl": "https://www.sjrwmd.com/projects/black-creek-project/" }
+  ],
+  "environmentalPermitting": {
+    "value": null,
+    "sourceStatus": "pending",
+    "notes": "Consumptive Use Permit / Environmental Resource Permit numbers were not located this pass — would need a direct search of SJRWMD's ePermitting portal for the project's permit number(s)."
+  }
+}

@@ -6,7 +6,7 @@ const errors = [];
 const ids = new Set();
 const sourceIds = new Set(sources.map((source) => source.id));
 
-const VALID_STATUSES = new Set(['verified_official', 'official_estimate', 'derived_estimate', 'rough_estimate', 'pending']);
+const VALID_STATUSES = new Set(['verified_official', 'official_estimate', 'derived_estimate', 'rough_estimate', 'pending', 'news_report']);
 
 for (const record of records) {
   if (ids.has(record.id)) errors.push(`Duplicate record id: ${record.id}`);
@@ -105,12 +105,60 @@ for (const req of recordsRequests) {
   if (!VALID_REQUEST_STATUSES.has(req.status)) errors.push(`Records request ${req.id} has unrecognized status "${req.status}"`);
 }
 
+// --- Phase 6 datasets (state funding, Public Safety Complex, geographic
+// spending, taxes/assessments, Black Creek, payroll/fuel leads) ------------
+// These files are looser/more research-shaped than the money-trail and
+// investigations layers above, so validation here focuses on the invariants
+// that matter: unique IDs, status values drawn from the fixed vocabularies,
+// and (for commissioner photos) that the referenced local asset actually
+// exists on disk rather than a dangling path.
+
+import { existsSync } from 'node:fs';
+
+const stateFunding = JSON.parse(await readFile(new URL('../data/state-funding.json', import.meta.url), 'utf8'));
+const stateFundingIds = new Set();
+for (const r of stateFunding.requests) {
+  if (stateFundingIds.has(r.id)) errors.push(`Duplicate state-funding request id: ${r.id}`);
+  stateFundingIds.add(r.id);
+  if (!VALID_STATUSES.has(r.sourceStatus)) errors.push(`State-funding request ${r.id} has unrecognized sourceStatus "${r.sourceStatus}"`);
+  const validLegislativeStatus = new Set(['requested', 'appropriated', 'vetoed', 'partially_vetoed', 'unknown_pending_gaa_review', 'withdrawn']);
+  if (!validLegislativeStatus.has(r.legislativeStatus)) errors.push(`State-funding request ${r.id} has unrecognized legislativeStatus "${r.legislativeStatus}"`);
+}
+
+const geoSpending = JSON.parse(await readFile(new URL('../data/geographic-spending.json', import.meta.url), 'utf8'));
+const geoIds = new Set();
+for (const c of geoSpending.classification) {
+  if (geoIds.has(c.id)) errors.push(`Duplicate geographic-spending classification id: ${c.id}`);
+  geoIds.add(c.id);
+  if (!VALID_EVIDENCE_STATUSES.has(c.evidenceStatus)) errors.push(`Geographic-spending entry ${c.id} has unrecognized evidenceStatus "${c.evidenceStatus}"`);
+}
+
+const payrollFuel = JSON.parse(await readFile(new URL('../data/payroll-fuel.json', import.meta.url), 'utf8'));
+for (const c of payrollFuel.payrollClaims) {
+  if (!VALID_EVIDENCE_STATUSES.has(c.status)) errors.push(`Payroll claim "${c.name}" has unrecognized status "${c.status}"`);
+}
+
+// Public Safety Complex, taxes/assessments, and Black Creek are read purely
+// to confirm they parse as valid JSON (they're consumed directly by the UI
+// with no additional cross-referencing needed yet).
+JSON.parse(await readFile(new URL('../data/public-safety-complex.json', import.meta.url), 'utf8'));
+JSON.parse(await readFile(new URL('../data/taxes-assessments.json', import.meta.url), 'utf8'));
+JSON.parse(await readFile(new URL('../data/black-creek.json', import.meta.url), 'utf8'));
+
+for (const inv of investigationMeta) {
+  if (inv.photoUrl) {
+    const localPath = new URL(`../public${inv.photoUrl}`, import.meta.url);
+    if (!existsSync(localPath)) errors.push(`Investigation ${inv.id} references photoUrl "${inv.photoUrl}" but no such file exists under public/`);
+  }
+}
+
 if (errors.length) {
   console.error(errors.join('\n'));
   process.exitCode = 1;
 } else {
   console.log(
     `Data audit passed: ${records.length} records, ${sources.length} sources, ${ids.size} unique IDs, ` +
-      `${leads.length} leads, ${evidence.length} evidence entries, ${timeline.length} timeline events, ${recordsRequests.length} records requests.`,
+      `${leads.length} leads, ${evidence.length} evidence entries, ${timeline.length} timeline events, ${recordsRequests.length} records requests, ` +
+      `${stateFunding.requests.length} state-funding requests, ${geoSpending.classification.length} geographic-spending entries.`,
   );
 }

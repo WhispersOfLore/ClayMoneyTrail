@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "title": "Clay County Public Safety Complex",
+    "asOf": "2026-09-16",
+    "summary": "A Public-Private Partnership (P3) to design, build, and finance a shared-use public safety and training campus (Sheriff, Fire Rescue, Emergency Management, 911/EOC, and a St. Johns River State College training component) on a 53+/- acre site near Green Cove Springs. RFP 25/26-085 is confirmed as a real, currently-active procurement (status: Evaluation as of last check). No land purchase, no total project cost, and no selected vendor have been confirmed from a primary document as of this research pass.",
+    "disclaimer": "This is an evidence-gathering project trail, not an accusation. Every figure below carries an explicit evidence status and a source. A reported number (like the $200M-$400M range circulating in the community) is not treated as fact unless traced to a primary county document."
+  },
+  "rfp": {
+    "number": "25/26-085",
+    "title": "Public Private Partnership (P3) to Design, Build and Finance a Public Safety Complex in Clay County",
+    "releaseDate": "2026-04-16",
+    "dueDate": "2026-06-15",
+    "bidOpenDate": "2026-06-16",
+    "statusAsOf": "Evaluation (checked 2026-09-16)",
+    "statutoryAuthority": "Florida Statute 255.065 (P3 authority for public entities to develop, operate, and finance projects serving a public purpose, including public safety facilities)",
+    "siteAcreage": "53+/- acres per the current official RFP text (Section 3.1/3.5), described as combined purchased property plus adjoining County property (a pond site). An earlier ~44-acre figure appears in initial research leads with no independently located source or date — it may reflect an earlier-stage proposal, a partial parcel count, or simply an imprecise informal figure; it is not treated as an established prior record here, only as context that the reported acreage has varied across informal accounts.",
+    "components": "Clay County Public Safety Facilities, ~391,000 SF (Public Safety Administration/Sheriff + Fire Rescue offices, Emergency Operations Center/911 Dispatch, Logistics Warehouse, Fleet Maintenance, Paved Storage, Shared Training) plus a St. Johns River State College Training/Classroom component, ~152,000 SF across two buildings — combined ~543,000 SF. No jail or courthouse component is included in this RFP.",
+    "accessPoints": "Rosemary Hill Rd, plus a second access point on the SE portion of the site along a not-yet-named planned road",
+    "neighboringDevelopment": "Peters Creek Industrial/Business Park — the RFP text asks respondents to coordinate with this neighboring developer on shared utilities, stormwater, and transportation.",
+    "financingStructure": "Progressive P3 model, phased: Phase 1 (Spatial Needs Assessment, Site Planning, Financing) -> Phase 2 (Building-by-Building Design) -> Phase 3 (Construction, only after County approval and execution of a Guaranteed Maximum Price for each facility). Financing is lease-leaseback or installment-based; the County retains land ownership and explicitly does not intend to bond this project. Some funding is designated in the County's Capital Improvement Plan budget.",
+    "evaluationProcess": "An Evaluation Committee of no fewer than 9 members scores proposals individually with no cross-communication; scores are announced at a public Evaluation Meeting under Florida Statutes; the committee's ranking goes to the Board of County Commissioners for approval to enter negotiations (the Board may also request its own presentations).",
+    "estimatedBCCRecommendationDate": "2026-07-14 per the RFP's own published timeline — this date has passed as of this research pass with no confirmed public BCC action found yet (see openQuestions).",
+    "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374",
+    "dateAccessed": "2026-09-16",
+    "evidenceStatus": "verified_fact"
+  },
+  "staffRanking": {
+    "respondents": [
+      { "rank": 1, "entity": "Balfour Beatty Developments, Inc.", "score": 136.9 },
+      { "rank": 2, "entity": "Florida Development Solutions, LLC", "score": 134.6 },
+      { "rank": 3, "entity": "E2L Real Estate Solutions, LLC", "score": 125.8 },
+      { "rank": 4, "entity": "VanTrust Real Estate, LLC dba VTRE Development, LLC", "score": 125.1 }
+    ],
+    "evidenceStatus": "unverified_lead",
+    "notes": "These four respondents and scores were supplied as a lead at the start of this research phase. Independent verification found: the RFP is real and did go to a bid opening (Bid Tabulation posted 2026-06-17 as 'Official Notice #2' on the procurement portal, and a matching 'Bid Opening Tabulations (J. Loos)' item was formally received into the BCC record on 2026-06-23), which is consistent with an evaluation process having occurred. But the portal requires a vendor-account login to download the actual Bid Tabulation PDF (2526-085_Bid_Tab.pdf) or any evaluation scoring sheet, and that login was not created (creating accounts is outside this project's operating rules). No BCC agenda item naming a selected vendor was found — a text search of BCC meetings from 2026-06-16 through 2026-12-16 for \"Balfour Beatty\" returned zero results. Treat the four names and scores as an unverified lead until the Bid Tabulation document or a BCC award item is pulled directly."
+  },
+  "landAcquisition": {
+    "site": "Green Cove Springs, near the Peters Creek Industrial Park area and the First Coast Expressway, across from the Clay County Fairgrounds",
+    "acreage": "53+/- acres per the RFP (see rfp.siteAcreage above)",
+    "status": "partially_verified",
+    "notes": "As of a Nov 12, 2025 News4Jax report, the county had not yet secured land or funding — it was only \"eyed.\" By the RFP's release (April 2026), the RFP text itself describes the 53-acre site as already assembled from \"purchased property and adjoining County property (pond site),\" implying at least a partial acquisition occurred between Nov 2025 and April 2026. No Clay County Property Appraiser parcel ID, purchase price, seller, or closing date has been located for that acquisition.",
+    "sourceUrl": "https://www.news4jax.com/news/local/2025/11/12/its-going-to-be-a-game-changer-clay-county-one-step-closer-to-new-public-safety-complex/"
+  },
+  "costRangeOrigin": {
+    "claimedRange": "$200M-$400M total project cost",
+    "evidenceStatus": "records_required",
+    "status": "LEAD / NEEDS VERIFICATION — a reported estimate, not an established cost",
+    "finding": "This is a reported estimate whose underlying primary-source cost document has not been located. No primary county document, presentation, video, RFP text, or news article found in this research pass repeats this range. The RFP text itself (Section 3.9 Pricing) explicitly defers total cost to Respondent proposals and per-facility negotiated Guaranteed Maximum Prices — it contains no project-wide cost estimate at all. This figure must not be presented as an established total project cost."
+  },
+  "stateGrant": {
+    "amount": 2000000,
+    "purpose": "Planning and partial design of the Public Safety Complex",
+    "date": "2025-10-23",
+    "presenter": "Florida CFO Blaise Ingoglia",
+    "location": "Fire Station 20, Clay County",
+    "evidenceStatus": "documented_connection",
+    "sourceUrl": "https://hoodline.com/2025/10/clay-county-to-build-new-public-safety-complex-with-2-million-state-grant/",
+    "notes": "Reported as coming from a Clay County government release; the county's own release page could not be independently pulled (site blocks automated access)."
+  },
+  "consolidationHistory": {
+    "value": "The complex would consolidate the Sheriff's Office, Fire Rescue, EMT, Emergency Management, and the 911/call center, currently scattered between the county courthouse and a building near the Fairgrounds on SR 16.",
+    "evidenceStatus": "partially_verified",
+    "sourceUrl": "https://www.news4jax.com/news/local/2025/11/12/its-going-to-be-a-game-changer-clay-county-one-step-closer-to-new-public-safety-complex/",
+    "notes": "No pre-2025 BCC agenda item originating the consolidation concept was located this pass."
+  },
+  "relatedComponent_lawEnforcementAcademy": {
+    "description": "Preliminary, non-binding discussions between Clay County, St. Johns River State College, and SJR State President Joe Pickens about co-locating SJR State's law-enforcement/fire training academy at the complex site.",
+    "evidenceStatus": "unverified_lead",
+    "sourceUrl": "https://www.news4jax.com/news/local/2025/11/12/its-going-to-be-a-game-changer-clay-county-one-step-closer-to-new-public-safety-complex/"
+  },
+  "relatedComponent_publicSafetyBondProgram": {
+    "description": "A separate, already-existing $65 million Public Safety Bond Program funds several fire stations (including Fire Station 20, opened August 2025). This is DISTINCT from the Public Safety Complex P3 project and should not be conflated with it.",
+    "evidenceStatus": "unverified_lead",
+    "notes": "Surfaced incidentally; not independently verified this pass."
+  },
+  "stateFundingComponents": {
+    "note": "Four FY2026-27 Florida Senate LFIR requests explicitly describe themselves as components of this same Public Safety Complex campus. See data/state-funding.json for full detail (all four are `publicSafetyComplexComponent: true`).",
+    "components": [
+      { "lfir": 2951, "title": "Clay County Fleet Center", "amountRequested": 1500000, "totalProjectCost": 3000000 },
+      { "lfir": 2970, "title": "Clay County Public Safety Administration Building", "amountRequested": 3000000, "totalProjectCost": 6000000 },
+      { "lfir": 2971, "title": "Clay County Public Safety Complex Utilities", "amountRequested": 2000000, "totalProjectCost": 4000000 },
+      { "lfir": 3084, "title": "Clay County Multi-Agency Warehouse", "amountRequested": 2000000, "totalProjectCost": 4000000 }
+    ],
+    "combinedStateAsk": 8500000,
+    "combinedFY2627ProjectCost": 17000000,
+    "importantCaveat": "This $17M in FY2026-27 project cost covers only these 4 component LFIR requests for one fiscal year's slice of funding — it is not, and should never be presented as, the total project cost of the complex."
+  },
+  "timeline": [
+    { "date": "2025-10-23", "event": "FL CFO Blaise Ingoglia presents a $2,000,000 state check for planning/partial design at Fire Station 20", "status": "documented_connection", "sourceUrl": "https://hoodline.com/2025/10/clay-county-to-build-new-public-safety-complex-with-2-million-state-grant/" },
+    { "date": "2025-11-12", "event": "News4Jax/Clay Today report: county has not yet secured land or funding; site \"eyed\" near Peters Creek Industrial Park", "status": "documented_connection", "sourceUrl": "https://www.news4jax.com/news/local/2025/11/12/its-going-to-be-a-game-changer-clay-county-one-step-closer-to-new-public-safety-complex/" },
+    { "date": "2025-11-21", "event": "Fleet Center LFIR #2951 filed with the Florida Senate ($1.5M requested)", "status": "verified_fact", "sourceUrl": "https://www.flsenate.gov/PublishedContent/Session/FiscalYear/FY2026-27/LocalFundingInitiativeRequests/FY2026-27_S2951.pdf" },
+    { "date": "2025-12-02", "event": "Public Safety Administration Building, Complex Utilities, and Multi-Agency Warehouse LFIRs filed ($3M/$2M/$2M requested)", "status": "verified_fact", "sourceUrl": "https://www.flsenate.gov/Session/Appropriations/FY2026-27/LocalFundingRequests" },
+    { "date": "2026-04-16", "event": "RFP 25/26-085 released", "status": "verified_fact", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374" },
+    { "date": "2026-05-21", "event": "Addendum #1 issued, extending bid dates", "status": "verified_fact", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374" },
+    { "date": "2026-06-15", "event": "Bids due (4:00pm)", "status": "verified_fact", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374" },
+    { "date": "2026-06-16", "event": "Bid opening (non-mandatory)", "status": "verified_fact", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374" },
+    { "date": "2026-06-17", "event": "Bid Tabulation posted to the procurement portal as Official Notice #2 (2526-085_Bid_Tab.pdf, login-gated)", "status": "verified_fact", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374/addenda" },
+    { "date": "2026-06-23", "event": "\"Bid Opening Tabulations (J. Loos)\" formally received into the BCC record as a Letter of Documentation", "status": "verified_fact", "sourceUrl": "https://claycounty.novusagenda.com/agendapublic/" },
+    { "date": "2026-06-29", "event": "Governor signs FY2026-27 budget; none of the four Public Safety Complex component LFIRs appear on the veto list (appropriation status otherwise unconfirmed)", "status": "partially_verified", "sourceUrl": "https://flgov.com/eog/sites/default/files/shared/2026/06/2026%20Veto%20List.pdf" },
+    { "date": "2026-07-14", "event": "RFP's own estimated date for the Evaluation Committee's recommendation to reach the BCC — no confirmed public record of this happening was found as of 2026-09-16", "status": "records_required", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374" }
+  ],
+  "openQuestions": [
+    "Who was actually selected (if anyone) — the Bid Tabulation PDF and/or a BCC award agenda item would resolve this.",
+    "What is the actual total project cost, and does any primary document support the $200M-$400M community figure?",
+    "What parcel(s) make up the 53-acre site, when were they purchased, from whom, and for how much?",
+    "Did the BCC ever formally act on the Evaluation Committee's recommendation after the estimated 2026-07-14 date?",
+    "What is the relationship, if any, between the $65M Public Safety Bond Program and this P3 project?"
+  ],
+  "recordsNeeded": [
+    "2526-085_Bid_Tab.pdf from procurement.opengov.com/portal/claycounty/projects/252374 (requires a vendor account or a records request)",
+    "BCC agenda item(s) discussing/awarding RFP 25/26-085 for July-September 2026",
+    "Clay County Property Appraiser (ccpao.com) parcel record for the 53-acre site",
+    "Any BCC real-estate acquisition agenda item for the site purchase"
+  ]
+}

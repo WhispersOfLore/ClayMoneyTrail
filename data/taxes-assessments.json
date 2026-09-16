@@ -1,0 +1,259 @@
+{
+  "meta": {
+    "title": "Taxes & Assessments \u2014 Clay County, 2019-2025",
+    "asOf": "2026-09-16",
+    "note": "Existing data/records.json already carries verified FY2025-26 ADOPTED millage/ad-valorem-revenue rows for Countywide Services, Conservation Lands, Unincorporated Services MSTU, Law Enforcement MSTU, Fire Control MSTU, and Challenger Center MSTU \u2014 this file adds the new multi-year and statewide-context data, and does not duplicate those single-year figures."
+  },
+  "comparativeTaxBillExhibit": {
+    "status": "records_required",
+    "target": "Clay County FY2025-26 Final Budget, 'Comparative Sample of Tax Bills' exhibit (per-area example: Unincorporated Clay County, Green Cove Springs, GCS Magnolia West, Keystone Heights, Orange Park, Penney Farms, Challenger Center MSTU, Green Cove Springs CRA, Keystone Heights CRA, Lake Asbury MSBD, and an example MSBU)",
+    "sourceUrl": "https://www.claycountygov.com/home/showdocument?id=9168&t=638949119516239477",
+    "notes": "Not obtained this research pass \u2014 claycountygov.com and ccpao.com both hard-block automated fetches; this specific exhibit needs a live-browser pull or a NovusAgenda search around the September 2025 budget-adoption agenda item."
+  },
+  "countywideMillageHistory": [
+    {
+      "fiscalYear": "FY2018-19",
+      "adoptedMillage": 5.2349,
+      "rolledBackRate": 4.9703,
+      "sourceStatus": "verified_official",
+      "source": "Florida DOR, Clay County Property Tax Overview, 2019-vintage PDF"
+    },
+    {
+      "fiscalYear": "FY2019-20",
+      "adoptedMillage": 5.2404,
+      "sourceStatus": "verified_official",
+      "source": "Florida DOR, Clay County Property Tax Overview, 2019-vintage PDF"
+    },
+    {
+      "fiscalYear": "FY2020-21",
+      "adoptedMillage": 5.3021,
+      "sourceStatus": "verified_official",
+      "source": "Florida Association of Counties, 2025 Florida County Property Tax Report, Table 5"
+    },
+    {
+      "fiscalYear": "FY2021-22",
+      "adoptedMillage": 5.5727,
+      "sourceStatus": "verified_official",
+      "source": "Florida Association of Counties, 2025 Florida County Property Tax Report, Table 5"
+    },
+    {
+      "fiscalYear": "FY2022-23",
+      "adoptedMillage": 5.5605,
+      "sourceStatus": "verified_official",
+      "source": "Florida Association of Counties, 2025 Florida County Property Tax Report, Table 5"
+    },
+    {
+      "fiscalYear": "FY2023-24",
+      "adoptedMillage": 5.5471,
+      "sourceStatus": "verified_official",
+      "source": "Florida Association of Counties, 2025 Florida County Property Tax Report, Table 5; matches DOR 2024-vintage PDF"
+    },
+    {
+      "fiscalYear": "FY2024-25",
+      "adoptedMillage": 5.5471,
+      "rolledBackRate2025": 5.3133,
+      "sourceStatus": "verified_official",
+      "source": "Florida DOR, Clay County Property Tax Overview, 2024- and 2025-vintage PDFs (both agree)"
+    },
+    {
+      "fiscalYear": "FY2025-26",
+      "adoptedMillage": 5.5471,
+      "proposedTrimRate": 5.7471,
+      "sourceStatus": "verified_official",
+      "source": "Adopted figure already verified in data/records.json (tax-countywide-services). Proposed figure is new: the county proposed 5.7471 mills at the August 2025 TRIM stage \u2014 a genuine documented increase \u2014 then held the FINAL ADOPTED rate flat at 5.5471. This requested/proposed vs. adopted distinction is modeled the same way as the state-funding pipeline: never collapse the two into one 'the rate' figure.",
+      "note": "PROPOSED != ADOPTED. The Board held the line at the final adopted rate."
+    }
+  ],
+  "adValoremSevenYearSeries": {
+    "sourceStatus": "verified_official",
+    "source": "Florida Department of Revenue, Property Tax Oversight, Clay County Property Tax Overview (annual county-profile PDFs, 2019-2025 vintages). Each vintage-year PDF reports that year's own TRIM-cycle figures. Non-ad-valorem figures for 2021-2023 added after a follow-up verification pass directly against each vintage year's own Clay County Property Tax Overview PDF.",
+    "byYear": [
+      {
+        "taxYear": 2019,
+        "totalJustValue": 18543452114,
+        "countyTaxableValue": 11389211388,
+        "countyAdValoremTaxes": 59683603,
+        "countyAdValoremPctOfTotal": 25.62,
+        "totalTaxesAllAuthorities": 232917105
+      },
+      {
+        "taxYear": 2020,
+        "totalJustValue": 19705653330,
+        "countyTaxableValue": null,
+        "countyAdValoremTaxes": 64772993,
+        "countyAdValoremPctOfTotal": 26.39,
+        "totalTaxesAllAuthorities": null
+      },
+      {
+        "taxYear": 2021,
+        "totalJustValue": 21198286499,
+        "countyTaxableValue": null,
+        "countyAdValoremTaxes": 72556602,
+        "countyAdValoremPctOfTotal": 27.46,
+        "totalTaxesAllAuthorities": 264183020,
+        "totalNonAdValoremTaxes": 48876049
+      },
+      {
+        "taxYear": 2022,
+        "totalJustValue": 26051665172,
+        "countyTaxableValue": null,
+        "countyAdValoremTaxes": 81491012,
+        "countyAdValoremPctOfTotal": 28.32,
+        "totalTaxesAllAuthorities": 287789269,
+        "totalNonAdValoremTaxes": 48876049
+      },
+      {
+        "taxYear": 2023,
+        "totalJustValue": 31057977523,
+        "countyTaxableValue": null,
+        "countyAdValoremTaxes": 94219659,
+        "countyAdValoremPctOfTotal": 27.59,
+        "totalTaxesAllAuthorities": 341496261,
+        "totalNonAdValoremTaxes": 64828316
+      },
+      {
+        "taxYear": 2024,
+        "totalJustValue": 33009829130,
+        "countyTaxableValue": 18552447780,
+        "countyAdValoremTaxes": 102911582,
+        "countyAdValoremPctOfTotal": 27.93,
+        "totalTaxesAllAuthorities": 368422464,
+        "schoolAdValoremTaxes": 128121475,
+        "municipalAdValoremTaxes": 8945128,
+        "otherAdValoremTaxes": 55856725,
+        "totalAdValoremTaxes": 295834910,
+        "totalNonAdValoremTaxes": 72587554,
+        "parcelCount": 101833
+      },
+      {
+        "taxYear": 2025,
+        "totalJustValue": 35003532623,
+        "countyTaxableValue": 20127960437,
+        "countyAdValoremTaxes": 111651099,
+        "countyAdValoremPctOfTotal": 22.18,
+        "totalTaxesAllAuthorities": 503350979,
+        "schoolAdValoremTaxes": 138013633,
+        "municipalAdValoremTaxes": 10248776,
+        "otherAdValoremTaxes": 60768798,
+        "totalAdValoremTaxes": 320682307,
+        "totalNonAdValoremTaxes": 182668673,
+        "parcelCount": 103423,
+        "vintageNote": "2025-vintage PDF (August 2025 TRIM cycle) \u2014 preliminary/proposed, not the final January-2026 release."
+      }
+    ],
+    "derivedGrowth20192025": {
+      "countyAdValoremTaxes": {
+        "2019": 59683603,
+        "2025": 111651099,
+        "dollarChange": 51967496,
+        "pctChange": 87.09
+      },
+      "totalJustValue": {
+        "2019": 18543452114,
+        "2025": 35003532623,
+        "pctChange": 88.75
+      },
+      "countyTaxableValue": {
+        "2019": 11389211388,
+        "2025": 20127960437,
+        "pctChange": 76.73
+      },
+      "notesOnCausesOfGrowth": "Just Value nearly doubled (+88.75%) \u2014 well above Clay County's population growth over the same period. The dominant documented driver of Clay County's ad valorem tax growth is RISING PROPERTY VALUES (reassessment plus new construction, not separated in this dataset), not the county raising millage \u2014 the Countywide Operating Millage only moved from about 5.24 (2019) to 5.5471 (since FY2023-24), a modest ~5.9% rate increase, versus an 87% dollar increase in the tax actually levied. A true new-construction-vs-reassessment split requires DOR's separate New Construction (DR-403) series, not yet pulled \u2014 flagged as still needed."
+    },
+    "nonAdValoremAnomaly": {
+      "label": "DATA ANOMALY \u2014 NEEDS VERIFICATION",
+      "observedValues": {
+        "2021": 48876049,
+        "2022": 48876049,
+        "2023": 64828316,
+        "2024": 72587554,
+        "2025": 182668673
+      },
+      "fieldVerification": {
+        "dorFieldLabel": "\"Total Non-Ad Valorem Taxes\", printed under the \"Property Taxes Levied\" panel heading on the Clay County page of each vintage year's DOR County Profile PDF",
+        "units": "Whole U.S. dollars, whole-county aggregate (not per-parcel, not a rate)",
+        "measureType": "This is a LEVY figure (the panel's own heading is \"Property Taxes Levied\"), not a collections, roll-value, or assessment-roll figure. It should never be described as taxes actually collected or paid by residents.",
+        "sameFieldNameAcrossYears": true,
+        "sameFieldNameNote": "The exact same field label (\"Total Non-Ad Valorem Taxes\") appears in an identically structured panel in every vintage-year PDF checked (2021 through 2025), suggesting the metric definition itself is stable across years. Whether the underlying UNIVERSE of assessments DOR rolls into that field changed year to year (e.g., a newly created MSBU, a reclassified assessment, a reporting-methodology change at DOR, or an actual new county-level assessment) was not established in this research pass.",
+        "oddityFound": "The 2021 and 2022 figures are IDENTICAL to the dollar ($48,876,049), despite Total Taxes and every ad valorem line changing between those two years. This is itself worth independent verification \u2014 it may indicate DOR did not re-survey this specific field for the 2022 vintage (a data-staleness/carry-forward artifact) rather than non-ad-valorem assessments genuinely holding flat. If that carry-forward pattern also affected the 2024 or 2025 figure, the apparent 2024-to-2025 jump could be a reporting artifact rather than a real one-year change \u2014 this has NOT been ruled out."
+      },
+      "whatIsNotEstablished": [
+        "Whether Clay County's own non-ad-valorem assessment roll shows the same $110M year-over-year change, or a different figure",
+        "Whether the change reflects a new/expanded assessment (e.g. stormwater, solid waste, fire, an MSBU), a DOR reporting-methodology change, or a data anomaly/carry-forward artifact like the one observed between 2021 and 2022",
+        "Whether the same set of taxing authorities and assessment types is represented in the 2024 and 2025 figures"
+      ],
+      "doNotPresentAs": "An increase in taxes actually paid or collected by Clay County residents; evidence of unexplained county spending; or a $110M new-tax event. None of these are established by the source data reviewed.",
+      "recommendedNextStep": "Clay County's own non-ad-valorem assessment roll, or the Tax Collector's combined tax-bill file, compared against DOR's underlying non-ad-valorem worksheet (not just the summary panel) for both years."
+    }
+  },
+  "statewideContext": {
+    "verificationTable": [
+      {
+        "claim": "FL county ad-valorem levy 2019 = $10,683,652,381",
+        "verdict": "NOT VERIFIED",
+        "detail": "Could not locate the exact statewide aggregate table (DOR's Ad Valorem Valuation and Tax Data Book) via automated access this session; the document library is JS-rendered.",
+        "sourceStatus": "pending"
+      },
+      {
+        "claim": "FL county ad-valorem levy 2019 collection rate = 99.25%",
+        "verdict": "VERIFIED (with a caveat)",
+        "detail": "DOR's 2019 Clay County Property Tax Overview shows 'FL Average' Percent of Taxes Levied Collected = 99.25% \u2014 an exact match. Caveat: this is DOR's average of all 67 counties' individual collection percentages, not necessarily a dollar-weighted statewide total.",
+        "sourceStatus": "verified_official",
+        "sourceUrl": "https://floridarevenue.com/property/Documents/2019_County_Profiles.pdf"
+      },
+      {
+        "claim": "FL county ad-valorem levy 2025 = $20,682,076,778",
+        "verdict": "NOT VERIFIED",
+        "detail": "Same access blocker as the 2019 figure.",
+        "sourceStatus": "pending"
+      },
+      {
+        "claim": "FL county ad-valorem levy 2025 collection rate = 97.19%",
+        "verdict": "VERIFIED (with the same caveat)",
+        "detail": "DOR's 2025-vintage Clay County Property Tax Overview shows 'FL Average' Percent of Taxes Levied Collected = 97.19% \u2014 an exact match. This most likely reports the most recently completed collection cycle (TY2024) as of the report's August-2025 publication.",
+        "sourceStatus": "verified_official",
+        "sourceUrl": "https://floridarevenue.com/property/Documents/2025_County_Profiles.pdf"
+      },
+      {
+        "claim": "FL population 2019 = 21,477,737",
+        "verdict": "NOT INDEPENDENTLY RE-VERIFIED",
+        "detail": "Plausible and consistent with known Census Vintage conventions, but not re-pulled from FRED/Census this session.",
+        "sourceStatus": "pending"
+      },
+      {
+        "claim": "FL population 2025 = 23,462,518",
+        "verdict": "VERIFIED",
+        "detail": "FRED series FLPOP (U.S. Census Bureau population estimates) shows 23,462.518 thousand persons for 2025 \u2014 an exact match.",
+        "sourceStatus": "verified_official",
+        "sourceUrl": "https://fred.stlouisfed.org/series/FLPOP"
+      },
+      {
+        "claim": "CPI-U inflation 2019-2025 cumulative \u2248 25.9%",
+        "verdict": "NOT PRECISELY VERIFIED",
+        "detail": "Not computed from exact BLS CPI-U index values this session (the BLS inflation calculator is an interactive tool, not directly fetchable). Directionally plausible given known annual U.S. inflation rates in this window, but should be labeled approximate/unconfirmed pending an actual CPI-U index computation.",
+        "sourceStatus": "rough_estimate"
+      },
+      {
+        "claim": "Broader total FL ad-valorem taxes (all authorities) 2019 = $33.886B, 2025 = $59.169B, +74.6%",
+        "verdict": "NOT VERIFIED",
+        "detail": "Same statewide-aggregate access blocker as the county-only levy totals.",
+        "sourceStatus": "pending"
+      }
+    ],
+    "accessBlockerNote": "Florida DOR's statewide aggregate 'Ad Valorem Valuation and Tax Data Book' is served through a JS-rendered document-library page; individual per-county 'County Profile' PDFs ARE static and directly linkable (floridarevenue.com/property/Documents/{YEAR}_County_Profiles.pdf) and were the primary source for every Clay County figure in this file. A follow-up with browser-based access, or a direct request to PTOResearchAnalysis@floridarevenue.com, would resolve the remaining statewide dollar totals.",
+    "explanatoryComponentsForClayCountyRevenueGrowth": {
+      "note": "Per the project's standing rule against assuming levy growth minus population minus inflation equals unexplained spending, here is what this dataset supports as explanatory factors for Clay County's 2019-2025 ad valorem growth specifically:",
+      "supportedByEvidence": [
+        "Rising property values (just value +88.75%, county taxable value +76.73%, 2019-2025) \u2014 the dominant documented driver of the dollar increase in county ad valorem taxes.",
+        "A modest millage increase (5.24 to 5.5471 mills, flat since FY2023-24) \u2014 real but small next to the value growth.",
+        "A large, not-yet-attributed increase in non-ad-valorem assessments in the most recent year observed (2024-2025, +$110M) \u2014 flagged above as unresolved."
+      ],
+      "notYetInvestigated": [
+        "New-construction value specifically (DOR publishes this as a separate line item; not pulled this session).",
+        "Exemption totals over time beyond the single-year figures captured above.",
+        "Voter-approved levies or new MSTU/MSBU districts created 2019-2025.",
+        "Commercial vs. residential development mix shift (DOR profiles show a 'Real Property Just Value by Property Type' breakdown per year; visible in raw extracts but not tabulated here)."
+      ]
+    }
+  }
+}

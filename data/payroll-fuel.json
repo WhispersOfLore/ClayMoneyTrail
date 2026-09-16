@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Payroll / compensation and fuel-fleet spending — leads and verification",
+    "asOf": "2026-09-16",
+    "note": "Clay County's own website (claycountygov.com) and the Clerk of Court's record search (clayclerk.com) both block automated access, so most figures below are capped at partially_verified or unverified_lead. Third-party salary aggregators (openpayrolls.com, opengovpay.com, govsalaries.com) are treated as leads only, never as primary sources, per this project's standing convention."
+  },
+  "payrollClaims": [
+    { "name": "Howard Wanamaker", "titleClaimed": "County Manager", "amountClaimed": 240441, "year": 2025, "status": "partially_verified", "notes": "Wanamaker is confirmed as Clay County's actual County Manager. $240,441 matches the 2025 countywide-highest-salary figure surfaced via a third-party aggregator, consistent with a County Manager topping the pay scale, but the exact name-figure pairing was not confirmed on a primary county document." },
+    { "name": "William Latham C", "titleClaimed": "Assistant County Manager", "amountClaimed": 177941, "year": 2025, "status": "unverified_lead", "notes": "Likely the same person indexed elsewhere as 'Charlie Latham, Assistant County Manager' (a 2022 aggregator snippet shows ~$122,593 that year, a plausible earlier-year figure). This name reconciliation is unconfirmed." },
+    { "name": "Steven Troy Nagle", "titleClaimed": "Assistant County Manager", "amountClaimed": 177941, "year": 2025, "status": "unverified_lead", "notes": "No independent corroboration found." },
+    { "name": "Tammy Stewart C", "titleClaimed": "Assistant County Manager", "amountClaimed": 177941, "year": 2025, "status": "unverified_lead", "notes": "No independent corroboration found." },
+    { "name": "Lorin Mock", "titleClaimed": "Fire Chief", "amountClaimed": 206270, "year": 2025, "status": "conflicting_evidence", "notes": "Mock's existence, title, and near-retirement are solidly confirmed via Jacksonville Today and News4Jax (both 2026-08-11). An independent local outlet (Clayviews.com) reports his salary as $213,778, not $206,270 — a real, if modest, discrepancy. Neither figure has been confirmed against a primary county payroll document." }
+  ],
+  "fireChiefTenureDiscrepancy": {
+    "question": "Has Lorin Mock led Fire Rescue since 2009 (county material) or 2019 (a third-party salary site's implied framing)?",
+    "resolution": "Resolved in favor of 2009, not 2019.",
+    "evidenceStatus": "verified_fact",
+    "evidence": [
+      { "source": "News4Jax, 2026-08-11, \"Clay County Fire Rescue Chief Lorin Mock to retire in April 2027\"", "sourceType": "news_report", "url": "https://www.news4jax.com/news/local/2026/08/11/clay-county-fire-rescue-chief-lorin-mock-to-retire-in-april-2027/", "quote": "joined Clay County Fire Rescue in 2009 ... led Clay County Fire Rescue for more than 16 years" },
+      { "source": "Jacksonville Today, 2026-08-11, \"Clay County Fire Rescue Chief Lorin Mock to retire after 16 years at helm\"", "sourceType": "news_report", "url": "https://jaxtoday.org/2026/08/11/clay-county-chief-lorin-mock-retirement/", "quote": "retiring after 16 years at helm, effective April 2027; more than 40 years as a firefighter including 27 with Jacksonville Fire and Rescue" }
+    ],
+    "conclusion": "Two independent local news outlets, published the same week (Aug 2026), both place Mock joining Clay County Fire Rescue in 2009 and leading it 16+ years. The '2019-2025' framing implied elsewhere was very likely just the years a salary aggregator happened to have rows for him, not a claim about when he became chief."
+  },
+  "fireMarshalDualRoleInvestigation": {
+    "originalClaim": "One county employee may simultaneously hold a Fire Chief and a separate Fire Marshal role and receive two salaries.",
+    "conclusion": "THIS CLAIM IS NOT SUPPORTED AND SHOULD NOT BE PUBLISHED. The Fire Marshal and the Fire Chief are two different people. There is no evidence in this research of any Clay County employee holding both roles, and no evidence of anyone receiving two salaries for a Fire Chief/Fire Marshal combination.",
+    "evidenceStatus": "disproven_claim",
+    "doNotPublish": "Do not state or imply that the Fire Chief and Fire Marshal are the same person, or that anyone receives two salaries for those two roles.",
+    "fireMarshalIdentity": {
+      "name": "Anthony Roseberry",
+      "titleSince": "August 2013",
+      "sourceUrl": "https://www.clayconc.com/fire-marshal",
+      "evidenceStatus": "partially_verified",
+      "notes": "A person distinct from Fire Chief Lorin Mock, which is what disproves the original claim. Sourced via search snippet, not independently fetched — the title-since date and the office itself should be confirmed against a primary county source before being presented as fact."
+    },
+    "separateUnrelatedFinding_fireChiefCountyManagerOverlap": {
+      "description": "A DIFFERENT, unrelated situation was found in the course of this research: Lorin Mock (Fire Chief) reportedly also held the title of acting/Deputy County Manager for a period during a county-manager search. This is a Fire Chief + County Manager title overlap, NOT a Fire Chief + Fire Marshal situation, and is a separate matter from the disproven claim above.",
+      "person": "Lorin Mock",
+      "titles": "Fire Chief AND (reportedly, temporarily/concurrently) Deputy County Manager",
+      "source": "Clayviews.com, \"Fire Crews Give Chiefs Failing Grades\"",
+      "url": "https://www.clayviews.com/p/turmoil-reigns-within-clay-county",
+      "quote": "Mock was appointed as county manager for the six-month search for a permanent manager ... asked Mock to remain as Deputy County Manager. Mock now splits his time between the two county offices.",
+      "secondPersonFound": { "name": "David Motes", "titles": "Reportedly Acting Fire Chief / Assistant County Manager" },
+      "compensation": {
+        "status": "UNRESOLVED — do not publish a compensation figure or characterization for this dual-title arrangement",
+        "note": "A single news outlet (Clayviews.com, not a primary government record) attributed total-compensation-style figures to Mock and Motes in the same article that described their dual titles, but the article does not state whether either person received one consolidated salary or additional/separate compensation for the second title. Absent a primary payroll or BCC personnel-action record, this must remain unresolved — do not publish a specific dollar figure as 'his salary for holding both roles' or imply additional compensation was paid."
+      },
+      "evidenceStatus": "possible_connection",
+      "recordsNeeded": "A Clay County BCC personnel-action or compensation resolution appointing Mock and/or Motes to the second title, showing whether any additional compensation was authorized."
+    }
+  },
+  "broaderPayrollDatasetAvailability": {
+    "found": false,
+    "notes": "No publicly downloadable 2019-2026 Clay County payroll dataset was located. Third-party aggregators appear to hold multi-year rosters but their full pages/CSV exports are bot-blocked. Recommended: a direct human visit to those sites, or a Chapter 119 Florida public-records request to Clay County BCC Human Resources for a compensation roster by year."
+  },
+  "fuelFleet": {
+    "status": "records_required",
+    "checkRegisterSearch": "No public, vendor-searchable check-register or 'open checkbook' disbursement tool was identified. clayclerk.com blocks AI crawlers by stated robots.txt policy; claycountygov.com returns 403 to all automated fetches.",
+    "claims": [
+      { "vendor": "WEX Fleet Universal", "description": "Clay County fuel purchases, July 2026", "amountClaimed": 24974.44, "status": "unverified_lead" },
+      { "vendor": "Gate Fuel Service, Inc.", "description": "Invoice dated 2026-08-25, 6,873 gallons", "amountClaimed": 23729.86, "status": "unverified_lead" }
+    ],
+    "recommendedPath": "A Chapter 119 public-records request to the Clay County Clerk of Court/Comptroller's Office (Finance Division) for AP disbursement/check-register detail for vendor names 'WEX'/'WEX Fleet Universal' and 'Gate Fuel Service, Inc.' for FY2026, specifying invoice-level detail (date, PO/invoice number, amount, department/fund charged)."
+  }
+}

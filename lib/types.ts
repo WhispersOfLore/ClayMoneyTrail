@@ -3,7 +3,12 @@ export type SourceStatus =
   | 'official_estimate'
   | 'derived_estimate'
   | 'rough_estimate'
-  | 'pending';
+  | 'pending'
+  // Added for the Phase 6 registry expansion: a source that is a news
+  // report rather than a primary government record. Used only in
+  // data/sources.json entries that back a lead, never for a money figure
+  // that should carry verified_official/official_estimate instead.
+  | 'news_report';
 
 export interface RecordItem {
   id: string;
@@ -145,4 +150,187 @@ export interface InvestigationMeta {
   status: string;
   disclaimer: string;
   cthrewRootEntityId?: string;
+  // Local, cached copy of the commissioner's official Clay County
+  // government headshot (not a remote hotlink) — see PART J. Optional so
+  // non-commissioner investigations (e.g. a future project-level
+  // investigation) don't need one.
+  photoUrl?: string;
+  photoSourceUrl?: string;
+  currentTitle?: string;
+  areaRepresented?: string;
+}
+
+// --- State funding / appropriations layer (PART A) ------------------------
+// Models the Florida Senate Local Funding Initiative Request (LFIR) pipeline.
+// CRITICAL: requested, appropriated, vetoed, and received are tracked as
+// distinct fields on purpose — never collapse them into one "funding" number.
+
+export type LegislativeStatus =
+  | 'requested'
+  | 'appropriated'
+  | 'vetoed'
+  | 'partially_vetoed'
+  | 'unknown_pending_gaa_review'
+  | 'withdrawn';
+
+export interface StateFundingRequest {
+  id: string;
+  lfir: number;
+  title: string;
+  titleAsFiled?: string;
+  fiscalYear: string;
+  senateSponsor: string;
+  houseSponsor?: string | null;
+  houseFormNumber?: string | null;
+  dateOfRequest: string | null;
+  requestingEntity: string;
+  stateAgency?: string | null;
+  amountRequested: number | null;
+  fundingType?: string | null;
+  totalProjectCost?: number | null;
+  matchingFunds?: { federal: number; state: number; local: number; other: number } | null;
+  description: string;
+  priorStateFundingNote?: string | null;
+  futureYearFundingLikely?: boolean;
+  futureYearAmount?: number | null;
+  estimatedStart?: string | null;
+  estimatedCompletion?: string | null;
+  omFundingPlan?: string | null;
+  facilityOwner?: string | null;
+  legislativeStatus: LegislativeStatus;
+  legislativeStatusDetail: string;
+  vetoAmount?: number | null;
+  actualFundsReceived: number | null;
+  publicSafetyComplexComponent?: boolean;
+  sourceUrl: string;
+  sourceStatus: SourceStatus;
+  dateAccessed: string;
+  notes?: string;
+}
+
+// --- Public Safety Complex investigation (PART B) --------------------------
+
+export interface PSCTimelineEntry {
+  date: string;
+  event: string;
+  status: EvidenceStatus;
+  sourceUrl: string;
+}
+
+export interface PublicSafetyComplex {
+  rfp: {
+    number: string;
+    title: string;
+    releaseDate: string;
+    dueDate: string;
+    bidOpenDate: string;
+    statusAsOf: string;
+    statutoryAuthority: string;
+    siteAcreage: string;
+    components: string;
+    financingStructure: string;
+    evaluationProcess: string;
+    sourceUrl: string;
+    dateAccessed: string;
+    evidenceStatus: EvidenceStatus;
+  };
+  staffRanking: {
+    respondents: { rank: number; entity: string; score: number | null }[];
+    evidenceStatus: EvidenceStatus;
+    notes: string;
+  };
+  landAcquisition: {
+    site: string;
+    acreage: string;
+    status: EvidenceStatus;
+    notes: string;
+    sourceUrl: string;
+  };
+  costRangeOrigin: {
+    claimedRange: string;
+    evidenceStatus: EvidenceStatus;
+    finding: string;
+  };
+  stateGrant: {
+    amount: number;
+    purpose: string;
+    date: string;
+    presenter: string;
+    evidenceStatus: EvidenceStatus;
+    sourceUrl: string;
+  };
+  timeline: PSCTimelineEntry[];
+  recordsNeeded: string[];
+}
+
+// --- Geographic spending (PART C) ------------------------------------------
+
+export interface GeographicClassification {
+  id: string;
+  category: string;
+  canAllocate: boolean | 'unknown';
+  reason: string;
+  evidenceStatus: EvidenceStatus;
+  sourceUrl?: string | null;
+  followUp?: string | null;
+}
+
+// --- Taxes & assessments (PART D/E) -----------------------------------------
+
+export interface MillageYear {
+  fiscalYear: string;
+  adoptedMillage: number;
+  proposedTrimRate?: number | null;
+  rolledBackRate?: number | null;
+  note?: string;
+}
+
+export interface AdValoremYear {
+  taxYear: number;
+  totalJustValue: number | null;
+  countyTaxableValue: number | null;
+  countyAdValoremTaxes: number | null;
+  countyAdValoremPctOfTotal: number | null;
+  totalTaxesAllAuthorities: number | null;
+  schoolAdValoremTaxes?: number | null;
+  municipalAdValoremTaxes?: number | null;
+  otherAdValoremTaxes?: number | null;
+  totalAdValoremTaxes?: number | null;
+  totalNonAdValoremTaxes?: number | null;
+  parcelCount?: number | null;
+}
+
+export interface StatewideClaimCheck {
+  claim: string;
+  verdict: 'VERIFIED' | 'NOT VERIFIED' | 'PARTIALLY VERIFIED' | 'NOT INDEPENDENTLY RE-VERIFIED';
+  detail: string;
+  sourceStatus: SourceStatus;
+  sourceUrl?: string | null;
+}
+
+// --- Black Creek Water Resource Development Project (PART I) ---------------
+
+export interface BlackCreekCostEstimate {
+  label: string;
+  amount: number;
+  asOfDate: string;
+  sourceStatus: SourceStatus;
+  sourceUrl: string;
+  notes?: string;
+}
+
+export interface BlackCreekFundingSource {
+  source: string;
+  amount: number | null;
+  measure: string;
+  sourceStatus: SourceStatus;
+  sourceUrl: string;
+  notes?: string;
+}
+
+export interface BlackCreekTimelineEntry {
+  date: string;
+  event: string;
+  sourceStatus: SourceStatus;
+  sourceUrl: string;
 }

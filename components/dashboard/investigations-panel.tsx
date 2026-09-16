@@ -89,7 +89,33 @@ export function InvestigationsPanel({
         ))}
       </div>
 
-      <h3 className="inv-subject-heading">{meta.subject}</h3>
+      <div className="inv-subject-header">
+        {meta.photoUrl && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            className="inv-subject-photo"
+            src={`${import.meta.env.BASE_URL}${meta.photoUrl.replace(/^\//, '')}`}
+            alt={`Official portrait of ${meta.commissioner ?? meta.subject}`}
+            width={72}
+            height={90}
+          />
+        )}
+        <div>
+          <h3 className="inv-subject-heading">{meta.subject}</h3>
+          {(meta.currentTitle || meta.areaRepresented) && (
+            <p className="inv-subject-subhead">
+              {meta.currentTitle}
+              {meta.currentTitle && meta.areaRepresented ? ' · ' : ''}
+              {meta.areaRepresented && <>Represents {meta.areaRepresented}</>}
+            </p>
+          )}
+          {meta.photoSourceUrl && (
+            <a className="source-link inv-subject-photo-credit" href={meta.photoSourceUrl} target="_blank" rel="noreferrer">
+              Official Clay County government photo
+            </a>
+          )}
+        </div>
+      </div>
 
       <div className="inv-tabs">
         {tabs.map((t) => (

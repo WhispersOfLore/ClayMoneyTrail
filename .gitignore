@@ -43,3 +43,9 @@ tsconfig.tsbuildinfo
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/cache
+
+# Raw research scratch material (fork notes, cached source PDFs, findings.json
+# drafts) for the Phase 6 expansion — kept locally for reference, not
+# published. Nothing here is deleted; it just isn't tracked in the repo.
+# Verified, cited facts derived from it live in data/*.json instead.
+/research-staging/

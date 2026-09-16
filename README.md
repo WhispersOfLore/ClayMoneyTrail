@@ -121,6 +121,52 @@ column definitions and the manual CSV → `data/records.json` conversion
 steps — there is no automatic importer, so every new record gets human
 review before publishing.
 
+## Phase 6 datasets (state funding, capital projects, geographic spending, taxes)
+
+Five additional research-backed datasets live alongside `data/records.json`,
+each with its own nav section and rendered by a dedicated component in
+`components/dashboard/`:
+
+- **`data/state-funding.json`** — Florida Senate Local Funding Initiative
+  Requests (LFIR) for Clay County, FY2026-27. Models the pipeline
+  `requested → appropriated → vetoed → received → spent` explicitly per
+  request via a `legislativeStatus` field — never collapse these stages into
+  one number. Rendered by **State Funding**.
+- **`data/public-safety-complex.json`** — the RFP 25/26-085 Public-Private
+  Partnership money trail (land, RFP, staff ranking, state-funding
+  components, timeline). Rendered by **Public Safety Complex**, and
+  cross-linked from **Capital Projects**.
+- **`data/geographic-spending.json`** — the "where does the money go"
+  classification (countywide/unallocated vs. MSTU vs. district vs. named CIP
+  road projects), each entry explicitly marked whether it CAN or CANNOT be
+  geographically allocated from public records, plus the CIP Transportation
+  project list. Rendered by **Geographic Spending**.
+- **`data/taxes-assessments.json`** — Clay County countywide millage
+  2018-2026, the 2019-2025 ad valorem series (FL DOR), and a claim-by-claim
+  verification table for a community post's statewide numbers. Rendered by
+  **Taxes & Assessments**.
+- **`data/black-creek.json`** — the SJRWMD Black Creek Water Resource
+  Development Project money trail (cost estimates, funding, timeline).
+  Rendered as a summary card on **Capital Projects**.
+- **`data/payroll-fuel.json`** — payroll-claim verification (including the
+  Fire Chief tenure-date and Fire Marshal dual-role investigations) and
+  fuel/fleet vendor leads. Not yet wired to its own nav page — read directly
+  or added to People/Payroll in a future pass.
+
+These use the same `sourceStatus` vocabulary as `data/records.json` for money
+figures, plus `EvidenceStatus` (the Investigations layer's vocabulary) for
+investigative claims — many entries mix both, e.g. a `sourceStatus` on the
+dollar figure and an `evidenceStatus` on the surrounding claim. `npm run
+data:audit` validates unique IDs, status-vocabulary membership, and that
+every `photoUrl` on an investigation actually exists under `public/`.
+
+Commissioner official headshots live in `public/images/commissioners/`,
+downloaded from each commissioner's official `claycountygov.com` bio page
+and referenced via `photoUrl` on their `data/investigations/meta.json`
+entry (also carries `photoSourceUrl`, `currentTitle`, and
+`areaRepresented`, each independently verified against official material,
+never the Facebook graphic that prompted this).
+
 ## Investigations
 
 An **Investigations** section (separate nav item, separate data model) adds
