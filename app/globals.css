@@ -161,6 +161,49 @@ button {
 .email-crossref { display: flex; gap: 12px; align-items: flex-start; padding: 18px 20px; }
 .email-crossref svg { color: var(--blue); flex: 0 0 auto; }
 .email-crossref p { color: var(--muted); font-size: 12px; line-height: 1.55; margin: 5px 0 0; }
+.matched-leads article { display: flex; justify-content: space-between; gap: 20px; padding: 14px 20px; border-top: 1px solid var(--line); }
+.matched-leads article p { color: var(--muted); font-size: 12px; margin: 5px 0 0; }
+.matched-leads article > div:last-child { text-align: right; white-space: nowrap; font-weight: 700; }
+.matched-leads article a { color: var(--blue); display: flex; justify-content: flex-end; align-items: center; gap: 4px; font-size: 10px; margin-top: 5px; text-decoration: none; }
+.contract-inventory-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.contract-inventory-metrics article { padding: 17px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+.contract-inventory-metrics span { display: block; color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .07em; }
+.contract-inventory-metrics strong { display: block; margin-top: 7px; color: var(--ink); font-size: 26px; }
+.financial-proof-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.financial-proof-grid article { padding: 22px; border: 1px solid var(--line); border-radius: 13px; background: var(--panel); }
+.financial-proof-grid span { display: block; font-size: 10px; font-weight: 850; letter-spacing: .09em; }
+.financial-proof-grid strong { display: block; margin: 7px 0 5px; font-size: clamp(28px, 4vw, 42px); line-height: 1; }
+.financial-proof-grid p { margin: 0; max-width: 540px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.award-proof { border-left: 5px solid var(--orange) !important; }
+.award-proof span, .award-proof strong { color: var(--orange); }
+.payment-proof { border-left: 5px solid var(--green) !important; }
+.payment-proof span, .payment-proof strong { color: var(--green); }
+.contract-method { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 20px; }
+.contract-method h3 { margin: 4px 0 8px; }
+.contract-method p { max-width: 850px; margin: 5px 0; color: var(--muted); line-height: 1.55; }
+.contract-method .source-link { flex: 0 0 auto; }
+.category-summary > div:last-child { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; padding: 0 20px 20px; }
+.category-summary > div:last-child span { display: grid; grid-template-columns: 36px 1fr; gap: 8px; align-items: center; padding: 10px; border-radius: 9px; background: var(--paper); color: var(--muted); font-size: 12px; }
+.category-summary > div:last-child strong { color: var(--ink); font-size: 16px; }
+.software-list { max-height: 480px; overflow: auto; padding: 0 20px 20px; }
+.software-list article { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 14px; align-items: center; padding: 11px 0; border-top: 1px solid var(--line); }
+.software-list article:first-child { border-top: 0; }
+.software-list strong, .software-list small { display: block; }
+.software-list small { margin-top: 3px; color: var(--muted); }
+.software-list > article > span { color: var(--orange); font-size: 10px; font-weight: 850; letter-spacing: .06em; }
+.software-list a { color: var(--blue); }
+.records-needed-queue > article { padding: 17px 20px; border-top: 1px solid var(--line); }
+.draft-only-note { max-width: 680px; margin: 6px 0 0; color: var(--muted); font-size: 12px; }
+.records-needed-title { display: flex; gap: 10px; align-items: flex-start; }
+.records-needed-title small { display: block; color: var(--muted); margin-top: 3px; }
+.records-needed-queue > article > p { color: var(--muted); font-size: 12px; }
+.records-needed-queue dl { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 18px; margin: 12px 0 0; }
+.records-needed-queue dl div { background: var(--paper); border-radius: 7px; padding: 10px; }
+.records-needed-queue dt { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
+.records-needed-queue dd { margin: 5px 0 0; font-size: 11px; line-height: 1.45; }
+.priority { border-radius: 10px; padding: 3px 7px; font-size: 9px; font-weight: 750; text-transform: uppercase; }
+.priority-high { background: #fbe5df; color: #8b3b2d; }
+.priority-medium { background: #fff1d0; color: #7c5a18; }
 .sidebar-note span,
 .sidebar-note strong {
   display: block;
@@ -1673,6 +1716,17 @@ footer p {
   .metric-grid, .directory-grid { grid-template-columns: 1fr; }
   .email-signal-grid { grid-template-columns: 1fr; }
   .email-review-summary { align-items: flex-start; flex-direction: column; }
+  .matched-leads article { align-items: flex-start; flex-direction: column; }
+  .matched-leads article > div:last-child { text-align: left; }
+  .matched-leads article a { justify-content: flex-start; }
+  .contract-inventory-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .financial-proof-grid { grid-template-columns: 1fr; }
+  .contract-method { display: block; }
+  .contract-method .source-link { display: inline-flex; margin-top: 12px; }
+  .category-summary > div:last-child { grid-template-columns: 1fr; }
+  .software-list article { grid-template-columns: minmax(0, 1fr) auto; }
+  .software-list article > span { grid-column: 1; }
+  .records-needed-queue dl { grid-template-columns: 1fr; }
   .open-research ul { columns: 1; }
   footer {
     margin: 0 16px;

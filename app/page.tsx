@@ -33,6 +33,7 @@ import geographicSpendingData from '@/data/geographic-spending.json';
 import taxesAssessmentsData from '@/data/taxes-assessments.json';
 import blackCreekData from '@/data/black-creek.json';
 import contractsVendorsData from '@/data/contracts-vendors.json';
+import contractsInventoryData from '@/data/contracts-fy25-26.json';
 import publicEmailData from '@/data/public-email.json';
 import publicRecordsContactsData from '@/data/public-records-contacts.json';
 import humanServicesData from '@/data/human-services.json';
@@ -446,7 +447,7 @@ export default function Home() {
               title={section}
               description="Official FY2025-26 procurement notices, kept separate from signed contracts, ceilings, invoices, and actual payments."
             >
-              <ContractsPanel data={contractsVendorsData} />
+              <ContractsPanel data={contractsVendorsData} inventory={contractsInventoryData} />
             </StandardPage>
           )}
 

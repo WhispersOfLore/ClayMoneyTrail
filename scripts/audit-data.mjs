@@ -152,6 +152,38 @@ for (const r of contracts.records) {
   contractIds.add(r.id);
   if (r.actualPayments !== null) errors.push(`Contract registry ${r.id} must not assert payments without a payment-ledger source`);
 }
+const contractInventory = JSON.parse(await readFile(new URL('../data/contracts-fy25-26.json', import.meta.url), 'utf8'));
+const VALID_CHAIN_STATUSES = new Set(['FOUND', 'MISSING', 'N/A', 'NEEDS VERIFICATION']);
+if (contractInventory.meta.documents_examined !== 427) errors.push('FY25/26 contract inventory document count changed unexpectedly');
+if (contractInventory.meta.verified_actual_payments_identified !== 0) errors.push('FY25/26 contract inventory must show zero verified actual payments currently identified');
+if (contractInventory.meta.clerk_index_metadata_only + contractInventory.meta.substantive_official_document_reviewed !== contractInventory.meta.inventory_records) {
+  errors.push('FY25/26 evidence-depth counts do not reconcile to inventory records');
+}
+const inventoryKeys = new Set();
+for (const r of contractInventory.records) {
+  const key = `${r.document_type}|${r.record_number}|${r.title}`;
+  if (inventoryKeys.has(key)) errors.push(`Duplicate FY25/26 inventory row: ${key}`);
+  inventoryKeys.add(key);
+  for (const field of ['procurement_status','award_status','contract_status','amendment_status','po_status','invoice_status','payment_status']) {
+    if (!VALID_CHAIN_STATUSES.has(r[field])) errors.push(`Invalid ${field} on FY25/26 inventory row ${key}`);
+  }
+  if (!['CLERK INDEX METADATA ONLY','SUBSTANTIVE OFFICIAL DOCUMENT REVIEWED'].includes(r.evidence_basis)) errors.push(`Invalid evidence_basis on FY25/26 inventory row ${key}`);
+  if (r.verified_actual_payments !== null) errors.push(`FY25/26 inventory row ${key} asserts actual payment without ledger evidence`);
+}
+if (contracts.recordsNeeded.length !== 8) errors.push(`Expected 8 contract Records Needed drafts, found ${contracts.recordsNeeded.length}`);
+for (const request of contracts.recordsNeeded) {
+  if (request.status !== 'draft_research_only' || request.sendEnabled !== false) errors.push(`Contract Records Needed item ${request.id} is not locked as a non-sending research draft`);
+}
+for (const id of ['2526-055','2526-014']) {
+  const unresolved = contracts.records.find((record) => record.id === id);
+  if (!unresolved || !/need.*procurement_chain_verification/.test(unresolved.status) || !/not verified/i.test(unresolved.vendor ?? '')) {
+    errors.push(`Rejected-solicitation relationship ${id} is no longer explicitly unresolved`);
+  }
+}
+const contractCsvHeader = (await readFile(new URL('../public/data/fy25-26-contract-inventory.csv', import.meta.url), 'utf8')).split('\n', 1)[0].split(',');
+for (const column of ['approved_amount','contract_ceiling','verified_actual_payments']) {
+  if (!contractCsvHeader.includes(column)) errors.push(`FY25/26 contract CSV is missing separate ${column} field`);
+}
 const publicEmail = JSON.parse(await readFile(new URL('../data/public-email.json', import.meta.url), 'utf8'));
 if (/\bcommitted malfeasance\b/i.test(JSON.stringify(publicEmail))) errors.push('Public-email dataset contains a prohibited legal conclusion');
 if (publicEmail.mailboxes.length !== 5) errors.push('Public-email review must cover all five commissioner mailboxes');
