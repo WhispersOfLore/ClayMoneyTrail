@@ -7,7 +7,7 @@
     "disclaimer": "An intent-to-award notice is not proof of a signed contract or payment. Contract ceilings, purchase orders, invoices, and actual payments remain separate fields and are null until verified.",
     "contractSearchUrl": "https://dmcc.clayclerk.com/Documents/Search",
     "accountsPayableContact": "Clay County Clerk/Comptroller — County Finance / Accounts Payable, 904-529-3865",
-    "inventoryCsv": "/data/fy25-26-contract-inventory.csv",
+    "inventoryCsv": "data/fy25-26-contract-inventory.csv",
     "documentsExamined": 427,
     "inventoryRecords": 425,
     "softwareRecords": 38,
