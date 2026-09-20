@@ -11,6 +11,8 @@
     "build:pages": "vite build --config vite.config.pages.ts",
     "data:export": "node scripts/export-data.mjs",
     "data:audit": "node scripts/audit-data.mjs",
+    "typecheck": "tsc --noEmit",
+    "secrets:scan": "node scripts/scan-secrets.mjs",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt",

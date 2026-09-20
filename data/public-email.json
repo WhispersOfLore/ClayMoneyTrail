@@ -1,0 +1,30 @@
+{
+  "meta":{"asOf":"2026-09-20","sourceUrl":"https://public.claycountygov.com/PublicEmail/#section=county","charterUrl":"https://www.claycountygov.com/home/showpublisheddocument/1144/639020110268470000","scope":"Neutral index and human-review workflow for official commissioner public mailboxes.","disclaimer":"No message is labeled malfeasance. Automated flags are research leads only; full threads, employee reporting relationships, and legal context must be reviewed by a person."},
+  "mailboxes":[
+    {"district":"1","commissioner":"John Sgromolo","archiveStatus":"available","reviewedMessages":0,"flaggedMessages":0},
+    {"district":"2","commissioner":"Alexandra Compere","archiveStatus":"available","reviewedMessages":0,"flaggedMessages":0},
+    {"district":"3","commissioner":"Jim Renninger","archiveStatus":"available","reviewedMessages":0,"flaggedMessages":0},
+    {"district":"4","commissioner":"Betsy Condon","archiveStatus":"available","reviewedMessages":0,"flaggedMessages":0},
+    {"district":"5","commissioner":"Kristen Burke","archiveStatus":"available","reviewedMessages":0,"flaggedMessages":0}
+  ],
+  "reviewStates":[
+    {"id":"information_request","label":"Information request","meaning":"Commissioner appears to seek information, which §2.2.J expressly permits."},
+    {"id":"citizen_referral","label":"Citizen referral","meaning":"Message forwards or refers a constituent concern without an operational direction."},
+    {"id":"possible_operational_direction","label":"Possible operational direction","meaning":"Language may direct an employee or agent; preserve the entire thread for human/legal review."},
+    {"id":"insufficient_context","label":"Insufficient context","meaning":"Reporting relationship, quoted history, attachments, or surrounding thread is missing."},
+    {"id":"reviewed_no_flag","label":"Reviewed — no §2.2.J flag","meaning":"Human review found no reason to retain this message in the §2.2.J review queue."}
+  ],
+  "signals":[
+    {"id":"direct_action","label":"Direct-action language","examples":["do this","have this done","contact them","change this","take care of this","I need you to"],"effect":"Raises review priority; never determines the result by itself."},
+    {"id":"inquiry","label":"Inquiry language","examples":["do you know","can you tell me","what is the status","can you find out"],"effect":"Generally lowers review priority because §2.2.J permits inquiry and information-seeking."},
+    {"id":"reporting_chain","label":"Recipient and reporting chain","examples":[],"effect":"Confirm whether the recipient was under the direct or indirect supervision named in §2.2.J."},
+    {"id":"oversight_context","label":"Oversight and authorization context","examples":[],"effect":"Check whether the appropriate official was included, forwarded, authorized, or already handling the matter. Absence from CC is a flag, not proof."},
+    {"id":"full_thread","label":"Complete thread","examples":[],"effect":"Earlier messages, replies, attachments, and quoted text can change the meaning; never classify an isolated excerpt as a finding."},
+    {"id":"entity_crossref","label":"Money Trail cross-reference","examples":[],"effect":"Match vendors, consultants, developments, contract numbers, and named projects to existing records as possible research links only."}
+  ],
+  "validationCases":[
+    {"commissioner":"Kristen Burke","label":"Candidate thread 1","status":"awaiting_complete_thread","archiveUrl":null,"note":"Reserved for the first manually identified Burke email; no excerpt or conclusion is entered without the complete thread or direct archive link."},
+    {"commissioner":"Kristen Burke","label":"Candidate thread 2","status":"awaiting_complete_thread","archiveUrl":null,"note":"Reserved for the second manually identified Burke email; no excerpt or conclusion is entered without the complete thread or direct archive link."}
+  ],
+  "messages":[]
+}

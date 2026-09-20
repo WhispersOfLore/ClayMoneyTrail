@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "FY2025-26 Contracts & Vendors registry",
+    "asOf": "2026-09-20",
+    "sourceUrl": "https://public.claycountygov.com/ISynFront/Current_Purchasing.aspx",
+    "scope": "Official notices visible in the county purchasing index. This is a procurement registry, not a payment ledger.",
+    "disclaimer": "An intent-to-award notice is not proof of a signed contract or payment. Contract ceilings, purchase orders, invoices, and actual payments remain separate fields and are null until verified."
+  },
+  "records": [
+    {"id":"2526-089","bidNumber":"25/26-089","title":"Knights Marina & Lake Shore Boat Ramp Repair, Redevelopment and Improvements","noticeType":"intent_to_award","noticeDate":"2026-08-26","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"document_required"},
+    {"id":"2526-094","bidNumber":"25/26-094","title":"Drainage Repair and/or New Public Works Construction","noticeType":"intent_to_award","noticeDate":"2026-08-12","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"document_required"},
+    {"id":"2526-066","bidNumber":"25/26-066","title":"Storm Damage Berm Repairs at Clay County Outdoor Adventure Park","noticeType":"intent_to_award","noticeDate":"2026-07-15","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"document_required"},
+    {"id":"2526-073","bidNumber":"25/26-073","title":"Mobile Trailers for Firefighter Gear Storage","noticeType":"intent_to_award","noticeDate":"2026-06-24","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"document_required"},
+    {"id":"2526-087","bidNumber":"25/26-087","title":"EMS Medical Supplies","noticeType":"intent_to_award","noticeDate":"2026-06-24","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"document_required"},
+    {"id":"2526-016","bidNumber":"25/26-016","title":"Construction Engineering and Inspection Services for SUN Trail","noticeType":"intent_to_award","noticeDate":"2026-06-10","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"document_required"},
+    {"id":"2526-041","bidNumber":"25/26-041","title":"Carl Pugh Park - Drainage Improvements","noticeType":"intent_to_award","noticeDate":"2026-05-27","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"document_required"},
+    {"id":"2526-017","bidNumber":"25/26-017","title":"Jail Fire Alarm Upgrade - Clay County Jail","noticeType":"intent_to_award","noticeDate":"2026-05-27","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"document_required"},
+    {"id":"2526-084","bidNumber":"25/26-084","title":"Mosquito Control Program","noticeType":"intent_to_award","noticeDate":"2026-05-27","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"document_required"},
+    {"id":"2526-074","bidNumber":"25/26-074","title":"Oakleaf Community Park - Drainage Improvements","noticeType":"intent_to_award","noticeDate":"2026-05-27","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"document_required"},
+    {"id":"2526-097","bidNumber":"25/26-097","title":"EOC HVAC Demolition and Replacement","noticeType":"rejected_all_bids","noticeDate":"2026-07-27","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"closed_no_award"},
+    {"id":"2526-055","bidNumber":"25/26-055","title":"Clay County Fairgrounds Hurricane Roof Repairs","noticeType":"rejected_all_bids","noticeDate":"2026-04-29","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"closed_no_award"},
+    {"id":"2526-014","bidNumber":"25/26-014","title":"Clay County Public Safety Physicals","noticeType":"rejected_all_bids","noticeDate":"2026-02-11","vendor":null,"approvedAward":null,"contractCeiling":null,"actualPayments":null,"status":"closed_no_award"}
+  ]
+}

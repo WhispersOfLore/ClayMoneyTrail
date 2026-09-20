@@ -1,0 +1,18 @@
+{
+  "meta":{"asOf":"2026-09-20","effectiveDate":"2026-10-01","source2026":"https://www.claycountygov.com/home/showpublisheddocument/9420/639225582532170000","source2025":"https://www.claycountygov.com/home/showpublisheddocument/9130/638907585893300000","note":"County Comprehensive Impact Fees only. School and Mobility Fees are additional and are not included."},
+  "rates":[
+    {"landUse":"Single Family (up to 1,500 sq. ft.)","unit":"Dwelling unit","total2025":3563,"total2026":3644.24},
+    {"landUse":"Single Family (1,501 to 2,499 sq. ft.)","unit":"Dwelling unit","total2025":4745,"total2026":4853.19},
+    {"landUse":"Single Family (2,500 sq. ft. and up)","unit":"Dwelling unit","total2025":5927,"total2026":6062.13},
+    {"landUse":"Multifamily","unit":"Dwelling unit","total2025":2829,"total2026":2893.51},
+    {"landUse":"Mobile Home","unit":"Dwelling unit","total2025":4008,"total2026":4099.37},
+    {"landUse":"Senior Unit","unit":"Dwelling unit","total2025":2700,"total2026":2761.56},
+    {"landUse":"Commercial: Retail and Services","unit":"1,000 sq. ft.","total2025":2464,"total2026":2520.18},
+    {"landUse":"Car Wash","unit":"Lane","total2025":3134,"total2026":3205.46},
+    {"landUse":"Hotel/Lodging","unit":"Room","total2025":751,"total2026":768.12},
+    {"landUse":"Office","unit":"1,000 sq. ft.","total2025":2948,"total2026":3015.22},
+    {"landUse":"Industrial","unit":"1,000 sq. ft.","total2025":1038,"total2026":1061.67},
+    {"landUse":"Institutional","unit":"1,000 sq. ft.","total2025":1994,"total2026":2039.46},
+    {"landUse":"Nursing Home","unit":"1,000 sq. ft.","total2025":1881,"total2026":1923.89}
+  ]
+}

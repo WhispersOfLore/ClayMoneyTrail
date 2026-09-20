@@ -26,10 +26,18 @@ civic-data project — not an official Clay County website.
   source status badge, clickable source link, notes/formula, last-verified
   date) everywhere records are listed
 - CSV and JSON downloads of the full dataset (`public/data/`)
+- FY2025-26 procurement-notice registry that keeps awards, contract ceilings,
+  and actual payments as separate concepts
+- Neutral commissioner-email index and Charter §2.2.J human-review workflow;
+  no message is characterized as malfeasance
+- Verified public-records/contact directory, FY2025-26 Human Services research,
+  and October 1, 2025 → October 1, 2026 comprehensive impact-fee comparison
+- Scrollable desktop/mobile navigation so every research module remains
+  reachable on shorter displays
 
 ## What remains incomplete
 
-No vendor/contract payments, no individual (named or by-position) payroll,
+No verified vendor payments, no individual (named or by-position) payroll,
 no capital project-level detail, no bond-level debt schedules, no actual
 stormwater collections or spending, and no fiscal years before FY2024-25 are
 loaded. Nearly every figure in the dataset is a **budgeted** or **estimated**

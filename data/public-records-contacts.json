@@ -1,0 +1,10 @@
+{
+  "meta":{"asOf":"2026-09-20","sourceUrl":"https://www.claycountygov.com/government/public-records-search","note":"Addresses and contacts are published by the listed government office. Verify before submitting a request."},
+  "contacts":[
+    {"id":"county-records-portal","name":"Clay County Public Records Portal","agency":"Clay County BCC","recordTypes":["General county records","Administrative email","Payroll and purchasing support"],"method":"Online portal","url":"https://claycountyfl.justfoia.com/publicportal/home/track","email":"publicrecords@claycountygov.com","phone":"904-529-3604","verified":"2026-09-20"},
+    {"id":"commissioner-email","name":"Commissioner Public Email Archive","agency":"Clay County BCC","recordTypes":["Current commissioner email","Former commissioner email"],"method":"Direct public archive","url":"https://public.claycountygov.com/PublicEmail/","email":null,"phone":null,"verified":"2026-09-20"},
+    {"id":"purchasing","name":"Purchasing Department","agency":"Clay County BCC","recordTypes":["Bids","Tabulations","Awards","Contracts","Vendor records"],"method":"Public index / records request","url":"https://www.claycountygov.com/government/purchasing/formal-bid-solicitations","email":"purchasing@claycountygov.com","phone":"904-284-6388","verified":"2026-09-20"},
+    {"id":"budget","name":"Office of Management and Budget","agency":"Clay County BCC","recordTypes":["Budgets","CIP amendments","Fee schedules"],"method":"Direct documents","url":"https://www.claycountygov.com/government/office-of-budget-management","email":null,"phone":"904-529-3600","verified":"2026-09-20"},
+    {"id":"clerk","name":"Clay County Clerk of Court and Comptroller","agency":"Constitutional office","recordTypes":["Recorded documents","County financial reports","Court records"],"method":"Clerk portals","url":"https://clayclerk.com/","email":null,"phone":"904-269-6302","verified":"2026-09-20"}
+  ]
+}

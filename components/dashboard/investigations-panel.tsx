@@ -10,8 +10,9 @@ import { EvidenceLedger } from './evidence-ledger';
 import { InvestigationTimeline } from './investigation-timeline';
 import { RecordsRequestsTable } from './records-requests-table';
 import { PatternExplorer } from './pattern-explorer';
+import { CommissionerEmailReview } from './commissioner-email-review';
 
-const CORE_TABS_BEFORE_TOPICS = ['Overview', 'Pattern Explorer', 'Timeline'];
+const CORE_TABS_BEFORE_TOPICS = ['Overview', 'Email Review', 'Pattern Explorer', 'Timeline'];
 const CORE_TABS_AFTER_TOPICS = ['Leads', 'Evidence Ledger', 'Records Needed'];
 
 function districtSortKey(meta: InvestigationMeta): number {
@@ -168,6 +169,8 @@ export function InvestigationsPanel({
       )}
 
       {activeTab === 'Pattern Explorer' && <PatternExplorer leads={invLeads} evidence={invEvidence} timeline={invTimeline} />}
+
+      {activeTab === 'Email Review' && <CommissionerEmailReview commissioner={meta.commissioner ?? meta.subject} district={meta.district} />}
 
       {activeTab === 'Timeline' && <InvestigationTimeline events={invTimeline} />}
 

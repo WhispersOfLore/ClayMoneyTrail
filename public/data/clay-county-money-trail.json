@@ -1,7 +1,7 @@
 {
   "dataset": "Clay County Money Trail",
   "version": "0.3.0",
-  "asOf": "2026-09-16",
+  "asOf": "2026-09-20",
   "disclaimer": "Budgeted does not equal actual spent. Derived calculations and rough/approximate estimates are labeled separately. Null means not yet populated. Record coverage below describes this dataset only, not the county's full budget.",
   "coverage": {
     "totalRecords": 106,
@@ -1705,6 +1705,42 @@
       "status": "news_report",
       "notes": "Source for resolving the Fire Chief tenure-start discrepancy (2009, not 2019).",
       "lastVerified": "2026-09-16"
+    },
+    {
+      "id": "clay-purchasing-index",
+      "title": "Current Purchasing and Award Notices",
+      "publisher": "Clay County Purchasing Department",
+      "url": "https://public.claycountygov.com/ISynFront/Current_Purchasing.aspx",
+      "status": "verified_official",
+      "notes": "Official index used for the FY2025-26 procurement registry. Notices are not treated as contracts or payments.",
+      "lastVerified": "2026-09-20"
+    },
+    {
+      "id": "clay-public-email",
+      "title": "Commissioner Email Archives",
+      "publisher": "Clay County",
+      "url": "https://public.claycountygov.com/PublicEmail/",
+      "status": "verified_official",
+      "notes": "Official public mailboxes for current and former commissioners; messages require contextual human review.",
+      "lastVerified": "2026-09-20"
+    },
+    {
+      "id": "clay-impact-fees-2026",
+      "title": "County Comprehensive Impact Fees — October 1, 2026",
+      "publisher": "Clay County Building Division",
+      "url": "https://www.claycountygov.com/home/showpublisheddocument/9420/639225582532170000",
+      "status": "verified_official",
+      "notes": "2026 comprehensive fee schedule; excludes additional school and mobility fees.",
+      "lastVerified": "2026-09-20"
+    },
+    {
+      "id": "clay-impact-fees-2025",
+      "title": "County Comprehensive Impact Fees — October 1, 2025",
+      "publisher": "Clay County Building Division",
+      "url": "https://www.claycountygov.com/home/showpublisheddocument/9130/638907585893300000",
+      "status": "verified_official",
+      "notes": "Historical comparison schedule for 2026 rates.",
+      "lastVerified": "2026-09-20"
     }
   ]
 }

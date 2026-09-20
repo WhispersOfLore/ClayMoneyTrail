@@ -145,6 +145,26 @@ JSON.parse(await readFile(new URL('../data/public-safety-complex.json', import.m
 JSON.parse(await readFile(new URL('../data/taxes-assessments.json', import.meta.url), 'utf8'));
 JSON.parse(await readFile(new URL('../data/black-creek.json', import.meta.url), 'utf8'));
 
+const contracts = JSON.parse(await readFile(new URL('../data/contracts-vendors.json', import.meta.url), 'utf8'));
+const contractIds = new Set();
+for (const r of contracts.records) {
+  if (contractIds.has(r.id)) errors.push(`Duplicate contract-registry id: ${r.id}`);
+  contractIds.add(r.id);
+  if (r.actualPayments !== null) errors.push(`Contract registry ${r.id} must not assert payments without a payment-ledger source`);
+}
+const publicEmail = JSON.parse(await readFile(new URL('../data/public-email.json', import.meta.url), 'utf8'));
+if (/\bcommitted malfeasance\b/i.test(JSON.stringify(publicEmail))) errors.push('Public-email dataset contains a prohibited legal conclusion');
+if (publicEmail.mailboxes.length !== 5) errors.push('Public-email review must cover all five commissioner mailboxes');
+for (const item of publicEmail.validationCases ?? []) {
+  if (item.status === 'awaiting_complete_thread' && item.archiveUrl !== null) errors.push(`Validation case ${item.label} has an archive URL but remains marked awaiting`);
+}
+const contacts = JSON.parse(await readFile(new URL('../data/public-records-contacts.json', import.meta.url), 'utf8'));
+for (const c of contacts.contacts) if (!c.url || !c.verified) errors.push(`Public-record contact ${c.id} lacks a URL or verification date`);
+const humanServices = JSON.parse(await readFile(new URL('../data/human-services.json', import.meta.url), 'utf8'));
+if (humanServices.meta.functionalTotal !== 32422874) errors.push('Human Services functional total no longer matches the adopted FY2025-26 budget');
+const impactFees = JSON.parse(await readFile(new URL('../data/impact-fees.json', import.meta.url), 'utf8'));
+for (const rate of impactFees.rates) if (rate.total2025 <= 0 || rate.total2026 <= 0) errors.push(`Invalid impact-fee total for ${rate.landUse}`);
+
 for (const inv of investigationMeta) {
   if (inv.photoUrl) {
     const localPath = new URL(`../public${inv.photoUrl}`, import.meta.url);

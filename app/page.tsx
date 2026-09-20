@@ -11,6 +11,7 @@ import {
   ExternalLink,
   FileQuestion,
   Landmark,
+  Mail,
   MapPin,
   Menu,
   Percent,
@@ -31,6 +32,11 @@ import publicSafetyComplexData from '@/data/public-safety-complex.json';
 import geographicSpendingData from '@/data/geographic-spending.json';
 import taxesAssessmentsData from '@/data/taxes-assessments.json';
 import blackCreekData from '@/data/black-creek.json';
+import contractsVendorsData from '@/data/contracts-vendors.json';
+import publicEmailData from '@/data/public-email.json';
+import publicRecordsContactsData from '@/data/public-records-contacts.json';
+import humanServicesData from '@/data/human-services.json';
+import impactFeesData from '@/data/impact-fees.json';
 import { money, formatDate } from '@/lib/format';
 import { computeCoverage } from '@/lib/coverage';
 import { computeFlags } from '@/lib/gaps';
@@ -48,6 +54,7 @@ import { StateFundingPanel, type StateFundingDataset } from '@/components/dashbo
 import { PublicSafetyComplexPanel, type PublicSafetyComplexData } from '@/components/dashboard/public-safety-complex-panel';
 import { GeographicSpendingPanel, type GeographicSpendingData } from '@/components/dashboard/geographic-spending-panel';
 import { TaxesAssessmentsPanel, type TaxesAssessmentsData } from '@/components/dashboard/taxes-assessments-panel';
+import { ContractsPanel, HumanServicesPanel, ImpactFeesPanel, PublicEmailPanel, RecordsDirectoryPanel } from '@/components/dashboard/civic-records-panel';
 
 const records = rawRecords as RecordItem[];
 const sources = rawSources as SourceItem[];
@@ -69,6 +76,10 @@ type Section =
   | 'Sheriff / Public Safety'
   | 'Stormwater'
   | 'Vendors & Contracts'
+  | 'Human Services'
+  | 'Impact Fees'
+  | 'Public Email'
+  | 'Public Records'
   | 'Capital Projects'
   | 'Public Safety Complex'
   | 'State Funding'
@@ -88,6 +99,8 @@ const navSections: { label: Section; icon: typeof CircleDollarSign }[] = [
   { label: 'Sheriff / Public Safety', icon: Shield },
   { label: 'Stormwater', icon: CircleDollarSign },
   { label: 'Vendors & Contracts', icon: Building2 },
+  { label: 'Human Services', icon: Users },
+  { label: 'Impact Fees', icon: Percent },
   { label: 'Capital Projects', icon: Landmark },
   { label: 'Public Safety Complex', icon: Shield },
   { label: 'State Funding', icon: Landmark },
@@ -96,14 +109,12 @@ const navSections: { label: Section; icon: typeof CircleDollarSign }[] = [
   { label: 'Debt & Reserves', icon: Landmark },
   { label: 'Year-over-Year', icon: BookOpen },
   { label: 'Investigations', icon: Search },
+  { label: 'Public Email', icon: Mail },
+  { label: 'Public Records', icon: BookOpen },
   { label: 'Questions / Flags', icon: FileQuestion },
   { label: 'Sources', icon: BookOpen },
 ];
 
-const VENDOR_COLUMNS = [
-  'record_id', 'fiscal_year', 'department', 'category', 'vendor_name', 'payment_date',
-  'amount', 'measure', 'source_status', 'source_url', 'source_title', 'notes', 'last_verified',
-];
 const CAPITAL_COLUMNS = [
   'record_id', 'fiscal_year', 'department', 'category', 'name', 'project_status',
   'amount', 'measure', 'source_status', 'source_url', 'source_title', 'notes', 'last_verified',
@@ -433,20 +444,15 @@ export default function Home() {
             <StandardPage
               kicker="DATASET READY"
               title={section}
-              description="The schema is ready for official records, but no verified vendor-level payments have been loaded."
+              description="Official FY2025-26 procurement notices, kept separate from signed contracts, ceilings, invoices, and actual payments."
             >
-              <DataGapNotice
-                title="No vendor or contract payments are loaded"
-                missing="Vendor names, individual payment amounts, payment dates, and contract awards."
-                recordNeeded="A countywide check register, accounts-payable export, or contract-award log from Clay County's public-records office."
-                templateFile="data/templates/vendor-payments.csv"
-                columns={VENDOR_COLUMNS}
-              />
-              <section className="panel">
-                <RecordsTable records={records.filter((r) => r.domain === 'vendors' && r.fiscalYear === fiscalYear)} sources={sources} />
-              </section>
+              <ContractsPanel data={contractsVendorsData} />
             </StandardPage>
           )}
+
+          {section === 'Human Services' && <StandardPage kicker="FY2025-26 BUDGET RESEARCH" title="Human Services" description="Published functional spending and cost-center history, with budget and actual measures kept distinct."><HumanServicesPanel data={humanServicesData}/></StandardPage>}
+
+          {section === 'Impact Fees' && <StandardPage kicker="EFFECTIVE OCTOBER 1, 2026" title="Comprehensive impact fees" description="A like-for-like comparison of the official 2025 and 2026 county comprehensive schedules."><ImpactFeesPanel data={impactFeesData}/></StandardPage>}
 
           {section === 'Capital Projects' && (
             <StandardPage
@@ -601,6 +607,10 @@ export default function Home() {
               />
             </StandardPage>
           )}
+
+          {section === 'Public Email' && <StandardPage kicker="PUBLIC CORRESPONDENCE" title="Commissioner email review" description="A neutral index and evidence-preserving workflow for communications potentially relevant to Charter §2.2.J."><PublicEmailPanel data={publicEmailData}/></StandardPage>}
+
+          {section === 'Public Records' && <StandardPage kicker="VERIFIED DIRECTORY" title="Public records and contacts" description="Official routes for finding records or requesting the records that are not directly published."><RecordsDirectoryPanel data={publicRecordsContactsData}/></StandardPage>}
 
           {section === 'Sources' && (
             <StandardPage

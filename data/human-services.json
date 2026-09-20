@@ -1,0 +1,8 @@
+{
+  "meta":{"asOf":"2026-09-20","sourceUrl":"https://www.claycountygov.com/home/showdocument?id=9168&t=638949119516239477","fiscalYear":"FY2025-26","functionalTotal":32422874,"note":"Functional Human Services is an accounting classification. Cost-center rows may not reconcile one-for-one without the budget's fund/function crosswalk."},
+  "records":[
+    {"id":"human-services-functional-total","name":"Human Services — all-funds functional total","costCenter":null,"fy2023Actual":null,"fy2024Actual":null,"fy2025Budget":null,"fy2026Budget":32422874,"measure":"budgeted","reconciliation":"published_function_total"},
+    {"id":"health-department-1107","name":"Health Department","costCenter":"FD1000-CC1107","fy2023Actual":1034490,"fy2024Actual":1063204,"fy2025Budget":1076497,"fy2026Budget":1076497,"measure":"mixed_actual_budget","reconciliation":"cost_center_component"}
+  ],
+  "openResearch":["Complete Human Services fund/function crosswalk","Import remaining relevant cost centers","Separate grants and transfers from direct service operating costs","Add FY2026 actuals only when published"]
+}
