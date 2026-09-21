@@ -1,0 +1,1397 @@
+{
+  "meta": {
+    "title": "Clay County BCC payroll — Public Records Request PRR-2026-1195",
+    "generatedBy": "scripts/build-payroll-dataset.mjs",
+    "sourceStatus": "verified_official",
+    "requestId": "PRR-2026-1195",
+    "custodian": "Clay County Board of County Commissioners — Personnel and Benefits Department",
+    "responseDate": "2026-09-17",
+    "recordType": "Workday payroll report exports and employee census, produced by the county in response to a public-records request",
+    "employerScope": "Board of County Commissioners employees only. The county stated it can provide information for the BCC and not for the constitutional offices, so the Sheriff, Clerk, Tax Collector, Property Appraiser, Supervisor of Elections, School Board, and municipal/utility employers are NOT covered and are never mixed in.",
+    "limitations": [
+      "Wage figures are as reported by the county for the report period; the source does not state whether they are pay-date or earned-date amounts.",
+      "\"Fiscal Non-OT YTD Wages\" is a single combined figure. The source does not break it into base pay, leave payout, special/assignment/acting pay, allowances, or retroactive pay, so none of those can be identified from it.",
+      "The census shows only each employee's CURRENT position and rate; it does not show earlier positions or rates.",
+      "Employer-paid benefits and employer taxes are county costs, not employee pay. Per-person values are not carried into ClayMoneyTrail's derived data (the original records, unaltered, remain in the public evidence archive).",
+      "The FY2025-26 report covers October 1, 2025 – September 16, 2026 (year to date), so its amounts are not a full fiscal year."
+    ]
+  },
+  "provenance": {
+    "registryId": "PRR-2026-1195",
+    "archive": {
+      "file": "Records_Request_Download_PRR-2026-1195_2026-09-21--10-47-54.zip",
+      "bytes": 20885608,
+      "sha256": "94bc2ecc7445db45002df3218ab1f3a08395d9ab42fd12a1548ca7c494499262"
+    },
+    "files": [
+      {
+        "name": "1. 2024 - New Hire Clay County BOCC Benefits Guide.pdf",
+        "bytes": 11507863,
+        "sha256": "899b64d8f74d556edbff717f080a72edd5c04683cbc9e5c47ef1dcc1e2cda70d",
+        "role": "benefits guide (pdf)"
+      },
+      {
+        "name": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+        "bytes": 81290,
+        "sha256": "476aa895b10685878de5c7c0210e6ba599ca93d114d14c4385b4970c392332e1",
+        "role": "payroll report (xlsx)"
+      },
+      {
+        "name": "PRR-2026-1195.pdf",
+        "bytes": 219755,
+        "sha256": "4944133069836bf1f9fbd7635e5c402e49fac615d83e1241fd43af565aefa28d",
+        "role": "cover letter (pdf)"
+      },
+      {
+        "name": "2026-27_contributions_total.pdf",
+        "bytes": 138216,
+        "sha256": "18a2f4150cb0425773a657402e1411487ecf219735c9f821e97d504610d36550",
+        "role": "state FRS contribution-rate chart (pdf)"
+      },
+      {
+        "name": "2024-25_contributions_total.pdf",
+        "bytes": 688593,
+        "sha256": "0930b643c7a0cc0810b04bcefc244b3e158b984771d02838ab5f08d6e4919609",
+        "role": "state FRS contribution-rate chart (pdf)"
+      },
+      {
+        "name": "2025-26_contributions_total.pdf",
+        "bytes": 140804,
+        "sha256": "0a0431e84864bcea563bed0c0eac86aa8b95f5a549f4ecf0c7d8a33dd58e2074",
+        "role": "state FRS contribution-rate chart (pdf)"
+      },
+      {
+        "name": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+        "bytes": 88036,
+        "sha256": "fbad940f6c101d70de7ce239c58e4a06eb9a08bd9a4d10d746206b147bf68a15",
+        "role": "payroll report (xlsx)"
+      },
+      {
+        "name": "Employee_Census - October 01 2024 - September 16 2026.xlsx",
+        "bytes": 113249,
+        "sha256": "d142f0dc6e068239a6e49d49a5d69d7af3535c67d7a4762e2c7db9e2569e5ff9",
+        "role": "employee census (xlsx)"
+      },
+      {
+        "name": "2026 Clay County BOCC Benefits Guide.pdf",
+        "bytes": 5993890,
+        "sha256": "b6f8ba41ee940f1783653b1fa16512607596ab8d8cdc57e9ed8e3657846ccc4e",
+        "role": "benefits guide (pdf)"
+      },
+      {
+        "name": "2025 Clay County Benefits Guide.pdf",
+        "bytes": 1912352,
+        "sha256": "393907f4117d6c6ec1a6ebbac912ecb438c7829a6048f8c28081016e4ec3d02f",
+        "role": "benefits guide (pdf)"
+      }
+    ]
+  },
+  "fieldDictionary": [
+    {
+      "field": "Fiscal Non-OT YTD Wages",
+      "source": "payroll reports",
+      "means": "Wages paid in the report period other than overtime, as one combined figure.",
+      "doesNotMean": "Base salary or annual rate; it cannot be split into base, leave payout, special pay, or allowances."
+    },
+    {
+      "field": "Fiscal Overtime",
+      "source": "payroll reports",
+      "means": "Overtime wages paid in the report period.",
+      "doesNotMean": "Any other category of pay."
+    },
+    {
+      "field": "Total Base Pay Annualized",
+      "source": "employee census",
+      "means": "The employee's current annualized base rate. A rate, not money paid.",
+      "doesNotMean": "Amount paid in any period. It is $0 for sitting commissioners."
+    },
+    {
+      "field": "Wages + overtime",
+      "source": "derived here",
+      "means": "Non-OT wages plus overtime, computed by this project.",
+      "doesNotMean": "Total compensation. It excludes employer-paid benefits, retirement, and employer taxes."
+    },
+    {
+      "field": "Fiscal YTD Employer Paid Benefits / Employer Taxes",
+      "source": "payroll reports",
+      "means": "County-paid costs on behalf of employees.",
+      "doesNotMean": "Pay received by the employee. Shown in aggregate only."
+    }
+  ],
+  "publication": {
+    "named": "Elected commissioners, the County Manager, Assistant County Managers, and the Fire Rescue leadership roles already named in ClayMoneyTrail research (see tier definition). Everyone else appears only in aggregate.",
+    "tierDefinition": [
+      {
+        "pattern": "^County Commissioner$",
+        "reason": "Elected county commissioner"
+      },
+      {
+        "pattern": "^County Manager$",
+        "reason": "County Manager"
+      },
+      {
+        "pattern": "^Assistant County Manager\\b",
+        "reason": "Assistant County Manager (senior executive staff)"
+      },
+      {
+        "pattern": "^(Fire Chief|Assistant Fire Chief|Fire Marshal)$",
+        "reason": "Fire Rescue leadership role named in existing ClayMoneyTrail research"
+      }
+    ],
+    "originalsNote": "ClayMoneyTrail's derived datasets are sanitized and purpose-limited. The original county records are preserved unaltered in a separate, researcher-maintained public evidence archive and contain fields that are not carried into ClayMoneyTrail's data.",
+    "withheldFields": [
+      "Gender",
+      "Per-person employer-paid benefits and employer taxes (can reveal insurance elections)",
+      "Names, hire dates, and pay of employees outside the tier",
+      "Census \"Active Status\", \"Employee Type\", and \"Years in Current Position\" (the last is internally inconsistent)"
+    ],
+    "sensitiveFieldsFoundInSource": "None of: SSN, bank/account, home address, personal phone/email, date of birth, dependent, or medical fields. Gender and per-person benefit costs are present in the original records and are not carried into ClayMoneyTrail's derived data."
+  },
+  "periods": [
+    {
+      "id": "fy2024-25",
+      "label": "FY2024-25",
+      "fiscalYear": "FY2024-25",
+      "start": "2024-10-01",
+      "end": "2025-09-30",
+      "partialYear": false,
+      "sourceFile": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+      "payPeriodsInferred": 26,
+      "payPeriodsBasis": "Inferred, not stated by the county: the full-period commissioners paid the flat amount have wages equal to $1,423.08 × 26 (no independent census-rate corroboration is possible for this period because the census rate describes only the current period).",
+      "payPeriodCorroboration": null,
+      "totals": {
+        "rowsInSource": 830,
+        "exactDuplicateRowsExcluded": 0,
+        "workers": 830,
+        "fullTime": 802,
+        "partTime": 28,
+        "withTerminationDate": 31,
+        "nonOtWagesPaid": 49722980.24,
+        "overtimePaid": 4365127.97,
+        "workersWithOvertime": 611,
+        "employerPaidBenefits": 23084000.48,
+        "employerTaxes": 3979193.35
+      },
+      "overtimeByPosition": [
+        {
+          "position": "Firefighter - Lieutenant",
+          "workers": 72,
+          "workersWithOvertime": 71,
+          "overtimePaid": 1277021.37,
+          "nonOtWagesPaid": 6861556.91
+        },
+        {
+          "position": "Firefighter - Engineer",
+          "workers": 94,
+          "workersWithOvertime": 91,
+          "overtimePaid": 919206.38,
+          "nonOtWagesPaid": 6350663.99
+        },
+        {
+          "position": "Firefighter - Captain",
+          "workers": 18,
+          "workersWithOvertime": 18,
+          "overtimePaid": 594611.42,
+          "nonOtWagesPaid": 2180245.61
+        },
+        {
+          "position": "Firefighter - EMT/Paramedic",
+          "workers": 90,
+          "workersWithOvertime": 89,
+          "overtimePaid": 497176.68,
+          "nonOtWagesPaid": 4102014.91
+        },
+        {
+          "position": "Battalion Chief",
+          "workers": 8,
+          "workersWithOvertime": 8,
+          "overtimePaid": 207273.09,
+          "nonOtWagesPaid": 1126862.2
+        },
+        {
+          "position": "Acting Firefighter - Lieutenant",
+          "workers": 8,
+          "workersWithOvertime": 8,
+          "overtimePaid": 110023.59,
+          "nonOtWagesPaid": 667053.03
+        },
+        {
+          "position": "Acting Firefighter - Engineer",
+          "workers": 6,
+          "workersWithOvertime": 6,
+          "overtimePaid": 61475.23,
+          "nonOtWagesPaid": 336789.9
+        },
+        {
+          "position": "Communication Specialist I - Technician Level",
+          "workers": 6,
+          "workersWithOvertime": 6,
+          "overtimePaid": 43838.18,
+          "nonOtWagesPaid": 287547.61
+        },
+        {
+          "position": "General Foreman",
+          "workers": 12,
+          "workersWithOvertime": 11,
+          "overtimePaid": 21449.56,
+          "nonOtWagesPaid": 595993.29
+        },
+        {
+          "position": "Recycling Operator II",
+          "workers": 7,
+          "workersWithOvertime": 7,
+          "overtimePaid": 14031.18,
+          "nonOtWagesPaid": 284239.26
+        },
+        {
+          "position": "Animal Control Officer",
+          "workers": 8,
+          "workersWithOvertime": 8,
+          "overtimePaid": 13870.66,
+          "nonOtWagesPaid": 168407.66
+        },
+        {
+          "position": "Scale Master",
+          "workers": 5,
+          "workersWithOvertime": 5,
+          "overtimePaid": 12081.2,
+          "nonOtWagesPaid": 92299.13
+        }
+      ]
+    },
+    {
+      "id": "fy2025-26-ytd",
+      "label": "FY2025-26 (year to date)",
+      "fiscalYear": "FY2025-26",
+      "start": "2025-10-01",
+      "end": "2026-09-16",
+      "partialYear": true,
+      "sourceFile": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+      "payPeriodsInferred": 25,
+      "payPeriodsBasis": "Inferred, not stated by the county: the full-period commissioners paid the flat amount have wages equal to $1,423.08 × 25; independently, the best fit for 80 salaried non-commissioner peers is 25 pay periods.",
+      "payPeriodCorroboration": {
+        "method": "Salaried, non-commissioner peers: count of peers whose wages are within 2% of (census rate × N ÷ 26), for each candidate N",
+        "peers": 80,
+        "candidates": [
+          {
+            "payPeriods": 24,
+            "peersWithinTwoPercent": 3
+          },
+          {
+            "payPeriods": 25,
+            "peersWithinTwoPercent": 62
+          },
+          {
+            "payPeriods": 26,
+            "peersWithinTwoPercent": 10
+          },
+          {
+            "payPeriods": 27,
+            "peersWithinTwoPercent": 3
+          }
+        ],
+        "bestFit": 25,
+        "agreesWithInferred": true
+      },
+      "totals": {
+        "rowsInSource": 907,
+        "exactDuplicateRowsExcluded": 1,
+        "workers": 906,
+        "fullTime": 850,
+        "partTime": 56,
+        "withTerminationDate": 102,
+        "nonOtWagesPaid": 53984707.95,
+        "overtimePaid": 5525896.91,
+        "workersWithOvertime": 519,
+        "employerPaidBenefits": 26648374.28,
+        "employerTaxes": 4379968.25
+      },
+      "overtimeByPosition": [
+        {
+          "position": "Firefighter - Engineer",
+          "workers": 105,
+          "workersWithOvertime": 104,
+          "overtimePaid": 1714274,
+          "nonOtWagesPaid": 7798846.57
+        },
+        {
+          "position": "Firefighter - Lieutenant",
+          "workers": 76,
+          "workersWithOvertime": 76,
+          "overtimePaid": 1499415.59,
+          "nonOtWagesPaid": 7698460.83
+        },
+        {
+          "position": "Firefighter - EMT/Paramedic",
+          "workers": 89,
+          "workersWithOvertime": 87,
+          "overtimePaid": 730790.58,
+          "nonOtWagesPaid": 3901193.01
+        },
+        {
+          "position": "Firefighter - Captain",
+          "workers": 18,
+          "workersWithOvertime": 18,
+          "overtimePaid": 635724.03,
+          "nonOtWagesPaid": 2253615.85
+        },
+        {
+          "position": "Battalion Chief",
+          "workers": 8,
+          "workersWithOvertime": 8,
+          "overtimePaid": 220611.39,
+          "nonOtWagesPaid": 1182887.31
+        },
+        {
+          "position": "Acting Firefighter - Engineer",
+          "workers": 16,
+          "workersWithOvertime": 16,
+          "overtimePaid": 218679.08,
+          "nonOtWagesPaid": 1122541.03
+        },
+        {
+          "position": "Communication Specialist I - Technician Level",
+          "workers": 6,
+          "workersWithOvertime": 6,
+          "overtimePaid": 46915.51,
+          "nonOtWagesPaid": 315233.88
+        },
+        {
+          "position": "Communication Specialist II",
+          "workers": 5,
+          "workersWithOvertime": 5,
+          "overtimePaid": 43796.69,
+          "nonOtWagesPaid": 319287.74
+        },
+        {
+          "position": "Animal Control Officer",
+          "workers": 7,
+          "workersWithOvertime": 6,
+          "overtimePaid": 11014.6,
+          "nonOtWagesPaid": 230048.85
+        },
+        {
+          "position": "General Foreman",
+          "workers": 11,
+          "workersWithOvertime": 10,
+          "overtimePaid": 8495.3,
+          "nonOtWagesPaid": 535954.44
+        },
+        {
+          "position": "Recycling Operator",
+          "workers": 8,
+          "workersWithOvertime": 6,
+          "overtimePaid": 8334.89,
+          "nonOtWagesPaid": 252712.43
+        },
+        {
+          "position": "Animal Care Attendant I",
+          "workers": 5,
+          "workersWithOvertime": 4,
+          "overtimePaid": 3104.74,
+          "nonOtWagesPaid": 119452.13
+        }
+      ]
+    }
+  ],
+  "sourceColumns": {
+    "payroll": {
+      "worker": "A",
+      "nonOtWages": "G",
+      "overtime": "H",
+      "position": "E",
+      "hireDate": "B"
+    },
+    "census": {
+      "annualizedBaseRate": "J",
+      "positionTitle": "G",
+      "legalFirstName": "A",
+      "legalLastName": "B",
+      "positionEffectiveDate": "K"
+    }
+  },
+  "commissionerComparison": {
+    "definition": "Comparison figure = annual Charter salary of $37,000 ÷ 26 bi-weekly periods (= $1,423.08, rounded to the cent) × the number of pay periods in the report. It is a calculation by this project, not a county-reported amount.",
+    "perPayPeriodComparison": 1423.08,
+    "checks": {
+      "differencesThatAreWholePayPeriods": 0,
+      "differencesTested": 5,
+      "partialPeriodComparisonsExcluded": 2,
+      "sharedPayCalendarAssumed": true
+    },
+    "rows": [
+      {
+        "personId": "burke-kristen-t",
+        "name": "Burke, Kristen T",
+        "periodId": "fy2024-25",
+        "officialPayrollAmount": 37000.08,
+        "comparisonApplies": true,
+        "payPeriods": 26,
+        "comparisonFigure": 37000.08,
+        "difference": 0,
+        "differenceUsingUnroundedComparison": 0.08,
+        "differenceInPayPeriods": 0,
+        "notComparedBecause": null,
+        "source": {
+          "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+          "row": 86
+        }
+      },
+      {
+        "personId": "burke-kristen-t",
+        "name": "Burke, Kristen T",
+        "periodId": "fy2025-26-ytd",
+        "officialPayrollAmount": 35577,
+        "comparisonApplies": true,
+        "payPeriods": 25,
+        "comparisonFigure": 35577,
+        "difference": 0,
+        "differenceUsingUnroundedComparison": 0.08,
+        "differenceInPayPeriods": 0,
+        "notComparedBecause": null,
+        "source": {
+          "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+          "row": 95
+        }
+      },
+      {
+        "personId": "cella-l-michael",
+        "name": "Cella, L. Michael",
+        "periodId": "fy2024-25",
+        "officialPayrollAmount": 5763.61,
+        "comparisonApplies": false,
+        "payPeriods": null,
+        "comparisonFigure": null,
+        "difference": null,
+        "differenceUsingUnroundedComparison": null,
+        "differenceInPayPeriods": null,
+        "notComparedBecause": "Employment ended during the period (partial period).",
+        "source": {
+          "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+          "row": 115
+        }
+      },
+      {
+        "personId": "compere-alexandra",
+        "name": "Compere, Alexandra",
+        "periodId": "fy2024-25",
+        "officialPayrollAmount": 37000.08,
+        "comparisonApplies": true,
+        "payPeriods": 26,
+        "comparisonFigure": 37000.08,
+        "difference": 0,
+        "differenceUsingUnroundedComparison": 0.08,
+        "differenceInPayPeriods": 0,
+        "notComparedBecause": null,
+        "source": {
+          "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+          "row": 142
+        }
+      },
+      {
+        "personId": "compere-alexandra",
+        "name": "Compere, Alexandra",
+        "periodId": "fy2025-26-ytd",
+        "officialPayrollAmount": 35577,
+        "comparisonApplies": true,
+        "payPeriods": 25,
+        "comparisonFigure": 35577,
+        "difference": 0,
+        "differenceUsingUnroundedComparison": 0.08,
+        "differenceInPayPeriods": 0,
+        "notComparedBecause": null,
+        "source": {
+          "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+          "row": 156
+        }
+      },
+      {
+        "personId": "condon-elizabeth-a",
+        "name": "Condon, Elizabeth A",
+        "periodId": "fy2024-25",
+        "officialPayrollAmount": 38275.08,
+        "comparisonApplies": true,
+        "payPeriods": 26,
+        "comparisonFigure": 37000.08,
+        "difference": 1275,
+        "differenceUsingUnroundedComparison": 1275.08,
+        "differenceInPayPeriods": 0.896,
+        "notComparedBecause": null,
+        "source": {
+          "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+          "row": 144
+        }
+      },
+      {
+        "personId": "condon-elizabeth-a",
+        "name": "Condon, Elizabeth A",
+        "periodId": "fy2025-26-ytd",
+        "officialPayrollAmount": 36102,
+        "comparisonApplies": true,
+        "payPeriods": 25,
+        "comparisonFigure": 35577,
+        "difference": 525,
+        "differenceUsingUnroundedComparison": 525.08,
+        "differenceInPayPeriods": 0.369,
+        "notComparedBecause": null,
+        "source": {
+          "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+          "row": 158
+        }
+      },
+      {
+        "personId": "renninger-james-b",
+        "name": "Renninger, James B",
+        "periodId": "fy2024-25",
+        "officialPayrollAmount": 39865.96,
+        "comparisonApplies": true,
+        "payPeriods": 26,
+        "comparisonFigure": 37000.08,
+        "difference": 2865.88,
+        "differenceUsingUnroundedComparison": 2865.96,
+        "differenceInPayPeriods": 2.014,
+        "notComparedBecause": null,
+        "source": {
+          "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+          "row": 610
+        }
+      },
+      {
+        "personId": "renninger-james-b",
+        "name": "Renninger, James B",
+        "periodId": "fy2025-26-ytd",
+        "officialPayrollAmount": 38474,
+        "comparisonApplies": true,
+        "payPeriods": 25,
+        "comparisonFigure": 35577,
+        "difference": 2897,
+        "differenceUsingUnroundedComparison": 2897.08,
+        "differenceInPayPeriods": 2.036,
+        "notComparedBecause": null,
+        "source": {
+          "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+          "row": 675
+        }
+      },
+      {
+        "personId": "sgromolo-john-albert",
+        "name": "Sgromolo, John Albert",
+        "periodId": "fy2024-25",
+        "officialPayrollAmount": 32457.91,
+        "comparisonApplies": false,
+        "payPeriods": null,
+        "comparisonFigure": null,
+        "difference": null,
+        "differenceUsingUnroundedComparison": null,
+        "differenceInPayPeriods": null,
+        "notComparedBecause": "Hired during the period (partial period).",
+        "source": {
+          "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+          "row": 670
+        }
+      },
+      {
+        "personId": "sgromolo-john-albert",
+        "name": "Sgromolo, John Albert",
+        "periodId": "fy2025-26-ytd",
+        "officialPayrollAmount": 36836.75,
+        "comparisonApplies": true,
+        "payPeriods": 25,
+        "comparisonFigure": 35577,
+        "difference": 1259.75,
+        "differenceUsingUnroundedComparison": 1259.83,
+        "differenceInPayPeriods": 0.885,
+        "notComparedBecause": null,
+        "source": {
+          "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+          "row": 739
+        }
+      }
+    ]
+  },
+  "censusSummary": {
+    "sourceFile": "Employee_Census - October 01 2024 - September 16 2026.xlsx",
+    "rows": 1347,
+    "active": 810,
+    "inactiveOrBlank": 537,
+    "fullTime": 1247,
+    "partTime": 100,
+    "note": "The census lists each employee's current (or last) position and current annualized rate for the window October 1, 2024 – September 16, 2026, and includes employees who are no longer active."
+  },
+  "peerContext": {
+    "note": "For most staff, paid non-OT wages differ from the census rate by a few percent, so a gap between paid wages and rate is common and is not, by itself, informative. Salaried (exempt) staff track their rate most closely.",
+    "fy2025_26_ytd_allFullTimePeers": {
+      "definition": "Non-OT wages paid ÷ (census annualized base rate × 25/26 pay periods)",
+      "peers": 504,
+      "percentiles": {
+        "p5": 0.96872,
+        "p25": 0.99883,
+        "p50": 1.04003,
+        "p75": 1.1929100000000001,
+        "p95": 1.31828
+      },
+      "withinTwoPercent": 183,
+      "aboveFivePercent": 230,
+      "belowFivePercent": 16
+    },
+    "fy2025_26_ytd_salariedPeers": {
+      "definition": "Non-OT wages paid ÷ (census annualized base rate × 25/26 pay periods)",
+      "peers": 80,
+      "percentiles": {
+        "p5": 0.98081,
+        "p25": 0.99883,
+        "p50": 0.9988400000000001,
+        "p75": 1.00505,
+        "p95": 1.07765
+      },
+      "withinTwoPercent": 62,
+      "aboveFivePercent": 6,
+      "belowFivePercent": 1
+    }
+  },
+  "dataQuality": [
+    {
+      "id": "exact-duplicate-rows",
+      "severity": "exclude",
+      "description": "Rows that are identical in every field to an earlier row in the same report. Counted once in every total; both rows are kept in the private data.",
+      "count": 1
+    },
+    {
+      "id": "terminated-before-period-with-pay",
+      "severity": "note",
+      "description": "Termination date is before the report period begins but wages are shown — consistent with final pay, leave payout, or corrections being paid in a later period. The report does not say which.",
+      "count": 3
+    },
+    {
+      "id": "hire-date-after-period-end",
+      "severity": "note",
+      "description": "Hire date is after the period ends yet wages are shown for the period — consistent with a re-hire where the report carries the most recent hire date.",
+      "count": 1
+    },
+    {
+      "id": "payroll-row-without-census-link",
+      "severity": "note",
+      "description": "Payroll rows that could not be linked to a census row by last name + hire date (+ position/initial).",
+      "count": 2
+    },
+    {
+      "id": "payroll-given-name-differs-from-census",
+      "severity": "note",
+      "description": "Linked rows where the payroll given name differs from the census legal first name (preferred-name usage). Identity for any published person is confirmed by hire date and position, not name.",
+      "count": 96
+    },
+    {
+      "id": "census-rows-not-in-either-payroll-report",
+      "severity": "note",
+      "description": "Census rows with no linked payroll row in either report (mostly former staff who left before the first report period, plus staff hired on the census end date).",
+      "count": 406,
+      "detail": "400 have a blank Active Status; 6 are marked active."
+    },
+    {
+      "id": "census-zero-base-pay",
+      "severity": "note",
+      "description": "Census rows with annualized base pay of $0 (including every sitting commissioner). Zero here means \"no rate recorded in this field\", not \"unpaid\".",
+      "count": 9
+    },
+    {
+      "id": "census-years-in-position-inconsistent",
+      "severity": "unreliable",
+      "description": "Census \"Years in Current Position\" disagrees (tolerance 0.06 yr) with the census's own \"Effective Date for Current Position\" measured to 2026-09-16. The field is not used for any published figure.",
+      "count": 333
+    }
+  ],
+  "publicTier": [
+    {
+      "id": "burke-kristen-t",
+      "name": "Burke, Kristen T",
+      "censusLegalName": "Kristen Burke",
+      "tierReason": "Elected county commissioner",
+      "hireDate": "2020-11-24",
+      "censusPosition": "County Commissioner",
+      "censusAnnualizedBaseRate": 0,
+      "censusPositionEffectiveDate": "2020-11-24",
+      "censusRow": 509,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "County Commissioner",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 37000.08,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 37000.08,
+          "nonOtPerPayPeriod": 1423.08,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 86
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "County Commissioner",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 35577,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 35577,
+          "nonOtPerPayPeriod": 1423.08,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 95
+          }
+        }
+      ],
+      "flags": [
+        "Census \"Total Base Pay Annualized\" is $0 for this position. That is not evidence the person was unpaid — payroll wages are shown separately."
+      ]
+    },
+    {
+      "id": "cella-l-michael",
+      "name": "Cella, L. Michael",
+      "censusLegalName": "L. Michael Cella",
+      "tierReason": "Elected county commissioner",
+      "hireDate": "2016-11-22",
+      "censusPosition": "County Commissioner",
+      "censusAnnualizedBaseRate": 0,
+      "censusPositionEffectiveDate": "2016-11-22",
+      "censusRow": 6,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "County Commissioner",
+          "timeType": "Full time",
+          "terminationDate": "2024-11-18",
+          "nonOtWagesPaid": 5763.61,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 5763.61,
+          "nonOtPerPayPeriod": null,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 115
+          }
+        }
+      ],
+      "flags": [
+        "Census \"Total Base Pay Annualized\" is $0 for this position. That is not evidence the person was unpaid — payroll wages are shown separately."
+      ]
+    },
+    {
+      "id": "compere-alexandra",
+      "name": "Compere, Alexandra",
+      "censusLegalName": "Alexandra Compere",
+      "tierReason": "Elected county commissioner",
+      "hireDate": "2022-11-22",
+      "censusPosition": "County Commissioner",
+      "censusAnnualizedBaseRate": 0,
+      "censusPositionEffectiveDate": "2022-11-22",
+      "censusRow": 818,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "County Commissioner",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 37000.08,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 37000.08,
+          "nonOtPerPayPeriod": 1423.08,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 142
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "County Commissioner",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 35577,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 35577,
+          "nonOtPerPayPeriod": 1423.08,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 156
+          }
+        }
+      ],
+      "flags": [
+        "Census \"Total Base Pay Annualized\" is $0 for this position. That is not evidence the person was unpaid — payroll wages are shown separately."
+      ]
+    },
+    {
+      "id": "condon-elizabeth-a",
+      "name": "Condon, Elizabeth A",
+      "censusLegalName": "Elizabeth Condon",
+      "tierReason": "Elected county commissioner",
+      "hireDate": "2020-11-24",
+      "censusPosition": "County Commissioner",
+      "censusAnnualizedBaseRate": 0,
+      "censusPositionEffectiveDate": "2020-11-24",
+      "censusRow": 508,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "County Commissioner",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 38275.08,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 38275.08,
+          "nonOtPerPayPeriod": 1472.12,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 144
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "County Commissioner",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 36102,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 36102,
+          "nonOtPerPayPeriod": 1444.08,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 158
+          }
+        }
+      ],
+      "flags": [
+        "Census \"Total Base Pay Annualized\" is $0 for this position. That is not evidence the person was unpaid — payroll wages are shown separately."
+      ]
+    },
+    {
+      "id": "renninger-james-b",
+      "name": "Renninger, James B",
+      "censusLegalName": "James Renninger",
+      "tierReason": "Elected county commissioner",
+      "hireDate": "2020-11-24",
+      "censusPosition": "County Commissioner",
+      "censusAnnualizedBaseRate": 0,
+      "censusPositionEffectiveDate": "2020-11-24",
+      "censusRow": 507,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "County Commissioner",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 39865.96,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 39865.96,
+          "nonOtPerPayPeriod": 1533.31,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 610
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "County Commissioner",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 38474,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 38474,
+          "nonOtPerPayPeriod": 1538.96,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 675
+          }
+        }
+      ],
+      "flags": [
+        "Census \"Total Base Pay Annualized\" is $0 for this position. That is not evidence the person was unpaid — payroll wages are shown separately."
+      ]
+    },
+    {
+      "id": "sgromolo-john-albert",
+      "name": "Sgromolo, John Albert",
+      "censusLegalName": "John Sgromolo",
+      "tierReason": "Elected county commissioner",
+      "hireDate": "2024-11-19",
+      "censusPosition": "County Commissioner",
+      "censusAnnualizedBaseRate": 0,
+      "censusPositionEffectiveDate": "2024-11-19",
+      "censusRow": 1126,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "County Commissioner",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 32457.91,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 32457.91,
+          "nonOtPerPayPeriod": null,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 670
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "County Commissioner",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 36836.75,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 36836.75,
+          "nonOtPerPayPeriod": 1473.47,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 739
+          }
+        }
+      ],
+      "flags": [
+        "Census \"Total Base Pay Annualized\" is $0 for this position. That is not evidence the person was unpaid — payroll wages are shown separately."
+      ]
+    },
+    {
+      "id": "wanamaker-howard",
+      "name": "Wanamaker, Howard",
+      "censusLegalName": "Howard Wanamaker",
+      "tierReason": "County Manager",
+      "hireDate": "2019-06-18",
+      "censusPosition": "County Manager",
+      "censusAnnualizedBaseRate": 247654.32,
+      "censusPositionEffectiveDate": "2019-06-18",
+      "censusRow": 426,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "County Manager",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 262071.7,
+          "overtimePaid": 991.28,
+          "wagesPlusOvertime": 263062.98,
+          "nonOtPerPayPeriod": 10079.68,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 772
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "County Manager",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 259474.64,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 259474.64,
+          "nonOtPerPayPeriod": 10378.99,
+          "paidToRateRatio": 1.09,
+          "rateComparisonFigure": 238129.15,
+          "differenceFromRateComparison": 21345.49,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 846
+          }
+        }
+      ],
+      "flags": []
+    },
+    {
+      "id": "latham-charlie",
+      "name": "Latham, Charlie",
+      "censusLegalName": "William Latham",
+      "tierReason": "Assistant County Manager (senior executive staff)",
+      "hireDate": "2020-11-23",
+      "censusPosition": "Assistant County Manager",
+      "censusAnnualizedBaseRate": 183279.12,
+      "censusPositionEffectiveDate": "2020-11-23",
+      "censusRow": 512,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "Assistant County Manager",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 177741.59,
+          "overtimePaid": 342.2,
+          "wagesPlusOvertime": 178083.79,
+          "nonOtPerPayPeriod": 6836.22,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 429
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "Assistant County Manager",
+          "timeType": "Full time",
+          "terminationDate": "2026-06-30",
+          "nonOtWagesPaid": 157431.56,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 157431.56,
+          "nonOtPerPayPeriod": null,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 475
+          }
+        }
+      ],
+      "flags": [
+        "Payroll reports list the given name \"Charlie\"; the census lists legal first name \"William\". Linked by last name + hire date.",
+        "The census lists 2 different employees with the legal name \"William Latham\". This person is distinguished by hire date and position title."
+      ]
+    },
+    {
+      "id": "nagle-troy",
+      "name": "Nagle, Troy",
+      "censusLegalName": "Steven Nagle",
+      "tierReason": "Assistant County Manager (senior executive staff)",
+      "hireDate": "2009-02-18",
+      "censusPosition": "Assistant County Manager",
+      "censusAnnualizedBaseRate": 183279.12,
+      "censusPositionEffectiveDate": "2009-02-18",
+      "censusRow": 211,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "Assistant County Manager",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 177741.55,
+          "overtimePaid": 3354.69,
+          "wagesPlusOvertime": 181096.24,
+          "nonOtPerPayPeriod": 6836.21,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 541
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "Assistant County Manager",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 176024.45,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 176024.45,
+          "nonOtPerPayPeriod": 7040.98,
+          "paidToRateRatio": 0.999,
+          "rateComparisonFigure": 176229.92,
+          "differenceFromRateComparison": -205.47,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 590
+          }
+        }
+      ],
+      "flags": [
+        "Payroll reports list the given name \"Troy\"; the census lists legal first name \"Steven\". Linked by last name + hire date."
+      ]
+    },
+    {
+      "id": "smith-karen",
+      "name": "Smith, Karen",
+      "censusLegalName": "Karen Smith",
+      "tierReason": "Assistant County Manager (senior executive staff)",
+      "hireDate": "2003-02-26",
+      "censusPosition": "Assistant County Manager - Quality of Life",
+      "censusAnnualizedBaseRate": 173000,
+      "censusPositionEffectiveDate": "2026-04-22",
+      "censusRow": 109,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "Administrative & Contractual Services Director",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 124832.83,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 124832.83,
+          "nonOtPerPayPeriod": null,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 691
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "Assistant County Manager - Quality of Life",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 140656.96,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 140656.96,
+          "nonOtPerPayPeriod": null,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 759
+          }
+        }
+      ],
+      "flags": [
+        "Position title differs between the two payroll reports."
+      ]
+    },
+    {
+      "id": "stewart-chereese",
+      "name": "Stewart, Chereese",
+      "censusLegalName": "Tammy Stewart",
+      "tierReason": "Assistant County Manager (senior executive staff)",
+      "hireDate": "2017-12-01",
+      "censusPosition": "Assistant County Manager",
+      "censusAnnualizedBaseRate": 183279.12,
+      "censusPositionEffectiveDate": "2017-12-01",
+      "censusRow": 183,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "Assistant County Manager",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 177741.59,
+          "overtimePaid": 171.1,
+          "wagesPlusOvertime": 177912.69,
+          "nonOtPerPayPeriod": 6836.22,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 708
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "Assistant County Manager",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 176024.44,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 176024.44,
+          "nonOtPerPayPeriod": 7040.98,
+          "paidToRateRatio": 0.999,
+          "rateComparisonFigure": 176229.92,
+          "differenceFromRateComparison": -205.48,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 776
+          }
+        }
+      ],
+      "flags": [
+        "Payroll reports list the given name \"Chereese\"; the census lists legal first name \"Tammy\". Linked by last name + hire date."
+      ]
+    },
+    {
+      "id": "mock-lorin-l",
+      "name": "Mock, Lorin L",
+      "censusLegalName": "Lorin Mock",
+      "tierReason": "Fire Rescue leadership role named in existing ClayMoneyTrail research",
+      "hireDate": "2009-11-04",
+      "censusPosition": "Fire Chief",
+      "censusAnnualizedBaseRate": 212457.63,
+      "censusPositionEffectiveDate": "2009-11-04",
+      "censusRow": 214,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "Fire Chief",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 207297.33,
+          "overtimePaid": 361.84,
+          "wagesPlusOvertime": 207659.17,
+          "nonOtPerPayPeriod": 7972.97,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 526
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "Fire Chief",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 205317.49,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 205317.49,
+          "nonOtPerPayPeriod": 8212.7,
+          "paidToRateRatio": 1.005,
+          "rateComparisonFigure": 204286.18,
+          "differenceFromRateComparison": 1031.31,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 573
+          }
+        }
+      ],
+      "flags": []
+    },
+    {
+      "id": "motes-david",
+      "name": "Motes, David",
+      "censusLegalName": "David Motes",
+      "tierReason": "Fire Rescue leadership role named in existing ClayMoneyTrail research",
+      "hireDate": "1988-06-28",
+      "censusPosition": "Assistant Fire Chief",
+      "censusAnnualizedBaseRate": 176000,
+      "censusPositionEffectiveDate": "2026-05-06",
+      "censusRow": 12,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "Deputy Chief - Administration",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 180636.61,
+          "overtimePaid": 519.12,
+          "wagesPlusOvertime": 181155.73,
+          "nonOtPerPayPeriod": null,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 539
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "Assistant Fire Chief",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 175810.49,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 175810.49,
+          "nonOtPerPayPeriod": null,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 588
+          }
+        }
+      ],
+      "flags": [
+        "Position title differs between the two payroll reports."
+      ]
+    },
+    {
+      "id": "roseberry-anthony-l",
+      "name": "Roseberry, Anthony L",
+      "censusLegalName": "Anthony Roseberry",
+      "tierReason": "Fire Rescue leadership role named in existing ClayMoneyTrail research",
+      "hireDate": "2013-08-05",
+      "censusPosition": "Fire Marshal",
+      "censusAnnualizedBaseRate": 114420.08,
+      "censusPositionEffectiveDate": "2013-08-05",
+      "censusRow": 237,
+      "linkBasis": "last name + hire date",
+      "periods": [
+        {
+          "periodId": "fy2024-25",
+          "position": "Fire Marshal",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 110962.94,
+          "overtimePaid": 213.63,
+          "wagesPlusOvertime": 111176.57,
+          "nonOtPerPayPeriod": 4267.81,
+          "paidToRateRatio": null,
+          "rateComparisonFigure": null,
+          "differenceFromRateComparison": null,
+          "source": {
+            "file": "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+            "row": 640
+          }
+        },
+        {
+          "periodId": "fy2025-26-ytd",
+          "position": "Fire Marshal",
+          "timeType": "Full time",
+          "terminationDate": null,
+          "nonOtWagesPaid": 109891.08,
+          "overtimePaid": 0,
+          "wagesPlusOvertime": 109891.08,
+          "nonOtPerPayPeriod": 4395.64,
+          "paidToRateRatio": 0.999,
+          "rateComparisonFigure": 110019.31,
+          "differenceFromRateComparison": -128.23,
+          "source": {
+            "file": "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+            "row": 709
+          }
+        }
+      ],
+      "flags": []
+    }
+  ]
+}

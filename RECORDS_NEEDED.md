@@ -15,14 +15,79 @@ rather than deleted, so the record of what was once a gap is preserved.
 ## Money-trail dataset (see README "What remains incomplete")
 
 - No vendor/contract payment records loaded.
-- No individual (named or by-position) payroll beyond charter-mandated
-  commissioner base salaries.
+- ~~No individual (named or by-position) payroll beyond charter-mandated
+  commissioner base salaries.~~ **PARTIALLY RESOLVED 2026-09-21** — BCC
+  payroll for FY2024-25 and FY2025-26 (through 2026-09-16) was received via
+  PRR-2026-1195; see "Payroll / compensation (PRR-2026-1195)" below. Still
+  missing: earnings detail by pay code, position/rate history, years before
+  FY2024-25, and the constitutional offices' payrolls.
 - No capital-project-level detail beyond what's cited for Investigation 001.
 - No bond-level debt schedules.
 - No actual (vs. budgeted/estimated) stormwater collections or spending.
 - FY2023-24 budget document **located and access-confirmed** (see
   "Historical expansion" below) but not yet extracted into `records.json`.
   FY2022-23 and earlier not yet located.
+
+## Payroll / compensation (PRR-2026-1195 — response received 2026-09-17)
+
+**Request status: `response_received_completeness_not_verified`.** The ZIP
+contains the county's cover letter but not the wording of our request, so we
+cannot yet say whether it was fulfilled, partially fulfilled, or open. Once the
+original request is located: REQUESTED vs PRODUCED vs MISSING (RN-PAY-10).
+
+Response from the **Clay County BCC Personnel and Benefits Department**
+(Workday exports), covering 2024-10-01 – 2025-09-30 and 2025-10-01 –
+2026-09-16, **BCC employees only** (the county stated it cannot provide the
+constitutional offices). Original ZIP
+`Records_Request_Download_PRR-2026-1195_2026-09-21--10-47-54.zip`, SHA-256
+`94bc2ecc7445db45002df3218ab1f3a08395d9ab42fd12a1548ca7c494499262`, 10 files.
+The originals are preserved unaltered in a public, **researcher-maintained**
+Google Drive evidence archive (not operated by Clay County) linked from the
+People / Payroll page and recorded in `data/records-responses.json`.
+Published view: `data/payroll.json` + `data/payroll-findings.json`.
+
+**Resolved**
+- A county-issued individual-level payroll file for BCC employees (previously:
+  none loaded).
+- Title, employer, and hire date for the County Manager, the three Assistant
+  County Managers, and the Fire Chief (official records).
+- The earlier third-party salary figures now have an official record to be
+  compared with. They may measure a different thing (an annualized rate at a
+  point in time) from the wages-paid figures in the payroll export.
+
+**Partly resolved**
+- Individual payroll — BCC only (constitutional offices are separate custodians).
+- Commissioner compensation — reported wages are known; what accounts for the
+  differences from the comparison figure is not.
+
+**Still needed — research drafts only, NOTHING has been requested.** These
+will be consolidated after all remaining gaps are reviewed, not sent one by
+one. Full text, custodians, and potential resolving records are in
+`data/payroll-findings.json` (`recordsNeededItems`) and on the People / Payroll
+page.
+
+| ID | Question / gap |
+|---|---|
+| RN-PAY-01 | Earnings by pay code (base, leave payout, special or acting pay, other) for the named group and commissioners |
+| RN-PAY-02 | Position and rate history with effective dates |
+| RN-PAY-03 | Payroll before FY2024-25 |
+| RN-PAY-04 | Constitutional-office payroll (each a separate custodian; never mixed with BCC) |
+| RN-PAY-05 | Mock appointment / personnel action for any acting or deputy county-management role, with effective dates |
+| RN-PAY-06 | Compensation authorization specifically associated with any additional Mock role, **if one exists** (does not assume one does) |
+| RN-PAY-07 | Authorization or basis for the FY2025-26 compensation adjustment (roughly 3% per pay period) |
+| RN-PAY-08 | What accounts for the difference between the comparison compensation figure and reported wages for three commissioners (FY2025-26: $525.00, $2,897.00, $1,259.75) |
+| RN-PAY-09 | What payroll components account for the difference between the current annualized-rate comparison and reported wages for the County Manager ($21,345.49, FY2025-26 YTD) |
+| RN-PAY-10 | Locate the original PRR-2026-1195 request wording (internal task, not a request) |
+
+**Standing corrections preserved**
+- The Fire Chief (Lorin Mock) and Fire Marshal (Anthony Roseberry) are
+  different people. The acting/deputy county-management compensation question
+  is separate and stays **unresolved** (`records_required`); the payroll files
+  cannot show whether additional compensation did or did not exist.
+- The census lists two different employees named William Latham. The Assistant
+  County Manager is "Latham, Charlie" in payroll. They are never merged.
+- Differences between reported wages and a comparison figure are research
+  questions only and are never characterized beyond what a record establishes.
 
 ## Investigation 001 — Kristen Burke / District 5
 

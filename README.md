@@ -34,13 +34,20 @@ civic-data project — not an official Clay County website.
   and October 1, 2025 → October 1, 2026 comprehensive impact-fee comparison
 - Scrollable desktop/mobile navigation so every research module remains
   reachable on shorter displays
+- County-produced BCC payroll (FY2024-25 and FY2025-26 year to date) from
+  public-records response PRR-2026-1195, shown for elected officials and
+  senior staff with salary rate, wages paid, and overtime kept in separate
+  columns; everyone else appears only in aggregate (see **Payroll and
+  records-response pipeline**)
 
 ## What remains incomplete
 
-No verified vendor payments, no individual (named or by-position) payroll,
-no capital project-level detail, no bond-level debt schedules, no actual
-stormwater collections or spending, and no fiscal years before FY2024-25 are
-loaded. Nearly every figure in the dataset is a **budgeted** or **estimated**
+No verified vendor payments, no payroll for the constitutional offices
+(Sheriff, Clerk, Tax Collector, Property Appraiser, Supervisor of Elections)
+or other employers, no earnings-by-pay-code detail or position/rate history
+for any employee, no capital project-level detail, no bond-level debt
+schedules, no actual stormwater collections or spending, and no fiscal years
+before FY2024-25 are loaded. Nearly every figure in the dataset is a **budgeted** or **estimated**
 amount — almost none of it is confirmed **actual** spending. The in-app
 "Questions / Flags" page lists these gaps and updates automatically as
 records are added; see also `lib/gaps.ts`.
@@ -219,6 +226,61 @@ records, leads, evidence ledger, and narrative timeline; Cthrew owns entity
 resolution and the relationship graph. They're kept in sync by hand for now
 — a shared entity-id convention (e.g. `person_burke`) is used on both sides
 so the same real-world entity can eventually be linked automatically.
+
+## Payroll and records-response pipeline
+
+Public-records responses follow one repeatable path, so a new response can be
+processed by rerunning scripts instead of re-reading files by hand:
+
+```
+ORIGINAL ZIP -> hash/provenance -> parse -> normalize -> validate -> sanitize -> public data
+```
+
+```bash
+npm run records:manifest -- <response.zip>   # hashes + CRC check + duplicate detection; extracts nothing
+npm run payroll:build -- <response.zip>      # parses the payroll reports + census straight from the ZIP
+npm run data:audit                           # includes payroll integrity checks
+npm run sensitive:scan                       # pattern scan + roster leak check (also run after builds)
+```
+
+- The original ZIP is never modified or unpacked in place.
+  `scripts/lib/zip-reader.mjs` and `scripts/lib/xlsx-reader.mjs` read it in
+  memory with Node built-ins only.
+- `scripts/build-payroll-dataset.mjs` refuses to run if a report's header row
+  changes, uses only fields actually supplied, and never fills a missing value.
+  It writes a **private** full dataset (names, gender, employer benefit costs,
+  validation detail) to `research-staging/` (gitignored) and a **sanitized
+  public** dataset to `data/payroll.json`.
+- **Who is named publicly** is controlled by one list, `PUBLIC_TIER`, in the
+  build script: elected commissioners, the County Manager, Assistant County
+  Managers, and the Fire Chief / Assistant Fire Chief / Fire Marshal roles
+  already in the research. Everyone else appears only in aggregate. Gender and
+  per-person employer benefit/tax costs are never published.
+- `data/payroll-findings.json` is hand-written editorial prose. Every figure it
+  cites is checked against `data/payroll.json` by `npm run data:audit`.
+- **Provenance registry.** `data/records-responses.json` has one entry per
+  public-records response (request number, agency, dates, status, original file
+  and SHA-256, files received, covered periods, public archive URL, derived
+  datasets, unresolved questions, and the request-to-finding chain). The audit
+  cross-checks it against the parser's output, and a request cannot be marked
+  fulfilled or partially fulfilled until its original wording has been located
+  and compared (`response_received_completeness_not_verified` until then).
+- **Public evidence archive.** Original files are preserved unaltered in a
+  public Google Drive folder that is maintained by the researcher, **not by Clay
+  County**. ClayMoneyTrail only links to it for independent inspection — it is
+  never read at runtime, the site works without it, and the audit forbids any
+  code from referencing Drive directly. Derived ClayMoneyTrail data is
+  sanitized; the archive holds the unaltered originals.
+- **Official amount vs comparison figure.** Numbers printed in the county's
+  export are OFFICIAL PAYROLL AMOUNTS. Anything this project calculates for
+  context is a COMPARISON FIGURE and is labeled as such; a difference between
+  them is a research question, never an accusation.
+- PRR-2026-1195 covers **Board of County Commissioners employees only**.
+  Constitutional offices are separate employers and are never mixed in.
+- **Salary rate ≠ wages paid.** The census shows a current annualized rate; the
+  payroll reports show a single combined "non-OT wages" figure plus overtime.
+  Leave payout, special/acting pay, and allowances cannot be separated, so no
+  total-compensation figure is shown.
 
 ## Methodology and limitations
 

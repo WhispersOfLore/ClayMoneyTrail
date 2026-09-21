@@ -334,3 +334,46 @@ export interface BlackCreekTimelineEntry {
   sourceStatus: SourceStatus;
   sourceUrl: string;
 }
+
+// --- Public-records responses (provenance registry) -----------------------
+// One entry per public-records request that produced a response. Kept as local
+// structured data so the site never depends on the external evidence archive
+// at runtime; the archive URL is a link for independent inspection only.
+export type RecordsResponseStatus =
+  | 'response_received_completeness_not_verified'
+  | 'fulfilled'
+  | 'partially_fulfilled'
+  | 'open';
+
+export interface RecordsResponse {
+  id: string;
+  sourceType: string;
+  requestNumber: string;
+  agency: string;
+  subject: string;
+  requestDate: string | null;
+  requestWording: { located: boolean; note: string };
+  responseDate: string;
+  status: RecordsResponseStatus;
+  statusNote: string;
+  description: string;
+  coveredPeriods: { label: string; start: string; end: string }[];
+  employerScope: string;
+  originalFile: { name: string; bytes: number; sha256: string; filesReceived: number };
+  filesReceived: string[];
+  publicArchive: {
+    url: string;
+    label: string;
+    maintainedBy: string;
+    explanation: string;
+    packageForThisFinding: string;
+    verifiedAccessible: string;
+    verificationNote: string;
+  };
+  derivedDatasets: { path: string; kind: string; generator?: string }[];
+  privateData: string;
+  relatedInvestigations: string[];
+  answers: string[];
+  unresolvedQuestionIds: string[];
+  provenanceChain: { step: string; detail: string }[];
+}

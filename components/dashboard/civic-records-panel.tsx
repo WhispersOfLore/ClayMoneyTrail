@@ -1,5 +1,6 @@
 import { ExternalLink, FileSearch, Mail, Phone } from 'lucide-react';
 import { money } from '@/lib/format';
+import type { RecordsResponse } from '@/lib/types';
 
 type ContractRecord = { id:string; bidNumber:string; title:string; noticeType:string; noticeDate:string; vendor:string|null; approvedAward:number|null; contractCeiling:number|null; actualPayments:number|null; contractNumber?:string|null; sourceUrl?:string };
 type ContractData = { meta: { disclaimer: string; contractSearchUrl:string; accountsPayableContact:string; inventoryCsv:string; recordsNeededStatus:string }; records: ContractRecord[]; additionalMatches:Array<{id:string;bidNumber:string;vendor:string;approvedAward:number|null;amountMeaning:string;sourceUrl:string}>; recordsNeeded:Array<{id:string;vendor:string;contract:string|null;contractCeiling:number|null;missing:string;searched:string[];custodian:string;dateRange:string;priority:string;status:string;sendEnabled:boolean;reason:string}> };
@@ -50,4 +51,35 @@ export function ImpactFeesPanel({ data }: { data: FeeData }) {
     <section className="panel data-table-panel"><table className="research-table"><thead><tr><th>Land use</th><th>Charged per</th><th>Oct. 1, 2025</th><th>Oct. 1, 2026</th><th>Change</th></tr></thead><tbody>{data.rates.map((r)=>{const change=r.total2026-r.total2025; const pct=change/r.total2025*100; return <tr key={r.landUse}><td><strong>{r.landUse}</strong></td><td>{r.unit}</td><td>{money(r.total2025)}</td><td>{money(r.total2026)}</td><td className="positive-change">+{money(change)} <small>{pct.toFixed(2)}%</small></td></tr>})}</tbody></table></section>
     <p className="source-footnote">Effective-date schedules: <a href={data.meta.source2025} target="_blank" rel="noreferrer">2025</a> · <a href={data.meta.source2026} target="_blank" rel="noreferrer">2026</a></p>
   </>;
+}
+
+export const RESPONSE_STATUS_LABELS: Record<string, string> = {
+  response_received_completeness_not_verified: 'Response received — completeness not yet verified',
+  fulfilled: 'Fulfilled',
+  partially_fulfilled: 'Partially fulfilled',
+  open: 'Open',
+};
+
+// Compact list of public-records responses received. Driven entirely by the local registry
+// (data/records-responses.json); the archive link is an outbound link, never a runtime dependency.
+export function RecordsResponsesPanel({ responses }: { responses: RecordsResponse[] }) {
+  return (
+    <section className="panel records-responses">
+      <div className="panel-head"><div><span className="section-kicker">RESPONSES RECEIVED</span><h3>Public-records responses, with the original files</h3></div></div>
+      {responses.map((r) => (
+        <article key={r.id}>
+          <header><strong>{r.requestNumber}</strong><span className="pending-value">{RESPONSE_STATUS_LABELS[r.status] ?? r.status}</span></header>
+          <p>{r.subject}</p>
+          <dl>
+            <div><dt>Produced by</dt><dd>{r.agency}</dd></div>
+            <div><dt>Response date</dt><dd>{r.responseDate}</dd></div>
+            <div><dt>Files received</dt><dd>{r.originalFile.filesReceived}</dd></div>
+            <div><dt>Answered</dt><dd>{r.answers.join(' ')}</dd></div>
+            <div><dt>Still missing</dt><dd>{r.unresolvedQuestionIds.length} open research questions (see People / Payroll)</dd></div>
+          </dl>
+          <p><a href={r.publicArchive.url} target="_blank" rel="noopener noreferrer">{r.publicArchive.label} <ExternalLink size={12} /></a> <small>Maintained by the ClayMoneyTrail researcher, not by Clay County.</small></p>
+        </article>
+      ))}
+    </section>
+  );
 }

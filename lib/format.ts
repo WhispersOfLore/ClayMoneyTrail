@@ -13,6 +13,12 @@ export function money(value: number | null, short = false): string {
   }).format(value);
 }
 
+// Payroll figures are compared to the cent, so they are never rounded to whole dollars.
+export function moneyExact(value: number | null): string {
+  if (value === null) return NOT_POPULATED;
+  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value);
+}
+
 export function formatDate(value: string | null | undefined): string {
   if (!value) return 'Not recorded';
   const parsed = new Date(`${value}T00:00:00`);

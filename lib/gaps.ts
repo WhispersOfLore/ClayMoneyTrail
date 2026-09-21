@@ -59,7 +59,7 @@ export function computeFlags(records: RecordItem[]): DataFlag[] {
       status: individualPayrollLoaded ? 'resolved' : 'open',
       description: individualPayrollLoaded
         ? 'Individual, non-aggregate payroll records are loaded.'
-        : 'Only charter salaries and department/division payroll totals are loaded. No named-employee salary, overtime, benefits, or total-compensation figures are populated, and none will be invented — see the county DOGE disclosure source for the current status of a countywide payroll file.',
+        : 'Board of County Commissioners payroll for FY2024-25 and FY2025-26 year to date is loaded from the county\'s response to PRR-2026-1195 (see People / Payroll), but it is a separate dataset and not part of this record count. Still missing: earnings detail by pay code, position and rate history, years before FY2024-25, and employee-level payroll for the constitutional offices and other employers. No total-compensation figure is shown, and none will be invented.',
     },
     {
       id: 'vendor-payments',

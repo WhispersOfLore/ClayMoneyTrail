@@ -38,10 +38,13 @@ import publicEmailData from '@/data/public-email.json';
 import publicRecordsContactsData from '@/data/public-records-contacts.json';
 import humanServicesData from '@/data/human-services.json';
 import impactFeesData from '@/data/impact-fees.json';
+import payrollData from '@/data/payroll.json';
+import payrollFindingsData from '@/data/payroll-findings.json';
+import recordsResponsesData from '@/data/records-responses.json';
 import { money, formatDate } from '@/lib/format';
 import { computeCoverage } from '@/lib/coverage';
 import { computeFlags } from '@/lib/gaps';
-import type { EvidenceItem, InvestigationMeta, LeadItem, RecordItem, RecordsRequestItem, SourceItem, TimelineEvent } from '@/lib/types';
+import type { EvidenceItem, InvestigationMeta, LeadItem, RecordItem, RecordsRequestItem, RecordsResponse, SourceItem, TimelineEvent } from '@/lib/types';
 import { CoveragePanel } from '@/components/dashboard/coverage-panel';
 import { DataGapNotice } from '@/components/dashboard/empty-state';
 import { DownloadLinks } from '@/components/dashboard/download-links';
@@ -55,7 +58,8 @@ import { StateFundingPanel, type StateFundingDataset } from '@/components/dashbo
 import { PublicSafetyComplexPanel, type PublicSafetyComplexData } from '@/components/dashboard/public-safety-complex-panel';
 import { GeographicSpendingPanel, type GeographicSpendingData } from '@/components/dashboard/geographic-spending-panel';
 import { TaxesAssessmentsPanel, type TaxesAssessmentsData } from '@/components/dashboard/taxes-assessments-panel';
-import { ContractsPanel, HumanServicesPanel, ImpactFeesPanel, PublicEmailPanel, RecordsDirectoryPanel } from '@/components/dashboard/civic-records-panel';
+import { PayrollPanel, type PayrollData, type PayrollFindings } from '@/components/dashboard/payroll-panel';
+import { ContractsPanel, HumanServicesPanel, ImpactFeesPanel, PublicEmailPanel, RecordsDirectoryPanel, RecordsResponsesPanel, RESPONSE_STATUS_LABELS } from '@/components/dashboard/civic-records-panel';
 
 const records = rawRecords as RecordItem[];
 const sources = rawSources as SourceItem[];
@@ -63,6 +67,23 @@ const stateFunding = stateFundingData as unknown as StateFundingDataset;
 const publicSafetyComplex = publicSafetyComplexData as unknown as PublicSafetyComplexData;
 const geographicSpending = geographicSpendingData as unknown as GeographicSpendingData;
 const taxesAssessments = taxesAssessmentsData as unknown as TaxesAssessmentsData;
+const payroll = payrollData as unknown as PayrollData;
+const payrollFindings = payrollFindingsData as unknown as PayrollFindings;
+const recordsResponses = recordsResponsesData.responses as unknown as RecordsResponse[];
+const payrollResponse = recordsResponses.find((r) => r.id === 'PRR-2026-1195') as RecordsResponse;
+// Public-records responses appear in the Sources register. The archive URL comes from the provenance
+// registry (single source of truth) and is labeled as researcher-maintained, never as county- or Google-operated.
+const responseSources: (SourceItem & { linkLabel?: string })[] = recordsResponses.map((r) => ({
+  id: `records-response-${r.id.toLowerCase()}`,
+  title: `${r.requestNumber} — official public-records response`,
+  publisher: r.agency,
+  url: r.publicArchive.url,
+  status: 'verified_official',
+  notes: `Official records produced by ${r.agency} in response to ${r.requestNumber} (response letter ${r.responseDate}; covers ${r.coveredPeriods.map((c) => `${c.start} to ${c.end}`).join(' and ')}; ${r.originalFile.filesReceived} files; original ZIP SHA-256 ${r.originalFile.sha256}). Request status: ${RESPONSE_STATUS_LABELS[r.status] ?? r.status}. The link opens an evidence archive maintained by ClayMoneyTrail / the project researcher — not operated or controlled by Clay County or Google — where the original files are preserved unaltered.`,
+  lastVerified: r.publicArchive.verifiedAccessible,
+  linkLabel: r.publicArchive.label,
+}));
+const allSources: (SourceItem & { linkLabel?: string })[] = [...sources, ...responseSources];
 const investigations = rawInvestigationMeta as InvestigationMeta[];
 const leads = rawLeads as LeadItem[];
 const evidenceLedger = rawEvidence as EvidenceItem[];
@@ -355,14 +376,15 @@ export default function Home() {
               title="What does Clay County government cost to staff?"
               description="Base salary is only one part of compensation. Overtime, benefits, retirement, allowances, and total taxpayer cost remain separate fields."
             >
+              <PayrollPanel data={payroll} findings={payrollFindings} response={payrollResponse} />
               <Disclaimer
-                title="Aggregate budgets, not named employee pay."
-                text="Commissioner entries are charter base salaries. CCSO calculations combine official division totals; they do not estimate compensation for any named employee."
+                title="Below: budgets and Charter figures, not individual pay."
+                text="Commissioner entries are Charter base salaries. CCSO calculations combine official division totals; they do not estimate compensation for any named employee. Sheriff's Office employee-level payroll is a separate employer and is not in the county's response."
               />
               <DataGapNotice
-                title="Countywide individual payroll is not loaded"
-                missing="Named-employee salary, overtime, benefits, retirement, and total-compensation figures for county staff."
-                recordNeeded="A countywide, individual-level payroll or position-and-salary file, such as the one referenced by the county's DOGE disclosure page."
+                title="Still not loaded: earnings detail and other employers"
+                missing="Earnings by pay code (base, leave payout, special or acting pay, allowances), position and rate history, fiscal years before FY2024-25, and employee-level payroll for the constitutional offices (Sheriff, Clerk, Tax Collector, Property Appraiser, Supervisor of Elections) and other employers."
+                recordNeeded="Workday earnings-by-pay-code detail from the BCC Personnel Department, and separate payroll records from each constitutional office's own custodian. Research drafts only — nothing has been requested."
                 templateFile="data/templates/payroll.csv"
                 columns={PAYROLL_COLUMNS}
               />
@@ -611,16 +633,16 @@ export default function Home() {
 
           {section === 'Public Email' && <StandardPage kicker="PUBLIC CORRESPONDENCE" title="Commissioner email review" description="A neutral index and evidence-preserving workflow for communications potentially relevant to Charter §2.2.J."><PublicEmailPanel data={publicEmailData}/></StandardPage>}
 
-          {section === 'Public Records' && <StandardPage kicker="VERIFIED DIRECTORY" title="Public records and contacts" description="Official routes for finding records or requesting the records that are not directly published."><RecordsDirectoryPanel data={publicRecordsContactsData}/></StandardPage>}
+          {section === 'Public Records' && <StandardPage kicker="VERIFIED DIRECTORY" title="Public records and contacts" description="Official routes for finding records or requesting the records that are not directly published."><RecordsDirectoryPanel data={publicRecordsContactsData}/><RecordsResponsesPanel responses={recordsResponses}/></StandardPage>}
 
           {section === 'Sources' && (
             <StandardPage
               kicker="SOURCE REGISTER"
               title="Every number should be traceable"
-              description="Official source links, record status, and notes for the initial dataset."
+              description="Official source links, public-records responses, record status, and notes for the dataset."
             >
               <section className="panel source-list">
-                {sources.map((s) => (
+                {allSources.map((s) => (
                   <article key={s.id}>
                     <div className="source-icon">
                       <BookOpen />
@@ -634,7 +656,7 @@ export default function Home() {
                         {s.publisher} · {s.notes}
                       </p>
                       <a href={s.url} target="_blank" rel="noreferrer">
-                        Open official source <ExternalLink size={14} />
+                        {s.linkLabel ?? 'Open official source'} <ExternalLink size={14} />
                       </a>
                     </div>
                   </article>

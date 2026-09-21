@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "purpose": "Registry of public-records responses received and the chain from each request to the published finding. One entry per request. Structured so a future Public Records Archive page can be built from it without changing the data model.",
+    "note": "This registry is local, structured data. The public evidence archive it links to is an external convenience for independent inspection; ClayMoneyTrail never reads from it at runtime and works without it.",
+    "statusVocabulary": {
+      "response_received_completeness_not_verified": "A response was received but the original request wording has not been compared against what was produced.",
+      "fulfilled": "The original request was compared with the production and everything requested was supplied.",
+      "partially_fulfilled": "The original request was compared with the production and some requested items were not supplied.",
+      "open": "No response, or the response is still being awaited."
+    }
+  },
+  "responses": [
+    {
+      "id": "PRR-2026-1195",
+      "sourceType": "official_public_records_response",
+      "requestNumber": "PRR-2026-1195",
+      "agency": "Clay County Board of County Commissioners — Personnel and Benefits Department",
+      "subject": "Payroll reports, employee census, and benefits information for Board of County Commissioners employees",
+      "requestDate": null,
+      "requestWording": {
+        "located": false,
+        "note": "The response package contains the county's cover letter but not the wording of the original request. Requested-versus-produced cannot be compared until the original request is located."
+      },
+      "responseDate": "2026-09-17",
+      "status": "response_received_completeness_not_verified",
+      "statusNote": "Do not treat this request as fulfilled or partially fulfilled until the original request wording is compared with the ten files produced. The county's letter states it can provide information for the BCC and not for the constitutional offices.",
+      "description": "Two Workday payroll report exports (FY2024-25 and FY2025-26 year to date), an employee census, three state FRS contribution-rate charts, and three benefits guides, delivered with a one-page cover letter.",
+      "coveredPeriods": [
+        { "label": "FY2024-25", "start": "2024-10-01", "end": "2025-09-30" },
+        { "label": "FY2025-26 (year to date)", "start": "2025-10-01", "end": "2026-09-16" }
+      ],
+      "employerScope": "Board of County Commissioners employees only. Constitutional offices and other employers are not covered.",
+      "originalFile": {
+        "name": "Records_Request_Download_PRR-2026-1195_2026-09-21--10-47-54.zip",
+        "bytes": 20885608,
+        "sha256": "94bc2ecc7445db45002df3218ab1f3a08395d9ab42fd12a1548ca7c494499262",
+        "filesReceived": 10
+      },
+      "filesReceived": [
+        "PRR-2026-1195.pdf",
+        "Payroll_Report 10.01.2024 - 9.30.2025.xlsx",
+        "Current_Payroll_Report 10.01.2025 - 9.16.2026.xlsx",
+        "Employee_Census - October 01 2024 - September 16 2026.xlsx",
+        "2024-25_contributions_total.pdf",
+        "2025-26_contributions_total.pdf",
+        "2026-27_contributions_total.pdf",
+        "1. 2024 - New Hire Clay County BOCC Benefits Guide.pdf",
+        "2025 Clay County Benefits Guide.pdf",
+        "2026 Clay County BOCC Benefits Guide.pdf"
+      ],
+      "publicArchive": {
+        "url": "https://drive.google.com/drive/folders/16FXvqMoGp2-HvuH1zL48PJYx3dSPxOtN?usp=sharing",
+        "label": "Open Public Records Evidence Archive",
+        "maintainedBy": "ClayMoneyTrail project researcher — not Clay County",
+        "explanation": "A public Google Drive folder, maintained by the ClayMoneyTrail researcher (not operated or controlled by Clay County), that preserves source records received through public-records requests so anyone can inspect them. The original files are stored unaltered.",
+        "packageForThisFinding": "The ZIP named above and the ten individual files it contains. The folder may hold other records; only this package was used for the PRR-2026-1195 payroll analysis, and not every file supports every finding.",
+        "verifiedAccessible": "2026-09-21",
+        "verificationNote": "Opened without signing in (HTTP 200). The archived ZIP's SHA-256 matches the hash above, and the archived payroll reports, census, and cover letter match the hashes of the same files inside the ZIP."
+      },
+      "derivedDatasets": [
+        { "path": "data/payroll.json", "kind": "Sanitized, purpose-limited public derivative (named officials and senior staff; all others aggregate only)", "generator": "scripts/build-payroll-dataset.mjs" },
+        { "path": "data/payroll-findings.json", "kind": "Hand-written editorial findings; every cited figure is machine-checked against data/payroll.json" }
+      ],
+      "privateData": "A full normalized dataset exists only on the researcher's machine and is never published.",
+      "relatedInvestigations": [],
+      "answers": [
+        "Whether earlier third-party salary figures for the County Manager, Assistant County Managers, and Fire Chief match county payroll records (they measure different things; see findings).",
+        "What wages the county reports for each commissioner in FY2024-25 and FY2025-26 year to date."
+      ],
+      "unresolvedQuestionIds": ["RN-PAY-01", "RN-PAY-02", "RN-PAY-03", "RN-PAY-04", "RN-PAY-05", "RN-PAY-06", "RN-PAY-07", "RN-PAY-08", "RN-PAY-09", "RN-PAY-10"],
+      "provenanceChain": [
+        { "step": "Public records request", "detail": "PRR-2026-1195 (original wording not yet located)" },
+        { "step": "County response", "detail": "BCC Personnel and Benefits Department cover letter dated 2026-09-17" },
+        { "step": "Original records", "detail": "10 files as produced by the county" },
+        { "step": "Public evidence archive", "detail": "Researcher-maintained public Google Drive folder; originals unaltered" },
+        { "step": "Original ZIP hash", "detail": "SHA-256 94bc2ecc…499262" },
+        { "step": "Parser", "detail": "scripts/build-payroll-dataset.mjs reads the ZIP in memory; refuses to run if a report layout changes" },
+        { "step": "Private normalized data", "detail": "Full dataset kept locally; never published" },
+        { "step": "Sanitized public data", "detail": "data/payroll.json" },
+        { "step": "ClayMoneyTrail finding / UI", "detail": "People / Payroll page" }
+      ]
+    }
+  ]
+}
