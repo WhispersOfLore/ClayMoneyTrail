@@ -1,0 +1,2251 @@
+{
+  "meta": {
+    "registryId": "PRR-2026-1194",
+    "asOf": "2026-09-23",
+    "terminologyNote": "These are supplier invoices recorded in Clay County's Workday accounts-payable system, not proof of payment. \"Approved\" means the invoice was approved for payment processing in Workday; it does not by itself establish that funds were disbursed to the supplier. Canceled, Denied, Draft, and In Progress invoices are not county spending. This dataset and the pages built from it use \"invoice\", \"approved invoice value\", and \"invoice activity\" — never \"payment\", \"spending\", \"money paid\", or \"checks issued\" — unless a separate disbursement record establishes that funds actually moved.",
+    "coveredInvoiceDates": {
+      "start": "2024-10-01",
+      "end": "2026-09-17"
+    },
+    "reportCompanyFilter": "Clay County Board of County Commissioners",
+    "totalInvoiceRows": 37845,
+    "distinctSuppliers": 1711,
+    "distinctPONumbers": 5979,
+    "statusTotals": {
+      "Approved": 648014284,
+      "In Progress": 8781897.77,
+      "Canceled": 22676008.68,
+      "Denied": 1653765.13,
+      "Draft": 93968.58
+    },
+    "statusDefinitions": {
+      "Approved": "Approved for payment processing in Workday. Not itself proof of disbursement.",
+      "In Progress": "Still moving through approval; not yet approved or paid.",
+      "Canceled": "The invoice record was canceled. Not county spending.",
+      "Denied": "The invoice was denied. Not county spending.",
+      "Draft": "Not yet submitted for approval. Not county spending."
+    },
+    "csvDownload": "data/supplier-invoices-fy2024-26.csv"
+  },
+  "governmentTransfers": {
+    "note": "These are intra-government budget-draw transfers or payments to other governmental entities, not third-party vendor invoices. They must never be ranked alongside, or described as, external vendor spending.",
+    "entities": [
+      {
+        "supplier": "Clay County Sheriff",
+        "kind": "constitutional_office_transfer",
+        "label": "Clay County Sheriff (constitutional office)",
+        "invoiceCount": 32,
+        "statusTotals": {
+          "Approved": 190001608.35,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 190001608.35,
+        "firstInvoiceDate": "2024-10-01",
+        "lastInvoiceDate": "2026-07-30"
+      },
+      {
+        "supplier": "Clay County Sheriff's Office - School Resource Officer",
+        "kind": "constitutional_office_transfer",
+        "label": "Clay County Sheriff — School Resource Officer",
+        "invoiceCount": 18,
+        "statusTotals": {
+          "Approved": 9963487.73,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 9963487.73,
+        "firstInvoiceDate": "2025-02-27",
+        "lastInvoiceDate": "2026-08-24"
+      },
+      {
+        "supplier": "Clay County Clerk Of The Circuit Court",
+        "kind": "constitutional_office_transfer",
+        "label": "Clay County Clerk of the Circuit Court (constitutional office)",
+        "invoiceCount": 95,
+        "statusTotals": {
+          "Approved": 8724846.86,
+          "In Progress": 0,
+          "Canceled": 236.7,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 8724846.86,
+        "firstInvoiceDate": "2024-10-01",
+        "lastInvoiceDate": "2026-08-04"
+      },
+      {
+        "supplier": "Clay County Property Appraiser",
+        "kind": "constitutional_office_transfer",
+        "label": "Clay County Property Appraiser (constitutional office)",
+        "invoiceCount": 8,
+        "statusTotals": {
+          "Approved": 7360684.94,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 7360684.94,
+        "firstInvoiceDate": "2024-10-15",
+        "lastInvoiceDate": "2026-06-01"
+      },
+      {
+        "supplier": "Clay County Supervisor Of Elections",
+        "kind": "constitutional_office_transfer",
+        "label": "Clay County Supervisor of Elections (constitutional office)",
+        "invoiceCount": 24,
+        "statusTotals": {
+          "Approved": 5668607.71,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 5668607.71,
+        "firstInvoiceDate": "2024-10-14",
+        "lastInvoiceDate": "2026-09-01"
+      },
+      {
+        "supplier": "City of Green Cove Springs",
+        "kind": "other_government_entity",
+        "label": "City of Green Cove Springs (municipal government) — recurring small-dollar utility/service billing tied to specific county facility addresses",
+        "invoiceCount": 1375,
+        "statusTotals": {
+          "Approved": 2990995.52,
+          "In Progress": 2906.38,
+          "Canceled": 9690.38,
+          "Denied": 287.68,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 2990995.52,
+        "firstInvoiceDate": "2024-10-01",
+        "lastInvoiceDate": "2026-09-15"
+      },
+      {
+        "supplier": "Jacksonville Trans Auth",
+        "kind": "other_government_entity",
+        "label": "Jacksonville Transportation Authority (regional government transportation authority) — recurring monthly billing",
+        "invoiceCount": 76,
+        "statusTotals": {
+          "Approved": 2005061.76,
+          "In Progress": 65038.91,
+          "Canceled": 838808.26,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 2005061.76,
+        "firstInvoiceDate": "2025-06-18",
+        "lastInvoiceDate": "2026-07-21"
+      },
+      {
+        "supplier": "Florida Dept Of Juvenile Justice",
+        "kind": "other_government_entity",
+        "label": "Florida Department of Juvenile Justice (state agency) — recurring monthly billing, consistent with the state-mandated county cost-share for juvenile detention",
+        "invoiceCount": 24,
+        "statusTotals": {
+          "Approved": 1808994.75,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1808994.75,
+        "firstInvoiceDate": "2024-10-04",
+        "lastInvoiceDate": "2026-09-04"
+      },
+      {
+        "supplier": "Clay County Health Department",
+        "kind": "other_government_entity",
+        "label": "Clay County Health Department (state-county partnership agency)",
+        "invoiceCount": 11,
+        "statusTotals": {
+          "Approved": 1775367.49,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1775367.49,
+        "firstInvoiceDate": "2024-10-21",
+        "lastInvoiceDate": "2026-06-22"
+      },
+      {
+        "supplier": "Clay County Utility Authority",
+        "kind": "other_government_entity",
+        "label": "Clay County Utility Authority (independent special district)",
+        "invoiceCount": 826,
+        "statusTotals": {
+          "Approved": 607847,
+          "In Progress": 1866.48,
+          "Canceled": 1080.45,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 607847,
+        "firstInvoiceDate": "2024-10-04",
+        "lastInvoiceDate": "2026-09-15"
+      },
+      {
+        "supplier": "Clay County School Board",
+        "kind": "other_government_entity",
+        "label": "Clay County School Board (separate governmental entity, not a BCC constitutional office)",
+        "invoiceCount": 4,
+        "statusTotals": {
+          "Approved": 266243.59,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 266243.59,
+        "firstInvoiceDate": "2024-11-06",
+        "lastInvoiceDate": "2026-07-30"
+      },
+      {
+        "supplier": "Putnam County Board of County Commissioners",
+        "kind": "other_government_entity",
+        "label": "Putnam County Board of County Commissioners (another county's government)",
+        "invoiceCount": 8,
+        "statusTotals": {
+          "Approved": 110096.04,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 110096.04,
+        "firstInvoiceDate": "2026-01-31",
+        "lastInvoiceDate": "2026-08-31"
+      },
+      {
+        "supplier": "Clay County Tax Collector",
+        "kind": "constitutional_office_transfer",
+        "label": "Clay County Tax Collector (constitutional office)",
+        "invoiceCount": 12,
+        "statusTotals": {
+          "Approved": 65210.37,
+          "In Progress": 0,
+          "Canceled": 87.75,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 65210.37,
+        "firstInvoiceDate": "2025-05-06",
+        "lastInvoiceDate": "2026-05-14"
+      }
+    ]
+  },
+  "externalVendors": {
+    "note": "Third-party businesses. Full invoice-level detail for every business and government supplier is in the downloadable CSV; this list is the top 50 by approved invoice value for on-page display.",
+    "totalSuppliers": 1237,
+    "totalApprovedInvoiceValue": 416359270.71,
+    "topByApprovedInvoiceValue": [
+      {
+        "supplier": "FCC Environmental Services LLC",
+        "invoiceCount": 29,
+        "statusTotals": {
+          "Approved": 32477990.25,
+          "In Progress": 0,
+          "Canceled": 1365938.53,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 32477990.25,
+        "poNumberCount": 2,
+        "firstInvoiceDate": "2024-10-01",
+        "lastInvoiceDate": "2026-09-03"
+      },
+      {
+        "supplier": "Florida Blue Stop Loss",
+        "invoiceCount": 19,
+        "statusTotals": {
+          "Approved": 28378191.15,
+          "In Progress": 1315945.95,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 28378191.15,
+        "poNumberCount": 0,
+        "firstInvoiceDate": "2025-02-18",
+        "lastInvoiceDate": "2026-08-20"
+      },
+      {
+        "supplier": "Waste Management Inc Of Florida",
+        "invoiceCount": 23,
+        "statusTotals": {
+          "Approved": 27947243.94,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 27947243.94,
+        "poNumberCount": 2,
+        "firstInvoiceDate": "2024-10-31",
+        "lastInvoiceDate": "2026-09-03"
+      },
+      {
+        "supplier": "Superior Construction CO SE LLC",
+        "invoiceCount": 35,
+        "statusTotals": {
+          "Approved": 22842343.87,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 22842343.87,
+        "poNumberCount": 4,
+        "firstInvoiceDate": "2024-11-08",
+        "lastInvoiceDate": "2026-09-08"
+      },
+      {
+        "supplier": "Kiewit Infrastructure South Co",
+        "invoiceCount": 27,
+        "statusTotals": {
+          "Approved": 22798351.94,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 22798351.94,
+        "poNumberCount": 3,
+        "firstInvoiceDate": "2024-11-01",
+        "lastInvoiceDate": "2026-06-09"
+      },
+      {
+        "supplier": "Express Scripts, Inc.",
+        "invoiceCount": 109,
+        "statusTotals": {
+          "Approved": 16911215.68,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 16911215.68,
+        "poNumberCount": 0,
+        "firstInvoiceDate": "2025-01-06",
+        "lastInvoiceDate": "2026-09-14"
+      },
+      {
+        "supplier": "Scorpio",
+        "invoiceCount": 25,
+        "statusTotals": {
+          "Approved": 14424724.4,
+          "In Progress": 952847.15,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 14424724.4,
+        "poNumberCount": 3,
+        "firstInvoiceDate": "2024-10-12",
+        "lastInvoiceDate": "2026-09-14"
+      },
+      {
+        "supplier": "Reeves Construction Company",
+        "invoiceCount": 20,
+        "statusTotals": {
+          "Approved": 14244960.24,
+          "In Progress": 1011190.23,
+          "Canceled": 646861.33,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 14244960.24,
+        "poNumberCount": 2,
+        "firstInvoiceDate": "2025-01-29",
+        "lastInvoiceDate": "2026-08-07"
+      },
+      {
+        "supplier": "E Vaughan Rivers Inc",
+        "invoiceCount": 22,
+        "statusTotals": {
+          "Approved": 13107095,
+          "In Progress": 0,
+          "Canceled": 1034398.81,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 13107095,
+        "poNumberCount": 2,
+        "firstInvoiceDate": "2025-02-05",
+        "lastInvoiceDate": "2026-08-13"
+      },
+      {
+        "supplier": "Fortress Secured LLC",
+        "invoiceCount": 27,
+        "statusTotals": {
+          "Approved": 12426167.6,
+          "In Progress": 0,
+          "Canceled": 536389.77,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 12426167.6,
+        "poNumberCount": 5,
+        "firstInvoiceDate": "2024-10-25",
+        "lastInvoiceDate": "2026-08-31"
+      },
+      {
+        "supplier": "Kirby Development Inc",
+        "invoiceCount": 35,
+        "statusTotals": {
+          "Approved": 12243295.21,
+          "In Progress": 801187.52,
+          "Canceled": 354012.19,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 12243295.21,
+        "poNumberCount": 15,
+        "firstInvoiceDate": "2024-10-27",
+        "lastInvoiceDate": "2026-08-24"
+      },
+      {
+        "supplier": "Anderson Columbia Co Inc",
+        "invoiceCount": 25,
+        "statusTotals": {
+          "Approved": 11606969.64,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 11606969.64,
+        "poNumberCount": 3,
+        "firstInvoiceDate": "2024-10-31",
+        "lastInvoiceDate": "2026-08-17"
+      },
+      {
+        "supplier": "Hubbard Construction Company",
+        "invoiceCount": 18,
+        "statusTotals": {
+          "Approved": 9611618.53,
+          "In Progress": 1458390.14,
+          "Canceled": 1394205.94,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 9611618.53,
+        "poNumberCount": 14,
+        "firstInvoiceDate": "2024-10-14",
+        "lastInvoiceDate": "2026-08-07"
+      },
+      {
+        "supplier": "Ajax Building Company, LLC",
+        "invoiceCount": 17,
+        "statusTotals": {
+          "Approved": 8003024.44,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 8003024.44,
+        "poNumberCount": 6,
+        "firstInvoiceDate": "2024-10-25",
+        "lastInvoiceDate": "2026-06-10"
+      },
+      {
+        "supplier": "Besch And Smith Civil Group, Inc.",
+        "invoiceCount": 39,
+        "statusTotals": {
+          "Approved": 7185851.34,
+          "In Progress": 0,
+          "Canceled": 219701.93,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 7185851.34,
+        "poNumberCount": 6,
+        "firstInvoiceDate": "2024-10-14",
+        "lastInvoiceDate": "2026-07-06"
+      },
+      {
+        "supplier": "Florida Blue Medicare",
+        "invoiceCount": 78,
+        "statusTotals": {
+          "Approved": 6907541.78,
+          "In Progress": 0,
+          "Canceled": 75196.5,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 6907541.78,
+        "poNumberCount": 0,
+        "firstInvoiceDate": "2024-10-01",
+        "lastInvoiceDate": "2026-08-16"
+      },
+      {
+        "supplier": "WGI Inc",
+        "invoiceCount": 106,
+        "statusTotals": {
+          "Approved": 6017636.03,
+          "In Progress": 0,
+          "Canceled": 8046938.87,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 6017636.03,
+        "poNumberCount": 23,
+        "firstInvoiceDate": "2024-10-01",
+        "lastInvoiceDate": "2026-08-12"
+      },
+      {
+        "supplier": "DB Civil Construction, LLC",
+        "invoiceCount": 18,
+        "statusTotals": {
+          "Approved": 5726926.02,
+          "In Progress": 783095.36,
+          "Canceled": 4865651.01,
+          "Denied": 765093.8,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 5726926.02,
+        "poNumberCount": 3,
+        "firstInvoiceDate": "2025-07-11",
+        "lastInvoiceDate": "2026-09-01"
+      },
+      {
+        "supplier": "Gate Petroleum Co",
+        "invoiceCount": 286,
+        "statusTotals": {
+          "Approved": 5285922.82,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 5285922.82,
+        "poNumberCount": 4,
+        "firstInvoiceDate": "2024-10-07",
+        "lastInvoiceDate": "2026-09-10"
+      },
+      {
+        "supplier": "Motorola Solutions Inc",
+        "invoiceCount": 49,
+        "statusTotals": {
+          "Approved": 4462129.04,
+          "In Progress": 262000.9,
+          "Canceled": 85897.35,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 4462129.04,
+        "poNumberCount": 23,
+        "firstInvoiceDate": "2024-10-10",
+        "lastInvoiceDate": "2026-09-15"
+      },
+      {
+        "supplier": "Asphalt Paving Systems, Inc.",
+        "invoiceCount": 10,
+        "statusTotals": {
+          "Approved": 4172220.37,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 4172220.37,
+        "poNumberCount": 10,
+        "firstInvoiceDate": "2024-12-05",
+        "lastInvoiceDate": "2026-08-28"
+      },
+      {
+        "supplier": "Jax Utilities Management Inc",
+        "invoiceCount": 23,
+        "statusTotals": {
+          "Approved": 3886281.59,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 3886281.59,
+        "poNumberCount": 17,
+        "firstInvoiceDate": "2024-12-09",
+        "lastInvoiceDate": "2026-07-29"
+      },
+      {
+        "supplier": "GAI Consultants Inc",
+        "invoiceCount": 117,
+        "statusTotals": {
+          "Approved": 3593897.81,
+          "In Progress": 84094.84,
+          "Canceled": 203607.27,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 3593897.81,
+        "poNumberCount": 33,
+        "firstInvoiceDate": "2024-10-01",
+        "lastInvoiceDate": "2026-08-18"
+      },
+      {
+        "supplier": "Risk Management Associates inc",
+        "invoiceCount": 59,
+        "statusTotals": {
+          "Approved": 3108711.06,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 3108711.06,
+        "poNumberCount": 13,
+        "firstInvoiceDate": "2024-10-01",
+        "lastInvoiceDate": "2026-06-30"
+      },
+      {
+        "supplier": "Ring Power Corp",
+        "invoiceCount": 446,
+        "statusTotals": {
+          "Approved": 2912881.19,
+          "In Progress": 0,
+          "Canceled": 6297.68,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 2912881.19,
+        "poNumberCount": 97,
+        "firstInvoiceDate": "2024-10-04",
+        "lastInvoiceDate": "2026-09-14"
+      },
+      {
+        "supplier": "Ten-8 Fire & Safety LLC",
+        "invoiceCount": 438,
+        "statusTotals": {
+          "Approved": 2790179.21,
+          "In Progress": 9400.27,
+          "Canceled": 8201.79,
+          "Denied": 0,
+          "Draft": 87061.12
+        },
+        "approvedInvoiceValue": 2790179.21,
+        "poNumberCount": 145,
+        "firstInvoiceDate": "2024-10-01",
+        "lastInvoiceDate": "2026-09-15"
+      },
+      {
+        "supplier": "Stryker Sales, LLC",
+        "invoiceCount": 40,
+        "statusTotals": {
+          "Approved": 2748612.45,
+          "In Progress": 0,
+          "Canceled": 1005.84,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 2748612.45,
+        "poNumberCount": 16,
+        "firstInvoiceDate": "2024-10-25",
+        "lastInvoiceDate": "2026-08-21"
+      },
+      {
+        "supplier": "CC Borden Construction Inc.",
+        "invoiceCount": 11,
+        "statusTotals": {
+          "Approved": 2643026.17,
+          "In Progress": 27023.28,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 2643026.17,
+        "poNumberCount": 2,
+        "firstInvoiceDate": "2025-09-30",
+        "lastInvoiceDate": "2026-08-21"
+      },
+      {
+        "supplier": "Municipal Equipment Co",
+        "invoiceCount": 74,
+        "statusTotals": {
+          "Approved": 2162713.46,
+          "In Progress": 0,
+          "Canceled": 220,
+          "Denied": 1052.99,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 2162713.46,
+        "poNumberCount": 42,
+        "firstInvoiceDate": "2024-10-11",
+        "lastInvoiceDate": "2026-09-03"
+      },
+      {
+        "supplier": "Duval Ford",
+        "invoiceCount": 49,
+        "statusTotals": {
+          "Approved": 2041067,
+          "In Progress": 0,
+          "Canceled": 389030,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 2041067,
+        "poNumberCount": 24,
+        "firstInvoiceDate": "2025-02-14",
+        "lastInvoiceDate": "2026-07-13"
+      },
+      {
+        "supplier": "Clay Electric Co-Op Inc",
+        "invoiceCount": 268,
+        "statusTotals": {
+          "Approved": 1923428.42,
+          "In Progress": 71401.49,
+          "Canceled": 0,
+          "Denied": 53926.09,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1923428.42,
+        "poNumberCount": 9,
+        "firstInvoiceDate": "2024-10-11",
+        "lastInvoiceDate": "2026-09-04"
+      },
+      {
+        "supplier": "Amwins Self-Funded LLC",
+        "invoiceCount": 20,
+        "statusTotals": {
+          "Approved": 1763968.53,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1763968.53,
+        "poNumberCount": 0,
+        "firstInvoiceDate": "2025-03-04",
+        "lastInvoiceDate": "2026-08-14"
+      },
+      {
+        "supplier": "Razorback, LLC",
+        "invoiceCount": 9,
+        "statusTotals": {
+          "Approved": 1760300,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1760300,
+        "poNumberCount": 2,
+        "firstInvoiceDate": "2025-04-01",
+        "lastInvoiceDate": "2026-04-22"
+      },
+      {
+        "supplier": "Chinchor Electric, Inc",
+        "invoiceCount": 5,
+        "statusTotals": {
+          "Approved": 1732258.78,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1732258.78,
+        "poNumberCount": 1,
+        "firstInvoiceDate": "2026-02-26",
+        "lastInvoiceDate": "2026-06-30"
+      },
+      {
+        "supplier": "Brogdon Builders LLC",
+        "invoiceCount": 13,
+        "statusTotals": {
+          "Approved": 1686404.55,
+          "In Progress": 0,
+          "Canceled": 85082,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1686404.55,
+        "poNumberCount": 2,
+        "firstInvoiceDate": "2025-04-10",
+        "lastInvoiceDate": "2026-09-01"
+      },
+      {
+        "supplier": "Dasher Hurst Architects Pa",
+        "invoiceCount": 56,
+        "statusTotals": {
+          "Approved": 1576622.43,
+          "In Progress": 0,
+          "Canceled": 13695,
+          "Denied": 4637.19,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1576622.43,
+        "poNumberCount": 25,
+        "firstInvoiceDate": "2024-10-18",
+        "lastInvoiceDate": "2026-09-02"
+      },
+      {
+        "supplier": "Workday Inc",
+        "invoiceCount": 5,
+        "statusTotals": {
+          "Approved": 1360637.81,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1360637.81,
+        "poNumberCount": 4,
+        "firstInvoiceDate": "2024-11-06",
+        "lastInvoiceDate": "2025-12-21"
+      },
+      {
+        "supplier": "Florida Lawn Medics, LLC",
+        "invoiceCount": 63,
+        "statusTotals": {
+          "Approved": 1353952.21,
+          "In Progress": 23101.02,
+          "Canceled": 45877.39,
+          "Denied": 42553.67,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1353952.21,
+        "poNumberCount": 13,
+        "firstInvoiceDate": "2024-11-01",
+        "lastInvoiceDate": "2026-09-01"
+      },
+      {
+        "supplier": "Clay Co Senior Svcs Of Aging True",
+        "invoiceCount": 46,
+        "statusTotals": {
+          "Approved": 1261437.26,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1261437.26,
+        "poNumberCount": 2,
+        "firstInvoiceDate": "2024-12-13",
+        "lastInvoiceDate": "2026-07-31"
+      },
+      {
+        "supplier": "Clay Behavioral Health Center Inc.",
+        "invoiceCount": 60,
+        "statusTotals": {
+          "Approved": 1244701.61,
+          "In Progress": 4951.33,
+          "Canceled": 8959.76,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1244701.61,
+        "poNumberCount": 6,
+        "firstInvoiceDate": "2024-10-16",
+        "lastInvoiceDate": "2026-09-09"
+      },
+      {
+        "supplier": "Matheny Motor Truck Co d/b/a Matheny Fire & Emergency",
+        "invoiceCount": 22,
+        "statusTotals": {
+          "Approved": 1143424.4,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1143424.4,
+        "poNumberCount": 9,
+        "firstInvoiceDate": "2025-02-24",
+        "lastInvoiceDate": "2026-06-23"
+      },
+      {
+        "supplier": "Legacy Dock and Marine Construction, LLC",
+        "invoiceCount": 17,
+        "statusTotals": {
+          "Approved": 1123282,
+          "In Progress": 0,
+          "Canceled": 105000,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1123282,
+        "poNumberCount": 6,
+        "firstInvoiceDate": "2025-08-18",
+        "lastInvoiceDate": "2026-08-24"
+      },
+      {
+        "supplier": "United Site Services of Florida LLC",
+        "invoiceCount": 601,
+        "statusTotals": {
+          "Approved": 1104104.17,
+          "In Progress": 75,
+          "Canceled": 91.18,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1104104.17,
+        "poNumberCount": 21,
+        "firstInvoiceDate": "2024-10-20",
+        "lastInvoiceDate": "2026-09-14"
+      },
+      {
+        "supplier": "Tax Collector #373118-0551 Code 701",
+        "invoiceCount": 33,
+        "statusTotals": {
+          "Approved": 1100425,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1100425,
+        "poNumberCount": 2,
+        "firstInvoiceDate": "2024-11-01",
+        "lastInvoiceDate": "2026-09-02"
+      },
+      {
+        "supplier": "Jones Edmunds & Associates, Inc",
+        "invoiceCount": 65,
+        "statusTotals": {
+          "Approved": 1083426.48,
+          "In Progress": 0,
+          "Canceled": 5273.82,
+          "Denied": 150233.97,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1083426.48,
+        "poNumberCount": 9,
+        "firstInvoiceDate": "2024-11-20",
+        "lastInvoiceDate": "2026-08-21"
+      },
+      {
+        "supplier": "Musco Sports Lighting LLC",
+        "invoiceCount": 3,
+        "statusTotals": {
+          "Approved": 1024884,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 1024884,
+        "poNumberCount": 2,
+        "firstInvoiceDate": "2025-04-23",
+        "lastInvoiceDate": "2025-10-21"
+      },
+      {
+        "supplier": "SHI International Corp",
+        "invoiceCount": 58,
+        "statusTotals": {
+          "Approved": 966984.4,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 966984.4,
+        "poNumberCount": 14,
+        "firstInvoiceDate": "2024-10-01",
+        "lastInvoiceDate": "2026-08-21"
+      },
+      {
+        "supplier": "Election Systems & Software Inc",
+        "invoiceCount": 2,
+        "statusTotals": {
+          "Approved": 942975,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 942975,
+        "poNumberCount": 1,
+        "firstInvoiceDate": "2025-01-10",
+        "lastInvoiceDate": "2025-02-28"
+      },
+      {
+        "supplier": "Florida Blue - 63491002",
+        "invoiceCount": 20,
+        "statusTotals": {
+          "Approved": 872341.94,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 872341.94,
+        "poNumberCount": 0,
+        "firstInvoiceDate": "2025-01-18",
+        "lastInvoiceDate": "2026-08-19"
+      },
+      {
+        "supplier": "Brindlee Mountain Fire Apparatus, LLC",
+        "invoiceCount": 4,
+        "statusTotals": {
+          "Approved": 852161,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "approvedInvoiceValue": 852161,
+        "poNumberCount": 2,
+        "firstInvoiceDate": "2025-07-22",
+        "lastInvoiceDate": "2026-07-24"
+      }
+    ]
+  },
+  "namedOfficialReimbursements": [
+    {
+      "official": "Alexandra Compere",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1068068",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2024-12-06",
+      "fiscalYear": "FY2024-25",
+      "memo": "2024 Legislative Conference Tampa, FL",
+      "supplierRef": "Travel25.1",
+      "approvedInvoiceAmount": 254.87,
+      "invoiceAmount": 254.87,
+      "poNumber": null,
+      "sourceRow": 34586
+    },
+    {
+      "official": "Alexandra Compere",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1071782",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-03-11",
+      "fiscalYear": "FY2024-25",
+      "memo": null,
+      "supplierRef": "Travel25.2",
+      "approvedInvoiceAmount": 167.96,
+      "invoiceAmount": 167.96,
+      "poNumber": null,
+      "sourceRow": 29558
+    },
+    {
+      "official": "Alexandra Compere",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1075114",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-05-05",
+      "fiscalYear": "FY2024-25",
+      "memo": "Clay Day 2025",
+      "supplierRef": "Travel25.3",
+      "approvedInvoiceAmount": 177.3,
+      "invoiceAmount": 177.3,
+      "poNumber": null,
+      "sourceRow": 26277
+    },
+    {
+      "official": "Alexandra Compere",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1079904",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-07-11",
+      "fiscalYear": "FY2024-25",
+      "memo": "Florida Association of Counties Annual Conference",
+      "supplierRef": "Travel25.4",
+      "approvedInvoiceAmount": 152.5,
+      "invoiceAmount": 152.5,
+      "poNumber": null,
+      "sourceRow": 22307
+    },
+    {
+      "official": "Alexandra Compere",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1084430",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-10-14",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Florida State Capitol",
+      "supplierRef": "Travel26.1",
+      "approvedInvoiceAmount": 165.62,
+      "invoiceAmount": 165.62,
+      "poNumber": null,
+      "sourceRow": 16734
+    },
+    {
+      "official": "Alexandra Compere",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1087299",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-12-10",
+      "fiscalYear": "FY2025-26",
+      "memo": "2025 Legislative Conference Tampa, FL",
+      "supplierRef": "Travel26.2",
+      "approvedInvoiceAmount": 224.21,
+      "invoiceAmount": 224.21,
+      "poNumber": null,
+      "sourceRow": 13814
+    },
+    {
+      "official": "Alexandra Compere",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1088803",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-12-15",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Delegation Visit",
+      "supplierRef": "Travel26.3",
+      "approvedInvoiceAmount": 159.37,
+      "invoiceAmount": 159.37,
+      "poNumber": null,
+      "sourceRow": 13610
+    },
+    {
+      "official": "Alexandra Compere",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1091941",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-02-25",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Clay Day",
+      "supplierRef": "Travel26.4",
+      "approvedInvoiceAmount": 174.88,
+      "invoiceAmount": 174.88,
+      "poNumber": null,
+      "sourceRow": 10176
+    },
+    {
+      "official": "Alexandra Compere",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1098448",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-07-13",
+      "fiscalYear": "FY2025-26",
+      "memo": "2026 Florida Assoc. of Counties Annual Conference Orlando, FL",
+      "supplierRef": "Travel26.5",
+      "approvedInvoiceAmount": 194.73,
+      "invoiceAmount": 194.73,
+      "poNumber": null,
+      "sourceRow": 3120
+    },
+    {
+      "official": "Betsy Condon",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1067252",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2024-12-06",
+      "fiscalYear": "FY2024-25",
+      "memo": "2024 Legislative Conf Tampa, FL",
+      "supplierRef": "Travel25.1",
+      "approvedInvoiceAmount": 227.28,
+      "invoiceAmount": 227.28,
+      "poNumber": null,
+      "sourceRow": 34589
+    },
+    {
+      "official": "Betsy Condon",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1073922",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-04-15",
+      "fiscalYear": "FY2024-25",
+      "memo": "Tallahassee 3/5 - 3/6",
+      "supplierRef": "Travel25.2",
+      "approvedInvoiceAmount": 178.06,
+      "invoiceAmount": 178.06,
+      "poNumber": null,
+      "sourceRow": 27412
+    },
+    {
+      "official": "Betsy Condon",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1074748",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-04-30",
+      "fiscalYear": "FY2024-25",
+      "memo": "Tallahassee 3/18 - 3/20",
+      "supplierRef": "Travel25.3",
+      "approvedInvoiceAmount": 721.47,
+      "invoiceAmount": 721.47,
+      "poNumber": null,
+      "sourceRow": 26628
+    },
+    {
+      "official": "Betsy Condon",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1074750",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-05-01",
+      "fiscalYear": "FY2024-25",
+      "memo": "Tallahassee 4/23 - 4/24",
+      "supplierRef": "Travel25.4",
+      "approvedInvoiceAmount": 186.26,
+      "invoiceAmount": 186.26,
+      "poNumber": null,
+      "sourceRow": 26425
+    },
+    {
+      "official": "Betsy Condon",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1079903",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-07-11",
+      "fiscalYear": "FY2024-25",
+      "memo": "Florida Association of Counties Annual Conference",
+      "supplierRef": "Travel25.5",
+      "approvedInvoiceAmount": 149.26,
+      "invoiceAmount": 149.26,
+      "poNumber": null,
+      "sourceRow": 22308
+    },
+    {
+      "official": "Betsy Condon",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1086579",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-11-21",
+      "fiscalYear": "FY2025-26",
+      "memo": "2025 Legislative Conference Tampa, FL",
+      "supplierRef": "Travel26.1",
+      "approvedInvoiceAmount": 186.06,
+      "invoiceAmount": 186.06,
+      "poNumber": null,
+      "sourceRow": 14744
+    },
+    {
+      "official": "Betsy Condon",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1088370",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-12-15",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Delegation Visit 2025",
+      "supplierRef": "Travel26.2",
+      "approvedInvoiceAmount": 139.47,
+      "invoiceAmount": 139.47,
+      "poNumber": null,
+      "sourceRow": 13618
+    },
+    {
+      "official": "Betsy Condon",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1090336",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-01-29",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Legislative & Rural Counties Day",
+      "supplierRef": "Travel26.3",
+      "approvedInvoiceAmount": 214.36,
+      "invoiceAmount": 214.36,
+      "poNumber": null,
+      "sourceRow": 11524
+    },
+    {
+      "official": "Betsy Condon",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1091939",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-02-24",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Clay Day",
+      "supplierRef": "Travel26.4",
+      "approvedInvoiceAmount": 196.88,
+      "invoiceAmount": 196.88,
+      "poNumber": null,
+      "sourceRow": 10249
+    },
+    {
+      "official": "Betsy Condon",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1098777",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-07-13",
+      "fiscalYear": "FY2025-26",
+      "memo": "Florida Assoc. of Counties Annual Conference Orlando, FL",
+      "supplierRef": "Travel26.5",
+      "approvedInvoiceAmount": 310.19,
+      "invoiceAmount": 310.19,
+      "poNumber": null,
+      "sourceRow": 3102
+    },
+    {
+      "official": "Chereese Stewart",
+      "tierReason": "Assistant County Manager (senior executive staff)",
+      "invoiceNumber": "SI-1074542",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-04-14",
+      "fiscalYear": "FY2024-25",
+      "memo": "2025 Rural Counties Day at Florida Sate Capitol",
+      "supplierRef": "Travel25.1",
+      "approvedInvoiceAmount": 27.55,
+      "invoiceAmount": 27.55,
+      "poNumber": null,
+      "sourceRow": 27467
+    },
+    {
+      "official": "Chereese Stewart",
+      "tierReason": "Assistant County Manager (senior executive staff)",
+      "invoiceNumber": "SI-1077964",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-06-24",
+      "fiscalYear": "FY2024-25",
+      "memo": null,
+      "supplierRef": "Travel25.2",
+      "approvedInvoiceAmount": 109.23,
+      "invoiceAmount": 109.23,
+      "poNumber": null,
+      "sourceRow": 23397
+    },
+    {
+      "official": "Chereese Stewart",
+      "tierReason": "Assistant County Manager (senior executive staff)",
+      "invoiceNumber": "SI-1091442",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-02-20",
+      "fiscalYear": "FY2025-26",
+      "memo": "Rural Counties Day 2026 in Tallahassee",
+      "supplierRef": "Travel26.1",
+      "approvedInvoiceAmount": 47,
+      "invoiceAmount": 47,
+      "poNumber": null,
+      "sourceRow": 10403
+    },
+    {
+      "official": "Howard Wanamaker",
+      "tierReason": "County Manager",
+      "invoiceNumber": "SI-1076961",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-06-03",
+      "fiscalYear": "FY2024-25",
+      "memo": "parking reimbursement",
+      "supplierRef": "Travel25.1",
+      "approvedInvoiceAmount": 35.15,
+      "invoiceAmount": 35.15,
+      "poNumber": null,
+      "sourceRow": 24655
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1065638",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2024-11-15",
+      "fiscalYear": "FY2024-25",
+      "memo": "Jacksonville City Hall - Duval Street Garage",
+      "supplierRef": "Travel25.1",
+      "approvedInvoiceAmount": 9,
+      "invoiceAmount": 9,
+      "poNumber": null,
+      "sourceRow": 35657
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1066956",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2024-12-16",
+      "fiscalYear": "FY2024-25",
+      "memo": "2024 Legislative Conference Tampa, FL 33602",
+      "supplierRef": "Travel25.2",
+      "approvedInvoiceAmount": 225.76,
+      "invoiceAmount": 225.76,
+      "poNumber": null,
+      "sourceRow": 34162
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1071237",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-03-04",
+      "fiscalYear": "FY2024-25",
+      "memo": "FL Regional Councils Association Winter Policy Board Meeting",
+      "supplierRef": "Travel25.3",
+      "approvedInvoiceAmount": 21.7,
+      "invoiceAmount": 21.7,
+      "poNumber": null,
+      "sourceRow": 29979
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1071781",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-03-06",
+      "fiscalYear": "FY2024-25",
+      "memo": null,
+      "supplierRef": "Travel25.4",
+      "approvedInvoiceAmount": 179.08,
+      "invoiceAmount": 179.08,
+      "poNumber": null,
+      "sourceRow": 29767
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1073415",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-04-08",
+      "fiscalYear": "FY2024-25",
+      "memo": "Tallahassee, FL 2025 Legislative Day",
+      "supplierRef": "Travel25.5",
+      "approvedInvoiceAmount": 205.04,
+      "invoiceAmount": 205.04,
+      "poNumber": null,
+      "sourceRow": 27775
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1074533",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-04-25",
+      "fiscalYear": "FY2024-25",
+      "memo": "Tallahassee, FL 2025 Clay Day",
+      "supplierRef": "Travel25.6",
+      "approvedInvoiceAmount": 203.62,
+      "invoiceAmount": 203.62,
+      "poNumber": null,
+      "sourceRow": 26877
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1077948",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-06-17",
+      "fiscalYear": "FY2024-25",
+      "memo": "Duval County Courthouse",
+      "supplierRef": "Travel25.7",
+      "approvedInvoiceAmount": 10,
+      "invoiceAmount": 10,
+      "poNumber": null,
+      "sourceRow": 23702
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1079059",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-07-14",
+      "fiscalYear": "FY2024-25",
+      "memo": "Florida Association of Counties Annual Conference/Orlando, FL",
+      "supplierRef": "Travel25.8",
+      "approvedInvoiceAmount": 161.72,
+      "invoiceAmount": 161.72,
+      "poNumber": null,
+      "sourceRow": 22242
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1082390",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-08-22",
+      "fiscalYear": "FY2024-25",
+      "memo": "Florida Regional Councils Association St Petersburg FL",
+      "supplierRef": "Travel25.9",
+      "approvedInvoiceAmount": 198.88,
+      "invoiceAmount": 198.88,
+      "poNumber": null,
+      "sourceRow": 19830
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1083233",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-09-17",
+      "fiscalYear": "FY2024-25",
+      "memo": "2025 FAC Innovation & Policy Conference - Alachua County",
+      "supplierRef": "Travel25.10",
+      "approvedInvoiceAmount": 53.98,
+      "invoiceAmount": 53.98,
+      "poNumber": null,
+      "sourceRow": 18371
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1084670",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-10-22",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Florida State Capitol",
+      "supplierRef": "Travel26.1",
+      "approvedInvoiceAmount": 161.42,
+      "invoiceAmount": 161.42,
+      "poNumber": null,
+      "sourceRow": 16353
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1086577",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-11-21",
+      "fiscalYear": "FY2025-26",
+      "memo": "2025 Legislative Conference Tampa, FL",
+      "supplierRef": "Travel26.2",
+      "approvedInvoiceAmount": 225.54,
+      "invoiceAmount": 225.54,
+      "poNumber": null,
+      "sourceRow": 14745
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1091022",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-02-24",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Clay Day",
+      "supplierRef": "Travel26.3",
+      "approvedInvoiceAmount": 180.24,
+      "invoiceAmount": 180.24,
+      "poNumber": null,
+      "sourceRow": 10298
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1095223",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-05-12",
+      "fiscalYear": "FY2025-26",
+      "memo": "Advanced Air Mobility Symposium",
+      "supplierRef": "Travel26.4",
+      "approvedInvoiceAmount": 81.26,
+      "invoiceAmount": 81.26,
+      "poNumber": null,
+      "sourceRow": 6095
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1098443",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-07-13",
+      "fiscalYear": "FY2025-26",
+      "memo": "2026 Florida Assoc. of Counties Annual Conference Orlando, FL",
+      "supplierRef": "Travel26.5",
+      "approvedInvoiceAmount": 190.28,
+      "invoiceAmount": 190.28,
+      "poNumber": null,
+      "sourceRow": 3122
+    },
+    {
+      "official": "Jim Renninger",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1099875",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-08-10",
+      "fiscalYear": "FY2025-26",
+      "memo": "2026 FL Regional Council Assoc Summer Policy Board Meeting",
+      "supplierRef": "Travel26.6",
+      "approvedInvoiceAmount": 192.88,
+      "invoiceAmount": 192.88,
+      "poNumber": null,
+      "sourceRow": 1710
+    },
+    {
+      "official": "John Sgromolo",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1068069",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2024-12-05",
+      "fiscalYear": "FY2024-25",
+      "memo": "2024 Legislative Conference Tampa, FL",
+      "supplierRef": "Travel25.1",
+      "approvedInvoiceAmount": 198.94,
+      "invoiceAmount": 198.94,
+      "poNumber": null,
+      "sourceRow": 34652
+    },
+    {
+      "official": "John Sgromolo",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1071788",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-03-11",
+      "fiscalYear": "FY2024-25",
+      "memo": null,
+      "supplierRef": "Travel25.2",
+      "approvedInvoiceAmount": 176.42,
+      "invoiceAmount": 176.42,
+      "poNumber": null,
+      "sourceRow": 29557
+    },
+    {
+      "official": "John Sgromolo",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1075224",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-05-05",
+      "fiscalYear": "FY2024-25",
+      "memo": "Tallahassee, FL Clay Day",
+      "supplierRef": "Travel25.3",
+      "approvedInvoiceAmount": 203.67,
+      "invoiceAmount": 203.67,
+      "poNumber": null,
+      "sourceRow": 26267
+    },
+    {
+      "official": "John Sgromolo",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1079070",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-07-11",
+      "fiscalYear": "FY2024-25",
+      "memo": "Florida Association of Counties Annual Conference",
+      "supplierRef": "Travel25.4",
+      "approvedInvoiceAmount": 150.72,
+      "invoiceAmount": 150.72,
+      "poNumber": null,
+      "sourceRow": 22337
+    },
+    {
+      "official": "John Sgromolo",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1084429",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-10-10",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Florida State Capitol",
+      "supplierRef": "Travel26.1",
+      "approvedInvoiceAmount": 174.08,
+      "invoiceAmount": 174.08,
+      "poNumber": null,
+      "sourceRow": 16851
+    },
+    {
+      "official": "John Sgromolo",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1088336",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-12-16",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Delegation Visit",
+      "supplierRef": "Travel26.2",
+      "approvedInvoiceAmount": 164.8,
+      "invoiceAmount": 164.8,
+      "poNumber": null,
+      "sourceRow": 13546
+    },
+    {
+      "official": "John Sgromolo",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1091060",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-02-24",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Clay Day",
+      "supplierRef": "Travel26.3",
+      "approvedInvoiceAmount": 174.12,
+      "invoiceAmount": 174.12,
+      "poNumber": null,
+      "sourceRow": 10286
+    },
+    {
+      "official": "John Sgromolo",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1098445",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-07-13",
+      "fiscalYear": "FY2025-26",
+      "memo": "2026 Florida Assoc. of Counties Annual Conference Orlando, FL",
+      "supplierRef": "Travel26.4",
+      "approvedInvoiceAmount": 192.06,
+      "invoiceAmount": 192.06,
+      "poNumber": null,
+      "sourceRow": 3121
+    },
+    {
+      "official": "Kristen Burke",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1072142",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-03-06",
+      "fiscalYear": "FY2024-25",
+      "memo": "Tallahassee 2025",
+      "supplierRef": "Travel25.1",
+      "approvedInvoiceAmount": 167.2,
+      "invoiceAmount": 167.2,
+      "poNumber": null,
+      "sourceRow": 29763
+    },
+    {
+      "official": "Kristen Burke",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1075109",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-05-05",
+      "fiscalYear": "FY2024-25",
+      "memo": "Clay Day",
+      "supplierRef": "Travel25.2",
+      "approvedInvoiceAmount": 214.78,
+      "invoiceAmount": 214.78,
+      "poNumber": null,
+      "sourceRow": 26278
+    },
+    {
+      "official": "Kristen Burke",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1080027",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-07-29",
+      "fiscalYear": "FY2024-25",
+      "memo": "Florida Association of Counties Annual Conference",
+      "supplierRef": "Travel25.3",
+      "approvedInvoiceAmount": 92.83,
+      "invoiceAmount": 92.83,
+      "poNumber": null,
+      "sourceRow": 21411
+    },
+    {
+      "official": "Kristen Burke",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1084431",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-10-14",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Florida State Capitol",
+      "supplierRef": "Travel26.1",
+      "approvedInvoiceAmount": 156.42,
+      "invoiceAmount": 156.42,
+      "poNumber": null,
+      "sourceRow": 16733
+    },
+    {
+      "official": "Kristen Burke",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1087526",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2025-12-15",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Delegation Visit",
+      "supplierRef": "Travel26.2",
+      "approvedInvoiceAmount": 167.38,
+      "invoiceAmount": 167.38,
+      "poNumber": null,
+      "sourceRow": 13647
+    },
+    {
+      "official": "Kristen Burke",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1091318",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-02-24",
+      "fiscalYear": "FY2025-26",
+      "memo": "Tallahassee, FL Clay Day",
+      "supplierRef": "Travel26.3",
+      "approvedInvoiceAmount": 202.91,
+      "invoiceAmount": 202.91,
+      "poNumber": null,
+      "sourceRow": 10267
+    },
+    {
+      "official": "Kristen Burke",
+      "tierReason": "Elected county commissioner",
+      "invoiceNumber": "SI-1098989",
+      "invoiceStatus": "Approved",
+      "invoiceDate": "2026-07-13",
+      "fiscalYear": "FY2025-26",
+      "memo": "2026 Florida Assoc. of Counties Annual Conference Orlando, FL",
+      "supplierRef": "Travel26.4",
+      "approvedInvoiceAmount": 168.39,
+      "invoiceAmount": 168.39,
+      "poNumber": null,
+      "sourceRow": 3095
+    }
+  ],
+  "employeeReimbursementsAggregated": {
+    "supplierCount": 277,
+    "invoiceCount": 530,
+    "statusTotals": {
+      "Approved": 134167.55,
+      "In Progress": 200.99,
+      "Canceled": 851.77,
+      "Denied": 0,
+      "Draft": 0
+    },
+    "approvedInvoiceValue": 134167.55,
+    "note": "Ordinary county employee reimbursements (travel, safety boots/uniforms, mileage, tuition/training). Aggregated per the Tier B privacy policy: not named, regardless of amount, unless a specific documented public-interest reason later requires it."
+  },
+  "residentRefundsAggregated": {
+    "supplierCount": 50,
+    "invoiceCount": 56,
+    "statusTotals": {
+      "Approved": 10609.53,
+      "In Progress": 0,
+      "Canceled": 0,
+      "Denied": 0,
+      "Draft": 0
+    },
+    "approvedInvoiceValue": 10609.53,
+    "note": "Refunds to private residents (facility/security deposits, rental refunds, and similar routine refunds). Aggregated per the Tier C privacy policy and never named — ClayMoneyTrail does not create a searchable directory of residents receiving routine refunds. The original county-produced record remains accessible only through the researcher-maintained public evidence archive, by the researcher's deliberate choice, not through this dataset."
+  },
+  "individualPayeesUnclassified": {
+    "supplierCount": 138,
+    "invoiceCount": 379,
+    "statusTotals": {
+      "Approved": 151879.32,
+      "In Progress": 0,
+      "Canceled": 406.73,
+      "Denied": 0,
+      "Draft": 0
+    },
+    "approvedInvoiceValue": 151879.32,
+    "note": "Individual-named suppliers whose invoices could not be reliably sorted into an employee-reimbursement or resident-refund category from the reference code and memo fields in this export (most are recurring small stipends or program payments with no reference code, e.g. recreation-program instructor fees). Aggregated and not named, using the same policy as Tier B/C, because their status is genuinely unresolved from this record alone."
+  },
+  "contractCrossReference": [
+    {
+      "recordsNeededId": "rn-2526-084-payments",
+      "vendor": "Vector Disease Control International",
+      "contract": "2025/2026-0173",
+      "contractCeiling": null,
+      "match": {
+        "matchedSupplier": "Vector Disease Control International",
+        "invoiceCount": 3,
+        "approvedInvoiceValue": 71313,
+        "statusTotals": {
+          "Approved": 71313,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "poNumberCount": 1,
+        "firstInvoiceDate": "2026-07-01",
+        "lastInvoiceDate": "2026-09-01"
+      },
+      "attributionStatus": "MATCHED — a single named supplier with no other identified county contracts; still not confirmed which PO(s) map to this specific agreement without contract-file cross-check."
+    },
+    {
+      "recordsNeededId": "rn-2526-073-payments",
+      "vendor": "Fly'n Bryan Trailer Sales dba FB Trailers",
+      "contract": "2025/2026-0207",
+      "contractCeiling": 75196,
+      "match": {
+        "matchedSupplier": "Fly'n Bryan Trailer Sales LLC",
+        "invoiceCount": 8,
+        "approvedInvoiceValue": 33632.24,
+        "statusTotals": {
+          "Approved": 33632.24,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "poNumberCount": 7,
+        "firstInvoiceDate": "2025-02-13",
+        "lastInvoiceDate": "2026-06-03"
+      },
+      "attributionStatus": "Approved invoice value is below the identified contract ceiling. This is not \"savings\" — the contract may be as-needed or the invoice record may be incomplete."
+    },
+    {
+      "recordsNeededId": "rn-2526-016-chain",
+      "vendor": "Eisman & Russo, Inc.",
+      "contract": "2025/2026-229",
+      "contractCeiling": null,
+      "match": {
+        "matchedSupplier": "Eisman & Russo Inc",
+        "invoiceCount": 11,
+        "approvedInvoiceValue": 75762.22,
+        "statusTotals": {
+          "Approved": 75762.22,
+          "In Progress": 0,
+          "Canceled": 53255.28,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "poNumberCount": 3,
+        "firstInvoiceDate": "2025-03-27",
+        "lastInvoiceDate": "2026-05-15"
+      },
+      "attributionStatus": "PO-TO-CONTRACT ATTRIBUTION REQUIRED — do not assume these invoices belong to the SUN Trail procurement specifically until PO/contract attribution is established."
+    },
+    {
+      "recordsNeededId": "rn-2526-074-payments",
+      "vendor": "H&H Land and Marine, LLC",
+      "contract": "2025/2026-0192",
+      "contractCeiling": null,
+      "match": {
+        "matchedSupplier": "H & H Land & Marine LLC",
+        "invoiceCount": 7,
+        "approvedInvoiceValue": 167759.1,
+        "statusTotals": {
+          "Approved": 167759.1,
+          "In Progress": 0,
+          "Canceled": 0,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "poNumberCount": 6,
+        "firstInvoiceDate": "2025-03-03",
+        "lastInvoiceDate": "2026-08-25"
+      },
+      "attributionStatus": "PO-TO-CONTRACT ATTRIBUTION REQUIRED — do not compare this total against the previously identified $156,770.20 award until all invoices/POs are confirmed to belong to that exact contract."
+    },
+    {
+      "recordsNeededId": "rn-2526-041-payments",
+      "vendor": "Kirby Development, Inc.",
+      "contract": "2025/2026-0193",
+      "contractCeiling": 250559.42,
+      "match": {
+        "matchedSupplier": "Kirby Development Inc",
+        "invoiceCount": 35,
+        "approvedInvoiceValue": 12243295.21,
+        "statusTotals": {
+          "Approved": 12243295.21,
+          "In Progress": 801187.52,
+          "Canceled": 354012.19,
+          "Denied": 0,
+          "Draft": 0
+        },
+        "poNumberCount": 15,
+        "firstInvoiceDate": "2024-10-27",
+        "lastInvoiceDate": "2026-08-24"
+      },
+      "attributionStatus": "COUNTYWIDE VENDOR TOTAL — NOT ATTRIBUTABLE TO THIS CONTRACT. This figure is Kirby Development's entire invoice activity with the county across all its contracts in the covered window, not the cost of the Carl Pugh Park drainage contract (ceiling $250,559.42). Which PO(s), if any, correspond to that specific contract is still unidentified."
+    },
+    {
+      "recordsNeededId": "rn-2526-017-payments",
+      "vendor": "Firetrol Protection Systems, Inc.",
+      "contract": "2025/2026-0191",
+      "contractCeiling": null,
+      "match": null,
+      "attributionStatus": "NO SUPPLIER MATCH FOUND in this invoice export. Remains unresolved."
+    },
+    {
+      "recordsNeededId": "rn-2526-087-chain",
+      "vendor": "EMS supplies — ten awarded vendors",
+      "contract": null,
+      "contractCeiling": null,
+      "match": null,
+      "attributionStatus": "UNRESOLVED — the ten awarded vendor names are not yet identified, so no cross-reference against this invoice export is possible yet."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-2026-1194-db-civil-po-1012684",
+      "label": "MULTIPLE CANCELED / DENIED INVOICE RECORDS — CONTEXT REQUIRED",
+      "vendor": "DB Civil Construction, LLC",
+      "poNumber": "PO-1012684",
+      "whatTheRecordShows": "9 invoice records on PO-1012684: Approved $236,182.55 (2026-05-01, SI-1096270); Approved $582,996.95 (2026-01-26, SI-1089792); Approved $767,793.8 (2025-09-30, SI-1089415); Denied $765,093.8 (2025-09-30, SI-1084065); Canceled $2,430,315.15 (2025-09-30, SI-1083941); Approved $420,113.75 (2025-09-30, SI-1083779); Canceled $2,430,315.15 (2025-09-21, SI-1084709); Approved $301,815 (2025-08-12, SI-1081182); Canceled $5,020.71 (2025-07-11, SI-1083884).",
+      "whatWeStillNeedToKnow": "Whether these represent corrections, resubmissions, replacement invoices, duplicate system records, or separate invoice events. Cancellation and denial do not themselves establish anything improper.",
+      "recordsThatCouldResolve": [
+        "Invoice-detail history for PO-1012684",
+        "Workday event/audit history for these invoice numbers",
+        "PO backup documentation",
+        "Replacement or correction records, if any"
+      ],
+      "sourceRows": [
+        6561,
+        11718,
+        17436,
+        17678,
+        17697,
+        17728,
+        18227,
+        20460,
+        22292
+      ]
+    },
+    {
+      "id": "rf-2026-1194-wgi-high-canceled",
+      "label": "HIGH CANCELED-INVOICE ACTIVITY — CONTEXT REQUIRED",
+      "vendor": "WGI Inc",
+      "whatTheRecordShows": "Canceled-status invoice value ($8,046,938.87) exceeds Approved-status invoice value ($6,017,636.03) across 23 POs. Canceled invoice value does not mean money was paid and then lost — it means an invoice record was canceled in Workday.",
+      "whatWeStillNeedToKnow": "Whether this is routine Workday correction/resubmission activity, a project change, replaced invoices, or something else.",
+      "poNumbers": [
+        "PO-1014159",
+        "PO-1014420",
+        "PO-1014599",
+        "PO-1014660",
+        "PO-1014658",
+        "PO-1014600",
+        "PO-1014601",
+        "PO-1014588",
+        "PO-1014725",
+        "PO-1011014",
+        "PO-1011048",
+        "PO-1011015",
+        "PO-1011002",
+        "PO-1011016",
+        "PO-1011010",
+        "PO-1011001",
+        "PO-1013365",
+        "PO-1012136",
+        "PO-1013506",
+        "PO-1011577",
+        "PO-1011001\r\n\r\nPO-1011002\r\n\r\nPO-1011010\r\n\r\nPO-1011014\r\n\r\nPO-1011015\r\n\r\nPO-1011016\r\n\r\nPO-1011048",
+        "PO-1011001\r\n\r\nPO-1011010",
+        "PO-1011359"
+      ],
+      "sourceRows": [
+        1528,
+        1959,
+        4682,
+        5445,
+        5446,
+        5988,
+        6119,
+        6239,
+        7326,
+        7567,
+        7935,
+        7936,
+        7937,
+        7938,
+        8581,
+        8637,
+        8638,
+        8639,
+        9423,
+        10901,
+        11175,
+        11176,
+        11925,
+        13740,
+        14923,
+        14962,
+        17509,
+        17510,
+        17511,
+        17512,
+        17513,
+        17514,
+        17515,
+        17535,
+        17536,
+        17905,
+        18794,
+        18848,
+        18849,
+        18850,
+        18851,
+        18852,
+        18853,
+        18854,
+        20930,
+        21002,
+        21003,
+        21004,
+        21005,
+        21006,
+        21007,
+        21008,
+        22296,
+        22297,
+        22298,
+        22299,
+        22300,
+        22301,
+        22302,
+        22356,
+        22376,
+        23985,
+        24278,
+        24522,
+        24523,
+        24524,
+        24525,
+        24526,
+        24527,
+        25792,
+        25931,
+        25932,
+        25933,
+        26422,
+        26748,
+        26749,
+        26750,
+        26751,
+        26752,
+        26753,
+        26754,
+        26996,
+        26997,
+        26998,
+        26999,
+        27000,
+        27602,
+        28827,
+        28828,
+        28829,
+        28830,
+        28831,
+        28832,
+        28833,
+        29936,
+        29982,
+        31643,
+        34240,
+        34241,
+        34242,
+        34243,
+        34244,
+        34245,
+        34246,
+        34248,
+        37664
+      ]
+    }
+  ],
+  "softwareSaas": {
+    "verifiedMatches": [
+      {
+        "vendor": "General Devices, LLC",
+        "matchedSupplier": "General Devices LLC",
+        "invoiceCount": 1,
+        "approvedInvoiceValue": 16475,
+        "poNumberCount": 1
+      },
+      {
+        "vendor": "LobbyTools",
+        "matchedSupplier": "Lobbytools Inc",
+        "invoiceCount": 2,
+        "approvedInvoiceValue": 4500,
+        "poNumberCount": 2
+      },
+      {
+        "vendor": "Tyler Technologies",
+        "matchedSupplier": "Tyler Technologies Inc",
+        "invoiceCount": 6,
+        "approvedInvoiceValue": 614334.46,
+        "poNumberCount": 5
+      },
+      {
+        "vendor": "Workday",
+        "matchedSupplier": "Workday Inc",
+        "invoiceCount": 5,
+        "approvedInvoiceValue": 1360637.81,
+        "poNumberCount": 4
+      },
+      {
+        "vendor": "APCO International",
+        "matchedSupplier": "APCO International Inc",
+        "invoiceCount": 13,
+        "approvedInvoiceValue": 25575,
+        "poNumberCount": 2
+      },
+      {
+        "vendor": "OverDrive",
+        "matchedSupplier": "Overdrive Inc.",
+        "invoiceCount": 279,
+        "approvedInvoiceValue": 806824.36,
+        "poNumberCount": 31
+      },
+      {
+        "vendor": "Syn-Tech Systems",
+        "matchedSupplier": "Syn-Tech Systems Inc",
+        "invoiceCount": 8,
+        "approvedInvoiceValue": 68719.2,
+        "poNumberCount": 4
+      },
+      {
+        "vendor": "Center for Internet Security",
+        "matchedSupplier": "Center for Internet Security",
+        "invoiceCount": 1,
+        "approvedInvoiceValue": 3000,
+        "poNumberCount": 1
+      },
+      {
+        "vendor": "THE SCARLETT GROUP",
+        "matchedSupplier": "The Scarlett Group LLC",
+        "invoiceCount": 49,
+        "approvedInvoiceValue": 181384.43,
+        "poNumberCount": 8
+      },
+      {
+        "vendor": "gWorks",
+        "matchedSupplier": "gWorks",
+        "invoiceCount": 3,
+        "approvedInvoiceValue": 40002,
+        "poNumberCount": 3
+      },
+      {
+        "vendor": "LinkedIn Corporation",
+        "matchedSupplier": "LinkedIn Corporation",
+        "invoiceCount": 2,
+        "approvedInvoiceValue": 39002,
+        "poNumberCount": 2
+      },
+      {
+        "vendor": "Perry Weather",
+        "matchedSupplier": "Perry Weather, Inc.",
+        "invoiceCount": 1,
+        "approvedInvoiceValue": 7400,
+        "poNumberCount": 1
+      }
+    ],
+    "possibleMatches": [
+      {
+        "vendor": "Motorola Solutions",
+        "matchedSupplier": "Motorola Solutions Inc",
+        "invoiceCount": 49,
+        "approvedInvoiceValue": 4462129.04,
+        "poNumberCount": 23,
+        "reason": "Entity match confirmed, but this vendor's invoice activity may include non-software items (hardware, infrastructure, medical devices, or bundled services), so the approved invoice value should not be described as entirely software spending."
+      },
+      {
+        "vendor": "Butterfly Network",
+        "matchedSupplier": "Butterfly Network Inc.",
+        "invoiceCount": 5,
+        "approvedInvoiceValue": 84008,
+        "poNumberCount": 4,
+        "reason": "Entity match confirmed, but this vendor's invoice activity may include non-software items (hardware, infrastructure, medical devices, or bundled services), so the approved invoice value should not be described as entirely software spending."
+      }
+    ],
+    "excluded": [
+      {
+        "vendor": "BOUND TREE MEDICAL OPERATIVE",
+        "reason": "EMS/medical supply vendor. A wordset name match to \"Bound Tree Medical LLC\" is a false positive for the software/SaaS category and is excluded."
+      }
+    ]
+  },
+  "fuelConnection": {
+    "supplier": "Gate Petroleum Co",
+    "invoiceCount": 286,
+    "statusTotals": {
+      "Approved": 5285922.82,
+      "In Progress": 0,
+      "Canceled": 0,
+      "Denied": 0,
+      "Draft": 0
+    },
+    "approvedInvoiceValue": 5285922.82,
+    "poNumbers": [
+      "PO-1013641",
+      "PO-1013572",
+      "PO-1010221",
+      "PO-1010052"
+    ],
+    "byFiscalYear": [
+      {
+        "fiscalYear": "FY2024-25",
+        "invoiceCount": 133,
+        "approvedInvoiceValue": 2295055.75
+      },
+      {
+        "fiscalYear": "FY2025-26",
+        "invoiceCount": 153,
+        "approvedInvoiceValue": 2990867.07
+      }
+    ],
+    "note": "Preserved for the existing payroll/fuel research thread. Not yet linked to a specific fuel purchasing agreement or connected to any cost conclusion — that cross-reference is future work."
+  },
+  "dataQuality": {
+    "negativeAmountInvoices": {
+      "count": 766,
+      "note": "Credit / adjustment activity against an earlier invoice, not new spending and not treated as anomalous."
+    },
+    "approvedInvoicesWithoutPO": {
+      "count": 5211,
+      "note": "Expected for employee reimbursements, refunds, utilities, and small purchases below the PO threshold. Not itself a review flag."
+    },
+    "ambiguousClassifications": [
+      {
+        "supplier": "Tax Collector #373118-0551 Code 701",
+        "note": "Classified as business (external vendor) by default because its identity is not established. Invoice memos (\"Body Storage Fees\", \"ARME\"-prefixed references) suggest this may be a Medical Examiner or similar government billing code rather than literally the Clay County Tax Collector's office — the \"Clay County Tax Collector\" entity already tracked separately under government transfers is a much smaller, distinct total. Left unclassified rather than guessed; needs manual verification before being named as either a vendor or a government transfer."
+      }
+    ]
+  }
+}

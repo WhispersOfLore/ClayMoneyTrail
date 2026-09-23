@@ -34,6 +34,7 @@ import taxesAssessmentsData from '@/data/taxes-assessments.json';
 import blackCreekData from '@/data/black-creek.json';
 import contractsVendorsData from '@/data/contracts-vendors.json';
 import contractsInventoryData from '@/data/contracts-fy25-26.json';
+import supplierInvoicesData from '@/data/supplier-invoices.json';
 import publicEmailData from '@/data/public-email.json';
 import publicRecordsContactsData from '@/data/public-records-contacts.json';
 import humanServicesData from '@/data/human-services.json';
@@ -59,7 +60,7 @@ import { PublicSafetyComplexPanel, type PublicSafetyComplexData } from '@/compon
 import { GeographicSpendingPanel, type GeographicSpendingData } from '@/components/dashboard/geographic-spending-panel';
 import { TaxesAssessmentsPanel, type TaxesAssessmentsData } from '@/components/dashboard/taxes-assessments-panel';
 import { PayrollPanel, type PayrollData, type PayrollFindings } from '@/components/dashboard/payroll-panel';
-import { ContractsPanel, HumanServicesPanel, ImpactFeesPanel, PublicEmailPanel, RecordsDirectoryPanel, RecordsResponsesPanel, RESPONSE_STATUS_LABELS } from '@/components/dashboard/civic-records-panel';
+import { ContractsPanel, HumanServicesPanel, ImpactFeesPanel, PublicEmailPanel, RecordsDirectoryPanel, RecordsResponsesPanel, RESPONSE_STATUS_LABELS, SupplierInvoicesPanel } from '@/components/dashboard/civic-records-panel';
 
 const records = rawRecords as RecordItem[];
 const sources = rawSources as SourceItem[];
@@ -470,6 +471,7 @@ export default function Home() {
               description="Official FY2025-26 procurement notices, kept separate from signed contracts, ceilings, invoices, and actual payments."
             >
               <ContractsPanel data={contractsVendorsData} inventory={contractsInventoryData} />
+              <SupplierInvoicesPanel data={supplierInvoicesData} />
             </StandardPage>
           )}
 

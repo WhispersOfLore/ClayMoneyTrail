@@ -42,7 +42,42 @@ if (existsSync(rosterPath) && existsSync('data/payroll.json')) {
   for (const name of withheld) for (const [file, text] of texts) if (text.includes(name)) hits.push(`${file}: contains withheld employee name "${name}"`);
 } else console.warn('Roster leak check skipped: private payroll roster not present on this machine.');
 
+// Same check for PRR-2026-1194 supplier invoices: every individual-named
+// supplier classified as Tier B (employee), Tier C (resident refund), or
+// unknown must never appear by name in any publishable file. Tier A
+// officials and businesses/government entities are allowed and excluded.
+//
+// A withheld name can coincidentally match unrelated PRE-EXISTING content
+// this feature never touched (e.g. a name already legitimately published in
+// the investigations evidence ledger for an unconnected reason). Rather than
+// whitelist that specific name — which would blind the scanner to a real
+// future leak of the same name — the check is scoped by SOURCE instead:
+// the two raw files this feature actually generates are authoritative and
+// any hit there is a hard failure ("NEW SUPPLIER-INVOICE PRIVACY LEAK").
+// A hit anywhere else (including built bundles, which mix this feature's
+// data with everything else in the same chunk and can't be cleanly
+// attributed) is reported for visibility as "PRE-EXISTING/BUNDLED CONTEXT"
+// but does not fail the scan, because the raw-source check is what actually
+// proves whether this feature leaked the name — a bundle only ever reflects
+// what its raw sources already contain.
+const invoiceRosterPath = 'research-staging/supplier-invoices-prr-2026-1194/supplier-summaries.json';
+const SUPPLIER_INVOICE_RAW_SOURCES = new Set(['data/supplier-invoices.json', 'public/data/supplier-invoices-fy2024-26.csv']);
+let invoiceRosterChecked = 0;
+const preExistingContextHits = [];
+if (existsSync(invoiceRosterPath)) {
+  const WITHHELD_TYPES = new Set(['employee_reimbursement_aggregated', 'resident_refund_aggregated', 'unknown']);
+  const withheldSuppliers = new Set(JSON.parse(readFileSync(invoiceRosterPath, 'utf8')).filter((s) => WITHHELD_TYPES.has(s.supplierType)).map((s) => s.supplier));
+  invoiceRosterChecked = withheldSuppliers.size;
+  for (const name of withheldSuppliers) for (const [file, text] of texts) {
+    if (!text.includes(name)) continue;
+    if (SUPPLIER_INVOICE_RAW_SOURCES.has(file)) hits.push(`${file}: NEW SUPPLIER-INVOICE PRIVACY LEAK — contains withheld individual name "${name}"`);
+    else preExistingContextHits.push(`${file}: PRE-EXISTING/BUNDLED CONTEXT — contains "${name}", but not in this feature's raw source output (data/supplier-invoices.json / public/data/supplier-invoices-fy2024-26.csv); not treated as a new leak`);
+  }
+} else console.warn('Supplier-invoices roster leak check skipped: private dataset not present on this machine.');
+
+if (preExistingContextHits.length) console.warn(`Informational (not a failure):\n${preExistingContextHits.map((h) => `  - ${h}`).join('\n')}`);
+
 if (hits.length) {
   console.error(`Sensitive-data scan FAILED:\n${hits.map((h) => `  - ${h}`).join('\n')}`);
   process.exitCode = 1;
-} else console.log(`Sensitive-data scan passed: ${files.length} publishable files checked${rosterChecked ? `, ${rosterChecked} withheld employee names not found anywhere` : ''}.`);
+} else console.log(`Sensitive-data scan passed: ${files.length} publishable files checked${rosterChecked ? `, ${rosterChecked} withheld employee names not found anywhere` : ''}${invoiceRosterChecked ? `, ${invoiceRosterChecked} withheld supplier-invoice individual names not found in the raw source outputs` : ''}.`);

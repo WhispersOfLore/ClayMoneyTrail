@@ -1,5 +1,5 @@
 import { ExternalLink, FileSearch, Mail, Phone } from 'lucide-react';
-import { money } from '@/lib/format';
+import { money, moneyExact, formatDate } from '@/lib/format';
 import type { RecordsResponse } from '@/lib/types';
 
 type ContractRecord = { id:string; bidNumber:string; title:string; noticeType:string; noticeDate:string; vendor:string|null; approvedAward:number|null; contractCeiling:number|null; actualPayments:number|null; contractNumber?:string|null; sourceUrl?:string };
@@ -21,6 +21,89 @@ export function ContractsPanel({ data, inventory }: { data: ContractData; invent
     <section className="panel matched-leads"><div className="panel-head"><div><span className="section-kicker">ADDITIONAL OFFICIAL MATCHES</span><h3>Vendor and award facts found in BCC records</h3></div></div>{data.additionalMatches.map((item)=><article key={item.id}><div><strong>{item.bidNumber} · {item.vendor}</strong><p>{item.amountMeaning}</p></div><div>{item.approvedAward == null ? 'No fixed award' : money(item.approvedAward)}<a href={item.sourceUrl} target="_blank" rel="noreferrer">Official record <ExternalLink size={12}/></a></div></article>)}</section>
     <section className="panel software-sweep"><div className="panel-head"><div><span className="section-kicker">DEDICATED SOFTWARE SWEEP</span><h3>{inventory.meta.software_records} agreements, renewals, and amendments flagged</h3></div></div><div className="software-list">{inventory.softwareRecords.map((item)=><article key={`${item.record_number}-${item.title}`}><div><strong>{item.normalized_vendor ?? item.title}</strong><small>{item.record_number ?? 'Procurement-only record'} · {item.document_type}</small></div><span>{item.payment_status}</span><a href={item.source_url} target="_blank" rel="noreferrer" aria-label={`Open ${item.title}`}><ExternalLink size={14}/></a></article>)}</div></section>
     <section className="panel records-needed-queue"><div className="panel-head"><div><span className="section-kicker">RECORDS NEEDED · DRAFTS ONLY</span><h3>Narrow research items generated from verified gaps</h3><p className="draft-only-note">{data.meta.recordsNeededStatus}</p></div><a className="source-link" href={data.meta.contractSearchUrl} target="_blank" rel="noreferrer">Search contracts <ExternalLink size={12}/></a></div>{data.recordsNeeded.map((item)=><article key={item.id}><div className="records-needed-title"><span className={`priority priority-${item.priority}`}>{item.priority}</span><div><strong>{item.vendor}</strong><small>{item.contract ? `Contract ${item.contract}` : 'Executed contract not yet matched'} · draft research item</small></div></div><p>{item.reason}</p><dl><div><dt>Missing</dt><dd>{item.missing}</dd></div><div><dt>Already searched</dt><dd>{item.searched.join(' · ')}</dd></div><div><dt>Likely custodian</dt><dd>{item.custodian}</dd></div><div><dt>Date range</dt><dd>{item.dateRange}</dd></div></dl></article>)}</section>
+  </>;
+}
+
+type InvoiceStatusTotals = { Approved: number; 'In Progress': number; Canceled: number; Denied: number; Draft: number };
+type SupplierInvoicesData = {
+  meta: { registryId: string; asOf: string; terminologyNote: string; coveredInvoiceDates: { start: string; end: string }; totalInvoiceRows: number; distinctSuppliers: number; distinctPONumbers: number; statusTotals: InvoiceStatusTotals; statusDefinitions: Record<string, string>; csvDownload: string };
+  governmentTransfers: { note: string; entities: Array<{ supplier: string; kind: string; label: string; invoiceCount: number; approvedInvoiceValue: number; firstInvoiceDate: string; lastInvoiceDate: string }> };
+  externalVendors: { note: string; totalSuppliers: number; totalApprovedInvoiceValue: number; topByApprovedInvoiceValue: Array<{ supplier: string; invoiceCount: number; approvedInvoiceValue: number; poNumberCount: number; firstInvoiceDate: string; lastInvoiceDate: string }> };
+  namedOfficialReimbursements: Array<{ official: string; tierReason: string; invoiceNumber: string; invoiceStatus: string; invoiceDate: string; fiscalYear: string; memo: string | null; approvedInvoiceAmount: number | null; poNumber: string | null }>;
+  employeeReimbursementsAggregated: { supplierCount: number; invoiceCount: number; approvedInvoiceValue: number; note: string };
+  residentRefundsAggregated: { supplierCount: number; invoiceCount: number; approvedInvoiceValue: number; note: string };
+  individualPayeesUnclassified: { supplierCount: number; invoiceCount: number; approvedInvoiceValue: number; note: string };
+  contractCrossReference: Array<{ recordsNeededId: string; vendor: string; contract: string | null; contractCeiling: number | null; match: { matchedSupplier: string; invoiceCount: number; approvedInvoiceValue: number; poNumberCount: number } | null; attributionStatus: string }>;
+  reviewFlags: Array<{ id: string; label: string; vendor: string; poNumber?: string; whatTheRecordShows: string; whatWeStillNeedToKnow: string; recordsThatCouldResolve?: string[] }>;
+  softwareSaas: { verifiedMatches: Array<{ vendor: string; matchedSupplier: string; approvedInvoiceValue: number; invoiceCount: number }>; possibleMatches: Array<{ vendor: string; matchedSupplier: string; approvedInvoiceValue: number; invoiceCount: number; reason: string }>; excluded: Array<{ vendor: string; reason: string }> };
+  fuelConnection: { supplier: string; invoiceCount: number; approvedInvoiceValue: number; byFiscalYear: Array<{ fiscalYear: string; invoiceCount: number; approvedInvoiceValue: number }>; note: string };
+  dataQuality: { negativeAmountInvoices: { count: number; note: string }; approvedInvoicesWithoutPO: { count: number; note: string } };
+};
+
+// Supplier invoices / accounts payable (PRR-2026-1194). Lives in Vendors &
+// Contracts alongside ContractsPanel rather than as its own section — it is
+// the accounts-payable side of the same procurement-chain question.
+export function SupplierInvoicesPanel({ data }: { data: SupplierInvoicesData }) {
+  const s = data.meta.statusTotals;
+  return <>
+    <div className="disclaimer"><FileSearch size={19}/><div><strong>Supplier invoices are not proof of payment.</strong><span>{data.meta.terminologyNote}</span></div></div>
+    <div className="invoice-status-grid">
+      <article><span>APPROVED INVOICES</span><strong>{money(s.Approved)}</strong><p>{data.meta.statusDefinitions.Approved}</p></article>
+      <article><span>IN PROGRESS</span><strong>{money(s['In Progress'])}</strong><p>{data.meta.statusDefinitions['In Progress']}</p></article>
+      <article><span>CANCELED</span><strong>{money(s.Canceled)}</strong><p>{data.meta.statusDefinitions.Canceled}</p></article>
+      <article><span>DENIED</span><strong>{money(s.Denied)}</strong><p>{data.meta.statusDefinitions.Denied}</p></article>
+      <article><span>DRAFT</span><strong>{money(s.Draft)}</strong><p>{data.meta.statusDefinitions.Draft}</p></article>
+    </div>
+    <p className="source-footnote">{data.meta.totalInvoiceRows.toLocaleString()} invoice records · {data.meta.distinctSuppliers.toLocaleString()} distinct suppliers · {data.meta.distinctPONumbers.toLocaleString()} distinct PO numbers · invoice dates {formatDate(data.meta.coveredInvoiceDates.start)} to {formatDate(data.meta.coveredInvoiceDates.end)} · <a href={data.meta.csvDownload} download>Download full business/government invoice CSV</a></p>
+
+    <section className="panel data-table-panel"><div className="panel-head"><div><span className="section-kicker">GOVERNMENT / CONSTITUTIONAL OFFICE TRANSFERS</span><h3>Kept separate from vendor spending</h3><p className="draft-only-note">{data.governmentTransfers.note}</p></div></div>
+      <table className="research-table"><thead><tr><th>Entity</th><th>Invoices</th><th>Approved invoice value</th><th>Covered dates</th></tr></thead><tbody>
+        {data.governmentTransfers.entities.map((g) => <tr key={g.supplier}><td><strong>{g.supplier}</strong><small>{g.label}</small></td><td>{g.invoiceCount}</td><td>{money(g.approvedInvoiceValue)}</td><td>{formatDate(g.firstInvoiceDate)} – {formatDate(g.lastInvoiceDate)}</td></tr>)}
+      </tbody></table>
+    </section>
+
+    <section className="panel data-table-panel"><div className="panel-head"><div><span className="section-kicker">EXTERNAL VENDORS</span><h3>Top 50 of {data.externalVendors.totalSuppliers.toLocaleString()} suppliers by approved invoice value</h3><p className="draft-only-note">{data.externalVendors.note}</p></div></div>
+      <table className="research-table"><thead><tr><th>Supplier</th><th>Invoices</th><th>POs</th><th>Approved invoice value</th></tr></thead><tbody>
+        {data.externalVendors.topByApprovedInvoiceValue.map((v) => <tr key={v.supplier}><td><strong>{v.supplier}</strong></td><td>{v.invoiceCount}</td><td>{v.poNumberCount}</td><td>{money(v.approvedInvoiceValue)}</td></tr>)}
+      </tbody></table>
+    </section>
+
+    <section className="panel matched-leads"><div className="panel-head"><div><span className="section-kicker">CONTRACT ↔ INVOICE CROSS-REFERENCE</span><h3>FY25/26 contract inventory records with matched invoice activity</h3></div></div>
+      {data.contractCrossReference.map((c) => <article key={c.recordsNeededId}><div><strong>{c.vendor}</strong><p>{c.contract ? `Contract ${c.contract}` : 'No specific contract identified yet'}{c.contractCeiling != null ? ` · ceiling ${money(c.contractCeiling)}` : ''}</p><p>{c.attributionStatus}</p></div><div>{c.match ? <>{money(c.match.approvedInvoiceValue)}<small>{c.match.invoiceCount} invoices · {c.match.poNumberCount} POs</small></> : 'No match'}</div></article>)}
+    </section>
+
+    <section className="panel records-needed-queue"><div className="panel-head"><div><span className="section-kicker">REVIEW FLAGS</span><h3>Worth examining — not findings of anything improper</h3></div></div>
+      {data.reviewFlags.map((f) => <div className="review-flag-card" key={f.id}><h4>{f.label}</h4><dl>
+        <div><dt>Vendor{f.poNumber ? ' / PO' : ''}</dt><dd>{f.vendor}{f.poNumber ? ` · ${f.poNumber}` : ''}</dd></div>
+        <div><dt>What the record shows</dt><dd>{f.whatTheRecordShows}</dd></div>
+        <div><dt>What we still need to know</dt><dd>{f.whatWeStillNeedToKnow}</dd></div>
+        {f.recordsThatCouldResolve && <div><dt>Records that could resolve it</dt><dd>{f.recordsThatCouldResolve.join(' · ')}</dd></div>}
+      </dl></div>)}
+    </section>
+
+    <section className="panel data-table-panel"><div className="panel-head"><div><span className="section-kicker">TIER A — NAMED OFFICIAL REIMBURSEMENTS</span><h3>Elected commissioners and senior officials only</h3><p className="draft-only-note">Shown because the reimbursement concerns the official&apos;s government role. A reimbursement is routine and is not, by itself, evidence of anything improper.</p></div></div>
+      <table className="research-table"><thead><tr><th>Official</th><th>Date</th><th>Purpose</th><th>Status</th><th>Amount</th><th>PO</th></tr></thead><tbody>
+        {data.namedOfficialReimbursements.map((r) => <tr key={r.invoiceNumber}><td><strong>{r.official}</strong><small>{r.tierReason}</small></td><td>{formatDate(r.invoiceDate)}</td><td>{r.memo ?? '—'}</td><td>{r.invoiceStatus}</td><td>{r.approvedInvoiceAmount != null ? moneyExact(r.approvedInvoiceAmount) : '—'}</td><td>{r.poNumber ?? '—'}</td></tr>)}
+      </tbody></table>
+    </section>
+
+    <div className="tier-aggregate-grid">
+      <article><span>TIER B · EMPLOYEE REIMBURSEMENTS</span><strong>{money(data.employeeReimbursementsAggregated.approvedInvoiceValue)}</strong><p>{data.employeeReimbursementsAggregated.supplierCount} people, {data.employeeReimbursementsAggregated.invoiceCount} invoices — aggregated, not named. {data.employeeReimbursementsAggregated.note}</p></article>
+      <article><span>TIER C · RESIDENT REFUNDS</span><strong>{money(data.residentRefundsAggregated.approvedInvoiceValue)}</strong><p>{data.residentRefundsAggregated.supplierCount} people, {data.residentRefundsAggregated.invoiceCount} invoices — aggregated, not named. {data.residentRefundsAggregated.note}</p></article>
+      <article><span>UNCLASSIFIED INDIVIDUALS</span><strong>{money(data.individualPayeesUnclassified.approvedInvoiceValue)}</strong><p>{data.individualPayeesUnclassified.supplierCount} people, {data.individualPayeesUnclassified.invoiceCount} invoices — aggregated, not named. {data.individualPayeesUnclassified.note}</p></article>
+    </div>
+
+    <section className="panel software-sweep"><div className="panel-head"><div><span className="section-kicker">SOFTWARE / SAAS INVOICE ACTIVITY</span><h3>Matched against the existing 38-record software sweep</h3></div></div>
+      <div className="software-list">
+        {data.softwareSaas.verifiedMatches.map((m) => <article key={m.vendor}><div><strong>{m.matchedSupplier}</strong><small>Verified software/service match</small></div><span>{money(m.approvedInvoiceValue)}</span></article>)}
+        {data.softwareSaas.possibleMatches.map((m) => <article key={m.vendor}><div><strong>{m.matchedSupplier}</strong><small>Possible match — review required: {m.reason}</small></div><span>{money(m.approvedInvoiceValue)}</span></article>)}
+        {data.softwareSaas.excluded.map((m) => <article key={m.vendor}><div><strong>{m.vendor}</strong><small>Excluded: {m.reason}</small></div><span>—</span></article>)}
+      </div>
+    </section>
+
+    <section className="panel contract-method"><div><span className="section-kicker">FUEL / PAYROLL-FUEL RESEARCH CONNECTION</span><h3>{data.fuelConnection.supplier}</h3><p>{data.fuelConnection.invoiceCount} invoices, {money(data.fuelConnection.approvedInvoiceValue)} approved invoice value across {data.fuelConnection.byFiscalYear.map((fy) => `${fy.fiscalYear}: ${money(fy.approvedInvoiceValue)}`).join(', ')}. {data.fuelConnection.note}</p></div></section>
+
+    <p className="source-footnote">{data.dataQuality.negativeAmountInvoices.count} negative-amount invoices ({data.dataQuality.negativeAmountInvoices.note}) · {data.dataQuality.approvedInvoicesWithoutPO.count} approved invoices with no PO number ({data.dataQuality.approvedInvoicesWithoutPO.note})</p>
   </>;
 }
 

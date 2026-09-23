@@ -14,7 +14,12 @@ rather than deleted, so the record of what was once a gap is preserved.
 
 ## Money-trail dataset (see README "What remains incomplete")
 
-- No vendor/contract payment records loaded.
+- ~~No vendor/contract payment records loaded.~~ **PARTIALLY RESOLVED
+  2026-09-23** — supplier-invoice/accounts-payable records are now loaded for
+  FY2024-25 through FY2025-26 year-to-date via PRR-2026-1194 (see "Supplier
+  invoices / accounts payable" below). Invoice approval does not establish
+  disbursement, and PO-to-contract attribution remains incomplete for most
+  matched vendors.
 - ~~No individual (named or by-position) payroll beyond charter-mandated
   commissioner base salaries.~~ **PARTIALLY RESOLVED 2026-09-21** — BCC
   payroll for FY2024-25 and FY2025-26 (through 2026-09-16) was received via
@@ -88,6 +93,78 @@ page.
   County Manager is "Latham, Charlie" in payroll. They are never merged.
 - Differences between reported wages and a comparison figure are research
   questions only and are never characterized beyond what a record establishes.
+
+## Supplier invoices / accounts payable (PRR-2026-1194 — response received 2026-09-23)
+
+**Request status: `response_received_completeness_not_verified`.** The ZIP
+contains no cover letter and no copy of the original request wording — just a
+raw Workday "Find Supplier Invoices" export. The response date above is
+inferred from the file's own embedded timestamp, not a dated county letter.
+
+Response from **Clay County BCC's Workday accounts-payable system**
+(producing department not stated), covering supplier-invoice dates
+2024-10-01 – 2026-09-17, **BCC only** (constitutional offices appear only as
+recipients of BCC-to-constitutional-office budget-draw transfers, not as
+vendors). Original ZIP
+`Records_Request_Download_PRR-2026-1194_2026-09-23--11-28-17.zip`, SHA-256
+`d868c970a5e5b843bdbb710fe5c5112fe79cc4ec55b73555e28566071bb24dc6`, 1 file
+(`Find Supplier Invoices 2026-09-18 10_32 EDT.xlsx`, SHA-256
+`e33de7c3de2b7b72e41b914f78f5281cea563ba3cfa92ec6152155fe23048a49`). The
+original is preserved unaltered in the same researcher-maintained Google
+Drive evidence archive used for PRR-2026-1195, linked from the Vendors &
+Contracts page and recorded in `data/records-responses.json`. Published view:
+`data/supplier-invoices.json` + `public/data/supplier-invoices-fy2024-26.csv`.
+
+**TERMINOLOGY: these are supplier invoices, not payments.** "Approved" means
+Workday approved the invoice for payment processing — it does not establish
+that funds were disbursed. Canceled, Denied, Draft, and In Progress invoices
+are not spending. See `data/supplier-invoices.json`'s `meta.terminologyNote`.
+
+**Resolved**
+- 37,845 supplier-invoice records now loaded (previously: none). Status
+  totals: Approved $648,014,284 · In Progress $8,781,897.77 · Canceled
+  $22,676,008.68 · Denied $1,653,765.13 · Draft $93,968.58.
+- Government/constitutional-office transfers (Sheriff, Clerk, Property
+  Appraiser, Supervisor of Elections, Tax Collector, and others) are now kept
+  structurally separate from external-vendor rankings.
+
+**Partly resolved — 5 of the 8 open `*-payments`/`*-chain` gaps below now
+have real invoice-level data, but PO-to-contract attribution is still
+missing for most of them.** See `data/contracts-vendors.json`
+(`recordsNeeded`) for the updated per-vendor detail; summary:
+
+| Vendor | Invoices found | Approved invoice value | Status |
+|---|---|---|---|
+| Vector Disease Control International | 3 | $71,313 | Best-attributed match (no other identified county contract) |
+| Fly'n Bryan Trailer Sales / FB Trailers | 8 | $33,632.24 | Below the $75,196 ceiling — not "savings"; as-needed contract |
+| Eisman & Russo, Inc. | 11 | $75,762.22 | PO-to-contract attribution required (SUN Trail not confirmed) |
+| H&H Land and Marine, LLC | 7 | $167,759.10 | PO-to-contract attribution required before comparing to the $156,770.20 award |
+| Kirby Development, Inc. | 35 | $12,243,295.21 | **Countywide vendor total — not the Carl Pugh Park contract's cost** |
+| Firetrol Protection Systems, Inc. | 0 | — | No match found; still fully unresolved |
+| EMS supplies (10 awarded vendors) | — | — | Not cross-referenced; the 10 vendor names are still unidentified |
+| FY25/26 software/subscription vendors (31 named) | 16 matched | ~12 verified, 2 mixed-purpose | 15 vendors still unmatched |
+
+**Still needed**
+- PO-to-contract attribution documentation for every matched vendor above.
+- Actual-disbursement / payment confirmation (Approved ≠ paid).
+- Firetrol Protection Systems invoice data (no custodian response yet located).
+- The ten EMS-supplies award vendor names.
+- The 15 unmatched software/subscription vendor names' invoice data.
+
+**Standing corrections preserved**
+- Government/constitutional-office budget-draw transfers are never ranked
+  as, or described as, external vendor spending.
+- Kirby Development's countywide invoice total must never be presented as
+  the cost of contract 2025/2026-0193 (Carl Pugh Park).
+- Motorola Solutions and Butterfly Network invoice activity is not described
+  as entirely software spending (mixed hardware/service/device purpose).
+- Bound Tree Medical is excluded from the software/SaaS category entirely
+  (EMS/medical supply vendor; an earlier fuzzy name match was a false
+  positive).
+- Two review flags — DB Civil Construction (PO-1012684, multiple
+  canceled/denied records) and WGI Inc (canceled-invoice value exceeding
+  approved-invoice value) — are neutral "context required" flags, not
+  findings of anything improper.
 
 ## Investigation 001 — Kristen Burke / District 5
 

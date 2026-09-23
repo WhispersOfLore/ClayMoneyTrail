@@ -79,6 +79,66 @@
         { "step": "Sanitized public data", "detail": "data/payroll.json" },
         { "step": "ClayMoneyTrail finding / UI", "detail": "People / Payroll page" }
       ]
+    },
+    {
+      "id": "PRR-2026-1194",
+      "sourceType": "official_public_records_response",
+      "requestNumber": "PRR-2026-1194",
+      "agency": "Clay County Board of County Commissioners — Workday Accounts Payable (system export; producing department not stated in the package)",
+      "subject": "Supplier invoices — Find Supplier Invoices accounts-payable export",
+      "requestDate": null,
+      "requestWording": {
+        "located": false,
+        "note": "The response package contains no cover letter and no copy of the original request wording — just the raw Workday report export. Requested-versus-produced cannot be compared until the original request is located."
+      },
+      "responseDate": "2026-09-18",
+      "status": "response_received_completeness_not_verified",
+      "statusNote": "No cover letter or dated response letter is present in this package, unlike PRR-2026-1195. The response date above is inferred from the report's own embedded generation timestamp (\"Find Supplier Invoices 2026-09-18 10_32 EDT.xlsx\"), not from a county-dated letter. Do not treat this request as fulfilled or partially fulfilled until the original request wording is located and compared against what was produced.",
+      "description": "A single Workday \"Find Supplier Invoices\" report export: 37,845 supplier-invoice line items (invoice number, status, supplier, supplier's own reference number, invoice date, memo, invoice amount, PO number) for the Board of County Commissioners, covering invoice dates 2024-10-01 through 2026-09-17. These are accounts-payable invoice records, not a payment/disbursement ledger — an \"Approved\" status means the invoice was approved for payment processing in Workday, not that funds were disbursed.",
+      "coveredPeriods": [
+        { "label": "Invoice dates (FY2024-25 through FY2025-26 year to date)", "start": "2024-10-01", "end": "2026-09-17" }
+      ],
+      "employerScope": "Invoices filed under \"Clay County Board of County Commissioners\" in Workday only (the report's own Company filter). Does not include the constitutional offices' own independently-issued vendor invoices — where a constitutional office appears in this export (Sheriff, Clerk, Property Appraiser, Supervisor of Elections, Tax Collector), it is as the recipient of a BCC-to-constitutional-office budget-draw transfer, not as a vendor being paid by the BCC.",
+      "originalFile": {
+        "name": "Records_Request_Download_PRR-2026-1194_2026-09-23--11-28-17.zip",
+        "bytes": 3361563,
+        "sha256": "d868c970a5e5b843bdbb710fe5c5112fe79cc4ec55b73555e28566071bb24dc6",
+        "filesReceived": 1
+      },
+      "filesReceived": [
+        "Find Supplier Invoices 2026-09-18 10_32 EDT.xlsx"
+      ],
+      "publicArchive": {
+        "url": "https://drive.google.com/drive/folders/16FXvqMoGp2-HvuH1zL48PJYx3dSPxOtN?usp=sharing",
+        "label": "Open Public Records Evidence Archive",
+        "maintainedBy": "ClayMoneyTrail project researcher — not Clay County",
+        "explanation": "A public Google Drive folder, maintained by the ClayMoneyTrail researcher (not operated or controlled by Clay County or Google), that preserves source records received through public-records requests so anyone can inspect them. The original files are stored unaltered.",
+        "packageForThisFinding": "The ZIP named above and the one file it contains. The folder may hold other records; only this package was used for the PRR-2026-1194 supplier-invoice analysis.",
+        "verifiedAccessible": "2026-09-23",
+        "verificationNote": "The ZIP and the extracted xlsx were already present in the shared Drive folder (uploaded 2026-09-23, matching the local download), with matching file name and size. Full byte-for-byte hash verification of the archived copy was not performed in this pass."
+      },
+      "derivedDatasets": [
+        { "path": "data/supplier-invoices.json", "kind": "Sanitized, purpose-limited public derivative (government transfers and business suppliers named in full; Tier A elected/senior officials named; ordinary employee and resident-refund individuals aggregated only, never named)", "generator": "scripts/build-supplier-invoices-dataset.mjs" },
+        { "path": "public/data/supplier-invoices-fy2024-26.csv", "kind": "Full row-level invoice detail for every business and government-entity supplier only (individuals excluded)", "generator": "scripts/build-supplier-invoices-dataset.mjs" }
+      ],
+      "privateData": "A full row-level dataset (all 37,845 rows, including the individual-named suppliers withheld from publication) exists only on the researcher's machine and is never published.",
+      "relatedInvestigations": [],
+      "answers": [
+        "What supplier invoices the county's Workday accounts-payable system recorded for the BCC between 2024-10-01 and 2026-09-17, including status, amount, PO number, and supplier.",
+        "Partial answers, pending PO-to-contract attribution, for several open vendor-payment gaps in the FY25/26 contract inventory (Vector Disease Control International, Fly'n Bryan Trailer Sales/FB Trailers, Eisman & Russo, H&H Land and Marine, and Kirby Development's countywide invoice activity)."
+      ],
+      "unresolvedQuestionIds": ["rn-2526-041-payments", "rn-2526-017-payments", "rn-2526-074-payments", "rn-2526-084-payments", "rn-2526-073-payments", "rn-2526-087-chain", "rn-2526-016-chain", "rn-software-fy2526"],
+      "provenanceChain": [
+        { "step": "Public records request", "detail": "PRR-2026-1194 (original wording not yet located)" },
+        { "step": "County response", "detail": "No cover letter; a raw Workday report export dated by its own filename (2026-09-18)" },
+        { "step": "Original records", "detail": "1 file (Find Supplier Invoices 2026-09-18 10_32 EDT.xlsx) as produced by the county" },
+        { "step": "Public evidence archive", "detail": "Researcher-maintained public Google Drive folder; originals unaltered" },
+        { "step": "Original ZIP hash", "detail": "SHA-256 d868c970a5e5b843bdbb710fe5c5112fe79cc4ec55b73555e28566071bb24dc6" },
+        { "step": "Parser", "detail": "scripts/build-supplier-invoices-dataset.mjs reads the ZIP in memory; refuses to run if the report layout changes" },
+        { "step": "Private normalized data", "detail": "Full row-level dataset kept locally; never published" },
+        { "step": "Sanitized public data", "detail": "data/supplier-invoices.json and public/data/supplier-invoices-fy2024-26.csv" },
+        { "step": "ClayMoneyTrail finding / UI", "detail": "Vendors & Contracts page — Supplier Invoices / Accounts Payable" }
+      ]
     }
   ]
 }
