@@ -320,3 +320,29 @@ Clay County publication. A few things to keep in mind when reading it:
   award, or project cost is shown unless it traces to an official source.
   Where data is missing, the interface says so explicitly and explains what
   official record would fill the gap.
+
+## Project status / checkpoint (2026-09-24)
+
+Research is paused at this checkpoint. A future session should be able to
+pick up from here without rediscovering project state:
+
+- **Deployed commit:** `7e63d01` (verified live on GitHub Pages).
+- **Integrated:** BCC payroll (PRR-2026-1195); supplier-invoice/accounts-payable
+  records (PRR-2026-1194); a meeting-transcript verification pass covering
+  the Public Safety Complex bid-opening record (4 bids, 2 no-bids, no
+  scores — RFP 25/26-085), the Governor's Park and Cathedral Oak
+  mobility-fee-credit agreements (see `GOVERNORS_PARK_MOBILITY_FEE_CREDITS.md`),
+  and the Avaap AMS Lifeline Support contract/amendment.
+- **Private by design:** the underlying meeting transcripts and other raw
+  working documents behind that verification pass live only in the
+  gitignored `research-staging/` directory and are never published; only
+  citation-ready findings derived from them were promoted into the tracked
+  data and documentation above.
+- **Highest-value open gaps** (see `RECORDS_NEEDED.md` for full detail):
+  the actual PSC Evaluation Committee scoresheet/selection record; the
+  53-acre PSC site's parcel/acquisition record; confirmation of whether
+  Governor's Park's/Cathedral Oak's mobility-fee credit has actually been
+  earned or used (as opposed to authorized); and Sunbiz identity
+  confirmation for the "Clay Dair Property Holdings" lead in `LEADS.md`.
+- No new research, integration, or public-records requests are planned
+  while paused.
