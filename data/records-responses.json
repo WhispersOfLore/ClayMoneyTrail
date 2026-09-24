@@ -63,6 +63,7 @@
       ],
       "privateData": "A full normalized dataset exists only on the researcher's machine and is never published.",
       "relatedInvestigations": [],
+      "relatedSectionLabel": "People / Payroll",
       "answers": [
         "Whether earlier third-party salary figures for the County Manager, Assistant County Managers, and Fire Chief match county payroll records (they measure different things; see findings).",
         "What wages the county reports for each commissioner in FY2024-25 and FY2025-26 year to date."
@@ -123,6 +124,7 @@
       ],
       "privateData": "A full row-level dataset (all 37,845 rows, including the individual-named suppliers withheld from publication) exists only on the researcher's machine and is never published.",
       "relatedInvestigations": [],
+      "relatedSectionLabel": "Vendors & Contracts",
       "answers": [
         "What supplier invoices the county's Workday accounts-payable system recorded for the BCC between 2024-10-01 and 2026-09-17, including status, amount, PO number, and supplier.",
         "Partial answers, pending PO-to-contract attribution, for several open vendor-payment gaps in the FY25/26 contract inventory (Vector Disease Control International, Fly'n Bryan Trailer Sales/FB Trailers, Eisman & Russo, H&H Land and Marine, and Kirby Development's countywide invoice activity)."

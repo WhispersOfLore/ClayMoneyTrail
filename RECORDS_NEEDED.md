@@ -166,6 +166,130 @@ missing for most of them.** See `data/contracts-vendors.json`
   approved-invoice value) — are neutral "context required" flags, not
   findings of anything improper.
 
+## 2026-09-23/24 verification pass — Public Safety Complex, mobility-fee credits, and other primary-document findings
+
+Findings below came from directly reviewing primary documents (Clay County
+Clerk Document Search, which is public and requires no login, plus one item
+obtained via the user's own authorized OpenGov vendor account per the
+project's Authorized Account Access rule) and from a 17-file meeting-
+transcript reconnaissance pass. Raw transcripts are not published; see
+`RECORDS_NEEDED.md`'s existing rules and `CLAUDE.md`. Ordinary residents'
+names/addresses surfaced in that transcript pass are excluded from all
+tracked/public files.
+
+**Public Safety Complex (RFP 25/26-085) — narrowed.** ~~Whether the RFP
+actually reached a bid opening, and who bid~~ **RESOLVED 2026-09-23** — the
+official Bid Tabulation Form has been directly reviewed: 4 companies
+submitted bids (Balfour Beatty Developments, E2L Real Estate Solutions,
+Florida Development Solutions, VanTrust Real Estate/VTRE) and 2 declined
+(HDR Architecture, Murray Ford of Starke). The document contains no
+evaluation scores or ranking — it predates evaluation entirely. The RFP's
+own evaluation criteria (9-member committee, 150 points across 7 weighted
+categories) have also been read and integrated (`data/public-safety-
+complex.json`, `evaluationCriteria`). **Still needed / now narrower:** the
+actual Evaluation Committee scoresheet(s) or Evaluation Meeting minutes
+(the previously circulated 4-company score/ranking table — Balfour Beatty
+136.9, Florida Development Solutions 134.6, E2L 125.8, VanTrust 125.1 —
+remains an unverified lead, NOT confirmed by the Bid Tabulation Form);
+official minutes/agenda packet for the Sept 8, 2026 BCC meeting to check a
+citizen public commenter's paraphrase of a same-night "item 24" board action
+involving "four proposals" and a "2.3 point" margin; and the 53-acre site's
+Property Appraiser parcel/acquisition record. See
+`data/public-safety-complex.json` for full detail.
+
+**Governor's Park & Cathedral Oak mobility-fee credits — RESOLVED (new
+finding).** Two primary mobility-fee-credit agreements were read in full:
+Clay County Agreement/Contract No. 2025/2026-0020 (Governors Park Property
+Holdings LLC, $81,138,270.20 MAXIMUM authorized credit, not a cash payment
+and not necessarily earned/used) and No. 2021/22-139 + AM1 (Cathedral Oak,
+LLC, successor to Reinhold Corporation, $1,381,835.60 authorized credit for
+a specific improvement). Full detail, entity-identity caveats, and the
+maximum/earned/used/cash distinction are in
+`GOVERNORS_PARK_MOBILITY_FEE_CREDITS.md`; the Governor's Park record is also
+updated in `data/contracts-fy25-26.json`. **Still needed:** the county's
+Mobility Fee Coordinator ledger and any GPPH/Cathedral Oak annual reports
+showing credit actually earned/used to date (as opposed to authorized); the
+2021/2022-139 AM2 amendment (2026-01-13, not yet read).
+
+**GBAR ranch land / Governor's Park DRI expansion — NEW, unverified lead.**
+Two independent meeting transcripts describe a proposed ~1,265-acre
+comprehensive-plan amendment (comp 26-00009) folding land at SR 16
+West/Springbank Road into the Governor's Park DRI, naming Governors Park
+Property Holdings LLC and a new, unidentified entity, Clay Dair Property
+Holdings, as applicants. See LEAD-governors-park-gbar-expansion in
+`LEADS.md`/`data/investigations/leads.json` and
+`GOVERNORS_PARK_MOBILITY_FEE_CREDITS.md` (including a naming-collision
+warning against confusing "GBAR ranch land" with the unrelated "G Bar Ranch
+LLC" entity in `SANDRIDGE_PROPERTY_CHAIN.md`). **Records needed:** official
+BCC/Planning Commission agenda packet and minutes for comp case 26-00009; a
+Sunbiz search for Clay Dair Property Holdings.
+
+**Avaap / Workday AMS Lifeline Support — RESOLVED (contract terms).** The
+original SOW (Agreement/Contract 2025/2026-0052, $177,375 ceiling) and its
+amendment (2025/2026-52 AM1, reducing the ceiling to $114,915) have both
+been read in full and are reflected in `data/contracts-fy25-26.json`. Both
+are procured via the ESC Region 19 Allied States Cooperative purchasing
+program, not a competitively bid Clay County RFP. Actual invoiced-to-date
+(~$23,393 Approved per PRR-2026-1194) is well under the current ceiling —
+unremarkable for an open T&M contract. **Still needed:** the two prior SOWs
+found in the Clerk index but not read (2022/2023-0014, 2024/2025-0013), and
+actual-disbursement confirmation (Approved ≠ paid, as with all supplier
+invoices).
+
+**WGI Inc — operational-role context (not a payment finding).** Transcript
+research (Jun 9, Jul 14, and Sep 8, 2026 BCC meetings) names WGI Inc as the
+program manager/inspection-services consultant for the county's Bonded
+Transportation Program, with countywide program expenditure stated in
+meetings as $158.1M (as of June 2, 2026) rising to $168.9M (as of September
+1, 2026). **This program-level total must never be attributed to WGI as a
+vendor** — it is the entire Bonded Transportation Program's spending across
+many contractors, not WGI's invoice total. WGI's own invoice activity
+(106 invoices, $6,017,636.03 Approved, $8,046,938.87 Canceled across 23 POs)
+remains tracked separately in `data/supplier-invoices.json`'s existing
+neutral "HIGH CANCELED-INVOICE ACTIVITY" review flag. **Records needed:** an
+official BCC presentation or program budget document (rather than a meeting
+transcript) confirming the $158.1M/$168.9M program totals, and a PO-level
+breakdown of WGI's specific role/scope within that total.
+
+**Perry Weather — cross-reference corroborated.** The existing verified
+software/SaaS match (Perry Weather, Inc., $7,400, 1 invoice, 1 PO) is now
+corroborated by a Sept 2, 2026 Tourist Development Council meeting reference
+to a ~$7,400 lightning-detection system purchased around June 2026 — see the
+`note` field on this entry in `data/supplier-invoices.json`. This is
+corroboration of an already-verified invoice record, not a new payment
+finding, and the invoice's "Approved" status is still not proof of
+disbursement.
+
+**SwiftGov — sole-source discussion, NOT yet citation-ready.** A July 28,
+2026 BCC consent-agenda item for a SwiftGov contract was pulled by a
+commissioner specifically so staff could justify sole-sourcing on the
+record, per meeting-transcript research. This is a specific, checkable
+county contracting action, but no procurement record, contract document, or
+official minutes have been independently reviewed to confirm the staff
+justification, the contract terms, or the final Board action (as opposed to
+the staff recommendation). **Treat as an open research item — see the
+existing `rn-software-fy2526` gap above (35 unmatched software vendors,
+which may include SwiftGov) — not as a verified finding. Records needed:**
+the July 28, 2026 BCC agenda packet/minutes for this item, and the
+underlying SwiftGov contract/sole-source justification memo.
+
+**Conservation, Stone Ridge Farms, and in-house/outsourced research — leads
+only, not promoted.** Transcript research surfaced: (1) a county
+conservation-acquisition fund (0.2-mill ad valorem, ~$4M/year, ~$3.8M
+available balance discussed June 16, 2026, one specific parcel under
+negotiation at an $867,873 appraisal); (2) a "Stone Ridge Farms"
+contamination/cleanup site near Sandridge Rd with a proposed adjacent
+townhome development and an FDEP 45-day comment period; and (3) a raw
+in-house-vs.-outsourced services table (mowing, uniform rental, Medical
+Examiner services, training) with no total-cost comparison. All three
+remain dependent primarily on transcript discussion and have not been
+cross-checked against an official budget line, contract, or FDEP filing —
+they are kept as research leads only, not promoted into any tracked/public
+finding. **Records needed:** the Land Conservation Committee's official
+minutes/budget detail; the FDEP Stone Ridge Farms filing and public-comment
+record; and, if this thread is pursued further, department-level
+fleet/contract cost data for the in-house/outsourced comparison.
+
 ## Investigation 001 — Kristen Burke / District 5
 
 ### Land & development (LEAD-sandridge, LEAD-gustafson)

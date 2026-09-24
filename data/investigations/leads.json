@@ -413,5 +413,24 @@
     "priority": "medium",
     "status": "documented_connection",
     "topic": "Campaign Money"
+  },
+  {
+    "id": "LEAD-governors-park-gbar-expansion",
+    "investigationId": "burke-d5",
+    "title": "GBAR ranch land — proposed ~1,265-acre Governor's Park DRI expansion",
+    "description": "Two independent meeting transcripts (Planning Commission, July 7, 2026; BCC, July 28, 2026 — both transmittal hearings, not final adoption) describe comp case 26-00009: a proposed comprehensive-plan/Future Land Use amendment moving approximately 1,264-1,265 acres at the intersection of SR 16 West and Springbank Road, in Commissioner Burke's district, from Agriculture and Commercial to Planned Community, to be incorporated into the existing Governor's Park Development of Regional Impact. Named applicants are Governors Park Property Holdings LLC (GPPH) — the same entity that holds the separately verified $81,138,270.20-maximum mobility-fee-credit agreement (Clay County Agreement/Contract No. 2025/2026-0020, see GOVERNORS_PARK_MOBILITY_FEE_CREDITS.md) — and a new, not-yet-independently-identified entity, Clay Dair Property Holdings. This is an unverified lead, not a confirmed transaction: no adoption hearing, ordinance number, or final BCC vote has been located, and no primary document ties this expansion's acreage to the existing mobility-fee-credit balance.",
+    "origin": "Meeting-transcript verification pass, 2026-09-23 (Planning Commission July 7, 2026 and BCC July 28, 2026 transcripts), cross-checked against the primary-document review of Clay County Agreement/Contract No. 2025/2026-0020.",
+    "entitiesInvolved": ["Governors Park Property Holdings LLC", "Clay Dair Property Holdings", "Kristen Burke", "Clay County Planning Commission", "Clay County BCC"],
+    "whyItMatters": "A large-scale DRI expansion by the same developer entity that already holds a multi-million-dollar mobility-fee-credit agreement in the same commissioner's district is a specific, checkable land-use/financial nexus worth tracking through to a final vote and any credit-balance interaction — but it is not established as anything more than a pending transmittal item at this stage.",
+    "evidenceAvailable": "Two independent meeting-transcript accounts of the July 7 and July 28, 2026 transmittal hearings (procedural facts: case number, acreage, applicants, agents, location), cross-referenced against the primary-document-confirmed Governor's Park Mobility Fee Credit Agreement.",
+    "evidenceMissing": "Official BCC/Planning Commission minutes or agenda packet for comp case 26-00009. Sunbiz identity confirmation for Clay Dair Property Holdings and its relationship (if any) to GPPH or BTI Partners. Any final adoption hearing or ordinance. Confirmation of whether new construction on the expanded acreage would draw on GPPH's existing mobility-fee-credit balance.",
+    "recordsNeeded": [
+      "Official BCC/Planning Commission agenda packet and minutes for comp case 26-00009 (July 7 and July 28, 2026, and any later adoption hearing)",
+      "Sunbiz search for Clay Dair Property Holdings",
+      "Confirmation of GPPH's, Clay Dair's, and BTI Partners' exact legal relationship to one another"
+    ],
+    "priority": "medium",
+    "status": "unverified_lead",
+    "topic": "Land & Development"
   }
 ]

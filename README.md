@@ -28,6 +28,19 @@ civic-data project — not an official Clay County website.
 - CSV and JSON downloads of the full dataset (`public/data/`)
 - FY2025-26 procurement-notice registry that keeps awards, contract ceilings,
   and actual payments as separate concepts
+- Supplier-invoice / accounts-payable records (PRR-2026-1194): 37,845 invoice
+  line items with vendor names, invoice dates, PO numbers, and invoice
+  amounts, covering 2024-10-01 through 2026-09-17. **Vendor names, invoice
+  amounts, and invoice dates are published data, not a gap** — what remains
+  unverified is confirmation that any specific invoice was actually
+  disbursed ("Approved" is Workday's payment-processing status, not proof of
+  payment; see **Payroll and records-response pipeline** and the Vendors &
+  Contracts page)
+- Primary-document-reviewed mobility-fee-credit agreements for Governor's
+  Park ($81,138,270.20 maximum authorized credit) and Cathedral Oak
+  (`GOVERNORS_PARK_MOBILITY_FEE_CREDITS.md`), and a reviewed Public Safety
+  Complex bid-opening record (4 bids, 2 no-bids, no scores) with the RFP's
+  full evaluation-scoring criteria
 - Neutral commissioner-email index and Charter §2.2.J human-review workflow;
   no message is characterized as malfeasance
 - Verified public-records/contact directory, FY2025-26 Human Services research,
@@ -42,7 +55,12 @@ civic-data project — not an official Clay County website.
 
 ## What remains incomplete
 
-No verified vendor payments, no payroll for the constitutional offices
+Supplier-invoice records exist (vendor names, amounts, dates — see above),
+but **actual payments independently verified: none yet** — no invoice has
+been confirmed as actually disbursed from any source outside the county's
+own "Approved" status field. This does not mean the county paid nothing; it
+means disbursement itself has not yet been independently confirmed. Beyond
+that: no payroll for the constitutional offices
 (Sheriff, Clerk, Tax Collector, Property Appraiser, Supervisor of Elections)
 or other employers, no earnings-by-pay-code detail or position/rate history
 for any employee, no capital project-level detail, no bond-level debt

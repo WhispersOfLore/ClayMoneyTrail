@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Clay County Public Safety Complex",
-    "asOf": "2026-09-16",
-    "summary": "A Public-Private Partnership (P3) to design, build, and finance a shared-use public safety and training campus (Sheriff, Fire Rescue, Emergency Management, 911/EOC, and a St. Johns River State College training component) on a 53+/- acre site near Green Cove Springs. RFP 25/26-085 is confirmed as a real, currently-active procurement (status: Evaluation as of last check). No land purchase, no total project cost, and no selected vendor have been confirmed from a primary document as of this research pass.",
+    "asOf": "2026-09-23",
+    "summary": "A Public-Private Partnership (P3) to design, build, and finance a shared-use public safety and training campus (Sheriff, Fire Rescue, Emergency Management, 911/EOC, and a St. Johns River State College training component) on a 53+/- acre site near Green Cove Springs. RFP 25/26-085 is confirmed as a real, currently-active procurement. The official Bid Tabulation Form has now been directly reviewed: 4 companies submitted bids and 2 declined (No Bid); the document is a bid-opening record only and contains no evaluation scores or ranking. No land purchase, no total project cost, and no selected vendor have been confirmed from a primary document as of this research pass.",
     "disclaimer": "This is an evidence-gathering project trail, not an accusation. Every figure below carries an explicit evidence status and a source. A reported number (like the $200M-$400M range circulating in the community) is not treated as fact unless traced to a primary county document."
   },
   "rfp": {
@@ -11,18 +11,53 @@
     "releaseDate": "2026-04-16",
     "dueDate": "2026-06-15",
     "bidOpenDate": "2026-06-16",
-    "statusAsOf": "Evaluation (checked 2026-09-16)",
+    "statusAsOf": "Bid opening confirmed; evaluation/scoring outcome unverified (checked 2026-09-23)",
     "statutoryAuthority": "Florida Statute 255.065 (P3 authority for public entities to develop, operate, and finance projects serving a public purpose, including public safety facilities)",
     "siteAcreage": "53+/- acres per the current official RFP text (Section 3.1/3.5), described as combined purchased property plus adjoining County property (a pond site). An earlier ~44-acre figure appears in initial research leads with no independently located source or date — it may reflect an earlier-stage proposal, a partial parcel count, or simply an imprecise informal figure; it is not treated as an established prior record here, only as context that the reported acreage has varied across informal accounts.",
     "components": "Clay County Public Safety Facilities, ~391,000 SF (Public Safety Administration/Sheriff + Fire Rescue offices, Emergency Operations Center/911 Dispatch, Logistics Warehouse, Fleet Maintenance, Paved Storage, Shared Training) plus a St. Johns River State College Training/Classroom component, ~152,000 SF across two buildings — combined ~543,000 SF. No jail or courthouse component is included in this RFP.",
     "accessPoints": "Rosemary Hill Rd, plus a second access point on the SE portion of the site along a not-yet-named planned road",
-    "neighboringDevelopment": "Peters Creek Industrial/Business Park — the RFP text asks respondents to coordinate with this neighboring developer on shared utilities, stormwater, and transportation.",
+    "neighboringDevelopment": "Peters Creek Industrial/Business Park — the RFP text asks respondents to coordinate with this neighboring developer on shared utilities, stormwater, and transportation. (This is the RFP's own text describing an adjacent, separate development; it is not the same parcel as the \"Peters Creek Business Park\" name appearing in an unrelated geotechnical report reviewed elsewhere in this research pass — the two are not established as the same site.)",
     "financingStructure": "Progressive P3 model, phased: Phase 1 (Spatial Needs Assessment, Site Planning, Financing) -> Phase 2 (Building-by-Building Design) -> Phase 3 (Construction, only after County approval and execution of a Guaranteed Maximum Price for each facility). Financing is lease-leaseback or installment-based; the County retains land ownership and explicitly does not intend to bond this project. Some funding is designated in the County's Capital Improvement Plan budget.",
-    "evaluationProcess": "An Evaluation Committee of no fewer than 9 members scores proposals individually with no cross-communication; scores are announced at a public Evaluation Meeting under Florida Statutes; the committee's ranking goes to the Board of County Commissioners for approval to enter negotiations (the Board may also request its own presentations).",
+    "evaluationProcess": "An Evaluation Committee of no fewer than 9 members scores proposals individually with no cross-communication; scores are announced at a public Evaluation Meeting under Florida Statutes; the committee's ranking goes to the Board of County Commissioners for approval to enter negotiations (the Board may also request its own presentations). See evaluationCriteria below for the verified scoring rubric from the full RFP document.",
     "estimatedBCCRecommendationDate": "2026-07-14 per the RFP's own published timeline — this date has passed as of this research pass with no confirmed public BCC action found yet (see openQuestions).",
     "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374",
-    "dateAccessed": "2026-09-16",
+    "dateAccessed": "2026-09-23",
     "evidenceStatus": "verified_fact"
+  },
+  "evaluationCriteria": {
+    "committeeSize": "No fewer than 9 members",
+    "totalPoints": 150,
+    "criteria": [
+      { "name": "Professional Qualifications", "points": 20 },
+      { "name": "Team Qualifications / Financial Capacity", "points": 30 },
+      { "name": "Project Understanding / Approach", "points": 30 },
+      { "name": "Financing Option", "points": 30 },
+      { "name": "Budget / Pricing", "points": 20 },
+      { "name": "Schedule", "points": 10 },
+      { "name": "References", "points": 10 }
+    ],
+    "evidenceStatus": "verified_fact",
+    "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374",
+    "dateAccessed": "2026-09-23",
+    "notes": "Read directly from the full RFP 25/26-085 document (Addendum Revision, pages 1-36 of 44; Evaluation Phases section), obtained via the user's own authorized OpenGov vendor account. This is the scoring rubric the Evaluation Committee is instructed to use — it is not itself a completed scoresheet, and no individual or aggregate scores from an actual evaluation have been located or reviewed."
+  },
+  "bidOpening": {
+    "rfpNumber": "25/26-085",
+    "date": "2026-06-16",
+    "time": "9:01 AM - 9:03 AM",
+    "bidders": [
+      { "entity": "Balfour Beatty Developments, Inc.", "result": "Bid submitted (addendum acknowledged)" },
+      { "entity": "E2L Real Estate Solutions, LLC", "result": "Bid submitted (addendum acknowledged)" },
+      { "entity": "Florida Development Solutions, LLC", "result": "Bid submitted (addendum acknowledged)" },
+      { "entity": "VanTrust Real Estate, LLC dba VTRE Development, LLC", "result": "Bid submitted (addendum acknowledged)" },
+      { "entity": "HDR Architecture, Inc.", "result": "No Bid" },
+      { "entity": "Murray Ford of Starke", "result": "No Bid" }
+    ],
+    "evidenceStatus": "verified_fact",
+    "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374/addenda",
+    "dateAccessed": "2026-09-23",
+    "documentId": "Bid Tabulation Form, RFP 25/26-085, posted as Official Notice #2",
+    "notes": "The official Bid Tabulation Form has been directly reviewed (obtained via the user's own authorized OpenGov vendor account — a document-access registration, not a government-vendor-qualification registration; see CLAUDE.md). It confirms 4 actual submitted bids and 2 declines (\"No Bid\"). Every submitted bid shows \"Total: To Be Determined\" — this is a generic bid-opening tabulation form; it contains NO evaluation scores, NO ranking, and NO recommendation of any kind. It predates the evaluation process entirely. Do not present the staffRanking table below as coming from, or confirmed by, this document."
   },
   "staffRanking": {
     "respondents": [
@@ -32,7 +67,7 @@
       { "rank": 4, "entity": "VanTrust Real Estate, LLC dba VTRE Development, LLC", "score": 125.1 }
     ],
     "evidenceStatus": "unverified_lead",
-    "notes": "These four respondents and scores were supplied as a lead at the start of this research phase. Independent verification found: the RFP is real and did go to a bid opening (Bid Tabulation posted 2026-06-17 as 'Official Notice #2' on the procurement portal, and a matching 'Bid Opening Tabulations (J. Loos)' item was formally received into the BCC record on 2026-06-23), which is consistent with an evaluation process having occurred. But the portal requires a vendor-account login to download the actual Bid Tabulation PDF (2526-085_Bid_Tab.pdf) or any evaluation scoring sheet, and that login was not created (creating accounts is outside this project's operating rules). No BCC agenda item naming a selected vendor was found — a text search of BCC meetings from 2026-06-16 through 2026-12-16 for \"Balfour Beatty\" returned zero results. Treat the four names and scores as an unverified lead until the Bid Tabulation document or a BCC award item is pulled directly."
+    "notes": "These four names and scores were supplied as a lead at the start of this research phase and remain UNVERIFIED. The names match the 4 actual bidders confirmed in the official Bid Tabulation Form (see bidOpening above), which is consistent with these being the real respondents — but the Bid Tabulation Form itself contains no scores or ranking of any kind, and no separate evaluation scoresheet, Evaluation Meeting minutes, or BCC award/ranking-acceptance record has been located or reviewed to confirm these specific point totals or this order. A Sept 8, 2026 BCC meeting's public-comment portion references a same-night board item involving \"four proposals\" with the \"top two\" separated by \"only 2.3 points\" — a citizen's paraphrase from a meeting transcript, not a reviewed board document, and its relationship (if any) to this specific 136.9/134.6/125.8/125.1 score set has not been established. Treat the four scores and this exact ranking as an unverified lead until the actual evaluation/selection record is obtained; do not present them as verified fact."
   },
   "landAcquisition": {
     "site": "Green Cove Springs, near the Peters Creek Industrial Park area and the First Coast Expressway, across from the Clay County Fairgrounds",
@@ -94,22 +129,24 @@
     { "date": "2026-05-21", "event": "Addendum #1 issued, extending bid dates", "status": "verified_fact", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374" },
     { "date": "2026-06-15", "event": "Bids due (4:00pm)", "status": "verified_fact", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374" },
     { "date": "2026-06-16", "event": "Bid opening (non-mandatory)", "status": "verified_fact", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374" },
-    { "date": "2026-06-17", "event": "Bid Tabulation posted to the procurement portal as Official Notice #2 (2526-085_Bid_Tab.pdf, login-gated)", "status": "verified_fact", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374/addenda" },
+    { "date": "2026-06-17", "event": "Bid Tabulation posted to the procurement portal as Official Notice #2 (2526-085_Bid_Tab.pdf) — bid-opening record only: 4 bids submitted (Balfour Beatty, E2L, Florida Development Solutions, VanTrust), 2 No Bid (HDR Architecture, Murray Ford of Starke); no scores or ranking", "status": "verified_fact", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374/addenda" },
     { "date": "2026-06-23", "event": "\"Bid Opening Tabulations (J. Loos)\" formally received into the BCC record as a Letter of Documentation", "status": "verified_fact", "sourceUrl": "https://claycounty.novusagenda.com/agendapublic/" },
     { "date": "2026-06-29", "event": "Governor signs FY2026-27 budget; none of the four Public Safety Complex component LFIRs appear on the veto list (appropriation status otherwise unconfirmed)", "status": "partially_verified", "sourceUrl": "https://flgov.com/eog/sites/default/files/shared/2026/06/2026%20Veto%20List.pdf" },
-    { "date": "2026-07-14", "event": "RFP's own estimated date for the Evaluation Committee's recommendation to reach the BCC — no confirmed public record of this happening was found as of 2026-09-16", "status": "records_required", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374" }
+    { "date": "2026-07-14", "event": "RFP's own estimated date for the Evaluation Committee's recommendation to reach the BCC — no confirmed public record of this happening was found as of this research pass", "status": "records_required", "sourceUrl": "https://procurement.opengov.com/portal/claycounty/projects/252374" },
+    { "date": "2026-09-08", "event": "BCC meeting public-comment portion references a same-night board item (\"item 24\") described by the commenter as accepting a ranking of \"four proposals\" with the top two \"separated by only 2.3 points\" — a citizen's paraphrase from the meeting record, not a reviewed board document; the formal item 24 discussion/vote itself was not located in the source reviewed. Not yet independently confirmed against an agenda packet or minutes.", "status": "unverified_lead", "sourceUrl": "https://claycounty.novusagenda.com/agendapublic/" }
   ],
   "openQuestions": [
-    "Who was actually selected (if anyone) — the Bid Tabulation PDF and/or a BCC award agenda item would resolve this.",
+    "Who was actually selected (if anyone), and what were the actual evaluation scores/ranking — a BCC award agenda item, Evaluation Meeting minutes, or scoresheet would resolve this (the Bid Tabulation Form itself is confirmed NOT to contain this).",
     "What is the actual total project cost, and does any primary document support the $200M-$400M community figure?",
     "What parcel(s) make up the 53-acre site, when were they purchased, from whom, and for how much?",
-    "Did the BCC ever formally act on the Evaluation Committee's recommendation after the estimated 2026-07-14 date?",
+    "Did the BCC ever formally act on the Evaluation Committee's recommendation after the estimated 2026-07-14 date? Does the Sept 8, 2026 \"item 24\" public comment correspond to that action?",
     "What is the relationship, if any, between the $65M Public Safety Bond Program and this P3 project?"
   ],
   "recordsNeeded": [
-    "2526-085_Bid_Tab.pdf from procurement.opengov.com/portal/claycounty/projects/252374 (requires a vendor account or a records request)",
-    "BCC agenda item(s) discussing/awarding RFP 25/26-085 for July-September 2026",
-    "Clay County Property Appraiser (ccpao.com) parcel record for the 53-acre site",
-    "Any BCC real-estate acquisition agenda item for the site purchase"
+    "BCC agenda packet and minutes for the Sept 8, 2026 meeting (\"item 24\") to confirm or disprove the citizen's paraphrase of a four-proposal ranking decided that night.",
+    "The actual Evaluation Committee scoresheet(s) or Evaluation Meeting minutes for RFP 25/26-085 — the Bid Tabulation Form (now reviewed) confirms the 4 bidders/2 no-bids but contains no scores.",
+    "Any BCC agenda item discussing/awarding RFP 25/26-085.",
+    "Clay County Property Appraiser (ccpao.com) parcel record for the 53-acre site.",
+    "Any BCC real-estate acquisition agenda item for the site purchase."
   ]
 }

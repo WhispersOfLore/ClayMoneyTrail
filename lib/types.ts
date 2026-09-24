@@ -373,6 +373,7 @@ export interface RecordsResponse {
   derivedDatasets: { path: string; kind: string; generator?: string }[];
   privateData: string;
   relatedInvestigations: string[];
+  relatedSectionLabel: string;
   answers: string[];
   unresolvedQuestionIds: string[];
   provenanceChain: { step: string; detail: string }[];

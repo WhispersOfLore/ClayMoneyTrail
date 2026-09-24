@@ -22,6 +22,21 @@ export interface PublicSafetyComplexData {
     sourceUrl: string;
     evidenceStatus: EvidenceStatus;
   };
+  evaluationCriteria: {
+    committeeSize: string;
+    totalPoints: number;
+    criteria: { name: string; points: number }[];
+    evidenceStatus: EvidenceStatus;
+    sourceUrl: string;
+    notes: string;
+  };
+  bidOpening: {
+    date: string;
+    bidders: { entity: string; result: string }[];
+    evidenceStatus: EvidenceStatus;
+    sourceUrl: string;
+    notes: string;
+  };
   staffRanking: {
     respondents: { rank: number; entity: string; score: number | null }[];
     evidenceStatus: EvidenceStatus;
@@ -88,6 +103,67 @@ export function PublicSafetyComplexPanel({ data }: { data: PublicSafetyComplexDa
             </dd>
           </div>
         </dl>
+      </section>
+
+      <section className="panel">
+        <div className="panel-head">
+          <div>
+            <span className="section-kicker">BID OPENING · RFP {data.rfp.number}</span>
+            <h3>{formatDate(data.bidOpening.date)} bid tabulation (reviewed)</h3>
+          </div>
+          <InvestigationStatusBadge value={data.bidOpening.evidenceStatus} />
+        </div>
+        <div className="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Respondent</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.bidOpening.bidders.map((b) => (
+                <tr key={b.entity} className="record-row">
+                  <td>{b.entity}</td>
+                  <td>{b.result}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="panel-footnote">{data.bidOpening.notes}</p>
+        <a className="source-link" href={data.bidOpening.sourceUrl} target="_blank" rel="noreferrer">
+          Procurement portal <ExternalLink size={12} />
+        </a>
+      </section>
+
+      <section className="panel">
+        <div className="panel-head">
+          <div>
+            <span className="section-kicker">EVALUATION CRITERIA · {data.evaluationCriteria.totalPoints} POINTS</span>
+            <h3>How proposals are scored ({data.evaluationCriteria.committeeSize})</h3>
+          </div>
+          <InvestigationStatusBadge value={data.evaluationCriteria.evidenceStatus} />
+        </div>
+        <div className="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Criterion</th>
+                <th>Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.evaluationCriteria.criteria.map((c) => (
+                <tr key={c.name} className="record-row">
+                  <td>{c.name}</td>
+                  <td>{c.points}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="panel-footnote">{data.evaluationCriteria.notes}</p>
       </section>
 
       <section className="panel">

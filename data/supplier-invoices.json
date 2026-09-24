@@ -2173,7 +2173,8 @@
         "matchedSupplier": "Perry Weather, Inc.",
         "invoiceCount": 1,
         "approvedInvoiceValue": 7400,
-        "poNumberCount": 1
+        "poNumberCount": 1,
+        "note": "Corroborated by a Sept 2, 2026 Tourist Development Council meeting reference to a ~$7,400 lightning-detection system purchased around June 2026 for event safety — the dollar amount and single-invoice pattern match this record exactly. The meeting reference is context/corroboration for an already-independently-verified invoice record, not itself the source of the invoice figure."
       }
     ],
     "possibleMatches": [

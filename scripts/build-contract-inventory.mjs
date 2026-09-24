@@ -18,6 +18,20 @@ const dateIso = (value) => {
   return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
 };
 
+// NOTE (2026-09-24): three records — "AVAAP AMS LIFELINE SUPPORT"
+// (2025/2026-0052), "AVAAP PROJECT CHANGE REQUEST - AMS SUPPORT"
+// (2025/2026-52 AM1), and "GOVERNOR'S PARK MOBILITY FEE CREDIT AGREEMENT"
+// (2025/2026-0020) in data/contracts-fy25-26.json were hand-enriched from a
+// full document review (evidence_basis, normalized_vendor, contract
+// ceilings, and detailed notes — see GOVERNORS_PARK_MOBILITY_FEE_CREDITS.md
+// and RECORDS_NEEDED.md's 2026-09-23/24 section) beyond what this script's
+// override schema and status-inference logic (built for competitively bid
+// RFP/agenda-item contracts) can reproduce — e.g. a cooperative-purchase
+// agreement or a mobility-fee-credit agreement isn't a "bid" or an
+// "approved award" in this script's sense. Re-running this generator WILL
+// overwrite those hand edits. Do not re-run it without first re-applying
+// them, or extending the override/status logic to cover these contract
+// types.
 const overrides = [
   [/CARL PUGH PARK DRAINAGE/i, { vendor: 'Kirby Development, Inc.', bid: '25/26-041', approved: 250559.42, ceiling: 250559.42, substantive: 'https://claycounty.novusagenda.com/agendapublic/CoverSheet.aspx?ItemID=16674&MeetingID=2143' }],
   [/JAIL FIRE ALARM UPGRADE/i, { vendor: 'Firetrol Protection Systems, Inc.', bid: '25/26-017', approved: 265476, substantive: 'https://claycounty.novusagenda.com/agendapublic/MeetingView.aspx?MeetingID=2143&MinutesMeetingID=-1&doctype=Agenda' }],
