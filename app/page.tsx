@@ -187,7 +187,7 @@ export default function Home() {
   );
 
   const coverage = useMemo(() => computeCoverage(records), []);
-  const flags = useMemo(() => computeFlags(records), []);
+  const flags = useMemo(() => computeFlags(records, supplierInvoicesData.meta.totalInvoiceRows > 0), []);
   const openFlags = flags.filter((f) => f.status === 'open');
 
   const verifiedBudget = records.find((r) => r.id === 'all-funds-total')?.amount ?? 0;

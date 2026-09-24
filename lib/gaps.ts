@@ -25,7 +25,7 @@ const EXPECTED_FISCAL_YEARS = [
  * automatically flips from "open" to "resolved" instead of needing to be
  * hand-edited or deleted.
  */
-export function computeFlags(records: RecordItem[]): DataFlag[] {
+export function computeFlags(records: RecordItem[], supplierInvoicesLoaded = false): DataFlag[] {
   const vendorsLoaded = records.some((r) => r.domain === 'vendors' && r.amount !== null);
   const individualPayrollLoaded = records.some((r) => r.category === 'Individual Payroll');
   const capitalDetailLoaded = records.some((r) => r.domain === 'capital' && r.measure === 'actual');
@@ -67,7 +67,9 @@ export function computeFlags(records: RecordItem[]): DataFlag[] {
       status: vendorsLoaded ? 'resolved' : 'open',
       description: vendorsLoaded
         ? 'Vendor-level payment records are loaded.'
-        : 'No verified vendor-level or check-register payment records are loaded. Vendor names, payment amounts, and dates require a public-records request or a published check register.',
+        : supplierInvoicesLoaded
+          ? 'Supplier-invoice records (vendor names, invoice amounts, PO numbers, and invoice dates) are loaded via PRR-2026-1194 — see Vendors & Contracts. What remains missing is a check register or other confirmation that a specific invoice was actually disbursed: "Approved" is Workday\'s payment-processing status, not proof of payment.'
+          : 'No verified vendor-level or check-register payment records are loaded. Vendor names, payment amounts, and dates require a public-records request or a published check register.',
     },
     {
       id: 'capital-project-detail',
