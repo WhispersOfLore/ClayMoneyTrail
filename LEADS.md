@@ -126,6 +126,27 @@ slate — see `PATTERN_MATRIX.md` and `COUNTER_EVIDENCE.md`.
   (P00000100632); county/municipal business-tax and permit records for
   either practice.
 
+**2026-09-28 addition — Clay Behavioral Health Center (new research
+question, not yet investigated):** a follow-up question was raised —
+whether there are documented financial ties between Kristen Burke's private
+practice (Fleming Island Family Chiropractic) and the State of Florida,
+Clay County, or Clay Behavioral Health Center. Preliminary, unverified
+observations only: Burke is reported to be listed on Clay Behavioral Health
+Center's Board of Directors, and Clay Behavioral has public-funding
+relationships of some kind. **Nothing has been established connecting
+Burke's private practice to any payment from the County or from Clay
+Behavioral** — this is explicitly a research question, not a finding, and
+ordinary healthcare reimbursements to the practice (if any exist) must be
+kept analytically separate from any county-contracting or related-party
+question. **Records needed:** County vendor/AP data cross-referenced for
+Fleming Island Family Chiropractic and any related corporate/legal names;
+confirmation of Burke's Clay Behavioral board seat from a primary source;
+Clay Behavioral financial statements/audits and IRS Form 990s; related-party
+disclosures; any Clay Behavioral contracts or grants; BCC votes involving
+Clay Behavioral; and any conflict-of-interest/recusal disclosures tied to
+either. This item has not been researched beyond recording the question —
+see the weekend handoff for the full framing.
+
 ## LEAD-campaign-contributors — Burke campaign contributors
 
 **Status:** partially_verified · **Priority:** high
@@ -213,6 +234,21 @@ proposal to her without a primary-source statement or vote.**
 - **Records needed:** Official Charter Review Commission agenda/minutes with
   the exact proposed figure and method; ballot-measure status; any recorded
   Burke statement or vote.
+
+**2026-09-28 addition — assessment-cap question (research question, not
+answered):** a public commenter asked whether the ballot measure (now
+tracked publicly as "Amendment 3") could remove assessment caps or allow
+unlimited fees, separate from the commissioner-pay mechanism itself. This
+has not been reviewed against the actual amendment/charter language and
+should not be characterized either way — including not characterizing the
+measure as a "trick" — until the exact ballot/legal text is read. Estimated
+compensation figures circulating range from "over $100,000" (Charter Review
+Commission figure, above) to "~$96,000" (a separate figure that has
+surfaced in other materials); this discrepancy has not been reconciled and
+should be checked against the final certified ballot language, not
+averaged or guessed. **Records needed:** the exact, final ballot/legal
+language for Amendment 3, including any provision affecting assessment
+caps.
 
 ## LEAD-governors-park-gbar-expansion — GBAR ranch land / Governor's Park DRI expansion
 

@@ -44,7 +44,7 @@
     "id": "LEAD-burke-chiropractic",
     "investigationId": "burke-d5",
     "title": "Burke chiropractic/business interests — including a reported newer clinic possibly involving a family member",
-    "description": "Kristen Burke is a chiropractor and, per her practice's own site, has co-owned Fleming Island Family Chiropractic with her husband Harold Burke since 2000 — well-established, not in question. UPDATE 2026-09-11: Burke's own bio now confirms she has a brother and states the family \"opened Oakleaf Family Chiropractic in 2009 for her brother and his family\" — this is the first primary-source (self-published) confirmation of both the brother's existence and a specific named business. However, the Sunbiz corporate record for the matching entity name lists officers surnamed Thompson (Jeremy E. and Natalie), not Burke, and the practice's current public website shows unrelated doctors. This is now CONFLICTING EVIDENCE, not a blank slate — see PATTERN_MATRIX.md and COUNTER_EVIDENCE.md.",
+    "description": "Kristen Burke is a chiropractor and, per her practice's own site, has co-owned Fleming Island Family Chiropractic with her husband Harold Burke since 2000 — well-established, not in question. UPDATE 2026-09-11: Burke's own bio now confirms she has a brother and states the family \"opened Oakleaf Family Chiropractic in 2009 for her brother and his family\" — this is the first primary-source (self-published) confirmation of both the brother's existence and a specific named business. However, the Sunbiz corporate record for the matching entity name lists officers surnamed Thompson (Jeremy E. and Natalie), not Burke, and the practice's current public website shows unrelated doctors. This is now CONFLICTING EVIDENCE, not a blank slate — see PATTERN_MATRIX.md and COUNTER_EVIDENCE.md. 2026-09-28 addition (new, unresearched question): whether there are documented financial ties between Fleming Island Family Chiropractic (or Kristen Burke personally) and the State of Florida, Clay County, or Clay Behavioral Health Center. Preliminary, unverified observations only: Burke is reported to sit on Clay Behavioral Health Center's Board of Directors, and Clay Behavioral has public-funding relationships of some kind. Nothing has been established connecting the private practice to any county or Clay Behavioral payment.",
     "origin": "User-provided investigative lead (mission brief). Major update 2026-09-11 via Burke's own bio + Sunbiz.",
     "entitiesInvolved": ["Kristen Burke", "Harold Burke", "Fleming Island Family Chiropractic", "Oakleaf Family Chiropractic", "Jeremy E. Thompson", "Natalie Thompson"],
     "whyItMatters": "If a Burke-family-connected business later sought or received a county permit, zoning approval, or other BCC action, that would be a Voting-Conflict/Ethics lead. Nothing found so far establishes that any such county action has occurred, even taking the family connection at face value.",
@@ -54,7 +54,12 @@
       "Confirmation of Kristen Burke's maiden name from a primary source (marriage record, voter registration, or an interview/bio that states it directly) to test the Thompson hypothesis",
       "Sunbiz officer detail for the second, active Oakleaf Family Chiropractic, Inc. entity (P12000019233)",
       "Sunbiz officer/registered-agent detail for Fleming Island Family Chiropractic, Inc. (P00000100632)",
-      "Clay County / municipal business tax receipt and building-permit records for either chiropractic business"
+      "Clay County / municipal business tax receipt and building-permit records for either chiropractic business",
+      "County vendor/AP data cross-referenced for Fleming Island Family Chiropractic and related corporate/legal names",
+      "Confirmation of Burke's Clay Behavioral Health Center board seat from a primary source",
+      "Clay Behavioral Health Center financial statements/audits and IRS Form 990s, including related-party disclosures",
+      "Any Clay Behavioral contracts/grants with the County or State, and any BCC votes involving Clay Behavioral",
+      "Conflict-of-interest/recusal disclosures tied to Burke and Clay Behavioral"
     ],
     "priority": "high",
     "status": "conflicting_evidence",
@@ -102,7 +107,7 @@
     "id": "LEAD-compensation",
     "investigationId": "burke-d5",
     "title": "Commissioner compensation increase proposal",
-    "description": "Clay County commissioner salary has been fixed at $37,000/year since 2008 per the Home Rule Charter (already documented in ClayMoneyTrail's main dataset, sourceId: county-charter). UPDATE 2026-09-11: the Charter Review Commission approved final ballot language on 2026-03-16 to tie commissioner pay to Florida Statute 145.031 (raising it to over $100,000, described as tripling current pay — reconciling the earlier conflicting $60,000-vs-triple figures; $60,000 was an earlier/superseded draft). Public hearings followed April-May 2026. Measure pending for the November 2026 ballot. Whether Burke has personally advocated for or against it remains unestablished.",
+    "description": "Clay County commissioner salary has been fixed at $37,000/year since 2008 per the Home Rule Charter (already documented in ClayMoneyTrail's main dataset, sourceId: county-charter). UPDATE 2026-09-11: the Charter Review Commission approved final ballot language on 2026-03-16 to tie commissioner pay to Florida Statute 145.031 (raising it to over $100,000, described as tripling current pay — reconciling the earlier conflicting $60,000-vs-triple figures; $60,000 was an earlier/superseded draft). Public hearings followed April-May 2026. Measure pending for the November 2026 ballot. Whether Burke has personally advocated for or against it remains unestablished. 2026-09-28 addition: a public commenter asked whether the ballot measure (Amendment 3) could remove assessment caps or allow unlimited fees, separate from the pay mechanism itself — this has not been reviewed against the actual amendment/charter language and is not characterized either way. A separate ~$96,000 compensation figure has also surfaced elsewhere and has not been reconciled against the Charter Review Commission's \"over $100,000\" figure above.",
     "origin": "User-provided investigative lead (mission brief). Ballot language and timeline confirmed 2026-09-11 (secondary source); Burke's position still not established.",
     "entitiesInvolved": ["Clay County Charter Review Commission", "Kristen Burke", "Courtney Connor"],
     "whyItMatters": "The mission brief explicitly warns not to attribute this proposal to Burke unless records establish that. No source found in either pass connects her to it in any way — see COUNTER_EVIDENCE.md.",
@@ -111,7 +116,8 @@
     "recordsNeeded": [
       "Primary Charter Review Commission minutes/video for the 2026-03-16 vote and the three public hearings",
       "Confirmation of whether the BCC took any recorded vote to forward the ballot language",
-      "Any recorded statement by Burke specifically on this proposal, if one exists"
+      "Any recorded statement by Burke specifically on this proposal, if one exists",
+      "Exact, final ballot/legal language for Amendment 3, including any provision affecting assessment caps"
     ],
     "priority": "medium",
     "status": "partially_verified",

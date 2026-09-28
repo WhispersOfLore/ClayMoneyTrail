@@ -29,6 +29,14 @@ rather than deleted, so the record of what was once a gap is preserved.
 - No capital-project-level detail beyond what's cited for Investigation 001.
 - No bond-level debt schedules.
 - No actual (vs. budgeted/estimated) stormwater collections or spending.
+  **2026-09-28 addition:** a public commenter raised a specific, unanswered
+  question that should be researched (not assumed) before any write-up:
+  if stormwater/flood-control work previously drew on property-tax/general-
+  revenue/grant/ARPA funding, precisely how much was spent, from which
+  sources, what changed, what funding gap led to the new $85/year (~$7.08/
+  month) ERU assessment, and what happens to those prior funding sources now
+  that the assessment exists. This is a research question, not a finding —
+  do not answer it by inference from the assessment's existence alone.
 - FY2023-24 budget document **located and access-confirmed** (see
   "Historical expansion" below) but not yet extracted into `records.json`.
   FY2022-23 and earlier not yet located.
@@ -289,6 +297,53 @@ finding. **Records needed:** the Land Conservation Committee's official
 minutes/budget detail; the FDEP Stone Ridge Farms filing and public-comment
 record; and, if this thread is pursued further, department-level
 fleet/contract cost data for the in-house/outsourced comparison.
+
+## 2026-09-28 weekend intake — WGI Inc. document package (Contract 2019/2020-196)
+
+The original Owner's Representative Services agreement (Contract
+2019/2020-196, executed 2020-09-08, original not-to-exceed $15,187,178.69)
+and all 16 amendments (AM1-AM16, the most recent executed 2026-09-04) have
+now been obtained and reviewed at the document level. This closes the gap
+previously flagged in this file ("WGI Inc — operational-role context (not a
+payment finding)" above), which had only clerk-index metadata for
+AM14/AM15/AM16 marked `NEEDS VERIFICATION`.
+
+**Resolved by direct document review:** the full amendment-by-amendment
+not-to-exceed history, confirmed against AM16's own signed recap table and
+cross-checked line-by-line against each individual amendment (14 of 17
+documents have a text layer and were read directly; the original agreement
+and AM1 are copier scans with no text layer and were not independently
+verified beyond what later amendments recite about them). Current adjusted
+total: **$21,054,438.34**. Every dollar figure and date in this summary
+matches what had been reported informally going into this pass — no
+discrepancies were found. Full detail, per-document provenance, and the
+reconciled table are in the private staging area:
+`research-staging/wgi-2019-2020-196/` (`inventory.json`, `findings.json`,
+`README.md`).
+
+**Still needed / explicitly not attempted in this pass:**
+- Whether Agreement/Contract **2021/2022-111** and the invoice/payment
+  reference **"WGI-5-2025-21-22-111 RN2"** relate to this contract
+  (2019/2020-196) at all. Nothing in the 17-document package references
+  2021/2022-111. Treat as a separate, unidentified WGI contract until a
+  document confirms otherwise — do not merge the two contract numbers.
+- The "WGI-5-2025-21-22-111 RN2" invoice/payment record itself has not been
+  located in this package or in `data/supplier-invoices.json`.
+- The master ledger connecting amendment -> Task Authorization -> project ->
+  Attachment F allocation -> invoice -> actual payment/disbursement has not
+  been built. This remains a distinct, larger future research pass, not
+  something to infer from the contract-ceiling history alone.
+- Whether the CCUA-reimbursement mechanism referenced in AM8 (+$119,658.61
+  for Project 4 CEI/utility work, "approved by CCUA") has an underlying
+  interlocal/reimbursement agreement, and whether CCUA has actually paid.
+- OCR of the original agreement and AM1 (both scanned, no text layer) if a
+  primary-source read of their full text becomes needed.
+
+**Terminology discipline carried forward from the existing WGI note above:**
+every figure in the amendment history is a **contract-ceiling
+authorization**, not a record of actual invoices paid, and reallocation
+amendments (AM7, AM10, AM15, AM16 — all "Zero Cost Amendments") must not be
+described as new spending.
 
 ## Investigation 001 — Kristen Burke / District 5
 
