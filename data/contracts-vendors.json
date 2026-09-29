@@ -42,5 +42,77 @@
     {"id":"rn-2526-087-chain","vendor":"EMS supplies — ten awarded vendors","contract":null,"contractCeiling":null,"paymentsIdentified":null,"purchaseOrdersIdentified":null,"invoicesLocated":null,"invoiceSource":"PRR-2026-1194 (not cross-referenced yet)","missing":"Executed agreements or ordering instrument, and the ten awarded vendor names","searched":["BCC multiple-award agenda","Clerk FY25/26 agreement and amendment indexes"],"custodian":"Clay County Fire Rescue/Purchasing and Clerk/Comptroller Accounts Payable","dateRange":"2026-06-24 through 2026-09-30","priority":"high","status":"draft_research_only","sendEnabled":false,"reason":"The unit-price multiple award is documented, but the ten awarded vendor names are still not identified, so PRR-2026-1194's supplier-invoice export could not be cross-referenced against this gap."},
     {"id":"rn-2526-016-chain","vendor":"Eisman & Russo, Inc.","contract":"2025/2026-229","contractCeiling":null,"paymentsIdentified":null,"purchaseOrdersIdentified":3,"invoicesLocated":11,"invoiceApprovedValue":75762.22,"invoiceSource":"PRR-2026-1194","missing":"Executed agreement amount and payment/check detail","searched":["BCC ranking agenda","Clerk FY25/26 agreement index","PRR-2026-1194 supplier-invoice export"],"custodian":"Clay County Engineering/Purchasing and Clerk/Comptroller Accounts Payable","dateRange":"2026-08-11 through 2026-09-30","priority":"medium","status":"draft_research_only","sendEnabled":false,"reason":"PRR-2026-1194 located 11 invoices and 3 POs for this vendor totaling $75,762.22 in approved invoice value. PO-TO-CONTRACT ATTRIBUTION REQUIRED — do not assume these invoices belong to the SUN Trail procurement specifically until that link is established; the agreement amount and actual spending remain unverified."},
     {"id":"rn-software-fy2526","vendor":"FY25/26 software and subscription vendors","contract":null,"contractCeiling":null,"paymentsIdentified":null,"purchaseOrdersIdentified":null,"invoicesLocated":"16 of 31 distinct named vendors matched (12 verified software/service matches, 2 possible/mixed-purpose matches); 15 vendors had no match","invoiceSource":"PRR-2026-1194","missing":"Vendor-level term/renewal detail and payment confirmation for matched vendors; invoice data at all for the 15 unmatched vendors","searched":["Clerk FY25/26 agreement index","Clerk FY25/26 amendments/renewals index","County website and published financial reports","PRR-2026-1194 supplier-invoice export"],"custodian":"Clay County Information Services/Purchasing and Clerk/Comptroller Accounts Payable","dateRange":"2025-10-01 through 2026-09-30","priority":"medium","status":"draft_research_only","sendEnabled":false,"reason":"The dedicated software sweep found 38 indexed records (31 distinct vendor names); PRR-2026-1194 provided real invoice activity for 16 of them. Some matched vendors (Motorola Solutions, Butterfly Network) mix software with hardware/services and should not be described as entirely software spending. No public vendor-payment ledger exists for any of them."}
+  ],
+  "vendorHistories":[
+    {
+      "id":"wgi-2019-2020-196",
+      "vendor":"WGI, Inc.",
+      "contractNumber":"2019/2020-196",
+      "title":"Owner's Representative Services for the 2020 Transportation Bond Program",
+      "originalDate":"2020-09-08",
+      "originalAmount":15187178.69,
+      "currentAmount":21054438.34,
+      "currentAsOfDate":"2026-09-04",
+      "summary":"17 documents (the original agreement plus 16 amendments), all obtained and cross-checked against Amendment 16's own signed recap table. The not-to-exceed ceiling rose from $15,187,178.69 to $21,054,438.34 over six years; several amendments changed scope, schedule, or CPI-based hourly rates without changing the ceiling at all.",
+      "amendments":[
+        {"label":"Original","date":"2020-09-08","effect":"$15,187,178.69"},
+        {"label":"AM1","date":"2021-02-23","effect":"No price change — removed a subcontractor's legal-services scope"},
+        {"label":"AM2","date":"2022-01-19","effect":"No price change — added a payment method for appraisal work"},
+        {"label":"AM3","date":"2022-03-08","effect":"+$95,197.88"},
+        {"label":"AM4","date":"2022-03-08","effect":"Added a separately funded project (Impact Fee District 2) — not an increase to this ceiling"},
+        {"label":"AM5","date":"2022-09-26","effect":"+$28,890.57 (and a CPI rate adjustment)"},
+        {"label":"AM6","date":"2022-10-25","effect":"+$3,532,555.78"},
+        {"label":"AM7","date":"2023-07-19","effect":"Zero Cost Amendment — reallocated budget between service categories"},
+        {"label":"AM8","date":"2023-07-25","effect":"+$119,658.61"},
+        {"label":"AM9","date":"2023-12-12","effect":"CPI rate adjustment only"},
+        {"label":"AM10","date":"2024-06-14","effect":"Zero Cost Amendment — reallocated budget between projects"},
+        {"label":"AM11","date":"2024-09-25","effect":"CPI rate adjustment only"},
+        {"label":"AM12","date":"2024-11-26","effect":"+$1,857,486.90 — also extended the program schedule to Dec. 15, 2026"},
+        {"label":"AM13","date":"2025-07-22","effect":"+$233,469.91"},
+        {"label":"AM14","date":"2025-11-10","effect":"CPI rate adjustment only — ceiling unchanged"},
+        {"label":"AM15","date":"2026-02-13","effect":"Zero Cost Amendment — budget reallocation"},
+        {"label":"AM16","date":"2026-09-04","effect":"Zero Cost Amendment — budget reallocation"},
+        {"label":"Current total","date":"2026-09-04","effect":"$21,054,438.34"}
+      ],
+      "terminologyNotes":[
+        "Every figure above is a not-to-exceed CONTRACT CEILING authorization, not a record of actual invoices paid.",
+        "A \"Zero Cost Amendment\" (AM7, AM10, AM15, AM16) moves budget between service categories or projects — it is not new spending.",
+        "A CPI rate adjustment (AM9, AM11, AM14) changes hourly billing rates, not necessarily the ceiling — AM14 is confirmed to have changed no dollar amount at all.",
+        "AM4 added a separately funded project rather than increasing this contract's own ceiling — see the amendment note above."
+      ],
+      "openQuestions":[
+        "Whether Agreement/Contract 2021/2022-111 (a separate, standalone WGI continuing-services contract used for at least one Fire Station 24 work order) relates to this contract in any way — nothing in these 17 documents references 2021/2022-111, and it should not be assumed related.",
+        "Whether the County's AP/Workday invoice activity for WGI (see the review flag on the Supplier Invoices page: $6,017,636.03 Approved vs. $8,046,938.87 Canceled across 23 POs) reconciles against this ceiling history — that reconciliation has not been attempted."
+      ],
+      "sourceNote":"All 17 documents (the original agreement and Amendments 1-16) were obtained and hashed; the ceiling figures above are transcribed from Amendment 16's own signed recap table and independently cross-checked against 14 of the 17 individual documents that have a text layer (the original agreement and Amendment 1 are scanned copier images without one).",
+      "sourceUrl":"https://dmcc.clayclerk.com/Documents/Search",
+      "sourceUrlNote":"Clay County Clerk of Court Document Search — search \"2019/2020-196\" for the individual recorded documents."
+    },
+    {
+      "id":"avaap-2025-2026-52",
+      "vendor":"Avaap USA, LLC",
+      "contractNumber":"2025/2026-52",
+      "title":"Statement of Work for Workday AMS Lifeline Support (\"Clay County AMS Renewal 2025-2026\")",
+      "originalDate":"2025-12-12",
+      "originalAmount":177375,
+      "currentAmount":114915,
+      "currentAsOfDate":"2026-02-12",
+      "summary":"A recurring IT support contract (Workday post-implementation application management), procured through the ESC Region 19 Allied States Cooperative purchasing program rather than a competitively bid Clay County RFP. The current agreement's ceiling was reduced by amendment about two months after it was signed.",
+      "amendments":[
+        {"label":"Original SOW","date":"2025-12-12","effect":"$177,375 ceiling (900 hours: 825 hrs AMS Consultant @ $195/hr + 75 hrs Engagement Manager @ $220/hr); term 10/1/2025–9/30/2026"},
+        {"label":"AM1 (Project Change Request)","date":"2026-02-12","effect":"-$62,460 — reduced to $114,915 ceiling (582 hours: 525 hrs AMS Consultant + 57 hrs Engagement Manager); no change to scope or end date"}
+      ],
+      "terminologyNotes":[
+        "The AM1 reduction is stated as budget alignment (\"Clay County would like to decrease the total contract amount to align with internal available budget\") — this is a ceiling decrease, not evidence of a service or scope cut.",
+        "Actual invoiced amount under this contract and its immediate predecessor: 8 invoices, $23,392.76 Approved (and $36,164.54 in Canceled-status invoice value, which does not mean money was paid and then lost — see the Supplier Invoices page for that terminology distinction), across 4 purchase orders, invoice dates 2024-10-31 through 2026-04-30. This is well under the current $114,915 ceiling, which is expected for a not-to-exceed, usage-based contract with time remaining on its term.",
+        "This is a recurring, multi-year relationship — two earlier SOWs for the same AMS Lifeline Support service are indexed at the Clerk (2022/2023-0014, dated 2022-10-17; 2024/2025-0013, dated 2024-10-15) but their content has not been reviewed."
+      ],
+      "openQuestions":[
+        "Whether Avaap's AMS Lifeline Support scope duplicates services already included in the County's underlying Workday subscription has not been established either way — no evidence has been reviewed on that question."
+      ],
+      "sourceNote":"Current SOW and its Project Change Request amendment obtained from the Clay County Clerk Document Search and hashed. Actual-invoiced figures are drawn from the same PRR-2026-1194 accounts-payable export already used for the Supplier Invoices page.",
+      "sourceUrl":"https://dmcc.clayclerk.com/Documents/Search",
+      "sourceUrlNote":"Clay County Clerk of Court Document Search — search \"2025/2026-52\" for the SOW and its amendment."
+    }
   ]
 }

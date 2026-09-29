@@ -231,6 +231,8 @@ button {
 .ordinance-summary .ordinance-lists ul { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.5; }
 .ordinance-summary .ordinance-lists li { margin-bottom: 6px; }
 .ordinance-summary .source-footnote { margin-top: 12px; }
+.ordinance-summary .research-table { margin-top: 12px; }
+.ordinance-summary .research-table th, .ordinance-summary .research-table td { padding: 10px 12px; }
 .priority { border-radius: 10px; padding: 3px 7px; font-size: 9px; font-weight: 750; text-transform: uppercase; }
 .priority-high { background: #fbe5df; color: #8b3b2d; }
 .priority-medium { background: #fff1d0; color: #7c5a18; }
