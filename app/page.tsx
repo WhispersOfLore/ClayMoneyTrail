@@ -430,7 +430,7 @@ export default function Home() {
             <StandardPage
               kicker="SPECIAL ASSESSMENT"
               title="Stormwater money trail"
-              description="Track the proposed assessment from estimated collections through regulatory costs and, later, actual projects and payments."
+              description="Track the proposed assessment from estimated collections through regulatory costs and, later, actual projects and payments — plus what the FY2026-27 budget and the rate-setting resolution establish."
             >
               <div className="flow-cards">
                 <div>
@@ -451,10 +451,31 @@ export default function Home() {
                   <small>*Arithmetic difference, not a verified allocation</small>
                 </div>
               </div>
+              <section className="panel ordinance-summary stormwater-rate-explainer">
+                <div className="panel-head"><div><span className="section-kicker">ASSESSMENT RATE</span><h3>What $85 and $120 mean</h3></div></div>
+                <article>
+                  <p>Clay County&apos;s Initial Stormwater Assessment Resolution (2025/2026-61, adopted July 28, 2026) sets two different numbers, and they answer two different questions.</p>
+                  <dl>
+                    <div><dt>Initial annual rate — what a one-ERU residential property is assessed now</dt><dd><strong>$85.00 per ERU per year</strong> — about $7.08/month.</dd></div>
+                    <div><dt>Authorized ceiling — what the Board could raise it to, for FY2026-27 and later</dt><dd><strong>Up to $120.00 per ERU per year.</strong> This is an authorized maximum, not a rate currently in effect — no record reviewed shows the assessment has actually been raised toward it.</dd></div>
+                  </dl>
+                  <p className="source-footnote">Source: Initial Stormwater Assessment Resolution 2025/2026-61, adopted 2026-07-28. An earlier three-tier rate figure ($51 / $85 / $161.50 by impervious-area band) reported before adoption was a superseded draft, not the final rate.</p>
+                </article>
+              </section>
+              <section className="panel ordinance-summary stormwater-fund-context">
+                <div className="panel-head"><div><span className="section-kicker">FY2026-27 BUDGET</span><h3>Two figures that are not the same measure</h3></div></div>
+                <article>
+                  <dl>
+                    <div><dt>FY2026-27 Stormwater Management Fund — total adopted budget</dt><dd><strong>$8,930,000</strong>, per Attachment A of the FY2026-27 Final Budget, adopted September 22, 2026.</dd></div>
+                    <div><dt>Estimated first-year assessment revenue (shown above)</dt><dd><strong>$8,218,308</strong>, the County&apos;s own pre-adoption estimate of assessment collections alone.</dd></div>
+                  </dl>
+                  <p><strong>These two figures are not currently established as directly comparable.</strong> The fund total can include a carryover balance, other fund revenue sources, grants, and transfers, in addition to assessment revenue; the assessment estimate is a standalone projection from a separate, earlier document. Their ~$711,692 arithmetic difference is not treated here as a funding gap, a shortfall, or a finding of any kind — reconciling them would require the fund&apos;s revenue-by-source detail, which has not been obtained.</p>
+                </article>
+              </section>
               <DataGapNotice
                 title="Actual stormwater collections and spending are not loaded"
-                missing="Actual assessment revenue collected, and actual spending by project or vendor once the assessment takes effect."
-                recordNeeded="A published stormwater fund actuals report or year-end financial statement covering the assessment."
+                missing="Actual assessment revenue collected; actual spending by project or vendor once the assessment takes effect; the complete funding-source history for stormwater/flood-control work before this assessment existed; the revenue-by-source breakdown behind the FY2026-27 Stormwater Management Fund's $8,930,000 total (carryover balance, grants, transfers, and assessment revenue, individually); the underlying Stormwater Utility and Assessment Ordinance itself (referenced elsewhere as Ordinance 2026-33), separate from the rate-setting resolution cited above; and whether or when the $120/ERU ceiling has actually been used."
+                recordNeeded="A published stormwater fund actuals report or year-end financial statement covering the assessment, the Stormwater Utility and Assessment Ordinance, and the FY2026-27 budget's revenue-by-source detail for Fund 4002."
                 templateFile="data/templates/historical-budget-vs-actual.csv"
                 columns={['record_id', 'fiscal_year', 'department', 'category', 'name', 'adopted_budget', 'amended_budget', 'actual_amount', 'source_status', 'source_url', 'source_title', 'notes', 'last_verified']}
               />
