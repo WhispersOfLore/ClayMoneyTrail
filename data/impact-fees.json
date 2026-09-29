@@ -14,5 +14,59 @@
     {"landUse":"Industrial","unit":"1,000 sq. ft.","total2025":1038,"total2026":1061.67},
     {"landUse":"Institutional","unit":"1,000 sq. ft.","total2025":1994,"total2026":2039.46},
     {"landUse":"Nursing Home","unit":"1,000 sq. ft.","total2025":1881,"total2026":1923.89}
+  ],
+  "ordinances":[
+    {
+      "id":"impact-fee-ordinance-2022-56",
+      "number":"2022-56",
+      "title":"Comprehensive Impact Fee Ordinance",
+      "adoptedDate":"2022-12-13",
+      "effectiveDate":"2023-06-01",
+      "codifiedAt":"Chapter 16, Article VII of the Clay County Code",
+      "establishes":"Establishes five impact-fee categories on qualifying new construction: Government, Jails, and Constitutional Facilities; Fire and Rescue Facilities; Law Enforcement Facilities; Parks and Recreation Facilities; and Library and Cultural Facilities. Rates are based on the \"Clay County Development Impact Fee Study,\" dated December 8, 2022, prepared by Willdan Financial Services, which the ordinance adopts by reference as Attachment A.",
+      "appliesTo":"All \"Capital Facilities Impact Construction\" — new development that increases impact on the five facility categories above — throughout unincorporated and incorporated Clay County, for any complete Building Permit application submitted on or after the effective date. Enforcement inside a municipality requires a separate interlocal agreement between the County and that municipality.",
+      "mechanism":"The fee is calculated from the adopted rate schedule by land-use category (or from an applicant-submitted Alternative Impact Fee Study) and is due in connection with the Building Permit. The ordinance requires periodic review and adjustment of the rates (Sec. 16.225) — this is the ordinance provision behind the year-over-year rate changes shown in the table above.",
+      "exemptionsAndCredits":[
+        "Affordable and Workforce Housing Impact Fee Waiver (Sec. 16.218) for qualifying low, very-low, and moderate-income housing",
+        "Economic Development Impact Fee Mitigation Program (Sec. 16.219) for qualifying non-residential and Qualified Target Industry (QTI) business construction",
+        "Developer Contribution Credit (Sec. 16.221) and DRI Mitigation Credits for contributions of land, money, or improvements identified as Capital Facilities in an approved Development Order",
+        "No fee where construction does not increase impact on the relevant facilities (e.g., certain like-for-like alterations or replacements)"
+      ],
+      "doesNotEstablish":[
+        "Does not itself state how much money the County has actually collected or spent under this fee program",
+        "Does not cover Mobility Fees or School Impact Fees — those are separate fee programs under different ordinances",
+        "A credit, waiver, or mitigation authorized here is not a cash payment from the County — it reduces or defers what a developer owes"
+      ],
+      "sourceNote":"Reviewed: Sec. 16.142 (Definitions) through Sec. 16.229 (Effective Date), the full 38-page ordinance. The source document also contains a separate, unrelated Capital Improvement Plan budget-amendment resolution (dated Nov. 22, 2022) appended after the ordinance text — that resolution is a different legislative item and is not described here.",
+      "sourceUrl":"https://library.municode.com/fl/clay_county/codes/code_of_ordinances?nodeId=CO_CH16PLDE_ARTVIICOIMFE_DIV1GE_S16-144LEFI",
+      "sourceUrlNote":"Current codification at Municode Library (Clay County's official Code of Ordinances host). The ordinance's own signed text, as adopted, is on file (SHA-256 4a72f22f2d3aa28849a744b6aad2cb8f8a6802bfc9734ddfe855ec6d16cbffa5); a direct county document-ID link for the original signed ordinance was not independently confirmed."
+    },
+    {
+      "id":"mobility-fee-ordinance-2026-8",
+      "number":"2026-8",
+      "title":"Mobility Fee Ordinance",
+      "adoptedDate":"2026-03-10",
+      "effectiveDate":"2026-06-15",
+      "codifiedAt":"Article VI of Chapter 16 of the Clay County Code",
+      "legislativeHistory":"Ordinance 2026-8 comprehensively amends and restates the mobility fee article, which originated as Ordinance 2020-39 (the \"2020 Mobility Fee Ordinance\"), itself the successor to Ordinance 2017-30 (the earlier \"Road Impact Fee Ordinance,\" which sunset January 31, 2020). Section 3.14 of Ordinance 2026-8 formally sunsets Ordinance 2020-39, as amended, effective the day before Ordinance 2026-8's own effective date — this is an amendment/recodification of an existing fee program, not a brand-new fee.",
+      "establishes":"Establishes a Mobility Fee on qualifying new construction, calculated from an adopted rate schedule (Appendix C) organized into five Mobility Districts (Appendix B) established by the ordinance, based on a Mobility Fee Study incorporated by reference.",
+      "appliesTo":"All \"New Construction\" in unincorporated Clay County that submits a complete Building Permit application on or after the effective date.",
+      "mechanism":"Upon a complete Building Permit application, the County's Mobility Fee Coordinator calculates the fee from the adopted rate schedule for the applicable Mobility District and land-use category (or from an applicant-submitted Alternative Mobility Fee Calculation). Section 3.10 provides for automatic rate adjustments on June 15 of each year from 2026 through 2029 per the Appendix C schedules. Fee revenue must be accounted for in a dedicated trust fund (Sec. 3.12), separate from the County's general fund.",
+      "exemptionsAndCredits":[
+        "Exemptions (Sec. 3.01) for like-for-like replacement/alteration that does not increase trip generation, for previously-paid mobile-home tie-downs, and for government buildings, facilities, and schools",
+        "Affordable and Workforce Housing Mobility Fee Deferral (Sec. 3.02)",
+        "Economic Development Mitigation Program (Sec. 3.03) for qualifying projects, including \"projects of significant economic or community impact\" (a category this 2026 amendment added)",
+        "Developer Contribution Credit (Sec. 3.05) for a developer's construction of, or contribution toward, mobility infrastructure — this is the credit mechanism already documented for the Governor's Park Mobility Fee Credit Agreement (see GOVERNORS_PARK_MOBILITY_FEE_CREDITS.md); a mobility-fee credit reduces what a developer owes on future permits, it is not a cash payment to the developer"
+      ],
+      "doesNotEstablish":[
+        "Does not itself state how much money the County has actually collected, spent, or credited under this fee program",
+        "Does not cover County Comprehensive Impact Fees or School Impact Fees — those are separate fee programs under different ordinances",
+        "A mobility-fee credit authorized under this ordinance (or its predecessor, 2020-39) is not cash paid to a developer — it is a future-fee offset, realized only as new permits are issued against it",
+        "This ordinance's own Section 3.10 governs the ordinary annual rate-adjustment schedule, not the credit-calculation mechanics for any specific agreement — a pre-2026-8 citation to a numbered section (e.g., an agreement executed before June 15, 2026 citing 'Section 3.10') may refer to the section numbering of the ordinance version in effect when that agreement was signed, not necessarily this current numbering; that has not been independently reconciled here"
+      ],
+      "sourceNote":"Reviewed: Article I (Sec. 1.01 Definitions) through Article III, Sec. 3.16 (Effective Date), the operative 55 pages of the 121-page document; Appendices A (Mobility Fee Study), B (Mobility Districts), and C (Rate Schedules) were not individually reviewed.",
+      "sourceUrl":"https://www.claycountygov.com/government/planning-and-zoning/impact-mobility-fees",
+      "sourceUrlNote":"Points to the County's general Impact & Mobility Fees program page, not a direct deep link to Ordinance 2026-8's text — a stable direct citation URL for this specific ordinance was not independently confirmed. The ordinance's own signed text, as adopted, is on file (SHA-256 5b008a0b323dc09b268eaf5318154700b8c44145fd9759b94124361dd545c92d)."
+    }
   ]
 }

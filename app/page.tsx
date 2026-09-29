@@ -477,7 +477,7 @@ export default function Home() {
 
           {section === 'Human Services' && <StandardPage kicker="FY2025-26 BUDGET RESEARCH" title="Human Services" description="Published functional spending and cost-center history, with budget and actual measures kept distinct."><HumanServicesPanel data={humanServicesData}/></StandardPage>}
 
-          {section === 'Impact Fees' && <StandardPage kicker="EFFECTIVE OCTOBER 1, 2026" title="Comprehensive impact fees" description="A like-for-like comparison of the official 2025 and 2026 county comprehensive schedules."><ImpactFeesPanel data={impactFeesData}/></StandardPage>}
+          {section === 'Impact Fees' && <StandardPage kicker="EFFECTIVE OCTOBER 1, 2026" title="Comprehensive impact fees" description="A like-for-like comparison of the official 2025 and 2026 county comprehensive schedules, plus what the underlying impact fee and mobility fee ordinances establish."><ImpactFeesPanel data={impactFeesData}/></StandardPage>}
 
           {section === 'Capital Projects' && (
             <StandardPage

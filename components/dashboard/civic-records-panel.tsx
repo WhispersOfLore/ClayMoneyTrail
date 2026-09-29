@@ -8,7 +8,8 @@ type ContractInventory = { meta:{methodology:string;documents_examined:number;in
 type EmailData = { meta:{ disclaimer:string; sourceUrl:string }; mailboxes:Array<{district:string; commissioner:string; reviewedMessages:number}>; reviewStates:Array<{id:string;label:string;meaning:string}> };
 type DirectoryData = { contacts:Array<{id:string;agency:string;name:string;recordTypes:string[];method:string;url:string;email:string|null;phone:string|null;verified:string}> };
 type HumanData = { meta:{functionalTotal:number;note:string}; records:Array<{id:string;name:string;costCenter:string|null;reconciliation:string;fy2023Actual:number|null;fy2024Actual:number|null;fy2025Budget:number|null;fy2026Budget:number|null}>; openResearch:string[] };
-type FeeData = { meta:{note:string;source2025:string;source2026:string}; rates:Array<{landUse:string;unit:string;total2025:number;total2026:number}> };
+type FeeOrdinance = { id:string; number:string; title:string; adoptedDate:string; effectiveDate:string; codifiedAt:string; legislativeHistory?:string; establishes:string; appliesTo:string; mechanism:string; exemptionsAndCredits:string[]; doesNotEstablish:string[]; sourceNote:string; sourceUrl:string; sourceUrlNote:string };
+type FeeData = { meta:{note:string;source2025:string;source2026:string}; rates:Array<{landUse:string;unit:string;total2025:number;total2026:number}>; ordinances?:FeeOrdinance[] };
 
 export function ContractsPanel({ data, inventory }: { data: ContractData; inventory: ContractInventory }) {
   return <>
@@ -133,6 +134,27 @@ export function ImpactFeesPanel({ data }: { data: FeeData }) {
     <div className="disclaimer"><FileSearch size={19}/><div><strong>Comprehensive fees only.</strong><span>{data.meta.note}</span></div></div>
     <section className="panel data-table-panel"><table className="research-table"><thead><tr><th>Land use</th><th>Charged per</th><th>Oct. 1, 2025</th><th>Oct. 1, 2026</th><th>Change</th></tr></thead><tbody>{data.rates.map((r)=>{const change=r.total2026-r.total2025; const pct=change/r.total2025*100; return <tr key={r.landUse}><td><strong>{r.landUse}</strong></td><td>{r.unit}</td><td>{money(r.total2025)}</td><td>{money(r.total2026)}</td><td className="positive-change">+{money(change)} <small>{pct.toFixed(2)}%</small></td></tr>})}</tbody></table></section>
     <p className="source-footnote">Effective-date schedules: <a href={data.meta.source2025} target="_blank" rel="noreferrer">2025</a> · <a href={data.meta.source2026} target="_blank" rel="noreferrer">2026</a></p>
+    {data.ordinances && <section className="panel ordinance-summary">
+      <div className="panel-head"><div><span className="section-kicker">ORDINANCE TEXT</span><h3>What the underlying ordinances establish</h3></div></div>
+      {data.ordinances.map((o)=>(
+        <article key={o.id}>
+          <header><strong>Ordinance No. {o.number} — {o.title}</strong></header>
+          <p>Adopted {formatDate(o.adoptedDate)} · Effective {formatDate(o.effectiveDate)} · Codified at {o.codifiedAt}</p>
+          {o.legislativeHistory && <p>{o.legislativeHistory}</p>}
+          <dl>
+            <div><dt>Establishes</dt><dd>{o.establishes}</dd></div>
+            <div><dt>Applies to</dt><dd>{o.appliesTo}</dd></div>
+            <div><dt>How the fee works</dt><dd>{o.mechanism}</dd></div>
+          </dl>
+          <div className="ordinance-lists">
+            <div><strong>Exemptions &amp; credits</strong><ul>{o.exemptionsAndCredits.map((x)=><li key={x}>{x}</li>)}</ul></div>
+            <div><strong>What this ordinance does NOT establish</strong><ul>{o.doesNotEstablish.map((x)=><li key={x}>{x}</li>)}</ul></div>
+          </div>
+          <p className="source-footnote">{o.sourceNote}</p>
+          <p className="source-footnote"><a href={o.sourceUrl} target="_blank" rel="noreferrer">Official record <ExternalLink size={12}/></a> · {o.sourceUrlNote}</p>
+        </article>
+      ))}
+    </section>}
   </>;
 }
 

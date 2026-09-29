@@ -217,6 +217,20 @@ button {
 .records-needed-queue dl div { background: var(--paper); border-radius: 7px; padding: 10px; }
 .records-needed-queue dt { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
 .records-needed-queue dd { margin: 5px 0 0; font-size: 11px; line-height: 1.45; }
+.ordinance-summary > article { padding: 17px 20px; border-top: 1px solid var(--line); }
+.ordinance-summary > article:first-child { border-top: 0; }
+.ordinance-summary header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.ordinance-summary header span { color: var(--muted); font-size: 12px; }
+.ordinance-summary > article > p { color: var(--muted); font-size: 12px; margin: 4px 0 0; }
+.ordinance-summary dl { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 18px; margin: 12px 0 0; }
+.ordinance-summary dl div { background: var(--paper); border-radius: 7px; padding: 10px; }
+.ordinance-summary dt { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
+.ordinance-summary dd { margin: 5px 0 0; font-size: 12px; line-height: 1.5; }
+.ordinance-summary .ordinance-lists { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; margin-top: 14px; }
+.ordinance-summary .ordinance-lists strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 6px; }
+.ordinance-summary .ordinance-lists ul { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.5; }
+.ordinance-summary .ordinance-lists li { margin-bottom: 6px; }
+.ordinance-summary .source-footnote { margin-top: 12px; }
 .priority { border-radius: 10px; padding: 3px 7px; font-size: 9px; font-weight: 750; text-transform: uppercase; }
 .priority-high { background: #fbe5df; color: #8b3b2d; }
 .priority-medium { background: #fff1d0; color: #7c5a18; }
@@ -1745,6 +1759,8 @@ footer p {
   .software-list article { grid-template-columns: minmax(0, 1fr) auto; }
   .software-list article > span { grid-column: 1; }
   .records-needed-queue dl { grid-template-columns: 1fr; }
+  .ordinance-summary dl { grid-template-columns: 1fr; }
+  .ordinance-summary .ordinance-lists { grid-template-columns: 1fr; }
   .open-research ul { columns: 1; }
   footer {
     margin: 0 16px;
