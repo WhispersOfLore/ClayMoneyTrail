@@ -233,6 +233,29 @@ button {
 .ordinance-summary .source-footnote { margin-top: 12px; }
 .ordinance-summary .research-table { margin-top: 12px; }
 .ordinance-summary .research-table th, .ordinance-summary .research-table td { padding: 10px 12px; }
+.evidence-chain { padding-bottom: 6px; }
+.chain-step { padding: 18px 20px; border-top: 1px solid var(--line); position: relative; }
+.chain-step:first-child { border-top: 0; }
+.chain-step::before { content: ''; position: absolute; left: 29px; top: -1px; width: 2px; height: 12px; background: var(--line); }
+.chain-step:first-child::before { display: none; }
+.chain-step header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.chain-step header h4 { margin: 2px 0 0; font-size: 16px; flex: 1 1 auto; min-width: 200px; }
+.chain-step > p { color: var(--muted); font-size: 12px; margin: 6px 0 0; }
+.chain-step dl { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 18px; margin: 12px 0 0; }
+.chain-step dl div { background: var(--paper); border-radius: 7px; padding: 10px; }
+.chain-step dt { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
+.chain-step dd { margin: 5px 0 0; font-size: 12px; line-height: 1.5; }
+.chain-step .research-table { margin-top: 12px; }
+.chain-step .research-table th, .chain-step .research-table td { padding: 9px 11px; font-size: 11px; }
+.chain-flag { display: flex; align-items: flex-start; gap: 10px; margin-top: 12px; padding: 10px; background: var(--paper); border-radius: 7px; }
+.chain-flag p { margin: 0; font-size: 12px; line-height: 1.5; color: var(--muted); }
+.chain-step .source-footnote { margin-top: 10px; }
+.stage-badge { border-radius: 10px; padding: 3px 8px; font-size: 9px; font-weight: 750; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+.stage-authorized { background: #ddeaf9; color: #1e4f7a; }
+.stage-invoiced { background: #fff1d0; color: #7c5a18; }
+.stage-unknown { background: #fbe5df; color: #8b3b2d; }
+.payment-status-step { background: var(--paper); }
+.countywide-context-note { padding: 16px 20px; font-size: 12px; color: var(--muted); line-height: 1.6; }
 .priority { border-radius: 10px; padding: 3px 7px; font-size: 9px; font-weight: 750; text-transform: uppercase; }
 .priority-high { background: #fbe5df; color: #8b3b2d; }
 .priority-medium { background: #fff1d0; color: #7c5a18; }
@@ -1763,6 +1786,8 @@ footer p {
   .records-needed-queue dl { grid-template-columns: 1fr; }
   .ordinance-summary dl { grid-template-columns: 1fr; }
   .ordinance-summary .ordinance-lists { grid-template-columns: 1fr; }
+  .chain-step dl { grid-template-columns: 1fr; }
+  .chain-step header h4 { min-width: 0; }
   .open-research ul { columns: 1; }
   footer {
     margin: 0 16px;

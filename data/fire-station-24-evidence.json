@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "Fire Station 24 — Gopher Tortoise Environmental Work",
+    "asOf": "2026-09-29",
+    "summary": "A documented chain of records — county project, engineering work order, state wildlife permit, recipient-site invoice — for gopher tortoise survey, permitting, and relocation work connected to the Fire Station 24 construction project. This is currently the best-documented example of this kind of work in the records reviewed by ClayMoneyTrail — it is not established as the only Clay County project involving gopher tortoises.",
+    "disclaimer": "This is a documented evidence chain, not an allegation. Every figure below carries an explicit evidence status and is traced to a primary document. An authorized work-order amount is not a payment; an invoice is not proof of payment; a pre-capture estimate is not the same measurement as a later invoiced count. Where a link in the chain (a survey, a manifest, a payment record) has not been obtained, that is stated directly rather than inferred."
+  },
+  "workOrder": {
+    "number": "WGI-5-2025-21-22-111 RN2",
+    "vendor": "WGI, Inc.",
+    "contractNumber": "2021/2022-111",
+    "contractLabelWrinkle": "This work order's own cover sheet cites \"Clay County Contract/Agreement No. 2021/2022-111 RN2,\" but its Exhibit B (Scope of Services) cover page instead labels the same underlying contract \"Contract No. 2024/2025-111 (RN1).\" This is an internal inconsistency between two exhibits of the same signed document. It has not been reconciled and is displayed here as an open document-labeling question, not resolved one way or the other.",
+    "contractLabelEvidenceStatus": "conflicting_evidence",
+    "scope": "Gopher tortoise 100% survey, applying for and obtaining an FWC permit, and capture and relocation services for the Fire Station 24 site. If needed, bucket trapping is billed per day, not to exceed the quoted fee.",
+    "excludesNote": "Stated directly on the work order: \"Fees do not include the FWC permitting fees or the recipient site fees.\" The recipient-site work is billed separately — see the APES invoice below.",
+    "lumpSum": 52237.76,
+    "notToExceed": 19017.12,
+    "totalAuthorized": 71254.88,
+    "signedDate": "2025-09-04",
+    "signedBy": "Howard Wanamaker, Clay County Manager",
+    "evidenceStatus": "verified_fact",
+    "sourceNote": "Signed work order (11 pages), obtained directly and hashed (SHA-256 c033074576c22a95c81054abbe2e1b9195d17288dcdeb81055a9a6890b957318). Not independently confirmed as separately indexed at the Clay County Clerk of Court under its own document ID.",
+    "sourceUrl": "https://dmcc.clayclerk.com/Documents/Search",
+    "sourceUrlNote": "Clay County Clerk of Court Document Search — a direct document-ID link for this specific work order was not independently confirmed; search \"2021/2022-111\" for the parent continuing-services contract."
+  },
+  "fwcPermit": {
+    "number": "GTC-25-00439",
+    "name": "Gopher Tortoise Conservation - Clay County Board of County Commissioners",
+    "owner": "Clay County Board of County Commissioners",
+    "effectiveDate": "2025-11-25",
+    "status": "Complete/Void",
+    "statusNote": "The available FWC record displays the status as \"Complete/Void\"; the current record set does not establish the administrative meaning of that status.",
+    "consultant": "Rick Harman, WGI, Inc.",
+    "evidenceStatus": "verified_fact",
+    "sourceNote": "Confirmed via a screenshot of the official FWC permit portal (app.myfwc.com), showing Permit Number, Permit Status, Effective Date, Owner, and Consultant fields. A screenshot is a weaker citation than an archived portal page — this should be replaced with a direct portal re-pull if this record is used again.",
+    "sourceUrl": "https://app.myfwc.com/maps/gtmapping/gtpermitmap.html",
+    "sourceUrlNote": "FWC's public Gopher Tortoise Permit Map tool, where Clay County permits including this one can be looked up directly — not the specific permit-detail deep link, which was not captured."
+  },
+  "relocation": {
+    "totalInvoiced": 16,
+    "adultCount": 8,
+    "juvenileCount": 8,
+    "sourceProjectAsStated": "Fire Station #24",
+    "recipientSite": "Escape Ranch Unit 1",
+    "recipientSiteLocationNote": "Escape Ranch is located in Kenansville, Osceola County — outside Clay County. Recipient sites of this kind routinely serve many unrelated source projects across a wide area; a recipient site receiving tortoises from outside Clay County is not, by itself, evidence of anything irregular about this relocation.",
+    "evidenceStatus": "verified_fact",
+    "sourceNote": "Both invoiced quantities (8 adult, 8 juvenile) and the source-project attribution (\"Fire Station #24\") are stated directly, twice, on APES Invoice #2440's own line items."
+  },
+  "estimateVsActual": {
+    "preCaptureEstimate": "WGI's own work-order scope document (Exhibit B) estimated, for FWC permit-fee budgeting purposes, \"12 tortoises anticipated plus 3 more as refundable contingency = 15 tortoises\" — a pre-capture planning estimate, made before any survey or capture occurred.",
+    "invoicedCount": "APES Invoice #2440 later billed for 16 tortoises actually relocated (8 adult + 8 juvenile).",
+    "explanation": "These are two different kinds of number, not a disputed count: one is a pre-capture estimate with an explicit contingency margin built in; the other is the later invoiced total after the work was performed. A one-animal difference between a rounded advance estimate and an actual result is not, by itself, a discrepancy.",
+    "evidenceStatus": "verified_fact"
+  },
+  "apesInvoice": {
+    "vendor": "All Phase Environmental Solutions",
+    "invoiceNumber": "2440",
+    "invoiceDate": "2026-01-13",
+    "dueDate": "2026-02-27",
+    "billedTo": "Clay County Board of County Commissioners",
+    "lineItems": [
+      { "description": "Recipient Site Fee — Fire Station #24 - Relocated 8 adult tortoises to Escape Ranch Unit 1", "qty": 8, "rate": 6000, "amount": 48000 },
+      { "description": "Recipient Site Fee — Fire Station #24 - Relocated 8 juvenile tortoises to Escape Ranch Unit 1", "qty": 8, "rate": 3000, "amount": 24000 }
+    ],
+    "total": 72000,
+    "evidenceStatus": "verified_fact",
+    "sourceNote": "Signed invoice, obtained directly and hashed (SHA-256 35fb032e3d81780078a015ed2156746e7e697447efc042936413267107e53b67). This is a bill for services (\"Thank you for your prompt payment... Ways to pay\"), not a payment record.",
+    "sourceUrl": null
+  },
+  "paymentStatus": {
+    "wgiWorkOrder": "Not established. The $71,254.88 figure above is an authorized not-to-exceed work-order amount. No WGI invoice against this work order, and no County payment/disbursement record, has been obtained.",
+    "apesInvoice": "Not established. The $72,000 figure above is an invoiced amount only. No County payment/disbursement record confirming this invoice was paid has been obtained.",
+    "doNotCombine": "Because neither figure is confirmed as paid, and because they represent different, separately scoped work (survey/permit/capture vs. recipient-site placement), they should not be added together into a single \"cost\" figure. ClayMoneyTrail does not have evidence supporting a combined total as actual County spending.",
+    "evidenceStatus": "records_required"
+  },
+  "crossProjectQuestion": {
+    "question": "A community question has been raised about whether tortoises from other County projects could have been combined into this Fire Station 24 permit or billing process.",
+    "evidenceStatus": "unverified_lead",
+    "finding": "The records reviewed do not establish that animals from other County projects were included in this Fire Station 24 relocation. Both APES Invoice #2440 line items independently attribute all 16 tortoises to \"Fire Station #24,\" the WGI work order's scope is specifically limited to the Fire Station 24 site, and no shared permit number, invoice number, purchase order, or other identifier has been found connecting these 16 animals to any other County project.",
+    "caveat": "This is not a permanent resolution of the question. The underlying tortoise survey, burrow/occupancy map, and capture/relocation manifest — the records that would most directly confirm the animals' origin — have not been obtained."
+  },
+  "countywideContext": {
+    "note": "Fire Station 24 is currently the best-documented County example of this kind of environmental/wildlife work in the records reviewed by ClayMoneyTrail. It is not established as the only Clay County project involving gopher tortoises — other public project records reference environmental or wildlife-related work, including the Bonded Transportation Program and the Outdoor Adventure Park / Shooting Range project, and have not yet been reviewed to the same depth as this one."
+  },
+  "missingRecords": [
+    "The gopher tortoise survey and burrow/occupancy map for the Fire Station 24 site",
+    "The capture and relocation manifest or individual tortoise records",
+    "WGI's actual invoice(s) billed against this work order",
+    "A County payment/disbursement record for the WGI work order",
+    "A County payment/disbursement record for APES Invoice #2440",
+    "The full underlying FWC permit file (application, survey report, correspondence) beyond the portal's summary screen",
+    "Clarification of the contract-number/renewal labeling question (2021/2022-111 vs. 2024/2025-111 (RN1))"
+  ]
+}

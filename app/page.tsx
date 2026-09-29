@@ -29,6 +29,7 @@ import rawTimeline from '@/data/investigations/timeline.json';
 import rawRecordsRequests from '@/data/investigations/records-requests.json';
 import stateFundingData from '@/data/state-funding.json';
 import publicSafetyComplexData from '@/data/public-safety-complex.json';
+import fireStation24Data from '@/data/fire-station-24-evidence.json';
 import geographicSpendingData from '@/data/geographic-spending.json';
 import taxesAssessmentsData from '@/data/taxes-assessments.json';
 import blackCreekData from '@/data/black-creek.json';
@@ -57,6 +58,7 @@ import { StatusBadge } from '@/components/dashboard/status-badge';
 import { InvestigationsPanel } from '@/components/dashboard/investigations-panel';
 import { StateFundingPanel, type StateFundingDataset } from '@/components/dashboard/state-funding-panel';
 import { PublicSafetyComplexPanel, type PublicSafetyComplexData } from '@/components/dashboard/public-safety-complex-panel';
+import { FireStation24Panel, type FireStation24Data } from '@/components/dashboard/fire-station-24-panel';
 import { GeographicSpendingPanel, type GeographicSpendingData } from '@/components/dashboard/geographic-spending-panel';
 import { TaxesAssessmentsPanel, type TaxesAssessmentsData } from '@/components/dashboard/taxes-assessments-panel';
 import { PayrollPanel, type PayrollData, type PayrollFindings } from '@/components/dashboard/payroll-panel';
@@ -66,6 +68,7 @@ const records = rawRecords as RecordItem[];
 const sources = rawSources as SourceItem[];
 const stateFunding = stateFundingData as unknown as StateFundingDataset;
 const publicSafetyComplex = publicSafetyComplexData as unknown as PublicSafetyComplexData;
+const fireStation24 = fireStation24Data as unknown as FireStation24Data;
 const geographicSpending = geographicSpendingData as unknown as GeographicSpendingData;
 const taxesAssessments = taxesAssessmentsData as unknown as TaxesAssessmentsData;
 const payroll = payrollData as unknown as PayrollData;
@@ -105,6 +108,7 @@ type Section =
   | 'Public Records'
   | 'Capital Projects'
   | 'Public Safety Complex'
+  | 'Fire Station 24'
   | 'State Funding'
   | 'Geographic Spending'
   | 'Taxes & Assessments'
@@ -126,6 +130,7 @@ const navSections: { label: Section; icon: typeof CircleDollarSign }[] = [
   { label: 'Impact Fees', icon: Percent },
   { label: 'Capital Projects', icon: Landmark },
   { label: 'Public Safety Complex', icon: Shield },
+  { label: 'Fire Station 24', icon: Building2 },
   { label: 'State Funding', icon: Landmark },
   { label: 'Geographic Spending', icon: MapPin },
   { label: 'Taxes & Assessments', icon: Percent },
@@ -542,7 +547,25 @@ export default function Home() {
                     SJRWMD project page <ExternalLink size={12} />
                   </a>
                 </button>
+                <button className="tile-card" onClick={() => setActive('Fire Station 24')}>
+                  <span className="section-kicker">FWC {fireStation24.fwcPermit.number} · {money(fireStation24.workOrder.totalAuthorized, true)} authorized</span>
+                  <h3>Fire Station 24 — Gopher Tortoise Work</h3>
+                  <p>{fireStation24.meta.summary.split('.')[0]}. A WGI work order, an FWC permit, and a separate recipient-site invoice, traced as a documented chain.</p>
+                  <span className="source-link">
+                    Open full trail <ChevronRight size={14} />
+                  </span>
+                </button>
               </div>
+            </StandardPage>
+          )}
+
+          {section === 'Fire Station 24' && (
+            <StandardPage
+              kicker={`FWC ${fireStation24.fwcPermit.number}`}
+              title="Fire Station 24 — gopher tortoise evidence chain"
+              description={fireStation24.meta.disclaimer}
+            >
+              <FireStation24Panel data={fireStation24} />
             </StandardPage>
           )}
 
